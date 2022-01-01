@@ -1,0 +1,64 @@
+### rapp001 - Verkoop per regio per doos {-#ex-rapp001}
+
+Maak onderstaand rapport met per regio de verkoop per doos. Hierbij moet ook berekend en getoond worden de totale omzet per regio en het percentage van de omzet over alle regio's. Bewaar het rapport onder de naam [rapp001]{.varname}.
+
+![](exercises/images/rapp001-report.png)
+
+### rapp002 - Omzet per doos per regio {-#ex-rapp002}
+
+Maak een rapport met daarop per doos de omzet per regio. Bewaar het rapport onder de naam [rapp002]{.varname}.
+
+![](exercises/images/rapp002-report.png)
+
+### rapp003 - Dooskosten met Bonbonkosten {-#ex-rapp003}
+
+Maak een rapport dat de bonbons in elke doos geeft samen met de kosten van elke bonbon. Toon ook de totale kosten van de bonbons per doos. Bewaar dit rapport op onder de naam [rapp003]{.varname}.
+
+![](exercises/images/rapp003-report.png)
+
+### rapp004 - Dooskosten met Bonbonkosten gegroepeerd {-#ex-rapp004}
+
+Maak een kopie van rapport [rapp003]{.varname} en noem de kopie [rapp004]{.varname}. Maak het rapport beter leesbaar door alle gegevens die bij een doos horen op één pagina af te drukken. Je kunt dit doen door een pagina-einde in te voegen voor de koptekst van elke groep (hier [Doos]{.varname}). Daarvoor moet je de eigenschap Nieuwe pagina voor de Koptekst ([Doos]{.varname}) instellen op de waarde Voor sectie.
+
+Maak verder nog wat kleine wijzigingen in de opmaak. Het tekstvak Som moet naar rechts verplaatst worden met een kleine horizontale lijn boven de tekst en het bedrag.
+
+![](exercises/images/rapp004-report.png)
+
+### rapp005 - Omzet per doos per order per periode {-#ex-rapp005}
+
+Maak een kopie van het rapport [Omzet per doos per order per periode]{.varname} en noem de kopie [rapp005]{.varname}. Wijzig het ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt afgedrukt.
+
+![](exercises/images/rapp005-report.png)
+
+### rapp006 - Doos per pagina {-#ex-rapp006}
+
+Maak een kopie van rapport [rapp005]{.varname} en noem het rapport [rapp006]{.varname}. Verander het ontwerp van het rapport zodanig dat iedere doos op een nieuwe pagina begint.
+
+`r hide("Tip")`
+Zet de eigenschap [Nieuwe pagina]{.uicontrol} voor de Koptekst (Doosnaam) op de waarde Voor sectie.
+`r unhide()`
+
+### rapp007 - Doosetiketten {-#ex-rapp007}
+
+Maak etiketten voor alle bonbondozen volgens het model zoals hierna afgebeeld. Bewaar het rapport onder de naam [rapp007]{.varname}.
+
+Etikettype “Avery J8163 99mmx38mm”, Letter Consolas 12pt normaal, zwart.
+
+```
+Alle Seizoenen
+
+Code   : ALLS
+Gewicht: 150 gram
+```
+
+### rapp008 - Jaarafzet dozen per regio {-#ex-rapp008}
+
+Maak een rapport met daarop per regio het aantal verkochte dozen in een bepaald jaar. Bij het openen van het rapport moet eerst gevraagd worden naar het jaar van verkoop waarop het rapport gebaseerd moet zijn. Bewaar het rapport onder de naam [rapp008]{.varname}.
+
+In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2009.
+
+`r hide("Tip")`
+Maak eerst een parameterquery [Jaarafzet dozen per regio]{.varname} die de benodigde gegevens voor het rapport levert en naar het verkoopjaar vraagt.
+`r unhide()`
+
+![](exercises/images/rapp008-report.png)

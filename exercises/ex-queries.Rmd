@@ -1,0 +1,255 @@
+### quer001 - Klanten uit Friesland en Groningen {-#ex-quer001}
+
+Maak een query om de klanten uit de provincies Friesland en Groningen te selecteren. Toon de velden [Achternaam]{.varname}, [Voornaam]{.varname} en [Plaats]{.varname}. Sla de query op onder de naam [quer001]{.varname}.
+
+`r hide("Tip")`
+Het veld [Provincie]{.varname} mag hier twee waarden hebben `FR` of `GR`. Dat kun je voor elkaar krijgen door in de regel voor [Criteria]{.uicontrol} de ene waarde te vermelden en bij de regel met [Of]{.uicontrol} de andere waarde.
+
+Een andere mogelijkheid is het gebruik van een expressie met de Of operator als criterium.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 40 klanten
+`r unhide()`
+
+### quer002 - Direct mail campagne doos MARS {-#ex-quer002}
+
+Stel het is eind december 2010. De houdbaarheidsdatum van de doos MARS komt in zicht en er is nog veel in voorraad. Daarom wil je een direct mail campagne gaan uitvoeren naar de klanten die in de periode augustus t/m november 2010 minimaal 1 doos MARS hebben besteld. Toon de naam en het adres van deze klanten. Sla de query op onder de naam [quer002]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 4 klanten
+`r unhide()`
+
+### quer003 - Bonbondozen met lage prijs {-#ex-quer003}
+
+Toon de Bonbondozen waarvan de prijs hoogstens € 17,50 bedraagt. Toon van de dozen de dooscode, de doosnaam en de prijs. Sla de query op onder de naam [quer003]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 4 dozen
+`r unhide()`
+
+### quer004 - Bonbons melk en puur met lage kosten {-#ex-quer004}
+
+Geef een overzicht van de bonbons met een chocoladetype melk of puur waarvan de prijs hoogstens 30 cent is. Sla de query op onder de naam [quer004]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 18 bonbons
+`r unhide()`
+
+### quer005 - Klanten uit Enschede, Hengelo of Almelo {-#ex-quer005}
+
+Geef een overzicht van de klanten (naam en adres) die in Enschede, Hengelo of Almelo wonen. Sla de query op onder de naam [quer005]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 12 klanten
+`r unhide()`
+
+### quer006 - Klanten uit Amsterdam met postcode 20 {-#ex-quer006}
+
+Geef een overzicht van de klanten uit Amsterdam (naam en adres) waarvan de postcode met 20 begint. Sla de query op onder naam [quer006]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 3 klanten
+`r unhide()`
+
+### quer007 - Bonbons zonder vulling {-#ex-quer007}
+
+Geef een overzicht van alle bonbons zonder vulling. Sla de query op onder de naam [quer007]{.varname}.
+
+`r hide("Tip")`
+Zoek eerst uit welke waarde het veld Vullingtype heeft als een bonbon geen vulling heeft.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 12 bonbons
+`r unhide()`
+
+### quer008 - Klanten niet uit Amsterdam {-#ex-quer008}
+
+Geef een overzicht van alle klanten die niet in Amsterdam wonen. Sla de query op onder de naam [quer008]{.varname}.
+
+`r hide("Tip")`
+Zoek eerst uit welke expressie je in een criterium moet gebruiken voor “niet gelijk aan”.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 293 klanten
+`r unhide()`
+
+### quer009 - Aantal bonbons per doos {-#ex-quer009}
+
+Maak een query van de doosnamen en het aantal bonbons per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer009]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer009-result.png)
+`r unhide()`
+
+### quer010 - Aantal bonbonsoorten per doos {-#ex-quer010}
+
+Maak een query van de doosnamen en het aantal bonbonsoorten per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer010]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer010-result.png)
+`r unhide()`
+
+### quer011 - Aantal orders per regio {-#ex-quer011}
+
+Geef een overzicht van het aantal orders per regio. De kolom met aantal moet een passende naam hebben. Sla de query op onder de naam [quer011]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer011-result.png)
+`r unhide()`
+
+### quer012 - Totale omzet per klant {-#ex-quer012}
+
+Geef een overzicht van het totale omzet per klant. Toon hierbij de klantcode, klantnaam en het omzettotaal. De kolom met omzet moet een passende naam en opmaak hebben.Sorteer daarbij zodanig dat de klanten met de grootste omzet bovenaan komen te staan. Sla de query op onder de naam [quer012]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer012-result.png)
+`r unhide()`
+
+### quer013 - Klanten die order geplaatst hebben {-#ex-quer013}
+
+Geef een overzicht van de klanten (klantcode en klantnaam) die ooit iets gekocht hebben. Sla de query op onder de naam [quer013]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 264 klanten
+`r unhide()`
+
+### quer014 - Klanten waarvan achternaam Jansen of Janssen is uit regio Noord {-#ex-quer014}
+
+Geef een overzicht van de klanten waarvan de achternaam Jansen of Janssen en die in de regio Noord wonen. Sla de query op onder de naam [quer014]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer014-result.png)
+`r unhide()`
+
+### quer015 - Bonbons met vulling en zonder noot {-#ex-quer015}
+
+Maak een overzicht van de bonbons die wel een vulling maar geen noot bevatten. Sla de query op onder naam [quer015]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 22 bonbons
+
+![](exercises/images/quer015-result.png)
+`r unhide()`
+
+### quer016 - Dozen zwaarder dan 150 gram met prijs van hoogstens 35 euro {-#ex-quer016}
+
+Maak een overzicht van de dozen die zwaarder zijn dan 150 gram en maximaal € 35,- kosten. Alleen de dooscode, doosnaam en prijs hoeven getoond te worden. Sorteer de dozen oplopend op prijs. Sla de query op onder de naam [quer016]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer016-result.png)
+`r unhide()`
+
+### quer017 - Dozen met prijs tussen 17 en 25 en voorraad van minstens 400 {-#ex-quer017}
+
+Maak een overzicht van de voorraad van de dozen met een prijs tussen € 17,- en € 25,- en waarvan er minstens 400 in voorraad zijn. Toon de doosnaam, de dooscode, de prijs en de voorraad. Sla de query op onder de naam [quer017]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer017-result.png)
+`r unhide()`
+
+### quer018 - Totale omzet per provincie {-#ex-quer018}
+
+Geef een overzicht van de totale omzet per provincie. De kolom met aantal moet een passende naam en opmaak hebben. Sorteer aflopend op omzet. Sla de query op onder de naam [quer018]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer018-result.png)
+`r unhide()`
+
+### quer019 - Klanten die week voor de kerst besteld hebben {-#ex-quer019}
+
+Geef een overzicht van de klanten die de laatste week voor kerst 2010 (20-12-2010 t/m 24-12 2010) dozen bonbons hebben besteld. Toon de klantcode, de klantnaam en het klantadres. Elke klant mag maar 1 keer in het overzicht voorkomen. Sla de query op onder de naam [quer019]{.varname}.
+
+`r hide("Tip")`
+Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke records op Ja ingesteld worden. De eigenschappen van de query kunnen zichtbaar gemaakt worden in de Ontwerpweergave van de query het venster Eigenschappen zichtbaar te maken en daarna in het rechterbovengebied van het ontwerpvenster op een lege plek te klikken.
+`r unhide()`
+
+`r hide("Antwoord")`
+![](exercises/images/quer019-result.png)
+`r unhide()`
+
+### quer020 - Dozen met lage omzet {-#ex-quer020}
+
+Maak een overzicht van de dozen met lage omzet, minder dan €2000. Toon de dooscode en de omzet per doos. De kolom met omzet moet een passende naam en opmaak hebben. Sorteer oplopend op omzet. Sla de query op onder de naam [quer020]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer020-result.png)
+`r unhide()`
+
+### quer021 - Klanten met omzet hoogstens 50 en postcode beginnend met 22 {-#ex-quer021}
+
+Geef een overzicht van de klanten waarvan de postcode begint met 22 en met een totale omzet van hoogstens € 50,-. Sla de query op onder de naam [quer021]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer021-result.png)
+`r unhide()`
+
+### quer023 - Klanten voor Zoet en bitter {-#ex-quer023}
+
+Geef een alfabetisch overzicht van de klanten die in 2009 minstens 1 doos “Zoet en bitter” gekocht hebben. Zorg er voor dat er geen dubbele records in het queryresultaat worden weergegeven. Sla de query op onder de naam [quer023]{.varname}.
+
+`r hide("Tip")`
+Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke waarden op Ja ingesteld worden.
+`r unhide()`
+
+`r hide("Antwoord")`
+![](exercises/images/quer023-result.png)
+`r unhide()`
+
+### quer024 - Plaatsen met minstens 2 klanten {-#ex-quer024}
+
+Geef een alfabetisch overzicht van de plaatsen met minstens 2 klanten. Sla de query op onder de naam [quer024]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer024-result.png)
+`r unhide()`
+
+### quer025 - Parameterquery bonbons {-#ex-quer025}
+
+Er zijn diverse chocoladetypes voor bonbons: Butterscotch, Melk, Puur, Toffee en Wit. Maak een parameterquery om bonbons te tonen waarvan het chocoladetype tijdens het uitvoeren van de query gevraagd wordt. Toon daarbij de kolommen [Chocoladetype]{.varname}, [Bonbonnaam]{.varname}, [Bonbonkosten]{.varname} en [Bonbonbeschrijving]{.varname}. Sla de query op onder de naam [quer025]{.varname}.
+
+### quer026 - Bijwerkquery prijsverlaging {-#ex-quer026}
+
+Door een daling van de chocoladeprijs op de wereldmarkt kunnen de prijzen van alle dozen met 15% verlaagd worden.
+
+1.  Start met het maken van een backup van de database.
+2.  Ontwerp een bijwerkquery om de prijsverlaging door te voeren. Sla de query op onder de naam [quer026]{.varname} en voer deze uit..
+3.  Herstel de originele situatie door de backup van de database terug te plaatsen.
+
+::: {.warning data-latex=""}
+1. Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
+
+2. Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 15% verlaagd worden.
+:::
+
+### quer027 - Kruistabel dozen per gewicht {-#ex-quer027}
+
+Maak een kruistabelquery met verticaal de doosnamen, horizontaal de gewichten van de doos en in de tabel de magazijnvoorraad. Sla de query op onder de naam [quer027]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer027-result.png)
+`r unhide()`
+
+### quer028 - Bijwerkquery prijsverhoging {-#ex-quer028}
+
+Door een stijging van de chocoladeprijs op de wereldmarkt moeten de prijzen van alle dozen met 10% verhoogd worden.
+
+1.  Start met het maken van een backup of kopie van de tabel of van de hele database.
+2.  Ontwerp een bijwerkquery om de prijsverhoging door te voeren. Sla de query op onder de naam [quer028]{.varname} en voer deze uit.
+3.  Herstel de originele situatie.
+
+::: {.warning data-latex=""}
+1. Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
+
+2. Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 10% verhoogd worden.
+:::
+
+### quer029 - Kruistabel omzet per klant per maand {-#ex-quer029}
+
+Maak met behulp van een kruistabelquery een overzicht van de totale omzet per klant per maand in 2010. Maak daartoe eerst een gewone query Omzet per klant per maand in 2010 en gebruik deze query als basis voor de kruistabelquery. Voor de klant mogen de klantcodes gebruikt worden en voor de maand de maandnummers. Geef ook de totale omzet per klant in 2010 in de kruistabel weer. Sla de kruistabelquery op onder de naam [quer029]{.varname}.
+
+`r hide("Antwoord")`
+![](exercises/images/quer029-result.png)
+`r unhide()`

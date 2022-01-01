@@ -1,0 +1,37 @@
+### expl001 - Selectie Bonbons {-#ex-expl001}
+
+Maak via filteren een selectie van de bonbons met een Chocoladetype melk of puur waarvan de prijs hoogstens 0,30 is.
+
+`r hide("Tip")`
+Bij de selectie van numerieke velden heb je ook mogelijkheden om getalbereiken aan te geven:
+
+![Getalfilter](exercises/images/expl001-filter-numbers.png)
+
+`r unhide()`
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 18 records.
+`r unhide()`
+
+### expl002 - Selectie Klanten op plaatsnaam {-#ex-expl002}
+
+Maak een selectie van de klanten die in Enschede, Hengelo of Almelo wonen.
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 12 records.
+`r unhide()`
+
+
+### expl003 - Selectie Klanten op postcode {-#ex-expl003}
+
+Maak een selectie van de klanten waarvan de postcode met 20 begint en die in Amsterdam wonen.
+
+`r hide("Tip")`
+Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
+
+![Tekstfilter](exercises/images/expl003-filter-text.png)
+`r unhide()`
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 3 records.
+`r unhide()`

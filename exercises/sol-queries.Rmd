@@ -1,0 +1,129 @@
+### quer001 - Klanten uit Friesland en Groningen {#sol-quer001}
+
+Voeg de tabel [Klanten]{.varname} aan het queryraster toe. Voor het verdere ontwerp zie afbeelding.
+
+![](exercises/images/quer001-design1.png)
+
+![](exercises/images/quer001-design2.png)
+
+### quer002 - Direct mail campagne doos MARS {#sol-quer002}
+
+![](exercises/images/quer002-design.png)
+
+Als conditie voor Orderdatum kun je ook gebruiken `>=#1-8-2010# And <=#30-11-2010#`
+
+### quer003 - Bonbondozen met lage prijs {#sol-quer003}
+
+![](exercises/images/quer003-design.png)
+
+### quer004 - Bonbons melk en puur met lage kosten {#sol-quer004}
+
+![](exercises/images/quer004-design.png)
+
+### quer005 - Klanten uit Enschede, Hengelo of Almelo {#sol-quer005}
+
+![](exercises/images/quer005-design.png)
+
+### quer006 - Klanten uit Amsterdam met postcode 20 {#sol-quer006}
+
+![](exercises/images/quer006-design.png)
+
+### quer007 - Bonbons zonder vulling {#sol-quer007}
+
+![](exercises/images/quer007-design.png)
+
+### quer008 - Klanten niet uit Amsterdam {#sol-quer008}
+
+![](exercises/images/quer008-design.png)
+
+### quer009 - Aantal bonbons per doos {#sol-quer009}
+
+![](exercises/images/quer009-design.png)
+
+### quer010 - Aantal bonbonsoorten per doos {#sol-quer010}
+
+![](exercises/images/quer010-design.png)
+
+### quer011 - Aantal orders per regio {#sol-quer011}
+
+![](exercises/images/quer011-design.png)
+
+### quer012 - Totale omzet per klant {#sol-quer012}
+
+![](exercises/images/quer012-design.png)
+
+### quer013 - Klanten die order geplaatst hebben {#sol-quer013}
+
+![](exercises/images/quer013-design.png)
+
+### quer014 - Klanten waarvan achternaam Jansen of Janssen is uit regio Noord {#sol-quer014}
+
+![](exercises/images/quer014-design.png)
+
+### quer015 - Bonbons met vulling en zonder noot {#sol-quer015}
+
+![](exercises/images/quer015-design.png)
+
+### quer016 - Dozen zwaarder dan 150 gram met prijs van hoogstens 35 euro {#sol-quer016}
+
+![](exercises/images/quer016-design.png)
+
+### quer017 - Dozen met prijs tussen 17 en 25 en voorraad van minstens 400 {#sol-quer017}
+
+![](exercises/images/quer017-design.png)
+
+### quer018 - Totale omzet per provincie {#sol-quer018}
+
+![](exercises/images/quer018-design.png)
+
+### quer019 - Klanten die week voor de kerst besteld hebben {#sol-quer019}
+
+![](exercises/images/quer019-design.png)
+
+### quer020 - Dozen met lage omzet {#sol-quer020}
+
+![](exercises/images/quer020-design.png)
+
+### quer021 - Klanten met omzet hoogstens 50 en postcode beginnend met 22 {#sol-quer021}
+
+![](exercises/images/quer021-design.png)
+
+### quer023 - Klanten voor Zoet en bitter {#sol-quer023}
+
+![](exercises/images/quer023-design.png)
+
+### quer024 - Plaatsen met minstens 2 klanten {#sol-quer024}
+
+![](exercises/images/quer024-design.png)
+
+### quer025 - Parameterquery bonbons {#sol-quer025}
+
+Maak via Queryontwerp een nieuwe lege query. Voeg de tabel Bonbons aan het queryvenster toe. Voeg de velden Chocoladetype, Bonbonnaam, Bonbonkosten en Bonbonbeschrijving aan het queryraster toe. Voeg in de kolom Chocoladetype bij Criteria in: [Voer chocoladetype in]. Zie de afbeelding hierna.
+
+![](exercises/images/quer025-design.png)
+
+### quer026 - Bijwerkquery prijsverlaging {#sol-quer026}
+
+Maak via Queryontwerp een nieuwe lege query. Voeg de tabel Dozen aan het queryvenster toe. Voeg het veld [Doosprijs]{.varname} aan het queryraster toe. Wijzig het type query in [Bijwerken]{.uicontrol}. Geef daarna het veld [Wijzigen in]{.uicontrol} de waarde `[Doosprijs*0,85]`. Zie de afbeelding hierna.
+
+![](exercises/images/quer026-design.png)
+
+### quer027 - Kruistabel dozen per gewicht {#sol-quer027}
+
+![](exercises/images/quer027-design.png)
+
+### quer028 - Bijwerkquery prijsverhoging {#sol-quer028}
+
+Maak via Queryontwerp een nieuwe query, voeg tabel [Dozen]{.varname} toe en dan veld [Doosprijs]{.varname}. Wijzig het type query in [Bijwerken]{.uicontrol}. Geef het veld [Wijzigen in]{.uicontrol} de waarde `[Doosprijs]*1,1`.
+
+![](exercises/images/quer028-design.png)
+
+### quer029 - Kruistabel omzet per klant per maand {#sol-quer029}
+
+De selectiequery kun je vanuit niets maken, maar je kunt ook het ontwerp van [quer012]{.varname} als basis nemen. Het maandnummer kun je uit het veld [Orderdatum]{.varname} halen met de functie `Month()` en het jaar met de functie `Year()`. De waarde `2010` moet bij de laatste als criterium worden toegevoegd.
+
+![Ontwerp selectiequery](exercises/images/quer029-design-selection.png "Ontwerp selectiequery")
+
+Voor Kies [Maken > Wizard Query > Wizard Kruistabelquery]{.uicontrol}. Gebruik de selectiequery als basis. Gebruik veld [Klantcode]{.varname} voor de rijkoppen, veld [Maand]{.varname} voor de kolomkoppen en `Som(Omzet)` voor de waarden.
+
+![Ontwerp kruistabelquery](exercises/images/quer029-design-crosstab.png "Ontwerp kruistabelquery")

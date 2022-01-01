@@ -1,0 +1,17 @@
+### form001 - Klanten {-#ex-form001}
+
+Maak een formulier klanten dat lijkt op de volgende afbeelding. Noem het formulier [form001]{.varname}.
+
+![](exercises/images/form001.png)
+
+### form002 - Bonbons in dozen {-#ex-form002}
+
+Maak een hoofdformulier met subformulier dat laat zien in welke dozen een bepaalde bonbon zit is en ook hoeveel daarvan. Noem de formulieren [form002 hoofd]{.varname} en [form002 sub]{.varname}.
+
+![](exercises/images/form002.png)
+
+### form003 - Dozen per klant {-#ex-form003}
+
+Maak een hoofdformulier met subformulier waarbij in het hoofdformulier de gegevens van een doos staan en in het subformulier de totale afzet per klant van deze doos. Maak daartoe eerst een query die het totale aantal bestelde dozen per doos per klant uitrekent. Noem de query [Dozen per klant]{.varname} en de formulieren [form003 hoofd]{.varname} en [form003 sub]{.varname}.
+
+![](exercises/images/form003.png)

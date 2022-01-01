@@ -1,0 +1,164 @@
+### norm001 - Orders {-#ex-norm001}
+
+Normaliseer de volgende tabel met gegevens:
+
+![](exercises/images/norm001-data.png)
+
+### norm003 - Cursusoverzicht {-#ex-norm003}
+
+Bij een bedrijf kunnen de werknemers cursussen volgen. De directie wenst periodiek een overzicht te krijgen van de door de werknemers gevolgde cursussen volgens onderstaande lay-out:
+
+![](exercises/images/norm003-data.png)
+
+Dezelfde cursussen kunnen op meerdere tijdstippen worden aangeboden. Een werknemer kan eventueel een bepaalde cursus op een ander tijdstip opnieuw volgen.
+
+Ontwerp voor deze gegevens een genormaliseerd systeem.
+
+### norm004 - Garage {-#ex-norm004}
+
+Een garage heeft een kaartenbak met alle klanten. Op de kaarten worden ook gegevens van de auto('s) van de klant bijgehouden en gegevens van de beurten van die auto's. Hieronder staan een paar voorbeelden van de layout van zo'n kaart:
+
+![](exercises/images/norm004-data.png)
+
+Voor het beschreven kaartsysteem moet een database ontworpen worden. Ontwerp voor deze gegevens een genormaliseerd systeem zonder extra attributen toe te voegen en teken een GSD.
+
+### norm005 - Klantcontacten {-#ex-norm005}
+
+De tabel [KLANT]{.term} bevat klantgegevens. De tabel [CONTACT]{.term} bevat de gegevens van contactpersonen bij een klant. Bij een klant kunnen 0, 1 of meer contactpersonen horen en 1 contactpersoon hoort bij precies 1 klant. Bij de contactpersonen van een klant komt de combinatie achternaam en voornaam maar één keer voor. Verder kunnen meerdere contactpersonen van een klant hetzelfde telefoonnummer hebben.
+
+[KLANT]{.term}(Klantnr, Naam, Adres, Postcode, Plaats)
+
+[CONTACT]{.term}(Achternaam, Voornaam, Bedrijf, telefoonnr)
+
+
+1.  Definieer een geschikte sleutel bij de tabel [CONTACT]{.term} zonder een extra veld toe te voegen.
+2.  De tabellen [CONTACT]{.term} en [KLANT]{.term} moeten gekoppeld worden. Leg uit welke velden gekoppeld moeten worden en wat primaire en secundaire tabel is bij de koppeling.
+3.  Stel dat je de structuur van de tabel [CONTACT]{.term} mag veranderen. Wat is een meer gebruikelijke manier om de tabellen [CONTACT]{.term} en [KLANT]{.term} te koppelen en wat is dan de nieuwe structuur? Het doel is een eenvoudiger invoer met behoud van de relatie.
+
+### norm006 - Hoveniersbedrijf {-#ex-norm006}
+
+Het hoveniersbedrijf "Fruithobby" drijft op kleine schaal handel in uitsluitend fruitbomen. De fruitbomen worden aangekocht, in voorraad opgeslagen en doorverkocht aan de hobbyist. Het bedrijf voert een viertal soorten fruitbomen: appel, peer, pruim en noot en betrekt deze van een drietal leveranciers die de volgende aanbiedingen hebben gedaan:
+
+![](exercises/images/norm006-data.png)
+
+Ontwerp hiervoor een genormaliseerde database. Geef van iedere tabel de structuur (velden + sleutel).
+
+### norm007 - Onderdelen {-#ex-norm007}
+
+Een autobedrijf gebruikt een gegevensbank voor het beheer van onderdelen zoals uitlaten, remvoeringen en schokdempers ten behoeve van montage in verschillende autotypen. Elk onderdeel heeft een uniek onderdeelnummer en een onderdeelomschrijving. In verband met technische wijzigingen van autotypen is per onderdeel aangegeven het beginbouwjaar en het eindbouwjaar van het autotype (of autotypen) waarvoor dit onderdeel geschikt is.
+
+Zo moet bijvoorbeeld opgeslagen kunnen worden dat een bepaald onderdeel geschikt is voor een Audi 100 met bouwjaren '83 t/m '88. En ook dat dit onderdeel geschikt is voor een Audi 80 van de bouwjaren '80 t/m '87.
+
+Om het onderdelenverbruik te voorspellen wordt van elk autotype het verkoopaantal (= aantal verkochte auto's) per bouwjaar geregistreerd. Tevens is per autotype een type-omschrijving opgenomen. Per onderdeel is de verkoopprijs aangegeven. Tevens zijn de montagekosten en de normtijd, die per autotype kunnen verschillen, in de gegevensbank opgenomen.
+
+Ontwerp voor deze informatiebehoefte een genormaliseerde database.
+
+### norm008 - Relaties {-#ex-norm008}
+
+Bekijk de volgende tabellen:
+
+[STUDENT]{.term}(studentnr, studentnaam, adres, woonplaats, klas, ...)
+
+[STAGEBEDRIJF]{.term}(bedrijfsnr, bedrijfsnaam, ...)
+
+1.  Welk proces zal van deze twee tabellen gebruik maken?
+2.  De gegevens die het proces genereert worden opgeslagen in een aparte tabel [STAGEPLAATS]{.term}. Geef aan hoe deze tabel eruit zal zien.
+
+### norm009 - Optimaliseren database {-#ex-norm009}
+
+Bekijk de volgende tabel:
+
+[ROOSTER]{.term}([dag]{.key}, [uur]{.key}, [lokaal]{.key}, docentcode, klas)
+
+De tabel moet voldoende mogelijkheden hebben om in de praktijk te kunnen voldoen. Om dit te testen zijn een aantal vragen geformuleerd.
+
+Kun je met deze tabel de vragen niet beantwoorden, kijk dan of je de vragen wel kunt beantwoorden door nieuwe velden aan de tabel toe te voegen.
+
+1.  Het veld [dag]{.varname} heeft als waarden "ma, di,..., vr". Biedt de tabel de mogelijkheid dat een docent twee keer in de week dezelfde klas lesgeeft?
+2.  Is deze tabel ook te gebruiken om collegezalen in te roosteren die geschikt zijn voor meerdere klassen?
+3.  Is het in dit roosterbestand mogelijk om werkcolleges op te nemen? Aan een werkcollege neemt de helft van het aantal studenten van een klas deel.
+4.  Is het mogelijk met deze tabel groepen studenten te clusteren uit diverse groepen klassen en studiejaren?
+
+### norm010 - Sleutels en tabellen {-#ex-norm010}
+
+Ga uit van de volgende verzameling gegevens van docenten:
+
+![](exercises/images/norm010-data.png)
+
+1.  Geef voor elk veld aan wat het gegevenstype is.
+2.  Wat is de sleutel van de tabel? Is dit een primaire sleutel?
+3.  Welke zou de sleutel zijn als het veld uit de vorige vraag niet in de tabel voorkwam? Is dit dan nog steeds een primaire sleutel?
+
+### norm011 - Doe-het-zelf zaak {-#ex-norm011}
+
+Een doe-het-zelfzaak verkoopt een groot aantal artikelen. Bestellingen ter aanvulling van de voorraad worden gedaan via een inkooporder.
+
+De bestellingen gaan per leverancier altijd via dezelfde inkoper. De inkoper maakt de diverse prijsafspraken voor de te leveren artikelen. De levering van een artikel is niet gebonden aan één leverancier. Op een inkooporder staat altijd minstens één orderregel. Het maximum aantal orderregels is 24. Voor een voorbeeld van een inkooporder zie de volgende afbeelding.
+
+![](exercises/images/norm011-data.png)
+
+1.  Ontwerp een database passend bij het orderformulier. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
+2.  Maak een bijbehorend gegevensstructuurdiagram.
+
+### norm012 - Vrachtbrief {-#ex-norm012}
+
+Een groothandel vervoert binnen Nederland zelf de vrachten naar de diverse klanten. De vrachtwagen wordt bij de expeditie geladen en de vracht wordt vervolgens naar de diverse klanten gebracht.
+
+Per dag wordt voor elke vrachtwagen één vrachtbrief gemaakt met daarop de informatie voor de chauffeur. In de figuur hierna staat een voorbeeld van zo’n vrachtbrief.
+
+![](exercises/images/norm012-data.png)
+
+1. Ontwerp een genormaliseerde database passend bij de vrachtbrief. Ga ervan uit dat een vrachtwagen uniek geïdentificeerd wordt met het kenteken. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
+2. Wat verandert er in het ontwerp als niet het kenteken de auto's uniek zou identificeren, maar alleen het autonummer?
+3. Maak een bijbehorend gegevensstructuurdiagram.
+
+### norm013 - Bestelbon {-#ex-norm013}
+
+Bekijk onderstaande bestelbon van de firma DataRex.
+
+![](exercises/images/norm013-data.png)
+
+1. Welke procesgegevens zijn er in de bestelbon te vinden?
+2. Leg uit wat wordt bedoeld met een herhalende (of repeterende) groep. Waaruit bestaat deze bij de bestelbon?
+3. Ontwerp een genormaliseerde database passend bij de bestelbon. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
+4. Maak een bijbehorend gegevensstructuurdiagram.
+
+### norm014 - Boekingen {-#ex-norm014}
+
+Het boekingsbureau Cultuur heeft voor het seizoen 2001 - 2002 het Passe-partout ingevoerd. Cultuurliefhebbers kunnen uit een bijzonder gevarieerd aanbod 5 voorstellingen kiezen en deze tegen een vriendenprijsje bezoeken. Het boekingsbureau heeft van elke voorstelling een aantal toegangs-kaarten beschikbaar en doet de overgebleven kaarten in de losse verkoop. Als de belangstelling groter is dan het beschikbaar aantal kaarten dan wordt een wachtlijst bijgehouden. De office-manager van boekingsbureau Cultuur heeft gevraagd om hiervoor een database te ontwerpen. Zij wil naast het aanmaken en afdrukken van de passe-partouts ook overzichtslijsten van de deelnemers per voorstelling. Een voorbeeld van een passe-partout zie je in de figuur hierna
+
+![](exercises/images/norm014-data.png)
+
+1.  Normaliseer het passe-partout. Geef alle stappen van het normalisatieproces duidelijk weer. Houd hierbij rekening met de volgende zaken.
+    -   De datum van uitgifte van het Passe-partout wordt bij het aanmaken vastgelegd als eigenschap van het passepartout.
+    -   De data op de regel van de voorstelling is de datum van die betreffende voorstelling.
+    -   Bij een Passe-partout moeten kaarten van 5 verschillende voorstellingen zijn gekocht.
+    -   Een voorstelling wordt geïdentificeerd met een identificatienummer, dat niet staat afgedrukt op het passepartout.
+2.  Maak het bijbehorende gegevensstructuurdiagram in Bachman weergave. Geef ook de verbindingsvelden aan.
+
+### norm015 - Integratie {-#ex-norm015}
+
+In verband met het Europese kampioenschap voetbal wil de NOS in samenwerking met een aantal kranten een klein geautomatiseerd informatiesysteem ontwikkelen. De bedoeling is de televisiekijkers en de krantenlezers zo goed mogelijk te informeren over het kampioenschap. Hiervoor zijn een aantal informatiebehoeftes opgesteld. Bepaal de tabellen met de velden die nodig zijn om in de informatiebehoefte te kunnen voorzien. Indien nodig kun je de eerder gemaakte tabellen uitbreiden met nieuwe velden.
+
+*Informatiebehoeftes*
+
+1. Een overzicht per land met de spelers die opgesteld kunnen worden en wie de trainer is. Het is mogelijk dat spelers dezelfde naam hebben. De namen van de landen kunnen niet hetzelfde zijn.
+
+2. Een overzicht van de begeleiders per land en hun functie.
+   
+3. Een lijst met topscorers (naam en aantal goals)
+
+4. Een lijst van clubs met daarop de spelers die door de club aan een bepaald ander land worden uitgeleend.
+   
+5. Integreer de vier afzonderlijke informatiebehoeftestructuren tot één totale geïntegreerde informatie-behoefte-structuur.  Maak een weergave voor deze geïntegreerde structuur.
+
+### norm016 - Postcodes {-#ex-norm016}
+
+In een bestand zijn alle plaatsen, straatnamen, huisnummers en postcodes van Nederland opgeslagen. In de volgende afbeelding zie je een deel van de tabel.
+
+![](exercises/images/norm016-data.png)
+
+Bij een gegeven straat, huisnummer en plaats hoort een postcode. De cijfers geven de stad, het dorp, de buurt of wijk aan. Het komt niet voor dat twee plaatsnamen dezelfde cijfers hebben. De letters zijn specifieker en geven de straat of een deel daarvan aan.
+
+1.  Welk attribuut is functioneel afhankelijk van welk ander attribuut?
+2.  Bepaal een sleutel voor deze tabel.

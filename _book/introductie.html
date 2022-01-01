@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>1 Beginnen met Access | Leer Microsoft Access</title>
+<meta name="author" content="Ben Welman">
+<meta name="description" content="Wat databases zijn en hoe deze zijn opgebouwd. Beknopte kennismaking met de componenten (tabellen, query’s, formulieren, rapporten, macro’s, modules). Het opstarten en afsluiten van Access. Het...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="1 Beginnen met Access | Leer Microsoft Access">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Wat databases zijn en hoe deze zijn opgebouwd. Beknopte kennismaking met de componenten (tabellen, query’s, formulieren, rapporten, macro’s, modules). Het opstarten en afsluiten van Access. Het...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1 Beginnen met Access | Leer Microsoft Access">
+<meta name="twitter:description" content="Wat databases zijn en hoe deze zijn opgebouwd. Beknopte kennismaking met de componenten (tabellen, query’s, formulieren, rapporten, macro’s, modules). Het opstarten en afsluiten van Access. Het...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Source%20Sans%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Source%20Code%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Bitter-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1284000-4', 'auto');
+      ga('send', 'pageview');
+
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/textbook.css">
+<link rel="stylesheet" href="include/elements.css">
+<link rel="stylesheet" href="include/webex.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Ga naar de hoofdinhoud</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Leer Microsoft Access</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Toon inhoudsopgave</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Zoeken" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Inhoudsopgave</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welkom</a></li>
+<li><a class="" href="voorwoord.html">Voorwoord</a></li>
+<li class="book-part">Basis</li>
+<li><a class="active" href="introductie.html"><span class="header-section-number">1</span> Beginnen met Access</a></li>
+<li><a class="" href="explore.html"><span class="header-section-number">2</span> Database SNOEP verkennen</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">3</span> Gegevens toevoegen/wijzigen</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabellen</a></li>
+<li><a class="" href="queries.html"><span class="header-section-number">5</span> Query’s</a></li>
+<li><a class="" href="forms.html"><span class="header-section-number">6</span> Formulieren</a></li>
+<li><a class="" href="reports.html"><span class="header-section-number">7</span> Rapporten</a></li>
+<li class="book-part">Gevorderd</li>
+<li><a class="" href="integration.html"><span class="header-section-number">8</span> Integratie met Office</a></li>
+<li><a class="" href="tools.html"><span class="header-section-number">9</span> Hulpmiddelen</a></li>
+<li><a class="" href="macros.html"><span class="header-section-number">10</span> Macro’s</a></li>
+<li><a class="" href="normalization.html"><span class="header-section-number">11</span> Normaliseren</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introductie" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Beginnen met Access<a class="anchor" aria-label="anchor" href="#introductie"><i class="fas fa-link"></i></a>
+</h1>
+<div class="intro">
+<ul>
+<li>Wat databases zijn en hoe deze zijn opgebouwd.</li>
+<li>Beknopte kennismaking met de componenten (tabellen, query’s, formulieren, rapporten, macro’s, modules).</li>
+<li>Het opstarten en afsluiten van Access.</li>
+<li>Het openen van een bestaande database en het kunnen opslaan hiervan onder een andere naam en/of in een ander bestandsformaat.</li>
+<li>De inrichting van het programmavenster van Access.</li>
+</ul>
+</div>
+<p>Access is een programma uit de Microsoft Office reeks waarmee je databases kunt maken. Hiermee kun je gegevens opslaan, beheren en analyseren. De gegevens bevatten bijvoorbeeld detailinformatie over klanten, orders, artikelen, leveranciers, enz. Deze gegevens worden geordend opgeslagen, waardoor je antwoorden kunt krijgen op vragen als</p>
+<ul>
+<li>Wat is de omzet per klant geweest in het afgelopen halfjaar?</li>
+<li>Welke artikelen zorgen voor het grootste deel van de omzet?</li>
+</ul>
+<p>Access wordt als een moeilijk programma gezien. Dat komt door de manier waarop databases in elkaar zitten en werken. Met de andere programma’s uit de Microsoft Office reeks als Excel, Word en Powerpoint kun je direct na het opstarten beginnen met gegevens in te voeren. Dat kan in Access niet. Je moet eerst een structuur voor de database bedenken en aanmaken voordat je gegevens in kunt voeren. Voor de wat grotere en complexere databases is dat al snel werk voor specialisten.</p>
+<div id="intro-about" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Wat zijn databases?<a class="anchor" aria-label="anchor" href="#intro-about"><i class="fas fa-link"></i></a>
+</h2>
+<p>Een database is een verzameling gegevens welke betrekking heeft op een bepaald onderwerp of een bepaald doel, bijvoorbeeld klanten en hun orders. Al deze gegevens worden vaak in afzonderlijke tabellen opgeslagen die samen de database vormen. In de eenvoudigste vorm kan een database uit slechts één tabel bestaan. Bij meerdere tabellen worden er relaties tussen de tabellen aangebracht waardoor je gegevens uit meerdere tabellen aan elkaar kunt koppelen. Een dergelijke database wordt daarom ook wel een <span class="term">relationele database</span> genoemd.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-rel-db"></span>
+<img src="images/intro/example-rel-db.png" alt="Voorbeeld van een relationele database met drie tabellen met onderlinge relaties." width="60%"><p class="caption">
+Figuur 1.1: Voorbeeld van een relationele database met drie tabellen met onderlinge relaties.
+</p>
+</div>
+<p>Naast het maken en onderhouden van tabellen kun je met Access ook formulieren, query’s en rapporten maken. Via de formulieren kun je de gegevens gemakkelijk en efficiënt bijwerken, zodat je niet rechtstreeks met de tabellen hoeft te werken. En met query’s kun je antwoorden op vragen krijgen, waarbij de onderliggende informatie uit verschillende tabellen kan komen. Via rapporten kun je er voor zorgen dat de uitvoer netjes en overzichtelijk op scherm of papier verschijnt.</p>
+<p>Access kent de volgende onderdelen (<span class="term">objecten</span>) in een database:</p>
+<ul>
+<li>Tabellen</li>
+<li>Query’s</li>
+<li>Formulieren</li>
+<li>Rapporten</li>
+<li>Macro’s</li>
+<li>Modules</li>
+</ul>
+<p>In Access wordt een database als één bestand opgeslagen, waarin al deze onderdelen van de database zitten.</p>
+<p>De werkzaamheden met databases kun je onderscheiden in:</p>
+<ul>
+<li><p><strong>Ontwerpen en maken van de database</strong>. Dit houdt in het maken van de tabellen, query’s, formulieren en rapporten. Dit is werk voor de bouwer van de database.</p></li>
+<li><p><strong>Omgaan met gegevens</strong>. Dit betreft het invoeren en wijzigen van gegevens, het maken van rapportages, het zoeken in de database, enz. Dit is werk waarmee de eindgebruiker bezig is.</p></li>
+</ul>
+<div id="intro-table" class="section level3 unnumbered">
+<h3>Tabellen<a class="anchor" aria-label="anchor" href="#intro-table"><i class="fas fa-link"></i></a>
+</h3>
+<p>In de tabellen worden de gegevens opgeslagen. Voor elk soort gegevens is er meestal één tabel. Zo kun je een tabel <span class="varname">Producten</span> hebben die allerlei gegevens over de producten bevat. En een tabel <span class="varname">Leveranciers</span> bevat gegevens over de bedrijven die de producten leveren. Om te weten welke tabellen je waarvoor nodig hebt moet er vooraf goed over de structuur van de database worden nagedacht. Een goed ontworpen database moet aan bepaalde criteria voldoen. Om een goed ontworpen database te maken wordt vaak gebruik gemaakt van een proces dat <span class="term">normaliseren</span> heet.</p>
+<p>In een tabel zijn gegevens in kolommen (<span class="term">velden</span>) en rijen (<span class="term">records</span>) ingedeeld.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-table"></span>
+<img src="images/intro/example-table.png" alt="Voorbeeld van een tabel met 3 records en 5 velden." width="75%"><p class="caption">
+Figuur 1.2: Voorbeeld van een tabel met 3 records en 5 velden.
+</p>
+</div>
+<dl>
+<dt>Veld</dt>
+<dd>Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon, telefoonnummer, artikelprijs, … In een tabel is elke kolom een veld.
+</dd>
+<dt>Record</dt>
+<dd>Een record is een verzameling van gegevens over een persoon, artikel, bedrijf, … In een tabel is elke rij een record.
+</dd>
+</dl>
+</div>
+<div id="intro-query" class="section level3 unnumbered">
+<h3>Query’s<a class="anchor" aria-label="anchor" href="#intro-query"><i class="fas fa-link"></i></a>
+</h3>
+<p>Via een query kun je een opdracht geven om bepaalde gegevens te selecteren en deze weer te geven. Je stelt als het ware een vraag aan de database, bijvoorbeeld “Welke producten hebben een leverancier uit Australië”. De gegevens die nodig zijn voor het antwoord op de query kunnen uit meerdere tabellen afkomstig zijn. De query brengt de gewenste informatie bijeen. Het resultaat van een query is een verzameling records die ook wel <span class="term">dynaset</span> genoemd wordt.</p>
+<p>Bij het ontwerp van een query geef je aan welke gegevens je nodig hebt. Zo kun je bijvoorbeeld een query definiëren om ordergegevens over een bepaalde periode weer te geven. De query haalt dan de gegevens op uit de verschillende tabellen. Daarnaast kun je met een query ook berekeningen uitvoeren, zoals het berekenen van totalen.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-query"></span>
+<img src="images/intro/example-query.png" alt="Voorbeeld van een query met ordergegevens." width="60%"><p class="caption">
+Figuur 1.3: Voorbeeld van een query met ordergegevens.
+</p>
+</div>
+<p>Een ander soort query is de <span class="term">actiequery</span> die een bepaalde bewerking op de geselecteerde records uitvoert.</p>
+</div>
+<div id="intro-form" class="section level3 unnumbered">
+<h3>Formulieren<a class="anchor" aria-label="anchor" href="#intro-form"><i class="fas fa-link"></i></a>
+</h3>
+<p>Wanneer je meerdere records tegelijk wilt bekijken is een weergave in tabelvorm wel gemakkelijk. Maar wanneer je afzonderlijke records wilt bekijken of gegevens wilt presenteren met een aangepaste indeling, dan kun je beter een formulier gebruiken.</p>
+<p>Een formulier biedt vaak de handigste indeling voor het invoeren, wijzigen en bekijken van afzonderlijke records in een database. Wanneer je een formulier ontwerpt geef je hierin aan hoe de gegevens moeten worden weergegeven. Bij het openen van het formulier worden de gewenste gegevens opgehaald uit de onderliggende tabellen en daarna volgens het gemaakte formulierontwerp weergegeven. Desgewenst kun je taken automatiseren door macro’s of modules in de formulieren te gebruiken.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-form"></span>
+<img src="images/intro/example-form.png" alt="Voorbeeld van een formulier voor het invoeren of wijzigen van klantgegevens. Merk op dat voor het invoeren van de Regio is een keuzelijst aanwezig." width="60%"><p class="caption">
+Figuur 1.4: Voorbeeld van een formulier voor het invoeren of wijzigen van klantgegevens. Merk op dat voor het invoeren van de Regio is een keuzelijst aanwezig.
+</p>
+</div>
+<p>In Access-formulieren kun je keuzelijsten opnemen met te kiezen waarden. Ook kun je een bericht laten weergeven wanneer een onjuiste waarde wordt ingevoerd. Bovendien kun je gegevens automatisch laten invullen en kun je de resultaten van berekeningen automatisch laten weergeven. Met een druk op de muisknop kun je overschakelen van de formulierweergave naar de gegevensbladweergave, een weergave in tabelvorm van dezelfde set records.</p>
+</div>
+<div id="intro-report" class="section level3 unnumbered">
+<h3>Rapporten<a class="anchor" aria-label="anchor" href="#intro-report"><i class="fas fa-link"></i></a>
+</h3>
+<p>Met een rapport kun je gegevens presenteren op papier of scherm en kun je totalen en eindtotalen van een verzameling records berekenen en weergeven.</p>
+<p>Via rapporten kun je gegevens met allerlei opmaken en stijlen afdrukken: gegevens uit velden, tekst die je definieert, totalen en het resultaat van berekeningen. Je kunt grafieken, figuren of andere objecten opnemen en je kunt adresetiketten maken.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-report"></span>
+<img src="images/intro/example-report.png" alt="Voorbeeld van een deel van een rapport." width="60%"><p class="caption">
+Figuur 1.5: Voorbeeld van een deel van een rapport.
+</p>
+</div>
+<div class="info">
+<p><strong>Besturingselementen</strong></p>
+<p>De elementen van een formulier of rapport die ervoor zorgen dat gegevens worden weergegeven of afgedrukt, heten besturingselementen. Voorbeelden van besturingselementen zijn knoppen, keuzelijsten en keuzevakjes.</p>
+<p>Met besturingselementen kun je onder andere het volgende weergeven: gegevens in een veld, de resultaten van een berekening, woorden voor een titel of bericht, een grafiek of een figuur of een ander object, zelfs een ander formulier of rapport.</p>
+</div>
+</div>
+<div id="intro-macro" class="section level3 unnumbered">
+<h3>Macro’s<a class="anchor" aria-label="anchor" href="#intro-macro"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een macro is een verzameling van een of meer acties, zoals bijvoorbeeld het openen van een formulier of het afdrukken van een rapport. Met macro’s kun je veel voorkomende taken automatiseren. Je kunt macro’s op verschillende plaatsen gebruiken. Je kunt een macro bijvoorbeeld verbinden met een formulier, rapport, besturingselement, toetsencombinatie of opdracht in een menu. Om een macro te maken hoef je geen programmeerervaringen te hebben.</p>
+</div>
+<div id="intro-module" class="section level3 unnumbered">
+<h3>Modules<a class="anchor" aria-label="anchor" href="#intro-module"><i class="fas fa-link"></i></a>
+</h3>
+<p>Met Access beschik je over een ingebouwde programmeertaal, Visual Basic for Applications (<span class="term">VBA</span>). Een module is een verzameling VBA procedures waarmee je complexere databasetaken kunt automatiseren. Voor het maken van een VBA module heb je wel wat programmeerervaring nodig.</p>
+</div>
+</div>
+<div id="intro-start" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Taak: Access opstarten<a class="anchor" aria-label="anchor" href="#intro-start"><i class="fas fa-link"></i></a>
+</h2>
+<p>De mogelijkheden om Access op te starten hangen af van de manier waarop het systeem geïnstalleerd is. Deze cursus gaat uit van een standaard installatie van Microsoft Office 365 NL op een systeem met Windows 10 NL. Op bijna alle computers kan Access via de startknop van Windows gestart worden en deze methode wordt hierna beschreven.</p>
+<div class="practice">
+<p>Kies <span class="uicontrol">Start &gt; Access</span>.</p>
+<p>Hierna verschijnt het opstartscherm van Access. In het linkerdeel staan de laatst geopende bestanden en in het rechterdeel een overzicht van beschikbare sjablonen.</p>
+</div>
+</div>
+<div id="intro-close" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Taak: Access afsluiten<a class="anchor" aria-label="anchor" href="#intro-close"><i class="fas fa-link"></i></a>
+</h2>
+<p>Om een database af te sluiten kies je <span class="uicontrol">Bestand &gt; Sluiten</span>.</p>
+<p>Om Access zelf af te sluiten klik je op de sluitknop van het programmavenster. Dit is een knop met een <span class="uicontrol">X</span> in de rechterbovenhoek van het venster.</p>
+<div class="practice">
+<p>Sluit het programmavenster van Access.</p>
+<p>In tegenstelling tot de meeste andere programma’s hoef je in Access een database niet op te slaan. Alle gemaakte wijzigingen worden automatisch bewaard.</p>
+</div>
+</div>
+<div id="intro-database-open" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Taak: Database openen<a class="anchor" aria-label="anchor" href="#intro-database-open"><i class="fas fa-link"></i></a>
+</h2>
+<p>Veel gebruikte methodes om een reeds bestaande Access database te openen zijn:</p>
+<ul>
+<li>Dubbelklikken op een Accessbestand in de Windows verkenner.</li>
+<li>In het opstartscherm van Access op een recent bestand klikken of kiezen voor <span class="uicontrol">Andere bestanden openen</span>.</li>
+<li>Wanneer Access reeds geopend is kiezen voor <span class="uicontrol">Bestand &gt; Openen</span>.</li>
+</ul>
+<div class="practice">
+<p>Open via een van de hiervoor genoemde methodes het bestand <span class="filepath">snoep365.accdb</span>.</p>
+</div>
+</div>
+<div id="intro-access-window" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> Access venster<a class="anchor" aria-label="anchor" href="#intro-access-window"><i class="fas fa-link"></i></a>
+</h2>
+<p>Het programmavenster van Access bestaat van boven naar beneden uit een gedeelte voor de besturing van het programma, het werkblad voor de documentvensters en de statusbalk.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:access-window"></span>
+<img src="images/common/access-window.png" alt="Programmavenster Access." width="75%"><p class="caption">
+Figuur 1.6: Programmavenster Access.
+</p>
+</div>
+<dl>
+<dt>Bestand</dt>
+<dd>Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Onder deze knop zitten een aantal basisopdrachten die je bij alle Office programma’s terugvindt zoals het openen, opslaan en afdrukken van bestanden. Ook zit hieronder de belangrijke opdracht <span class="uicontrol">Opties</span>, waarmee je een aantal instellingen voor Access kunt regelen.
+</dd>
+<dt>Werkbalk Snelle Toegang</dt>
+<dd>In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Access staan hierop drie knoppen:
+</dd>
+<dd><ul>
+<li>
+<img src="images/common/button-save.png" alt="Opslaan"> - Opslaan</li>
+</ul></dd>
+<dd><ul>
+<li>
+<img src="images/common/button-undo.png" alt="Ongedaan maken"> - Ongedaan maken</li>
+</ul></dd>
+<dd><ul>
+<li>
+<img src="images/common/button-redo.png" alt="Opnieuw"> - Opnieuw</li>
+</ul></dd>
+<dt>Lint</dt>
+<dd>Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals Start, Maken, …. Elk tabblad heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde contextuele tabbladen. Een voorbeeld hiervan is het tabblad Tabel, welke alleen verschijnt wanneer een tabel geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
+</dd>
+</dl>
+<div class="info">
+<p>Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met de toetscombinatie <span class="uicontrol">Ctrl + F1</span>. Je ziet dan alleen de tabs. Opnieuw indrukken van deze toetscombinatie brengt het volledige lint weer terug.</p>
+</div>
+<dl>
+<dt>Tabbladen</dt>
+<dd>Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen commando’s. Sommige tabs worden alleen maar getoond wanneer je ze nodig hebt.
+</dd>
+<dt>Groepen</dt>
+<dd>Op elk tabblad staan groepen van bij elkaar behorende opdrachten. De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl <img src="images/common/button-dialogwindow.png"> in de rechterbenedenhoek van de groep klikken.
+</dd>
+<dt>Opdrachtknop</dt>
+<dd>Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk aangebracht. Het kan ook zijn dat er eerst een keuzelijst of een dialoogvenster verschijnt.
+</dd>
+<dt>Navigatievenster</dt>
+<dd>Het navigatiedeelvenster staat aan de linkerkant en hierin zijn alle objecten van de database te vinden.
+</dd>
+<dt>Documentvensters</dt>
+<dd>Wanneer een object wordt geopend dan verschijnt deze in een eigen documentvenster.
+</dd>
+</dl>
+</div>
+<div id="intro-database-new" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> Nieuwe database venster<a class="anchor" aria-label="anchor" href="#intro-database-new"><i class="fas fa-link"></i></a>
+</h2>
+<p>Aan het maken van een database hoort eigenlijk een proces van informatieanalyse vooraf te gaan, gevolgd door een normalisatieproces. Dan is de structuur van de database bekend en weet je welke tabellen met welke velden je moet maken. Daarom is het maken van een nieuwe database geen doel van deze cursus. Wanneer je weet wat er gemaakt moet worden is het maken van een database niet moeilijk meer. Hierna volgen een paar richtlijnen hoe je te werk zou kunnen gaan.</p>
+<p>Het startpunt is het opstartscherm van Access. In het linkerdeel staan de laatst geopende bestanden en in het rechterdeel een overzicht van beschikbare sjablonen.</p>
+<p>Allereerst kun je Access de opdracht geven om een lege nieuwe database aan te maken door te klikken op het sjabloon <span class="uicontrol">Lege database</span>. In het dan volgende scherm moet je de naam en opslagplek van de nieuwe database opgeven. Vervolgens maakt Access deze database en maakt tegelijk een nieuwe lege tabel. Het maken van tabellen komt verderop in deze cursus aan bod.</p>
+<p>Access voorziet in een aantal sjablonen voor veel voorkomende soorten databases, zie de knoppen in het opstartscherm. Wanneer de nieuw te maken database in de buurt komt van deze sjablonen dan kun je hier gebruik van maken. Door te klikken op een sjabloon wordt een database inclusief tabellen met velden en vaak ook een aantal query’s, formulieren en rapporten aangemaakt. Daarna kun je de ontwerpen aanpassen. Dit is soms handiger en sneller dan alles handmatig vanaf nul te beginnen.</p>
+</div>
+<div id="intr-database-saveas" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> Taak: Database opslaan als<a class="anchor" aria-label="anchor" href="#intr-database-saveas"><i class="fas fa-link"></i></a>
+</h2>
+<p>Soms kan het wenselijk zijn om meerdere versies van een bestand te hebben. In dat geval kun je het bestand onder een andere naam bewaren via <span class="uicontrol">Database opslaan als</span>. Ook wanneer je het bestand in een ouder Access formaat wilt opslaan kun je deze menukeuze gebruiken.</p>
+<p>In deze cursus wordt een database met de bestandsnaam snoep365.accdb gebruikt. Omdat Access alle wijzigingen die je aanbrengt onmiddellijk zonder te vragen opslaat, beschik je al vrij snel niet meer over de originele database. Het is daarom aan te bevelen om te beginnen met eerst een kopie van de originele database snoep365.accdb te maken, voordat je met deze database gaat werken. Je kunt dat op bestandsniveau doen met de Windows verkennner, maar je kunt ook gebruik maken van de <span class="uicontrol">Opslaan als</span> opdracht in Access.</p>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open de database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Kies <span class="uicontrol">Bestand &gt; Opslaan als</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:saveas"></span>
+<img src="images/common/saveas.png" alt="Dialoogvenster Opslaan als" width="60%"><p class="caption">
+Figuur 1.7: Dialoogvenster Opslaan als
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Selecteer <span class="uicontrol">Access-database (*.accdb)</span> en klik <span class="uicontrol">Opslaan als</span>.</p></li>
+<li><p>Blader in het dialoogvenster naar de opslagplaats, specificeer de naam van het nieuwe bestand en klik op <span class="uicontrol">Opslaan</span>.</p></li>
+</ol>
+</div>
+<div id="intro-database-backup" class="section level3 unnumbered">
+<h3>Backup maken<a class="anchor" aria-label="anchor" href="#intro-database-backup"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een backup is in feite niets anders dan een kopie van een database die je op een bepaald moment gemaakt hebt. In feite is dit hetzelfde proces als met de <span class="uicontrol">Opslaan als</span> opdracht. Toch biedt Access nog een backup functie aan.</p>
+<p>Kies <span class="uicontrol">Bestand &gt; Opslaan als</span>. Selecteer in het venster <span class="uicontrol">Back-up van database</span> en klik <span class="uicontrol">Opslaan als</span>. Je kunt daarna de opslagplaats en naam specificeren. Standaard is de voorgestelde naam de naam van het originele bestand, aangevuld met de actuele datum.</p>
+<div class="info">
+<p>Wanneer je gegevens of objecten terugzet vanuit het backup bestand, wil je weten van welke database de backup gemaakt is, alsmede wanneer deze gemaakt is. Het is daarom aan te bevelen om de voorgestelde naam te gebruiken.</p>
+</div>
+</div>
+</div>
+<div id="intro-access-fileformats" class="section level2" number="1.8">
+<h2>
+<span class="header-section-number">1.8</span> Bestandsformaten van Access<a class="anchor" aria-label="anchor" href="#intro-access-fileformats"><i class="fas fa-link"></i></a>
+</h2>
+<p>Een overzicht van de nieuwe en oude bestandsformaten van Access.</p>
+<dl>
+<dt>ACCDB</dt>
+<dd>Dit is het standaardformaat voor bestanden gemaakt met Access 2007 en later.
+</dd>
+</dl>
+<div class="warning">
+<p>Omdat de bestandsformaten gelijk zijn kun je bijvoorbeeld in Access 2007 een database openen die met Access 2016 gemaakt is. Echter nieuwe functies die in de oudere versies niet beschikbaar zijn zullen niet werken. Hierdoor kunnen problemen optreden.</p>
+</div>
+<dl>
+<dt>MDB</dt>
+<dd>Dit is het bestandsformaat voor Access 2003 en eerder. Een dergelijk bestand kan ook door Access 2007, 2010, 2013 en 2016 geopend worden. Ook kan Access 2016 een database in dit oudere bestandsformaat opslaan.|
+</dd>
+</dl>
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    $(solveme[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    $(selects[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  update_total_correct();
+}
+
+</script><div class="chapter-nav">
+<div class="prev"><a href="voorwoord.html">Voorwoord</a></div>
+<div class="next"><a href="explore.html"><span class="header-section-number">2</span> Database SNOEP verkennen</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Op deze pagina</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introductie"><span class="header-section-number">1</span> Beginnen met Access</a></li>
+<li>
+<a class="nav-link" href="#intro-about"><span class="header-section-number">1.1</span> Wat zijn databases?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#intro-table">Tabellen</a></li>
+<li><a class="nav-link" href="#intro-query">Query’s</a></li>
+<li><a class="nav-link" href="#intro-form">Formulieren</a></li>
+<li><a class="nav-link" href="#intro-report">Rapporten</a></li>
+<li><a class="nav-link" href="#intro-macro">Macro’s</a></li>
+<li><a class="nav-link" href="#intro-module">Modules</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#intro-start"><span class="header-section-number">1.2</span> Taak: Access opstarten</a></li>
+<li><a class="nav-link" href="#intro-close"><span class="header-section-number">1.3</span> Taak: Access afsluiten</a></li>
+<li><a class="nav-link" href="#intro-database-open"><span class="header-section-number">1.4</span> Taak: Database openen</a></li>
+<li><a class="nav-link" href="#intro-access-window"><span class="header-section-number">1.5</span> Access venster</a></li>
+<li><a class="nav-link" href="#intro-database-new"><span class="header-section-number">1.6</span> Nieuwe database venster</a></li>
+<li>
+<a class="nav-link" href="#intr-database-saveas"><span class="header-section-number">1.7</span> Taak: Database opslaan als</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#intro-database-backup">Backup maken</a></li></ul>
+</li>
+<li><a class="nav-link" href="#intro-access-fileformats"><span class="header-section-number">1.8</span> Bestandsformaten van Access</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Laatste productiedatum 01 januari 2022.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Dit boek is gemaakt met de <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

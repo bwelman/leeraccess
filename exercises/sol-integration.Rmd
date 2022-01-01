@@ -1,0 +1,23 @@
+### intg001 - Standaardbrief {#sol-intg001}
+
+Maak allereerst de query. Kies tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Voeg toe de tabellen [Klanten]{.varname}, [Orders]{.varname}, [Orderdetails]{.varname}, [Dozen]{.varname}, [Doosdetails]{.varname} en [Bonbons]{.varname}. Voeg uit de tabel [Klanten]{.varname} toe de velden [Achternaam]{.varname}, [Voornaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname} en [Plaats]{.varname}. Voeg uit de tabel [Bonbons]{.varname} toe het veld [Chocoladetype]{.varname}. Geef bij dit laatste veld als criterium op `Wit`. Stel via het Eigenschappenvenster voor de [Queryeigenschappen]{.uicontrol} de waarde van de eigenschap [Unieke waarden]{.uicontrol} in op [Ja]{.uicontrol. Bewaar de query onder de naam [intg001]{.varname} en sluit deze.
+
+Geef een rechtermuisklik op de naam van de zojuist gemaakte query en kies [Exporteren > Word Merge]{.uicontrol}. Kies een nieuw document maken waaraan de gegevens gekoppeld moeten worden.
+
+Voeg de gewenste samenvoegvelden in en typ de overige tekst in, bijvoorbeeld zoals hierna is aangegeven:
+
+```
+<<Voornaam>> <<Achternaam>>
+<<Straat>>
+<<Postcode>>  <<Plaats>>
+
+Beste <<Voornaam>>,
+Graag willen we je een aanbieding doen voor onze nieuwste doos ...
+```
+
+Handel hierna het samenvoegen verder op de bekende wijze af.
+
+### intg002 - Export klantgegevens {#sol-intg002}
+
+1.  Geef een rechter muisklik op de tabel [Klanten]{.varname} en kies [Exporteren > Excel]{.uicontrol}.
+2.  Geef een bestandsnaam en pad op en selecteer de optie [Gegevens exporteren met opmaak en indeling]{.uicontrol}.

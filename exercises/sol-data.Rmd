@@ -1,0 +1,10 @@
+### data001 - Bonbons toevoegen {#sol-data001}
+
+Open het formulier [Bonbons]{.varname}. Klik op de knop voor een nieuw record en voeg de bonbons toe.
+
+### data002 - Order toevoegen {#sol-data002}
+
+Zoek eerst in de tabel [Klanten]{.varname} de klantcode op van Rebecca Smit. Dit is `11`. Open daarna het formulier [Orders]{.varname}. Ga naar de laatste order. Deze heeft ordercode `967`. De nieuwe order krijgt daarom ordercode `968`. Klik op de knop [Nieuw Record]{.uicontrol}. Voeg in ordercode `968`, de orderdatum en klantcode `11` in. Voeg onderaan in het subformulier de te bestellen dozen (KERS en MARS) in.
+
+Om de dozen MARS te verwijderen open je de tabel [Orderdetails]{.varname}, ga naar de laatste order met ordercode `968`. Selecteer de orderregel met Mars, rechter muisknop en dan Record verwijderen.
+

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>9 Hulpmiddelen | Leer Microsoft Access</title>
+<meta name="author" content="Ben Welman">
+<meta name="description" content="Tabellen kunnen analyseren en inconsistenties opsporen. Het kunnen defragmenteren en repareren van databases.  9.1 Over hulpmiddelen Access kent een aantal hulpmiddelen om de database te...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="9 Hulpmiddelen | Leer Microsoft Access">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Tabellen kunnen analyseren en inconsistenties opsporen. Het kunnen defragmenteren en repareren van databases.  9.1 Over hulpmiddelen Access kent een aantal hulpmiddelen om de database te...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="9 Hulpmiddelen | Leer Microsoft Access">
+<meta name="twitter:description" content="Tabellen kunnen analyseren en inconsistenties opsporen. Het kunnen defragmenteren en repareren van databases.  9.1 Over hulpmiddelen Access kent een aantal hulpmiddelen om de database te...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Source%20Sans%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Source%20Code%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Bitter-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1284000-4', 'auto');
+      ga('send', 'pageview');
+
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/textbook.css">
+<link rel="stylesheet" href="include/elements.css">
+<link rel="stylesheet" href="include/webex.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Ga naar de hoofdinhoud</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Leer Microsoft Access</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Toon inhoudsopgave</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Zoeken" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Inhoudsopgave</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welkom</a></li>
+<li><a class="" href="voorwoord.html">Voorwoord</a></li>
+<li class="book-part">Basis</li>
+<li><a class="" href="introductie.html"><span class="header-section-number">1</span> Beginnen met Access</a></li>
+<li><a class="" href="explore.html"><span class="header-section-number">2</span> Database SNOEP verkennen</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">3</span> Gegevens toevoegen/wijzigen</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabellen</a></li>
+<li><a class="" href="queries.html"><span class="header-section-number">5</span> Query’s</a></li>
+<li><a class="" href="forms.html"><span class="header-section-number">6</span> Formulieren</a></li>
+<li><a class="" href="reports.html"><span class="header-section-number">7</span> Rapporten</a></li>
+<li class="book-part">Gevorderd</li>
+<li><a class="" href="integration.html"><span class="header-section-number">8</span> Integratie met Office</a></li>
+<li><a class="active" href="tools.html"><span class="header-section-number">9</span> Hulpmiddelen</a></li>
+<li><a class="" href="macros.html"><span class="header-section-number">10</span> Macro’s</a></li>
+<li><a class="" href="normalization.html"><span class="header-section-number">11</span> Normaliseren</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tools" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Hulpmiddelen<a class="anchor" aria-label="anchor" href="#tools"><i class="fas fa-link"></i></a>
+</h1>
+<div class="intro">
+<ul>
+<li>Tabellen kunnen analyseren en inconsistenties opsporen.</li>
+<li>Het kunnen defragmenteren en repareren van databases.</li>
+</ul>
+</div>
+<div id="tools-about" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Over hulpmiddelen<a class="anchor" aria-label="anchor" href="#tools-about"><i class="fas fa-link"></i></a>
+</h2>
+<p>Access kent een aantal hulpmiddelen om de database te analyseren, problemen op te sporen en te corrigeren. In dit onderwerp komt het volgende aan bod:</p>
+<ul>
+<li>Analyse van een tabel</li>
+<li>Comprimeren van een database</li>
+</ul>
+<p>Andere hulpmiddelen binnen Access:</p>
+<ul>
+<li>Analyseren van prestaties</li>
+<li>Documenteren van de database</li>
+<li>Versleutelen met een wachtwoord</li>
+<li>Het maken van een schakelbord</li>
+</ul>
+</div>
+<div id="tools-analyse-tables" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Taak: Analyse van een tabel<a class="anchor" aria-label="anchor" href="#tools-analyse-tables"><i class="fas fa-link"></i></a>
+</h2>
+<p>Wanneer dezelfde informatie vaker dan één keer wordt opgeslagen dan wordt dit <span class="term">redundantie</span> genoemd. Dat is onwenselijk, want wanneer de informatie wijzigt, moet deze wijziging op al die plaatsen worden doorgevoerd. Als je dat niet doet dan wordt de database <span class="term">inconsistent</span>.</p>
+<p>Access beschikt over het hulpmiddel <span class="uicontrol">Tabelanalyse</span> om redundante gegevens op te sporen en een tabel met redundante gegevens op te splitsen in meerdere, gerelateerde tabellen zodat de informatie efficiënter wordt opgeslagen. Dit proces wordt ook wel normalisatie genoemd.</p>
+<p>Je kunt opgeven welke tabellen je de wizard wilt laten maken of je kunt jouw tabel door de wizard laten normaliseren. Nadat je de voorgestelde nieuwe tabellen hebt opgegeven, helpt de wizard de gegevens te saneren die in de oorspronkelijke tabel op inconsistente wijze werden herhaald. In de laatste stap kun je een query maken waarmee alle informatie in de gesplitste tabellen kan worden weergegeven in een enkel gegevensblad dat overeenkomt met de oorspronkelijke tabel.</p>
+<p>In de afbeelding hierna is een voorbeeld van een tabel <span class="varname">Contacts</span> te zien. Hierin is te zien dat veel gegevens meervoudig worden opgeslagen. Deze tabel is niet dus niet genormaliseerd. Access kan deze tabel splitsen in twee tabellen zo dat zo min mogelijk gegevens meervoudig worden opgeslagen.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:tools-table-contacts"></span>
+<img src="images/tools/table-contacts.png" alt="Tabel contacten." width="75%"><p class="caption">
+Figuur 9.1: Tabel contacten.
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>Open het hulpbestand <span class="filepath">tools.accdb</span>.</p></li>
+<li><p>Selecteer de tabel <span class="varname">Contacts</span>.</p></li>
+<li><p>Kies [tab Hulpmiddelen voor databases &gt; Tabel analyseren (groep Analyseren)]{.uicontrol. De wizard <span class="wintitle">Tabelanalyse</span> verschijnt met wat algemene uitleg over dubbele informatie.</p></li>
+<li><p>Klik op <span class="uicontrol">Volgende</span>. Een nieuw scherm van de wizard Tabelanalyse verschijnt met algemene uitleg over hoe dit probleem opgelost kan worden.</p></li>
+<li><p>Klik op <span class="uicontrol">Volgende</span>. De wizard vraagt nu welke tabel de redundante gegevens bevat.</p></li>
+<li><p>Selecteer tabel <span class="varname">Contacts</span> en klik op <span class="uicontrol">Volgende</span>. Nu kun je aangeven wie de keuze van de velden bepaalt, de wizard of jij.</p></li>
+<li><p>Selecteer <span class="uicontrol">Zelf een keuze maken</span> en klik op <span class="uicontrol">Volgende</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:table-analyzer-wizard"></span>
+<img src="images/tools/table-analyzer-wizard.png" alt="Wizard tabelanalyse" width="75%"><p class="caption">
+Figuur 9.2: Wizard tabelanalyse
+</p>
+</div>
+<div class="info">
+<p>In deze stap kun je nieuwe tabellen maken en velden daaraan toevoegen.</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Selecteer veld <span class="varname">ContactName</span> en sleep deze uit de tabel. Er wordt een nieuwe tabel gemaakt met daarin het veld <span class="varname">ContactName</span>. De wizard vraagt nu om de naam van de nieuwe tabel.</p></li>
+<li><p>Geef de nieuwe tabel de naam <span class="varname">Contactpersons</span> en klik <span class="uicontrol">OK</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:table-generated"></span>
+<img src="images/tools/table-generated.png" alt="Nieuw aangemaakte tabel contactpersoon" width="75%"><p class="caption">
+Figuur 9.3: Nieuw aangemaakte tabel contactpersoon
+</p>
+</div>
+<div class="info">
+<ul>
+<li><p>Er is tevens een relatie tussen de twee tabellen aangemaakt.</p></li>
+<li><p>De plaats en de afmetingen van de getoonde tabellen kunnen gewijzigd worden door de tabel zelf of de randen te verslepen.</p></li>
+</ul>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Sleep de velden <span class="varname">CompanyName</span> en <span class="varname">Tel</span> naar de nieuwe tabel <span class="varname">Contactpersons</span>.</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:tables-splitted"></span>
+<img src="images/tools/tables-splitted.png" alt="Eindresultaat tabel Contactpersons" width="75%"><p class="caption">
+Figuur 9.4: Eindresultaat tabel Contactpersons
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li><p>Klik op <span class="uicontrol">Volgende</span>. In het scherm dat nu verschijnt kan een bijbehorende query gemaakt worden.</p></li>
+<li><p>Selecteer <span class="uicontrol">Geen query maken</span> en klik op <span class="uicontrol">Voltooien</span>. Er zijn nu drie tabellen: <span class="varname">Contacts</span> (oorspronkelijke tabel), <span class="varname">Contactpersons</span> (nieuwe tabel), <span class="varname">Tabel1</span> (nieuwe tabel)</p></li>
+</ol>
+<div class="warning">
+<p>Er kan een waarschuwingsvenster verschijnen met de mededeling dat de opdracht of actie <span class="uicontrol">OnderElkaar</span> niet beschikbaar is. Klik in dat geval op <span class="uicontrol">OK</span>.</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li><p>Sluit de tabellen en wanneer daarom gevraagd wordt, laat dan de gewijzigde indelingen opslaan.</p></li>
+<li><p>Verwijder de tabel <span class="varname">Contacts</span>.</p></li>
+<li><p>Wijzig de naam van <span class="varname">Tabel1</span> in <span class="varname">Contacts</span>.</p></li>
+</ol>
+</div>
+<div id="tools-compact-repair" class="section level2" number="9.3">
+<h2>
+<span class="header-section-number">9.3</span> Database comprimeren<a class="anchor" aria-label="anchor" href="#tools-compact-repair"><i class="fas fa-link"></i></a>
+</h2>
+<p>Bij het veelvuldig gebruik van een database waarbij je records toevoegt, wijzigt of verwijderd kunnen op den duur meerdere problemen optreden. Bij het openen van een database onderzoekt Access de conditie ervan en bij eventuele problemen wordt geprobeerd deze te repareren. Niet altijd worden de problemen ontdekt en in dat geval moet de gebruiker een actie tot comprimeren en herstellen starten.</p>
+<p>Comprimeren heeft ook invloed op automatische nummeringen in een Access-database. Als je records hebt verwijderd aan het einde van een tabel met een AutoNummering veld, wordt de waarde voor AutoNummering opnieuw ingesteld. Deze start dan bij het eerstvolgende hogere nummer bij het toevoegen van records.</p>
+<p>Om een database te comprimeren kies je <span class="uicontrol">tab Hulpmiddelen voor databases &gt; Database comprimeren en herstellen (groep Extra)</span>.</p>
+
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    $(solveme[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    $(selects[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  update_total_correct();
+}
+
+</script><div class="chapter-nav">
+<div class="prev"><a href="integration.html"><span class="header-section-number">8</span> Integratie met Office</a></div>
+<div class="next"><a href="macros.html"><span class="header-section-number">10</span> Macro’s</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Op deze pagina</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#tools"><span class="header-section-number">9</span> Hulpmiddelen</a></li>
+<li><a class="nav-link" href="#tools-about"><span class="header-section-number">9.1</span> Over hulpmiddelen</a></li>
+<li><a class="nav-link" href="#tools-analyse-tables"><span class="header-section-number">9.2</span> Taak: Analyse van een tabel</a></li>
+<li><a class="nav-link" href="#tools-compact-repair"><span class="header-section-number">9.3</span> Database comprimeren</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Laatste productiedatum 01 januari 2022.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Dit boek is gemaakt met de <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

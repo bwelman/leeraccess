@@ -1,0 +1,11 @@
+### expl001 - Selectie Bonbons {#sol-expl001}
+
+De selectie kan via filteren verkregen worden. Open de tabel [Bonbons]{.varname}. Maak een filter in de kolom [Chocoladetype]{.varname} en selecteer uitsluitend de waarden `Melk` en `Puur`. Klik in de kolom [Bonbonkosten]{.varname} in een veld met de waarde `0,3`. Kies dan [tab Start > Selectie (groep Sorteren en filteren) > Kleiner dan of gelijk aan € 0,30]{.uicontrol}.
+
+### expl002 - Selectie Klanten op plaatsnaam {#sol-expl002}
+
+Open de tabel [Klanten]{.varname}. Klik op de filterpijl aan het eind van de kolomkop [Plaats]{.varname} en selecteer uitsluitend `Almelo`, `Enschede`, `Hengelo`.
+
+### expl003 - Selectie Klanten op postcode {#sol-expl003}
+
+Open de tabel [Klanten]{.varname}. Klik in de kolom [Plaats]{.varname} in een vak met de waarde `Amsterdam`. Kies dan [tab Start > Selectie (groep Sorteren en filteren) > is gelijk aan Amsterdam]{.uicontrol}. Klik op de filterpijl aan het eind van de kolomkop [Postcode]{.varname} en kies [Tekstfilters > Begint met ...]{.uicontrol}. Typ daarna in `20` en klik op [OK]{.uicontrol}.

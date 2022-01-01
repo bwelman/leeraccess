@@ -1,0 +1,9 @@
+### intg001 - Standaardbrief {-#ex-intg001}
+
+De afdeling marketing wil de nieuwe doos alleen promoten onder de klanten die ooit een doos met bonbons met witte chocolade gekocht hebben. Maak de hiervoor benodigde query  en maak m.b.v. deze query een standaardbrief.
+
+Als een doos minstens 1 bonbon met witte chocolade bevat en deze doos is gekocht door een bepaalde klant dan willen we deze klant dus een standaardbrief sturen. Zorg ervoor dat een klant hoogstens één brief krijgt.
+
+### intg002 - Export klantgegevens {-#ex-intg002}
+
+Exporteer alle klantgegevens naar een Excelbestand.

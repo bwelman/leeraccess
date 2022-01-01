@@ -1,0 +1,20 @@
+bookdown::bs4_book:
+  css:
+  - include/textbook.css
+  - include/elements.css
+  - include/webex.css
+  includes:
+    in_header: include/google_analytics.html
+    after_body: include/webex.js
+  template: "S:/tools/bs4_book_nl.html"
+  theme:
+    primary: "#A4373A"
+    fg: "#2b2121"
+    bg: "#FFFAF0"             #Floral White
+    base_font:
+      google: "Source Sans Pro"
+    heading_font:
+      google: Bitter
+    code_font:
+      google: "Source Code Pro"
+  lib_dir: libs

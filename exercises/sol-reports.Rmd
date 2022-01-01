@@ -1,0 +1,62 @@
+### rapp001 - Verkoop per regio per doos {#sol-rapp001}
+
+1.  Kies [tab Maken > Wizard Rapport (groep Rapporten)]{.uicontrol}.
+2.  Kies als gegevensbron de query [Verkoop per regio per doos]{.varname} en voeg alle velden toe. Neem als groepeerniveau het veld [Regio]{.varname}. Sorteer oplopend op het veld [Doosnaam]{.varname}. Kies bij [Opties voor totalen]{.uicontrol} voor `Som`, laat weergeven [Details en totalen]{.uicontrol} en [Percentage van totaal]{.uicontrol.
+3.  Pas indien nodig in de ontwerpweergave de breedte van de vakken voor de bedragen aan zodat deze goed worden weergegeven.
+
+### rapp002 - Omzet per doos per regio {#sol-rapp002}
+
+1.  Kies [tab Maken > Wizard Rapport (groep Rapporten)]{.uicontrol}.
+2.  Kies als gegevensbron de query [Verkoop per regio per doos]{.varname} en voeg alle velden toe. Neem als groepeerniveau het veld [Doosnaam]{.varname}. Sorteer oplopend op het veld [Regio]{.varname}. Kies bij [Opties voor totalen]{.uicontrol} voor `Som`, laat weergeven [Details en totalen]{.uicontrol} en [Percentage van totaal]{.uicontrol}. Kies de indeling [Met interval]{.uicontrol} en pas de titel aan.
+3.  Pas indien nodig in de ontwerpweergave de lay-out van de vakken zodat alles goed wordt weergegeven.
+
+### rapp003 - Dooskosten met Bonbonkosten {#sol-rapp003}
+
+1.  Kies [tab Maken > Wizard Rapport (groep Rapporten)]{.uicontrol}.
+2.  Kies als gegevensbron de query [Bonbons per doos]{.varname} en voeg alle velden toe. Neem als groepeerniveau het veld [Doos]{.varname}. Sorteer oplopend op het veld [Bonbon]{.varname}. Kies bij [Opties voor totalen]{.uicontrol} voor `Som`, laat weergeven [Details en totalen]{.uicontrol}.
+3.  Wijzig indien nodig in de Ontwerpweergave via het Eigenschappenvenster de notatie van de vakken voor de som in Euro.
+
+### rapp004 - Dooskosten met Bonbonkosten gegroepeerd {#sol-rapp004}
+
+1.  Kopieer en plak [rapp003]{.varname} en noem de kopie [rapp004]{.varname}.
+2.  Open rapport [rapp004]{.varname} in [Ontwerpweergave]{.uicontrol}.
+3.  Klik op een lege plek in de sectie [Koptekst]{.uicontrol} en wijzig in [Eigenschappenvenster (tab Opmaak)]{.uicontrol} de eigenschap Nieuwe pagina in Voor sectie.
+4.  Verplaatst de tekst Som naar rechts en plaats een horizontaal lijntje boven de tekst en de waarde.
+
+### rapp005 - Omzet per doos per order per periode {#sol-rapp005}
+
+1.  Kopieer en plak [Omzet per doos per order per periode]{.varname} en noem de kopie [rapp005]{.varname}.
+2.  Open rapport [rapp005]{.varname} in [Ontwerpweergave]{.uicontrol}.
+3.  Verplaats het vak [Som([Bedrag])]{.varname} naar de sectie [Koptekst]{.uicontrol}, rechts van de Doosnaam.
+
+### rapp006 - Doos per pagina {#sol-rapp006}
+
+1.  Kopieer en plak [rapp005]{.varname} en noem de kopie [rapp006]{.varname}.
+2.  Open rapport [rapp006]{.varname} in [Ontwerpweergave]{.uicontrol}.
+3.  Zet de eigenschap Nieuwe pagina voor de Koptekst (Doosnaam) op de waarde Voor sectie.
+
+### rapp007 - Doosetiketten {#sol-rapp007}
+
+1.  Selecteer tabel [Dozen]{.varname}.
+2.  Kies [tab Maken > Etiketten (groep Rapporten)]{.uicontrol}.
+3.  Selecteer de juiste etiketsoort.
+4.  Stel lettertype, tekengrootte en tekengewicht in.
+5.  Voeg de velden en tekst toe volgens voorbeeld:
+
+```
+{Doosnaam}
+
+Code  : {Dooscode}
+Gewicht: {Gewicht} gram
+```
+
+6.  Sorteer oplopend op [Dooscode]{.varname}.
+
+### rapp008 - Jaarafzet dozen per regio {#sol-rapp008}
+
+Maak een query volgens het ontwerp zoals hierna afgebeeld.
+
+![](exercises/images/rapp008-query.png)
+
+Maak een rapport via [tab Maken > Wizard Rapport (groep Rapporten)]{.uicontrol}. Baseer het rapport op de query [Jaarafzet dozen per regio]{.varname}. Voel alle velden toe en groepeer op [Regio]{.varname}. Pas de lay-out verder naar wens aan.
+

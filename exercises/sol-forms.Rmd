@@ -1,0 +1,21 @@
+### form001 - Klanten {#sol-form001}
+
+1.  Selecteer tabel [Klanten]{.varname}.
+2.  Kies [tab Maken > Formulier (groep Formulieren)]{.uicontrol}.
+3.  Zet het formulier in de [Ontwerpweergave]{.uicontrol}, verwijder de indeling en breng de wijzigingen in de lay-out aan.
+
+### form002 - Bonbons in dozen {#sol-form002}
+
+1.  Kies [tab Maken > Wizard formulier]{.uicontrol}.
+2.  Selecteer tabel [Bonbons]{.varname} en voeg alle velden toe.
+3.  Selecteer tabel [Doosdetails]{.varname} en voeg toe de velden [Dooscode]{.varname} en [Hoeveelheid]{.varname}.
+4.  Formulier met subformulier, weergeven volgens [Bonbons]{.varname}.
+5.  Zet hoofdformulier in de ontwerpweergave, verwijder de schikking en pas de lay-out aan.
+
+### form003 - Dozen per klant {#sol-form003}
+
+1.  Maak eerst als volgt de query [Dozen per klant]{.varname}. Kies [tab Maken > Queryontwerp]{.uicontrol}. Voeg toe de tabellen [Klanten]{.varname}, [Orders]{.varname} en [Orderdetails]{.varname}. Voeg uit de tabel [Klanten]{.varname} de velden [Klantcode]{.varname} en [Achternaam]{.varname} toe. Voeg uit de tabel [Orderdetails]{.varname} de velden [Dooscode]{.varname} en [Hoeveelheid]{.varname} toe.
+2.  Kies [tab Maken > Wizard formulier]{.uicontrol}.
+3.  Selecteer tabel [Dozen]{.varname} en voeg alle velden toe.
+4.  Selecteer query [Dozen per klant]{.varname} en voeg de velden [Klantcode]{.varname}, [Achternaam]{.varname} en [Hoeveelheid]{.varname} toe.
+5.  Geef de gegevens weer volgens [Dozen]{.varname} in een hoofdformulier met subformulier.

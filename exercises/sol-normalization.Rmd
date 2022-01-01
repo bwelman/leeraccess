@@ -1,0 +1,258 @@
+### norm001 - Orders {#sol-norm001}
+
+[ORDER]{.term}([ordernr]{.key}, orderdatum, klantnr)
+
+[KLANT]{.term}([klantnr]{.key}, naam, adres, postcode, plaats)
+
+[ORDERREGEL]{.term}([ordernr]{.key}, [artnr]{.key}, aantal, prijs)
+
+[ARTIKEL]{.term}([artnr]{.key}, omschr, adviesprijs)
+
+In de tabel ORDERREGEL is een veld prijs opgenomen om het mogelijk te maken dat de prijs op de factuur afwijkt van de adviesprijs.
+
+
+### norm003 - Cursusoverzicht {#sol-norm003}
+
+[WERKNEMERS]{.term}([werknemernr]{.key}, naam, afd)
+
+[AFDELINGEN]{.term}([afd]{.key}, chef)
+
+[CURSUSSEN]{.term}([cursusnr]{.key}, cursusomschr)
+
+[DEELNAMES]{.term}([werknemernr]{.key}, [cursusnr]{.key}, [datum]{.key})
+
+### norm004 - Garage {#sol-norm004}
+
+[KLANT]{.term}([klantnaam, telnr]{.key}, adres, postcode, woonplaats)
+
+[AUTO]{.term}([kenteken]{.key}, klantnaam, telnr, merk, type, bouwjaar)
+
+[BEURT]{.term}([kenteken]{.key}, [datum]{.key}, [omschrijving]{.key}, arbeid, materialen)
+
+![](exercises/images/norm004-dsd.png)
+
+
+### norm005 - Klantcontacten {#sol-norm005}
+
+1.  Sleutel: [Achternaam]{.key}, [Voornaam]{.key}, [Bedrijf]{.key}
+2.  Het veld [Bedrijf]{.varname} uit de tabel [CONTACT]{.term} koppelen aan veld [Naam]{.varname} uit de tabel [KLANT]{.term}. De tabel [KLANT]{.term} is de primaire tabel en de tabel [CONTACT]{.term} is de secundaire tabel.
+3.  Verwijder veld [Bedrijf]{.varname} in de tabel [CONTACT]{.term} en voeg [Klantnr]{.varname} toe in deze tabel.
+
+
+### norm006 - Hoveniersbedrijf {#sol-norm006}
+
+[LEVERANCIER]{.term}([Levnaam]{.key}, adres, postcode, plaats)
+
+[ARTIKEL]{.term}([Artikelnaam]{.key}, Soort, Hand_Stoof)
+
+[AANBIEDING]{.term}([Levnaam]{.key}, [Artikelnaam]{.key}, Inkoopprijs)
+
+
+### norm007 - Onderdelen {#sol-norm007}
+
+[ONDERDEEL]{.term}([onderdeelnr]{.key}, onderdeelomschrijving, verkoopprijs)
+
+[GESCHIKTHEID]{.term}([onderdeelnr]{.key}, [autotype]{.key}, [beginbouwjaar]{.key}, eindbouwjaar)
+
+[VERKOOP]{.term}([autotype]{.key}, [bouwjaar]{.key}, verkoopaantal)
+
+[AUTO]{.term}([autotype]{.key}, type-omschrijving)
+
+[NORMGEG]{.term}([onderdeelnr]{.key}, [autotype]{.key}, normtijd, montagekosten)
+
+
+### norm008 - Relaties {#sol-norm008}
+
+1.  Het stagebureau van een school gebruikt deze twee tabellen voor de registratie van een stageplaats van studenten.
+2.  Een minimale uitvoering is: [STAGEPLAATS]{.term}([studentnr]{.key}, [bedrijfsnr]{.key}, [begindatum]{.key}, einddatum).
+
+
+### norm009 - Optimaliseren database {#sol-norm009}
+
+1.  Dat is mogelijk.
+2.  Dat is mogelijk.
+3.  Uitgaande van de veronderstelling dat de waarde van het veld klas de gehele klas betreft, dan kan dit niet. Een mogelijke oplossing is het opnemen van een veld waarmee je kunt aangeven welke helft van een klas geroosterd wordt.
+4.  Dat kan niet. Wanneer je twee klassen op hetzelfde moment, in hetzelfde lokaal, met dezelfde docent roostert, dan zou je twee verschillende records met dezelfde sleutelwaarde krijgen. Een mogelijke oplossing zou zijn om de sleutel uit te breiden met het veld klas.
+
+
+### norm010 - Sleutels en tabellen {#sol-norm010}
+
+1. Gegevenstype velden:
+
+|veld      |gegevenstype|
+|----------|------------|
+|persnr    |Numeriek    |
+|docnaam   |Tekst       |
+|docadres  |Tekst       |
+|postcode  |Tekst       |
+|woonplaats|Tekst       |
+|telnr     |Tekst       |
+|gebdat    |Datum/tijd  |
+
+2.  De sleutel is het veld [persnr]{.varname}. Dit is een primaire sleutel.
+3.  Lastige vraag, antwoord hangt af van waar je allemaal rekening mee moet houden. Je zult een aantal vragen moeten bedenken zoals "Kun je twee docenten hebben met dezelfde achternaam op hetzelfde adres, met hetzelfde telefoonnummer? De combinatie met unieke waarden kan de primaire sleutel zijn.
+
+
+### norm011 - Doe-het-zelf zaak {#sol-norm011}
+
+Constante gegevens
+: Naam van de doe-het-zelf zaak. Dit gegeven wordt niet opgenomen.
+
+Procesgegevens
+: `bedrag` = `aantal` * `prijs` (is niet op order vermeld) en `Totaalbedrag`. Deze procesgegevens worden niet opgenomen, wel [aantal]{.varname} en [prijs]{.varname}.
+
+Elementaire gegevens
+: ordernummer, orderdatum, leveranciernr, adres, postcode, plaats, artikelnr, omschrijving, aantal, prijs, leverdatum, inkoper.
+
+0 NV
+: [ORDER]{.term}([ordernr]{.key}, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper, RG[artikelnr, omschrijving, aantal, prijs])
+
+
+1 NV
+: [ORDER]{.term}([ordernr]{.key}, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper)
+: [ORDERREGEL]{.term}([ordernr]{.key}, [artikelnr]{.key}, omschrijving, aantal, prijs)
+
+2 NV
+: [ORDER]{.term}([ordernr]{.key}, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper)
+: [ORDERREGEL]{.term}([ordernr]{.key}, [artikelnr]{.key}, aantal)
+: [ARTIKEL]{.term}([artikelnr]{.key}, omschrijving, prijs)
+
+3 NV
+: [ORDER]{.term}([ordernr]{.key}, orderdatum, leveranciernr, leverdatum, inkoper)
+: [ORDERREGEL]{.term}([ordernr]{.key}, [artikelnr]{.key}, aantal)
+: [ARTIKEL]{.term}([artikelnr]{.key}, omschrijving, prijs)
+: [LEVERANCIER]{.term}([leveranciernr]{.key}, adres, postcode, plaats)
+
+![](exercises/images/norm011-dsd.png)
+
+
+### norm012 - Vrachtbrief {#sol-norm012}
+
+Procesgegevens
+: `Totaalgewicht` = som van de afzonderlijke gewichten. Dit procesgegeven wordt niet opgenomen.
+
+Elementaire gegevens
+: vrachtnummer, datum, autonummer, kenteken, merk, laadvermogen, klantnr, naam, adres, plaats, colli, gewicht, chauffeur.
+
+
+0 NV
+: [VRACHT]{.term}([vrachtnummer]{.key}, datum, autonummer, kenteken, merk, laadvermogen, chauffeur, RG[klantnr, naam, adres, plaats, colli, gewicht])
+
+1 NV
+: [VRACHT]{.term}([vrachtnummer]{.key}, datum, autonummer, kenteken, merk, laadvermogen, chauffeur)
+: [VRACHTREGEL]{.term}([vrachtnummer]{.key}, [klantnr]{.key}, naam, adres, plaats, colli, gewicht)
+
+2 NV
+: [VRACHT]{.term}([vrachtnummer]{.key}, datum, autonummer, kenteken, merk, laadvermogen, chauffeur)
+: [VRACHTREGEL]{.term}([vrachtnummer]{.key}, [klantnr]{.key}, colli, gewicht)
+: [KLANT]{.term}([klantnr]{.key}, naam, adres, plaats)
+
+3 NV
+: [VRACHT]{.term}([vrachtnummer]{.key}, datum, kenteken, chauffeur)
+: [VRACHTREGEL]{.term}([vrachtnummer]{.key}, [klantnr]{.key}, colli, gewicht)
+: [KLANT]{.term}([klantnr]{.key}, naam, adres, plaats)
+: [VRACHTAUTO]{.term}([kenteken]{.key}, autonummer, merk, laadvermogen)
+
+
+![](exercises/images/norm012-dsd.png)
+
+
+### norm013 - Bestelbon {#sol-norm013}
+
+1. Procesgegevens zijn gegevens die afgeleid kunnen worden uit andere gegevens, vaak door een berekening. Op de bestelbon zijn de volgende procesgegevens aan te treffen:
+
+  + bedrag = prijs * aantal
+  + BTW bedrag = BTW percentage (afgeleid van btwcode) * bedrag
+  + Het subtotaal van de bedragen
+  + Het subtotaal van de BTW bedragen
+  + Het totaalbedrag
+
+2. Een herhalende (repeterende) groep is een groep van gegevens die vaker dan 1 keer voorkomen, die zich dus herhaalt.Op de bestelbon zijn de regels met daarin de bestellingen, herhalende groepen.
+
+Constante gegevens
+: Naam van de firma Datarex en het bankrekeningnummer. Van de betalingstermijn (hier 14 dagen) kan via de bon niet nagegaan worden of dit voor alle leveranciers hetzelfde is. In dat geval is het ook een constant gegeven. Verschilt de betalingstermijn per leverancier, dan is het een gegeven dat bij de leverancier hoort. Verder wordt het BTW percentage dat aan de btwcode gekoppeld is, als een constant gegeven beschouwd. Dit is ook maar de vraag of dit goed is, want btwpercentages kunnen in de tijd veranderen. Constante gegevens wordt niet opgenomen. En de betalingstermijn wordt ook als een constant gegeven beschouwd
+
+Procesgegevens
+: Zie hiervoor. Deze procesgegevens worden niet opgenomen.
+
+Elementaire gegevens
+: Bonnummer, Leveranciernummer, Naam, Adres, Plaats, artikelnummer, aantal, omschrijving, prijs, btwcode
+
+
+0 NV
+: [BON]{.term}([bonnummer]{.key}, leveranciernr, naam, adres, plaats, RG[artikelnr, aantal, omschrijving, prijs, btwcode])
+
+1 NV
+: [BON]{.term}([bonnummer]{.key}, leveranciernr, naam, adres, plaats)
+: [BONREGEL]{.term}([bonnummer]{.key}, [artikelnr]{.key}, aantal, omschrijving, prijs, btwcode)
+
+2 NV
+: [BON]{.term}([bonnummer]{.key}, leveranciernr, naam, adres, plaats)
+: [BONREGEL]{.term}([bonnummer]{.key}, [artikelnr]{.key}, aantal)
+: [ARTIKEL]{.term}([artikelnr]{.key}, omschrijving, prijs, btwcode)
+
+3 NV
+: [BON]{.term}([bonnummer]{.key}, leveranciernr)
+: [BONREGEL]{.term}([bonnummer]{.key}, [artikelnr]{.key}, aantal)
+: [ARTIKEL]{.term}([artikelnr]{.key}, omschrijving, prijs, btwcode)
+: [LEVERANCIER]{.term}([leveranciernr]{.key}, naam, adres, plaats)
+
+![](exercises/images/norm013-dsd.png)
+
+
+### norm014 - Boekingen {#sol-norm014}
+
+Procesgegevens
+: bedrag, totaal aantal en totaal bedrag Deze procesgegevens worden niet opgenomen.
+
+Elementaire gegevens
+: pasnr, klantnr, voornaam, achternaam, plaats, postcode, telefoon, datumuitgifte, datum, aantal, titel, theater, prijs
+
+0 NV
+: [PAS]{.term}([pasnr]{.key}, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon, RG[idnummer, datum, aantal, titel, theater, prijs])
+
+1 NV
+: [PAS]{.term}([pasnr]{.key}, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon)
+: [PASREGEL]{.term}([pasnr]{.key}, [idnummer]{.key}, datum, aantal, titel, theater, prijs)
+
+Aannames:
+
++ Een voorstelling kan in alle theaters draaien.
++ De prijs is een eigenschap van een voorstelling en daarom in alle theaters hetzelfde.
+
+2 NV
+: [PAS]{.term}([pasnr]{.key}, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon)
+: [PASREGEL]{.term}([pasnr, idnummer]{.key}, datum, aantal, theater)
+: [VOORSTELLING]{.term}([idnummer]{.key}, titel, prijs)
+
+3 NV
+: [PAS]{.term}([pasnr]{.key}, datumuitgifte, klantnr)
+: [PASREGEL]{.term}([pasnr]{.key}, [idnummer]{.key}, datum, aantal, theater)
+: [VOORSTELLING]{.term}([idnummer]{.key}, titel, prijs)
+: [KLANT]{.term}([klantnr]{.key}, voornaam, achternaam, adres, postcode, plaats, telefoon)
+
+
+![](exercises/images/norm014-dsd.png)
+
+
+### norm015 - Integratie {#sol-norm015}
+
+In verband met het Europese kampioenschap voetbal wil de NOS in samenwerking met een aantal kranten een klein geautomatiseerd informatiesysteem ontwikkelen. De bedoeling is de televisiekijkers en de krantenlezers zo goed mogelijk te informeren over het kampioenschap. Hiervoor zijn een aantal informatiebehoeftes opgesteld. Bepaal de tabellen met de velden die nodig zijn om in de informatiebehoefte te kunnen voorzien. Indien nodig kun je de eerder gemaakte tabellen uitbreiden met nieuwe velden.
+
+1. [LAND]{.term}landnaam, trainer)  
+   [SPELER]{.term}spelersnr, spelersnaam, landnaam)
+
+2. [LAND]{.term}landnaam, trainer)  
+   [BEGELEIDER]{.term}begeleidernaam, landnaam, functie)
+
+3. [SPELER]{.term}spelersnr, spelersnaam, landnaam, goals)
+
+4. [CLUB]{.term}clubnaam, clubland)  
+   [SPELER]{.term}spelersnr, spelersnaam, landnaam, goals)
+
+5. ![](exercises/images/norm015.png)
+
+### norm016 - Postcodes {#sol-norm016}
+
+1.  [Plaats]{.varname} is functioneel afhankelijk van [Postcode]{.varname}.
+2.  [Postcode]{.key}, [Huisnummer]{.key}

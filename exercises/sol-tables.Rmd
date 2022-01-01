@@ -1,0 +1,85 @@
+### tabl001 - Dubbele namen voorkomen {#sol-tabl001}
+
+Open de tabel [Leveranciers]{.varname} in de Ontwerpweergave. Verander bij het veld [Leverancier]{.varname} de eigenschap [Geïndexeerd]{.uicontrol} in [Ja (Geen duplicaten)]{.uicontrol}.
+
+### tabl002 - Tussenvoegsel in namen {#sol-tabl002}
+
+Er moet dan aan de tabel [Klanten]{.varname} een nieuw veld [Tussenvoegsel]{.varname} worden toegevoegd. In het veld [Achternaam]{.varname} komt dan alleen `Molen` te staan. In het veld [Tussenvoegsel]{.varname} komt `van de` te staan. Sorteren op [Achternaam]{.varname} geeft dan de gewenste weergave. Op een etiket kan dan op één regel achter elkaar de velden Voornaam [Tussenvoegsel]{.varname} en [Achternaam]{.varname} worden gezet.
+
+### tabl003 - Titelveld met keuzelijst {#sol-tabl003}
+
+Open de tabel [Klanten]{.varname} in de ontwerpweergave. Voeg een veld [Titel]{.varname} toe. Kies bij [Gegevenstype]{.uicontrol} voor [Wizard opzoeken…]{.uicontrol}. Geef bij het dan volgende dialoogscherm aan dat de waarden worden ingetypt. Er is maar 1 kolom nodig. Typ in deze kolom onder elkaar in: ing., ir., drs., mr., dr. Gebruik voor het bijschrift de tekst `Titel`.
+
+### tabl004 - Valutanotatie {#sol-tabl004}
+
+Open de tabel [Vervoer]{.varname} in de Ontwerpweergave, selecteer het veld [Vervoerskosten]{.varname} en wijzig de waarde van de eigenschap [Notatie]{.uicontrol} in `Euro`.
+
+### tabl005 - Samengestelde sleutel {#sol-tabl005}
+
+Open de tabel [Vervoer]{.varname} in de Ontwerpweergave. Selecteer de velden [ID vervoersbedrijf]{.varname} en [Aflever-provincie]{.varname}. Klik daarna op de knop [Primaire sleutel]{.uicontrol}.
+
+### tabl006 - Veld doelgroep met keuzelijst {#sol-tabl006}
+
+Open de tabel [Klanten]{.varname} in de ontwerpweergave. Voeg een veld [Doelgroep]{.varname} toe. Kies bij [Gegevenstype]{.uicontrol} voor [Wizard opzoeken…]{.uicontrol}. Geef bij het dan volgende dialoogscherm aan dat de waarden worden ingetypt. Er is maar 1 kolom nodig. Typ in deze kolom onder elkaar in: top klant, goede klant, kleine klant. Gebruik voor het bijschrift de tekst `Doelgroep`.
+
+### tabl007 - Relatie maken {#sol-tabl007}
+
+De tabellen [Doosdetails]{.varname} en [Bonbons]{.varname} hebben het veld [Bonboncode]{.varname} als gemeenschappelijk veld. [Bonboncode]{.varname} is in de tabel [Bonbons]{.varname} de sleutel; dus is [Bonbons]{.varname} de primaire tabel (de één kant). Een bepaalde [Bonboncode]{.varname} kan in de tabel [Doosdetails]{.varname} vaker voorkomen, dus is [Doosdetails]{.varname} de veel kant. Kies [tab Hulpmiddelen voor databases > Relaties (groep Relaties)]{.uicontrol}. Selecteer het veld [Bonboncode]{.varname} in de tabel [Bonbons]{.varname} en sleep deze naar het veld [Bonboncode]{.varname} in de tabel [Doosdetails]{.varname}. Het vakje [Referentiële integriteit afdwingen]{.uicontrol} inschakelen.
+
+### tabl008 - Tabel Werknemers {#sol-tabl008}
+
+Import van het Excelbestand.
+
+1.  Kies [tab Externe gegevens > Nieuwe gegevensbron (groep importeren en koppelen) > Uit bestand > Excel]{.uicontrol}.
+2.  Selecteer het bestand [Werknemers.xlsx]{.filepath} en kies voor [De brongegevens importeren in een nieuwe tabel in de huidige database]{.uicontrol}.
+3.  Selecteer de optie [Eerste rij bevat kolomkoppen]{.uicontrol}.
+4.  Wijzig het [Gegevenstype]{.uicontrol} van het veld [Werknemercode]{.varname} van [Dubbele precisie]{.uicontrol} in [Lange integer]{.uicontrol}.
+5.  Maak het veld [Werknemercode]{.varname} de primaire sleutel.
+6.  Geef de nieuwe tabel de naam [Werknemers]{.varname}.
+
+Uitbreiding van de tabel [Orders]{.varname}.
+
+1.  Open de tabel [Orders]{.varname} in de [Ontwerpweergave]{.uicontrol}.
+2.  Voeg een veld toe met de naam [Werknemercode]{.varname} met als [Gegevenstype]{.uicontrol} [Numeriek]{.uicontrol} en als Veldlengte Lange integer.
+
+Relatie tot stand brengen.
+
+1.  Kies [tab Hulpmiddelen voor databases > Relaties (groep Relaties)]{.uicontrol}.
+2.  Kies [tab Ontwerp > tabel weergeven (groep Relaties)]{.uicontrol} en voeg de tabel [Werknemers]{.varname} aan het raster toe.
+3.  Selecteer het veld [Werknemercode]{.varname} in de tabel [Werknemers]{.varname} en sleep deze naar het veld [Werknemercode]{.varname} in de tabel [Orders]{.varname}. Het vakje [Referentiële integriteit afdwingen]{.uicontrol} inschakelen.
+
+### tabl009 - Contactregistratie {#sol-tabl009}
+
+Er moet eigenlijk eerst een informatie-analyse gemaakt worden. Het resultaat hiervan moet opleveren welke velden in de tabel [Contacten]{.varname} moeten komen, wat de sleutel wordt en of er relaties met de andere tabellen moeten komen en zo ja via welke velden. Er kan dan ook niet één goed antwoord gegeven worden. Een mogelijk antwoord wordt in de afbeelding hierna weergegeven:
+
+![](exercises/images/tabl009-contacts.png)
+
+Aandachtspunten bij dit ontwerp en ook bij een ander ontwerp:
+
++ Van een klant zullen meerdere contacten vastgelegd moeten kunnen worden. Vandaar een sleutelveld [ContactID]{.varname} en de opname van het veld Klantcode (gegevenstype: Numeriek - Lange integer) waarmee een koppeling met de tabel Klanten gemaakt kan worden.
++ Wanneer de tabel Werknemers beschikbaar is, dan is het wel zo handig om bij de registratie van een contactmoment ook op te kunnen nemen door welke werknemer het contact is afgehandeld. In dat geval kan het veld Werknemercode (gegevenstype: Numeriek - Lange integer) opgenomen worden waarmee een koppeling met de tabel Werknemers gelegd kan worden.
++ Uit de informatie-analyse moet blijken welke waarden het veld SoortContact moet hebben. Voor dit veld kan dan het beste een opzoektabel gemaakt worden waarin de waarden zijn vastgelegd.
++ Voor de drie Datum/tijd velden moet een geschikte notatie gekozen worden, eventueel met een invoermasker.
++ Uit de informatie-analyse moet blijken hoe er met de berekening van de kosten wordt omgegaan. De afhandelingstijd kan berekend worden uit de begin- en eindtijd, is dus een procesgegeven en moet dus niet worden opgenomen in de tabel. Als het uurtarief een constante is, dan kan deze ook worden weggelaten uit de tabel. In dat geval wordt er dan niets over de kosten in de tabel opgenomen en wordt de berekening ervan uitgevoerd op het moment dat je dat wilt weten, bij een query of rapport. Varieert het uurtarief wel in de tijd, dan moet het uurtarief in de tabel worden opgenomen.
+
+### tabl010 - Klachtenregistratie {#sol-tabl010}
+
+Er moet eigenlijk eerst een informatie-analyse gemaakt worden. Het resultaat hiervan moet opleveren welke velden in de tabel Klachten moeten komen, wat de sleutel wordt en of er relaties met de andere tabellen moeten komen en zo ja via welke velden. Er kan dan ook niet één goed antwoord gegeven worden. Een minimaal ontwerp wordt in de afbeelding hierna weergegeven:
+
+![](exercises/images/tabl010-complaints.png)
+
+Voor het veld [SoortKlacht]{.varname} kan het beste een opzoektabel gemaakt worden waarin de waarden zijn vastgelegd.
+
+Er moet een relatie gelegd worden tussen deze tabel en de tabel [Orders]{.varname} via het veld [Ordercode]{.varname}. Het vakje [Referentiële integriteit afdwingen]{.uicontrol} inschakelen.
+
+Mogelijke nuttige uitbreidingen bij dit ontwerp zijn:
+
++ datum klacht.
++ een uitvoeriger omschrijving van de klacht.
++ een ja/nee veld of de klacht al is afgehandeld.
+
+### tabl011 - Referentiële integriteit {#sol-tabl011}
+
+1.  Kies [tab Hulpmiddelen voor database > Relaties (groep Relaties)]{.uicontrol}.
+2.  Geef een dubbelklik op de relatiepijl tussen twee tabellen
+3.  Indien nodig aanvinken [Referentiële integriteit afdwingen]{.uicontrol}.

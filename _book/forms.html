@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>6 Formulieren | Leer Microsoft Access</title>
+<meta name="author" content="Ben Welman">
+<meta name="description" content="Hoofdformulier, subformulier en gekoppeld formulier. Het werken met besturingselementen. Gegenereerde formulieren en handmatige aanpassingen. Het opmaken van een formulier. Berekeningen in een...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="6 Formulieren | Leer Microsoft Access">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Hoofdformulier, subformulier en gekoppeld formulier. Het werken met besturingselementen. Gegenereerde formulieren en handmatige aanpassingen. Het opmaken van een formulier. Berekeningen in een...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="6 Formulieren | Leer Microsoft Access">
+<meta name="twitter:description" content="Hoofdformulier, subformulier en gekoppeld formulier. Het werken met besturingselementen. Gegenereerde formulieren en handmatige aanpassingen. Het opmaken van een formulier. Berekeningen in een...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Source%20Sans%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Source%20Code%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Bitter-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1284000-4', 'auto');
+      ga('send', 'pageview');
+
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/textbook.css">
+<link rel="stylesheet" href="include/elements.css">
+<link rel="stylesheet" href="include/webex.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Ga naar de hoofdinhoud</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Leer Microsoft Access</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Toon inhoudsopgave</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Zoeken" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Inhoudsopgave</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welkom</a></li>
+<li><a class="" href="voorwoord.html">Voorwoord</a></li>
+<li class="book-part">Basis</li>
+<li><a class="" href="introductie.html"><span class="header-section-number">1</span> Beginnen met Access</a></li>
+<li><a class="" href="explore.html"><span class="header-section-number">2</span> Database SNOEP verkennen</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">3</span> Gegevens toevoegen/wijzigen</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabellen</a></li>
+<li><a class="" href="queries.html"><span class="header-section-number">5</span> Query’s</a></li>
+<li><a class="active" href="forms.html"><span class="header-section-number">6</span> Formulieren</a></li>
+<li><a class="" href="reports.html"><span class="header-section-number">7</span> Rapporten</a></li>
+<li class="book-part">Gevorderd</li>
+<li><a class="" href="integration.html"><span class="header-section-number">8</span> Integratie met Office</a></li>
+<li><a class="" href="tools.html"><span class="header-section-number">9</span> Hulpmiddelen</a></li>
+<li><a class="" href="macros.html"><span class="header-section-number">10</span> Macro’s</a></li>
+<li><a class="" href="normalization.html"><span class="header-section-number">11</span> Normaliseren</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="forms" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Formulieren<a class="anchor" aria-label="anchor" href="#forms"><i class="fas fa-link"></i></a>
+</h1>
+<div class="intro">
+<ul>
+<li>Hoofdformulier, subformulier en gekoppeld formulier.</li>
+<li>Het werken met besturingselementen.</li>
+<li>Gegenereerde formulieren en handmatige aanpassingen.</li>
+<li>Het opmaken van een formulier.</li>
+<li>Berekeningen in een formulier.</li>
+<li>Formulieren met een grafiek.</li>
+</ul>
+</div>
+<p>Formulieren tonen een georganiseerd en opgemaakt overzicht van velden in tabellen en query’s. Ze zijn erg belangrijk voor de gegevensinvoer.</p>
+<div id="forms-about" class="section level2" number="6.1">
+<h2>
+<span class="header-section-number">6.1</span> Over formulieren maken<a class="anchor" aria-label="anchor" href="#forms-about"><i class="fas fa-link"></i></a>
+</h2>
+<p>Gegevens kunnen rechtstreeks in de tabellen ingevoerd worden. In de praktijk gebeurt dat alleen bij zeer eenvoudige tabellen. Meestal worden formulieren gebruikt voor de gegevensinvoer. Eenvoudige formulieren zijn vaak gebaseerd op gegevens uit één tabel of query. Daarnaast heb je geavanceerde formulieren zoals een hoofd-subformulier of gekoppelde formulieren, waarvan de gegevens uit gerelateerde tabellen of query’s komen.</p>
+<p>Behalve dat je formulieren een aantrekkelijk uiterlijk kunt geven, is het belangrijker dat je hiermee mogelijkheden hebt om allerlei controles (validaties) op de invoer toe te passen. En verder kun je op formulieren zogenaamde besturingselementen plaatsen. Voorbeelden hiervan zijn keuzelijsten, selectievakjes, knoppen, toelichtende tekst, enz.</p>
+<p>Je kunt een formulier vanaf nul opbouwen, maar vaak laat je Access eerst automatisch een formulier genereren, of maak je gebruik van de <span class="uicontrol">Wizard Formulier</span>. Het dan ontstane formulier kun je daarna handmatig aanpassen.</p>
+<div id="forms-explanation-mainsub" class="section level3 unnumbered">
+<h3>Hoofd- en subformulieren<a class="anchor" aria-label="anchor" href="#forms-explanation-mainsub"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een <span class="term">subformulier</span> is een formulier dat in een ander formulier, het <span class="term">hoofdformulier</span>, is opgenomen. Subformulieren worden veel gebruikt wanneer je gegevens weer moet geven uit tabellen en query’s met een een-op-veel relatie. De gegevens van de een-kant staan dan in het hoofdformulier en de gegevens uit de veel-kant in het subformulier.</p>
+<div class="demo">
+<p>Hoofdformulier: Bevat de gegevens van een klant (afkomstig uit tabel <span class="varname">Klant</span>).</p>
+<p>Subformulier: Bevat de orders van de klant (afkomstig uit tabel <span class="varname">Orders</span>).</p>
+<p>Het hoofdformulier en subformulier zijn gekoppeld, zo dat in het subformulier alleen records worden weergegeven die gerelateerd zijn aan het record in het hoofdformulier.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customers-orders-1"></span>
+<img src="images/forms/f-customers-orders.png" alt="[Hoofdformulier Klanten met subformulier Orders." width="50%"><p class="caption">
+Figuur 6.1: [Hoofdformulier Klanten met subformulier Orders.
+</p>
+</div>
+</div>
+</div>
+<div id="forms-explanation-linked" class="section level3 unnumbered">
+<h3>Gekoppelde formulieren<a class="anchor" aria-label="anchor" href="#forms-explanation-linked"><i class="fas fa-link"></i></a>
+</h3>
+<p>Gekoppelde formulieren zijn losse formulieren die aan elkaar gerelateerd zijn. Een van de formulieren, ook <span class="term">hoofdformulier</span> genoemd, heeft een <span class="term">opdrachtknop</span> waarmee het andere formulier wordt geopend en de records tussen de twee formulieren worden gesynchroniseerd. Achter de knop zit programmacode (<span class="term">VBA</span>) die er voor zorgt dat het subformulier geopend wordt. Deze VBA code wordt automatisch door de Wizard gemaakt. Je hoeft dus niet te kunnen programmeren om hiermee te werken.</p>
+<p>Of je met gekoppelde formulieren of met opgenomen subformulieren werkt hangt meestal af van de methode van werken van de gebruiker. Wanneer je alleen de primaire gegevens van een klant nodig hebt, dan hoef je niet meteen alle orderinformatie van deze klant te zien. Dan is het vaak handiger om een knop op het formulier te hebben waarmee je de bijbehorende orderinformatie tevoorschijn kunt halen.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customerorders-linked-1"></span>
+<img src="images/forms/f-customerorders-linked.png" alt="Twee formulieren gekoppeld met gesynchroniseerde gegevens." width="75%"><p class="caption">
+Figuur 6.2: Twee formulieren gekoppeld met gesynchroniseerde gegevens.
+</p>
+</div>
+</div>
+</div>
+<div id="forms-controls-layout" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Besturingselementen en Indelingen<a class="anchor" aria-label="anchor" href="#forms-controls-layout"><i class="fas fa-link"></i></a>
+</h2>
+<div id="besturingselementen" class="section level4 unnumbered">
+<h4>Besturingselementen<a class="anchor" aria-label="anchor" href="#besturingselementen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Besturingselementen zijn onderdelen van een formulier of rapport waarmee je gegevens kunt invoeren, bewerken of weergeven. Een tekstvak is bijvoorbeeld het meest gebruikte besturingselement voor het weergeven van gegevens. Andere veelgebruikte besturingselementen zijn opdrachtknoppen, selectievakjes en keuzelijsten.</p>
+<p>Besturingselementen kunnen afhankelijk, niet-afhankelijk of berekend zijn:</p>
+<dl>
+<dt>Afhankelijk besturingselement</dt>
+<dd>Een besturingselement waarvan de gegevensbron een veld in tabel of een query is. Je gebruikt afhankelijke besturingselementen om waarden weer te geven die afkomstig zijn uit velden.
+</dd>
+<dt>Niet-afhankelijk besturingselement</dt>
+<dd>Een besturingselement zonder gegevensbron. Je gebruikt niet-afhankelijke besturingselementen voor het weergeven van informatie, afbeeldingen, lijnen, …
+</dd>
+<dt>Berekend besturingselement</dt>
+<dd>Een besturingselement waarvan de gegevensbron een expressie is en niet een veld.
+</dd>
+</dl>
+</div>
+<div id="indelingen" class="section level4 unnumbered">
+<h4>Indelingen<a class="anchor" aria-label="anchor" href="#indelingen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Indelingen zijn hulpmiddelen waarmee je de besturingselementen horizontaal en verticaal kunt uitlijnen. Indelingen zijn optioneel en worden meestal gebruikt om het formulier een uniform uiterlijk te geven. Indelingen zijn er in twee soorten: tabelvormig en gestapeld.</p>
+<dl>
+<dt>Tabelvormige indeling</dt>
+<dd>In tabelvormige indelingen worden besturingselementen gerangschikt in rijen en kolommen zoals in een werkblad, met labels aan de bovenkant.
+</dd>
+</dl>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:layout-controls-tabular"></span>
+<img src="images/forms/layout-controls-tabular.png" alt="Voorbeeld van een tabelvormige indeling" width="50%"><p class="caption">
+Figuur 6.3: Voorbeeld van een tabelvormige indeling
+</p>
+</div>
+<dl>
+<dt>Gestapelde indeling</dt>
+<dd>In gestapelde indelingen worden besturingselementen verticaal gerangschikt zoals op een papieren formulier, met een label links van elk besturingselement.
+</dd>
+</dl>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:layout-controls-stacked"></span>
+<img src="images/forms/layout-controls-stacked.png" alt="Voorbeeld van een gestapelde indeling." width="40%"><p class="caption">
+Figuur 6.4: Voorbeeld van een gestapelde indeling.
+</p>
+</div>
+</div>
+<div id="besturingselementen-bewerken" class="section level4 unnumbered">
+<h4>Besturingselementen bewerken<a class="anchor" aria-label="anchor" href="#besturingselementen-bewerken"><i class="fas fa-link"></i></a>
+</h4>
+<p>Omdat op formulieren vaak besturingselementen anders geordend moeten worden is het van belang om te weten hoe je besturingselementen kunt bewerken en verplaatsen. Veel bewerkingen kun je op meerdere besturingselementen tegelijk uitvoeren. Om besturingselementen te bewerken moet je deze altijd eerst selecteren. Zorg er ook voor dat altijd het Eigenschappenvenster zichtbaar is.</p>
+<ul>
+<li>
+<span class="term">selecteren</span>: Klik op het besturingselement.</li>
+<li>
+<span class="term">meervoudige selectie</span>: Klik met ingedrukte Shift toets op de besturingselementen, of sleep met de muis een rechthoekig kader om de besturingselementen.</li>
+<li>
+<span class="term">selectie opheffen</span>: Op een lege plek in het formulier klikken.</li>
+<li>
+<span class="term">verplaatsen</span>: Versleep het besturingselement via het vierkantje linksboven. Precieze plaats op het formulier kan via het <span class="uicontrol">Eigenschappenvenster</span> ingesteld wordt.</li>
+<li>
+<span class="term">afmetingen</span>: Versleep een van de formaatgrepen (in het midden of in de hoekpunten van de selectierechthoek). Precieze afmetingen kunnen via het <span class="uicontrol">Eigenschappenvenster</span> ingesteld worden.</li>
+<li>
+<span class="term">uitlijnen</span>: Via de opties bij <span class="uicontrol">tabblad Schikken &gt; groep uitlijning bepalen</span>.</li>
+<li>
+<span class="term">verwijderen</span>: Via de <span class="uicontrol">Delete</span> toets.</li>
+</ul>
+</div>
+</div>
+<div id="forms-autoform" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Taak: Automatisch formulier<a class="anchor" aria-label="anchor" href="#forms-autoform"><i class="fas fa-link"></i></a>
+</h2>
+<p>Wanneer nieuwe records aan een tabel moeten worden toegevoegd, is het meestal de bedoeling dat alle velden een waarde kunnen krijgen. Zo’n formulier moet dan wel alle velden van de tabel bevatten. De snelste manier om zo’n formulier te maken is door eerst de tabel te selecteren en via de opdracht <span class="uicontrol">Formulier</span> automatisch een formulier te laten genereren dat alle velden bevat. Daarna kan desgewenst handmatig het formulier worden aangepast.</p>
+<p>In deze taak wordt een formulier gemaakt waarmee een magazijnmedewerker de magazijnvoorraad van een doos kan wijzigen en eventueel aan kan geven of een doos al dan niet uit productie is. De andere doosgegevens moet de medewerker niet via dit formulier kunnen wijzigen. Het formulier moet er ongeveer als volgt uit gaan zien:</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-stock-in-trade-result"></span>
+<img src="images/forms/f-stock-in-trade-result.png" alt="Eindresultaat formulier inventaris." width="60%"><p class="caption">
+Figuur 6.5: Eindresultaat formulier inventaris.
+</p>
+</div>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Selecteer de tabel <span class="varname">Dozen</span>. Deze hoeft niet geopend te worden.</p></li>
+<li><p>Klik <span class="uicontrol">tab Maken &gt; Formulier (groep Formulieren)</span>. Het formulier wordt aangemaakt en geopend in de <span class="uicontrol">Indelingsweergave</span>.</p></li>
+</ol>
+<div class="info">
+<p>Als in Access een tabel wordt gevonden met een een-op-veel-relatie met de tabel of query waarmee je het formulier hebt gemaakt, dan wordt automatisch een subgegevensblad aan het formulier toegevoegd op basis van de gerelateerde tabel of query. Er worden geen gegevensbladen aan het formulier toegevoegd als er meer tabellen zijn die een een-op-veel-relatie hebben met de tabel op basis waarvan je het formulier hebt gemaakt.</p>
+<p>In dit geval is het formulier gebaseerd op de tabel <span class="varname">Dozen</span> en is er een een-op-veel relatie tussen de tabel <span class="varname">Dozen</span> en de tabel <span class="varname">Orderdetails</span>. Het subgegevensblad geeft alle records uit <span class="varname">Orderdetails</span> weer die betrekking hebben op het huidige record van tabel <span class="varname">Dozen</span>.</p>
+<p>Als je het subgegevensblad niet in het formulier wilt hebben, kun je dit in de <span class="uicontrol">Indelingsweergave</span> verwijderen door het gegevensblad te selecteren en op de <span class="uicontrol">Delete</span> toets te drukken.</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Wanneer het subgegevensblad aanwezig is, selecteer het dan en druk vervolgens op de <span class="uicontrol">Delete</span> toets om het te verwijderen.</p></li>
+<li><p>Schakel over naar de <span class="uicontrol">Ontwerpweergave</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-stock-in-trade-design"></span>
+<img src="images/forms/f-stock-in-trade-design.png" alt="Ontwerpweergave formulier inventaris." width="60%"><p class="caption">
+Figuur 6.6: Ontwerpweergave formulier inventaris.
+</p>
+</div>
+<div class="info">
+<p>Bij een formulier die op deze manier gemaakt wordt heeft elk veld twee besturingselementen: een <span class="uicontrol">Tekstvak</span> en een daaraan gekoppeld <span class="uicontrol">Bijschrift</span>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:textbox-label"></span>
+<img src="images/forms/textbox-label.png" alt="Tekstvak met gekoppeld vak bijschrift." width="60%"><p class="caption">
+Figuur 6.7: Tekstvak met gekoppeld vak bijschrift.
+</p>
+</div>
+<p>Alle bijschriften staan verticaal gerangschikt en alle tekstvakken ook. Dit heet een <span class="term">Gestapelde indeling</span>. Hierdoor kan een enkel besturingselement niet op een willekeurige plaats op het formulier gezet worden. Is dat wel de bedoeling, dan moet je eerst de indeling voor dat besturingselement verwijderen via <span class="uicontrol">tab Schikken &gt; Indeling verwijderen (groep Tabel)</span>.</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Selecteer de tekst <code>Dozen</code> in de <span class="uicontrol">Formulierkoptekst</span> en wijzig deze in <code>Inventaris</code>. Wijzig dan de eigenschappen <span class="uicontrol">Tekengewicht</span> in <code>vet</code> en <span class="uicontrol">Tekengrootte</span> in <code>20</code>.</li>
+</ol>
+<div class="info">
+<p>Het <span class="uicontrol">Eigenschappenvenster</span> staat meestal aan de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden via sneltoets <span class="uicontrol">F4</span>. En om hierin sneller een bepaalde eigenschap te vinden kun je deze alfabetisch sorteren met de knop <img src="../common/images/button-sort-ascending.png"> rechtsboven in het venster.</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Selecteer de tekstvakken van alle velden en wijzig de waarde van eigenschap <span class="uicontrol">Breedte</span> in <code>8cm</code>. Hef daarna de selectie op door ergens anders in het formulier te klikken.</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:property-textboxes-width"></span>
+<img src="images/forms/property-textboxes-width.png" alt="Instelling eigenschap breedte." width="60%"><p class="caption">
+Figuur 6.8: Instelling eigenschap breedte.
+</p>
+</div>
+<div class="info">
+<p>De eigenschap <span class="uicontrol">Vergrendeld</span> kan gebruikt worden om de waarde in een veld te beveiligen zodat de gebruiker deze niet kan wijzigen.</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Selecteer alle tekstvakken behalve <span class="varname">Magazijnvoorraad</span> en <span class="varname">Uit produktie</span> en wijzig de waarde van eigenschap <span class="uicontrol">Vergrendeld (tab Gegevens)</span> in <code>Ja</code>.</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:property-textboxes-locked"></span>
+<img src="images/forms/property-textboxes-locked.png" alt="Instelling vergrendeling tekstvak via eigenschappenvenster." width="60%"><p class="caption">
+Figuur 6.9: Instelling vergrendeling tekstvak via eigenschappenvenster.
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>
+<p>Houd deze velden geselecteerd en wijzig dan de achtergrondkleur van wit in lichtgrijs. Je kunt dat op een van de volgende manieren doen:</p>
+<ul>
+<li>Wijzig eigenschap <span class="uicontrol">Achtergrondkleur</span>.</li>
+<li>Rechtermuisklik op een van de geselecteerde velden en kies uit het snelmenu voor <span class="uicontrol">Opvul-/achtergrondkleur</span>.</li>
+</ul>
+</li>
+<li><p>Schakel over naar <span class="uicontrol">Formulierweergave</span> om het resultaat te zien.</p></li>
+<li><p>Sluit het formulier en laat de wijzigingen bewaren.</p></li>
+<li><p>Noem het formulier in <span class="varname">Inventaris</span> en klik op <span class="uicontrol">OK</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-customers-orders" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> Taak: Hoofd- en subformulier<a class="anchor" aria-label="anchor" href="#forms-customers-orders"><i class="fas fa-link"></i></a>
+</h2>
+<p>De gemakkelijkste manier om een hoofdformulier met een subformulier te maken is met behulp van de <span class="uicontrol">Wizard Formulier</span>. Deze Wizard maakt beide formulieren en zorgt voor de onderlinge koppeling.</p>
+<p>De opdracht is om een formulier te maken dat van een klant de klantcode, naam en adres toont en verder de bijbehorende orders met ordercode, orderdatum en subtotaal.</p>
+<p>Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zijn beschikbaar in de tabel <span class="varname">Klanten</span>. In het subformulier staan de gegevens over de order zelf: <span class="varname">ordercode</span>, <span class="varname">orderdatum</span> en een berekend subtotaal. Het subtotaal kan berekend worden uit het veld <span class="varname">Hoeveelheid</span> (tabel <span class="varname">Orderdetails</span>) en het veld <span class="varname">Doosprijs</span> (tabel <span class="varname">Dozen</span>).</p>
+<p>Om het subtotaal te berekenen heb je een query nodig die al deze gegevens als bron kan aanbieden aan het te maken subformulier. Een dergelijke query is reeds beschikbaar en heet <span class="varname">Orders met subtotalen</span>. Deze query bevat ook het veld <span class="varname">Klantcode</span>, zodat de koppeling tussen hoofd- en subformulier gemaakt kan worden.</p>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Kies<span class="uicontrol">tab Maken &gt; Wizard Formulier (groep Formulieren)</span>.</p></li>
+<li><p>Selecteer <span class="varname">Tabel: Klanten</span> onder <span class="uicontrol">Tabellen/query’s</span> .</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-wizard-t-customers-1"></span>
+<img src="images/forms/f-wizard-t-customers.png" alt="Wizard Formulier keuze velden." width="75%"><p class="caption">
+Figuur 6.10: Wizard Formulier keuze velden.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Voeg achtereenvolgens de volgende velden toe: <span class="varname">Klantcode</span>, <span class="varname">Voornaam</span>, <span class="varname">Achternaam</span>, <span class="varname">Straat</span>, <span class="varname">Postcode</span>, <span class="varname">Plaats</span> en <span class="varname">Telefoon</span>.</p></li>
+<li><p>Selecteer <span class="varname">Query: Orders met subtotalen</span> onder <span class="uicontrol">Tabellen/query’s</span>. De velden van de query worden getoond in het vak <span class="uicontrol">Beschikbare velden</span>.</p></li>
+<li><p>Voeg achtereenvolgens de volgende velden toe: <span class="varname">Ordercode</span>, <span class="varname">Orderdatum</span> en <span class="varname">Subtotaal</span>. Klik dan op <span class="uicontrol">Volgende</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-wizard-customers-orders-dataview"></span>
+<img src="images/forms/f-wizard-customers-orders-dataview.png" alt="Wizard Formulier keuze weergave." width="75%"><p class="caption">
+Figuur 6.11: Wizard Formulier keuze weergave.
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Controleer de instellingen en klik dan op <span class="uicontrol">Volgende</span>. De wizard vraagt nu naar de layout voor het subformulier: tabelvorm of gegevensblad.</p></li>
+<li><p>Selecteer layout <span class="uicontrol">Als gegevensblad</span> en klik op <span class="uicontrol">Volgende</span>.</p></li>
+</ol>
+<p>Je kunt nu namen (titels) aan de formulieren geven. Er zijn al default titels beschikbaar, maar je kunt deze wijzigen.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>
+<p>Wijzig de standaardtitels van de formulieren.</p>
+<ul>
+<li>Titel formulier: <code>Klanten en orders</code>
+</li>
+<li>Titel subformulier: <code>Klanten en orders subformulier</code>.</li>
+</ul>
+</li>
+<li><p>Klik op <span class="uicontrol">Voltooien</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customers-orders-2"></span>
+<img src="images/forms/f-customers-orders.png" alt="Formulier klanten en orders." width="60%"><p class="caption">
+Figuur 6.12: Formulier klanten en orders.
+</p>
+</div>
+<div class="info">
+<p>Desgewenst kan zowel het ontwerp van het hoofdformulier als van het subformulier gewijzigd worden.</p>
+</div>
+</div>
+</div>
+<div id="forms-customers-data-entry" class="section level2" number="6.5">
+<h2>
+<span class="header-section-number">6.5</span> Taak: Invoerformulier Klanten<a class="anchor" aria-label="anchor" href="#forms-customers-data-entry"><i class="fas fa-link"></i></a>
+</h2>
+<p>In deze taak wordt een formulier gemaakt waarmee voor een nieuwe klant de gegevens kunnen worden ingevoerd en van een bestaande klant de gegevens kunnen worden gewijzigd. Verder worden een aantal vaardigheden geoefend in het verplaatsen en uitlijnen van besturingselementen om het formulier in de volgende opmaak te brengen.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customer-entry"></span>
+<img src="images/forms/f-customer-entry.png" alt="Invoerformulier klanten." width="60%"><p class="caption">
+Figuur 6.13: Invoerformulier klanten.
+</p>
+</div>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Selecteer de tabel <span class="varname">Klanten</span>. Deze hoeft niet geopend te worden.</p></li>
+<li><p>Klik <span class="uicontrol">tab Maken &gt; Formulier (groep Formulieren)</span>. Het formulier wordt aangemaakt en geopend in de <span class="uicontrol">Indelingsweergave</span>.</p></li>
+</ol>
+<p>Omdat het formulier gebaseerd is op de tabel <span class="varname">Klanten</span> en deze tabel een een-op-veel relatie heeft met de tabel <span class="varname">Orders</span>, wordt automatisch een subgegevensblad gebaseerd op de tabel <span class="varname">Orders</span>, aan het formulier toegevoegd. Het subgegevensblad geeft alle records uit <span class="varname">Orders</span> weer die betrekking hebben op het huidige record van tabel <span class="varname">Klanten</span>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Selecteer het subgegevensblad en verwijder deze met toets <span class="uicontrol">Delete</span>.</p></li>
+<li><p>Schakel over naar de <span class="uicontrol">Ontwerpweergave</span>.</p></li>
+<li><p>Verwijder het logo in de formulierkoptekst door deze eerst te selecteren en dan te verwijderen met de toets <span class="uicontrol">Delete</span>.</p></li>
+<li><p>Bewaar het formulier onder de naam <span class="varname">Klant invoer en wijziging</span> via de knop <span class="uicontrol">Opslaan <img src="images/common/button-save.png"></span> in de <span class="uicontrol">Werkbalk Snelle toegang</span>.</p></li>
+<li><p>Maak de hoogte van de <span class="uicontrol">Formulierkoptekst</span> wat groter door de scheidingslijn met <span class="uicontrol">Details</span> wat naar beneden te slepen.</p></li>
+<li><p>Selecteer de tekst <code>Klanten</code> in het label in de formulierkoptekst en wijzig deze in <code>De chocolade fijnproever</code>. Wijzig de opmaak van de tekst in <code>MS Sans Serif</code>, <code>14 pt</code>, <code>vet</code> en <code>cursief</code>.</p></li>
+<li><p>Selecteer het besturingselement <span class="uicontrol">Label</span> via <span class="uicontrol">tab Ontwerp &gt; Label (groep Besturingselementen)</span> <img src="images/common/control-label.png"> en teken onder de eerste formulierkoptekst een kader voor de tweede koptekst. Voer als tekst in <code>Klant invoer en wijziging</code>. Wijzig de opmaak van de tekst in <code>MS Sans Serif</code>, <code>14 pt</code>, <code>Vet</code>, <code>kleur Zwart</code>.</p></li>
+<li><p>Selecteer alle besturingselementen in de sectie <span class="uicontrol">Detail</span> door vanuit de linkerbovenhoek met ingedrukte linkermuisknop een kader naar de rechteronderhoek te trekken. Laat daarna de muisknop los. Alle besturingselementen in de sectie Detail zijn nu geselecteerd.</p></li>
+<li><p>Kies <span class="uicontrol">tab Schikken &gt; Indeling verwijderen (groep Tabel)</span>. De geselecteerde besturingselementen zijn nu uit de gestapelde indeling gehaald en daardoor vrij op het formulier te verplaatsen.</p></li>
+<li><p>Hef de selectie op.</p></li>
+<li>
+<p>Versleep de besturingselementen op het formulier zodanig dat de lay-out zo goed mogelijk lijkt op de gewenste indeling. Maak hiervoor gebruik van de hierna aangegeven tips.</p>
+<ul>
+<li>Je kunt geselecteerde besturingselementen uitlijnen via <span class="uicontrol">tab Schikken &gt; Uitlijnen (groep Formaat en volgorde)</span>.</li>
+<li>Je hebt een nieuw <span class="uicontrol">Bijschrift</span> nodig met de tekst <code>Naam:</code>.</li>
+<li>Je kunt de afmetingen van de besturingselementen wijzigen met de eigenschappen <span class="uicontrol">Breedte</span> en <span class="uicontrol">Hoogte</span>.</li>
+<li>Je kunt de plaats van linkerbovenhoek van een besturingselement wijzigen met de eigenschappen <span class="uicontrol">Boven</span> en <span class="uicontrol">Links</span>.</li>
+<li>Je kunt de achtergrondkleur instellen met de eigenschap <span class="uicontrol">Achtergrondkleur</span>.</li>
+</ul>
+</li>
+<li><p>Schakel over naar de <span class="uicontrol">Formulierweergave</span> en test de werking van het formulier.</p></li>
+<li><p>Sluit het formulier en bewaar de wijzigingen.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-pralines-data-entry" class="section level2" number="6.6">
+<h2>
+<span class="header-section-number">6.6</span> Taak: Invoerformulier Bonbons<a class="anchor" aria-label="anchor" href="#forms-pralines-data-entry"><i class="fas fa-link"></i></a>
+</h2>
+<p>In deze taak wordt een formulier gemaakt waarmee de gegevens voor een nieuwe bonbon kunnen worden ingevoerd en van een bestaande bonbon de gegevens gewijzigd kunnen worden. Verder wordt bij een aantal velden het besturingselement <span class="uicontrol">Tekstvak</span> vervangen door een <span class="uicontrol">Keuzelijst</span>, al dan niet met invoervak. De gewenste lay-out voor het formulier is in de volgende afbeelding weergegeven.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-praline-entry"></span>
+<img src="images/forms/f-praline-entry.png" alt="Invoerformulier bonbons." width="60%"><p class="caption">
+Figuur 6.14: Invoerformulier bonbons.
+</p>
+</div>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Selecteer de tabel <span class="varname">Bonbons</span>. Deze hoeft niet geopend te worden.</p></li>
+<li><p>Klik <span class="uicontrol">tab Maken &gt; Formulier (groep Formulieren)</span>. Het formulier wordt aangemaakt en geopend in de <span class="uicontrol">Indelingsweergave</span>.</p></li>
+<li><p>Schakel over naar de <span class="uicontrol">Ontwerpweergave</span>.</p></li>
+<li><p>Verwijder de tabel <span class="varname">Doosdetails</span> in het onderste deel van het formulier en het logo in de formulierkoptekst.</p></li>
+<li><p>Verwijder het logo in de formulierkoptekst.</p></li>
+<li><p>Bewaar het formulier onder de naam <span class="varname">Bonbon informatie</span> via de knop <span class="uicontrol">Opslaan</span> <img src="images/common/button-save.png">** in de <span class="uicontrol">Werkbalk Snelle toegang</span>.</p></li>
+<li><p>Wijzig de opmaak van de koptekst in: <code>Calibri</code>, <code>22 pt</code>, <code>vet</code>, <code>kleur wit</code> en <code>achtergrond groen</code>.</p></li>
+<li><p>Selecteer alle besturingselementen in de sectie <span class="uicontrol">Detail</span> en verwijder de gestapelde indeling via <span class="uicontrol">tab Schikken &gt; Indeling verwijderen (groep Tabel)</span>. Je kunt nu met alle besturingselementen afzonderlijk werken.</p></li>
+<li><p>Hef de selectie op.</p></li>
+<li><p>Verwijder de velden <span class="varname">Chocoladetype</span>, <span class="varname">Vullingtype</span> en <span class="varname">Noottype</span>. Verplaats de overige velden zodat de lay-out op de gewenste lijkt.</p></li>
+<li><p>Selecteer het besturingselement <span class="uicontrol">Lijn</span> via <span class="uicontrol">tab Ontwerp &gt; Keuzelijst (groep Besturingselementen)</span> en teken een horizontale lijn onder de velden <span class="varname">Bonboncode</span> en <span class="varname">Bonbonnaam</span>. Geef de lijn dikte van 2pt en dezelfde kleur als de achtergrond van de koptekst.</p></li>
+<li><p>Selecteer het besturingselement <span class="uicontrol">Keuzelijst</span> via <span class="uicontrol">tab Ontwerp &gt; Keuzelijst (groep Besturingselementen)</span> en teken een kader voor het veld <span class="uicontrol">Chocoladetype</span>. Na het tekenen van het kader wordt de <span class="uicontrol">Wizard Keuzelijst</span> opgestart.</p></li>
+<li>
+<p>Beantwoord de vragen die de Wizard achtereenvolgens stelt als volgt:</p>
+<ul>
+<li>De waarden zullen worden getypt.</li>
+<li>Aantal kolommen is 1. De in te typen waarden zijn: <code>Butterscotch</code>, <code>Melk</code>, <code>Puur</code> en <code>Toffee</code>.</li>
+<li>De geselecteerde waarde opslaan in het veld <span class="varname">Chocoladetype</span>.</li>
+<li>De geselecteerde waarde opslaan in het veld <span class="varname">Chocoladetype</span>.</li>
+<li>Tekst voor het label bij de keuzelijst: <code>Chocoladetype:</code>
+</li>
+</ul>
+</li>
+</ol>
+<p>Na het Voltooien van de Wizard kom je weer terug in de <span class="uicontrol">Ontwerpweergave</span>.</p>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Maak op analoge wijze een <span class="uicontrol">Keuzelijst met invoervak</span> voor <span class="varname">Vullingtype</span> met de waarden: <code>Amaretto</code>, <code>Bosbes</code>, <code>Kersecrème</code>, <code>Kokos</code>, <code>Marsepein</code>, <code>Mokkacrème</code> en <code>Geen</code>.</p></li>
+<li><p>Maak op analoge wijze een <span class="uicontrol">Keuzelijst met invoervak</span> voor <span class="varname">Noottype</span> met de waarden: <code>Amandel</code>, <code>Cashew</code>, <code>Hazelnoot</code>, <code>Macadamia</code>, <code>Para</code>, <code>Pecan</code>, <code>Pistache</code>, <code>Walnoot</code> en <code>Geen</code>.</p></li>
+<li><p>Schakel over naar de <span class="uicontrol">Formulierweergave</span> en test de werking van het formulier.</p></li>
+<li><p>Sluit het formulier en bewaar de wijzigingen.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-boxes-data-entry" class="section level2" number="6.7">
+<h2>
+<span class="header-section-number">6.7</span> Taak: Invoerformulier Dozen<a class="anchor" aria-label="anchor" href="#forms-boxes-data-entry"><i class="fas fa-link"></i></a>
+</h2>
+<p>In deze taak wordt in een bestaand subformulier een <span class="uicontrol">Tekstvak</span> vervangen door een <span class="uicontrol">Keuzelijst met invoervak</span>. Hiervoor moet eerst een bijbehorende query gemaakt worden.</p>
+<p>Met het bestaande formulier <span class="varname">Dozen</span> kan een bonbon alleen maar via de bonboncode gekozen worden. De opdracht is om dat ook mogelijk te maken voor de naam van de bonbon.</p>
+<p>Het formulier <span class="varname">Dozen</span> bestaat uit het hoofdformulier <span class="varname">Dozen</span> en het subformulier <span class="varname">Dozen subformulier</span>. De keuze van de bonbon gebeurt in het subformulier. Dus alleen het subformulier hoeft aangepast te worden. Daar moet het tekstvak <span class="varname">Bonbonnaam</span> vervangen worden door een <span class="uicontrol">Keuzelijst met invoervak</span>.</p>
+<p>Echter <span class="varname">Dozen subformulier</span> is gebaseerd op de tabel <span class="varname">Doosdetails</span> en hierin komt <span class="varname">Bonbonnaam</span> niet voor. Daarom zal er een query <span class="varname">Kies bonbonnaam</span> gemaakt moeten worden, gebaseerd op de tabel <span class="varname">Bonbons</span>, die als resultaat de kolommen <span class="varname">Bonbonnaam</span> en <span class="varname">Bonboncode</span> geeft en die gesorteerd is op <span class="varname">Bonbonnaam</span>. Deze nieuwe query is dan de gegevensbron voor de keuzelijst met invoervak.</p>
+<div class="practice">
+<p><strong>Query <span class="varname">Kies bonbonnaam</span></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span></p></li>
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Queryontwerp (groep Query’s)</span> en voeg de tabel <span class="varname">Bonbons</span> toe. Voeg van deze tabel de velden <span class="varname">Bonbonnaam</span> en <span class="varname">Bonboncode</span> toe. Sorteer Oplopend op <span class="varname">Bonbonnaam</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:q-choose-praline-design"></span>
+<img src="images/forms/q-choose-praline-design.png" alt="Ontwerp query voor invoer bonbonkeuze." width="60%"><p class="caption">
+Figuur 6.15: Ontwerp query voor invoer bonbonkeuze.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Sluit de query en bewaar deze onder de naam <span class="varname">Kies bonbonnaam</span>.</li>
+</ol>
+</div>
+<div class="practice">
+<p><strong>Aanpassing subformulier</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Open het formulier <span class="varname">Dozen subformulier</span> in de <span class="uicontrol">Ontwerpweergave</span>.</p></li>
+<li><p>Verwijder in de sectie <span class="uicontrol">Details</span> het veld <span class="varname">Bonbonnaam</span>.</p></li>
+<li><p>Selecteer [tab Ontwerp &gt; Keuzelijst met invoervak (groep Besturingselementen)] en trek een rechthoekig kader op de plaats van het verwijderde veld <span class="varname">Bonbonnaam</span>. De Wizard <span class="uicontrol">Keuzelijst met invoervak</span> wordt opgestart.</p></li>
+<li>
+<p>Beantwoord de vragen van de Wizard achtereenvolgens als volgt:</p>
+<ul>
+<li>De waarden voor de keuzelijst worden opgezocht in een tabel of query.</li>
+<li>De waarden voor de keuzelijst worden geleverd door de query <span class="varname">Kies bonbonnaam</span>.</li>
+<li>De toe te voegen velden zijn <span class="varname">Bonbonnaam</span> en <span class="varname">Bonboncode</span>.</li>
+<li>Sorteervolgorde is Oplopend op <span class="varname">Bonbonnaam</span>.</li>
+<li>Maak de kolombreedtes passend door een dubbelklik op de rechtergrens van elke kolom.</li>
+<li>De kolom <span class="varname">Bonboncode</span> bevat de waarde die opgeslagen moet worden.</li>
+<li>De waarde moet opgeslagen worden in het veld <span class="varname">Code</span>.</li>
+<li>Typ een willekeurige tekst voor het label in. Dit label wordt in de volgende stap verwijderd omdat de labeltekst al in de formulierkoptekst voorkomt.</li>
+</ul>
+</li>
+<li><p>Selecteer het zojuist ingevoerde label dat bij de keuzelijst hoort en druk dan op de <span class="uicontrol">Delete</span> toets om deze te verwijderen.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-boxes-subform"></span>
+<img src="images/forms/f-boxes-subform.png" alt="Keuzelijst op subformulier dozen." width="60%"><p class="caption">
+Figuur 6.16: Keuzelijst op subformulier dozen.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Selecteer de <span class="uicontrol">Keuzelijst met invoervak</span> en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap <span class="uicontrol">Alleen lijst</span> de waarde <code>Ja</code> heeft. Zo niet, dan de waarde wijzigen in <code>Ja</code>.</li>
+</ol>
+<div class="info">
+<p>Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Sluit het formulier <span class="varname">Dozen subformulier</span> en bewaar de wijzigingen.</p></li>
+<li><p>Test de nieuwe keuzelijst uit.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-orders-data-entry" class="section level2" number="6.8">
+<h2>
+<span class="header-section-number">6.8</span> Taak: Invoerformulier Orders<a class="anchor" aria-label="anchor" href="#forms-orders-data-entry"><i class="fas fa-link"></i></a>
+</h2>
+<p>Voor het bekijken van een bestaande order en het invoeren van een nieuwe order moet een orderformulier gemaakt worden, zie de volgend afbeelding.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-orderdata-entry"></span>
+<img src="images/forms/f-orderdata-entry.png" alt="Invoerformulier orders." width="60%"><p class="caption">
+Figuur 6.17: Invoerformulier orders.
+</p>
+</div>
+<p>De gegevens op het hoofdformulier zijn afkomstig uit de tabel <span class="varname">Klanten</span> en uit de tabel <span class="varname">Orders</span>. Er moet dus een query <span class="varname">Orders-Klanten</span> gemaakt worden, gebaseerd op deze twee tabellen, welke de gewenste gegevens aanlevert.</p>
+<p>De gegevens op het subformulier zijn afkomstig uit de tabel <span class="varname">Orderdetails</span> en uit de tabel <span class="varname">Dozen</span>. Er moet dus een query <span class="varname">Orderdetails-Dozen</span> gemaakt worden, gebaseerd op deze twee tabellen, welke de gewenste gegevens aanlevert.</p>
+<p>Maak daarna een formulier met subformulier en baseer het hoofdformulier op de query <span class="varname">Orders-Klanten</span> en het subformulier op de query <span class="varname">Orderdetails-Dozen</span>. Voeg de gewenste velden voor zowel het hoofdformulier als het subformulier toe.</p>
+<div class="practice">
+<p><strong>Query <span class="varname">Orders-Klanten</span></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span></p></li>
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Queryontwerp (groep Query’s)</span> en voeg de tabellen <span class="varname">Orders</span> en <span class="varname">Klanten</span> toe.</p></li>
+<li><p>Voeg van beide tabellen alle velden toe.</p></li>
+</ol>
+<div class="info">
+<p>Met de keuze <code>*</code> kun je alle velden van een tabel toevoegen.</p>
+</div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:q-orders-customers-design"></span>
+<img src="images/forms/q-orders-customers-design.png" alt="Ontwerp query orders klanten." width="60%"><p class="caption">
+Figuur 6.18: Ontwerp query orders klanten.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Sluit de query en bewaar deze onder de naam <span class="varname">Orders-Klanten</span>.</li>
+</ol>
+</div>
+<div class="practice">
+<p><strong>Query Orderdetails-Dozen</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Queryontwerp (groep Query’s)</span> en voeg de tabellen <span class="varname">Orderdetails</span> en <span class="varname">Dozen</span> toe.</p></li>
+<li><p>Voeg van beide tabellen alle velden toe.</p></li>
+<li><p>Maak een kolom met de naam <span class="varname">Totaal</span> die de berekening <code>Hoeveelheid*Doosprijs</code> uitvoert.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:q-orderdetails-boxes-design"></span>
+<img src="images/forms/q-orderdetails-boxes-design.png" alt="Ontwerp query orderdetails dozen." width="60%"><p class="caption">
+Figuur 6.19: Ontwerp query orderdetails dozen.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Sluit de query en bewaar deze onder de naam <span class="varname">Orderdetails-Dozen</span>.</li>
+</ol>
+</div>
+<div class="practice">
+<p><strong>Formulier</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Wizard Formulier</span>.</p></li>
+<li><p>Selecteer query <span class="varname">Orders-Klanten</span> en voeg alle velden behalve <span class="varname">Orders.Klantcode</span> toe.</p></li>
+<li><p>Selecteer query <span class="varname">Orderdetails-Dozen</span> en voeg achtereenvolgens de volgende velden toe: <span class="varname">Dozen.Dooscode</span>, <span class="varname">Doosnaam</span>, <span class="varname">Hoeveelheid</span>, <span class="varname">Doosprijs</span> en <span class="varname">Totaal</span>.</p></li>
+<li><p>Klik op <span class="uicontrol">Volgende</span> en laat dan de gegevens weergeven volgens <span class="varname">Orders-Klanten</span>. Hiermee wordt het hoofdformulier gebaseerd op de query <span class="varname">Orders-Klanten</span> en het subformulier op de query <span class="varname">Orderdetails-Dozen</span>.</p></li>
+<li><p>Klik op <span class="uicontrol">Volgende</span> en selecteer dan de opmaak voor het subformulier <span class="uicontrol">In tabelvorm</span>.</p></li>
+<li><p>Kies een stijl en klik dan op <span class="uicontrol">Volgende</span>.</p></li>
+<li><p>Ken de volgende namen toe: <span class="varname">Ordergegevens hoofdformulier</span> en <span class="varname">Ordergegevens subformulier</span> en klik op <span class="uicontrol">Voltooien</span>. Het formulier wordt geopend.</p></li>
+<li><p>Pas desgewenst de lay-out van beide formulieren aan zodat het lijkt op het gewenste formulier voor ordergegevens.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-orders-total" class="section level2" number="6.9">
+<h2>
+<span class="header-section-number">6.9</span> Taak: Ordertotaal<a class="anchor" aria-label="anchor" href="#forms-orders-total"><i class="fas fa-link"></i></a>
+</h2>
+<p>Het formulier dat gemaakt is in <a href="forms.html#forms-orders-data-entry">6.8</a> wordt zodanig gewijzigd dat ook het totale orderbedrag berekend en getoond wordt.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-orderdata-entry-totals"></span>
+<img src="images/forms/f-orderdata-entry-totals.png" alt="Orders met totaalbedrag." width="60%"><p class="caption">
+Figuur 6.20: Orders met totaalbedrag.
+</p>
+</div>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Open formulier <span class="varname">Ordergegevens subformulier</span> in <span class="uicontrol">Ontwerpweergave</span>.</p></li>
+<li><p>Selecteer in het <span class="uicontrol">Eigenschappenvenster</span> het type <span class="uicontrol">Formulier</span> en stel dan <span class="uicontrol">Standaardweergave</span> in op <span class="uicontrol">Doorlopend formulier</span>.<br>
+Deze instelling is nodig omdat anders het totaal niet kan worden berekend.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-orderdatasub-properties"></span>
+<img src="images/forms/f-orderdatasub-properties.png" alt="Standaardweergave subformulier." width="60%"><p class="caption">
+Figuur 6.21: Standaardweergave subformulier.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Maak de verticale ruimte voor de formuliervoettekst wat groter door de onderkant naar beneden te slepen.</p></li>
+<li><p>Selecteer <span class="uicontrol">tab Ontwerp &gt; Tekstvak (groep Besturingselementen)</span> en teken een rechthoekig kader in de formuliervoettekst waar het totaalbedrag moet komen.</p></li>
+<li><p>Stel de waarde voor de eigenschap <span class="uicontrol">Besturingselementbron</span> van het tekstvak in op <code>=Som([Totaal])</code> en de waarde van eigenschap <span class="uicontrol">Notatie</span> op <code>Valuta</code>.</p></li>
+<li><p>Sluit het subformulier en bewaar de wijzigingen.</p></li>
+<li><p>Open formulier <span class="varname">Ordergegevens hoofdformulier</span> en controleer of alles in orde en naar wens is.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-sales-boxes" class="section level2" number="6.10">
+<h2>
+<span class="header-section-number">6.10</span> Taak: Formulier met grafiek<a class="anchor" aria-label="anchor" href="#forms-sales-boxes"><i class="fas fa-link"></i></a>
+</h2>
+<p>De opdracht is om een grafiek te maken voor het jaar 2010 waarin de omzet per maand per doos bekeken kan worden. Zie het volgende voorbeeld.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-sales-boxes-chart"></span>
+<img src="images/forms/f-sales-boxes-chart.png" alt="Formulier met grafiek." width="60%"><p class="caption">
+Figuur 6.22: Formulier met grafiek.
+</p>
+</div>
+<p>De verschillende onderdelen in de grafiek kunnen uit bepaalde tabellen gehaald of berekend worden.</p>
+<ul>
+<li><p>De <span class="varname">Doosnaam</span> zit in de tabel <span class="varname">Dozen</span>.</p></li>
+<li><p>De <span class="varname">Omzet</span> moet berekend worden via de berekening <code>[Hoeveelheid] * [Doosprijs]</code>.</p></li>
+<li><p>Het veld <span class="varname">Doosprijs</span> zit ook in de tabel <span class="varname">Dozen</span>.</p></li>
+<li><p>Het veld <span class="varname">Hoeveelheid</span> zit in de tabel <span class="varname">Orderdetails</span>.</p></li>
+<li><p><span class="varname">Maand</span> en <span class="varname">Jaar</span> kunnen berekend worden met de functies <code>Month([Orderdatum])</code> en <code>Year([Orderdatum])</code>.</p></li>
+<li><p>Het veld <span class="varname">Orderdatum</span> zit in de tabel <span class="varname">Orders</span>.</p></li>
+<li><p>Groepering eerst op <span class="varname">Doosnaam</span> en daarna op <span class="varname">Maand</span>.</p></li>
+<li><p>Er moet gefilterd worden op het jaar <code>2010</code>.</p></li>
+</ul>
+<p>Er moet dus een query gemaakt worden die de benodigde gegevens (<span class="varname">Doosnaam</span>, <span class="varname">Omzet</span>, Maand<span class="varname">Maand</span> en <span class="varname">Jaar</span>) aanlevert. Groeperen en filteren kan via de rij <span class="varname">Totaal</span> in het queryraster. Voor groeperen kies je voor <code>Group By</code> en voor filteren maak je de keuze <code>Waar</code>. Voor het laatste moet dan ook nog bij <span class="uicontrol">Criteria</span> de waarde <code>2010</code> worden opgegeven.</p>
+<p>De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en daarna het formulier met de grafiek.</p>
+<div class="practice">
+<p><strong>Query maken</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Queryontwerp (groep Query’s)</span> en voeg achtereenvolgens de tabellen <span class="varname">Dozen</span>, <span class="varname">Orderdetails</span> en <span class="varname">Orders</span> toe.</p></li>
+<li><p>Voeg het veld <span class="varname">Doosnaam</span> uit tabel <span class="varname">Dozen</span> in de eerste kolom toe en daarna in de volgende kolommen de expressies <code>Maand:Month([Orderdatum])</code>, <code>Omzet:[Hoeveelheid]*[Doosprijs]</code> en <code>Jaar:Year([Orderdatum])</code>.</p></li>
+<li><p>Kies <span class="uicontrol">tab Ontwerp &gt; Totalen (groep Weergeven/verbergen)</span>.</p></li>
+<li><p>Wijzig in de derde kolom de <span class="uicontrol">Group By</span> in <code>Som</code> en in de vierde kolom in <code>Waar</code>. Voeg in de vierde kolom als criterium toe <code>2010</code>. Laat dit laatste veld niet weergeven.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:q-sales-box-month-design"></span>
+<img src="images/forms/q-sales-box-month-design.png" alt="Ontwerp query omzet" width="60%"><p class="caption">
+Figuur 6.23: Ontwerp query omzet
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Sluit de query en bewaar deze onder de naam <span class="varname">Omzet per doos per maand in 2010</span>.</li>
+</ol>
+<div class="info">
+<p>Wanneer je na het sluiten de query weer opent in de <span class="uicontrol">Ontwerpweergave</span>, dan heeft Access een paar wijzigingen aangebracht in de kolom <span class="varname">Omzet</span>.</p>
+<ul>
+<li>Waarde in rij <span class="uicontrol">Veld</span> is nu: <code>Omzet: Som([Hoeveelheid]*[Doosprijs])</code>
+</li>
+<li>Waarde in veld <span class="uicontrol">Totaal</span> is nu: <code>Expressie</code>
+</li>
+</ul>
+</div>
+</div>
+<div class="practice">
+<p><strong>Formulier maken</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Wizard Formulier</span>. Voeg tabel <span class="varname">Dozen</span> toe en van deze tabel alleen het veld <span class="varname">Doosnaam</span>. Klik op <span class="uicontrol">Volgende</span>.</p></li>
+<li>
+<p>Beantwoord de vragen van de Wizard als volgt:</p>
+<ul>
+<li>Formulier opmaak <span class="uicontrol">Als gegevensblad</span>.</li>
+<li>Titel <code>Omzet per doos per maand in 2010</code>.</li>
+<li>Bewaar het formulier onder dezelfde naam als de titel.</li>
+</ul>
+</li>
+<li><p>Open het formulier in de <span class="uicontrol">Ontwerpweergave</span>. Maak wat ruimte voor de grafiek in de sectie <span class="uicontrol">Details</span> door de onderkant naar beneden te slepen.</p></li>
+<li><p>Kies <span class="uicontrol">tab Ontwerp &gt; Grafiek (groep Besturingselementen)</span> <img src="images/common/control-chart.png"> en teken op het formulier een rechthoekig kader waar de grafiek moet komen. De <span class="uicontrol">Wizard Grafieken</span> wordt opgestart.</p></li>
+<li>
+<p>Beantwoord de eerste drie vragen van de Wizard achtereenvolgens als volgt:</p>
+<ul>
+<li>De gegevens voor de grafiek zijn afkomstig van de query <strong>Omzet per doos per maand in 2010</strong>.</li>
+<li>Voeg de velden Maand en Omzet aan de grafiek toe.</li>
+<li>Kies als grafiektype een <strong>Kolomdiagram</strong>.</li>
+</ul>
+<p>De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten aanpassen.</p>
+</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:chartwizard-layout-default"></span>
+<img src="images/forms/chartwizard-layout-default.png" alt="Voorstel indeling grafiek." width="60%"><p class="caption">
+Figuur 6.24: Voorstel indeling grafiek.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Sleep het veld <span class="varname">SomVanMaand</span> uit het vak bij de verticale as naar het vak voor de horizontale as. De weergave langs de horizontale as wijzigt dan in <code>Maand</code>.</p></li>
+<li><p>Sleep het veld <span class="varname">Omzet</span> naar het vak voor de verticale as. De weergave langs de verticale as wijzigt in <code>SomVanOmzet</code>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:chartwizard-layout-data"></span>
+<img src="images/forms/chartwizard-layout-data.png" alt="Definitieve indeling grafiek" width="60%"><p class="caption">
+Figuur 6.25: Definitieve indeling grafiek
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Klik op <span class="uicontrol">Volgende</span>. Hier selecteer je het veld in het formulier dat gekoppeld moet worden aan het veld in de grafiek. In beide gevallen is dat <span class="varname">Doosnaam</span>.</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:chartwizard-linking-fields"></span>
+<img src="images/forms/chartwizard-linking-fields.png" alt="Koppeling tussen velden formulier en grafiek" width="60%"><p class="caption">
+Figuur 6.26: Koppeling tussen velden formulier en grafiek
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Klik op <span class="uicontrol">Volgende</span>. Geef de grafiek de naam <span class="varname">Omzet per doos per maand in 2010</span> en kies er voor om de legenda niet weer te geven en klik daarna op <span class="uicontrol">Voltooien</span>.</li>
+</ol>
+<div class="warning">
+<p>In de Ontwerpweergave wordt een voorbeeldgrafiek getoond en niet een grafiek met de echte gegevens.</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Sluit het formulier en bewaar de wijzigingen.</p></li>
+<li><p>Open het formulier in de <span class="uicontrol">Formulierweergave</span>, blader door wat dozen en sluit daarna het formulier.</p></li>
+</ol>
+</div>
+</div>
+<div id="forms-customerorders" class="section level2" number="6.11">
+<h2>
+<span class="header-section-number">6.11</span> Taak: Gekoppelde formulieren<a class="anchor" aria-label="anchor" href="#forms-customerorders"><i class="fas fa-link"></i></a>
+</h2>
+<p>De gemakkelijkste manier om gekoppelde formulieren te maken is met behulp van de <span class="uicontrol">Wizard Formulier</span>. Deze Wizard maakt de benodigde formulieren, zorgt voor de onderlinge koppeling en brengt op het hoofdformulier een opdrachtknop aan waarmee het subformulier geopend kan worden.</p>
+<p>De opdracht is om een formulier te maken waarbij de gegevens van een klant getoond worden en dat via klik op een opdrachtknop de ordergegevens van de klant in een nieuw formulier getoond worden. Zie de volgende afbeelding.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customerorders-linked-2"></span>
+<img src="images/forms/f-customerorders-linked.png" alt="Twee formulieren gekoppeld met gesynchroniseerde gegevens." width="60%"><p class="caption">
+Figuur 6.27: Twee formulieren gekoppeld met gesynchroniseerde gegevens.
+</p>
+</div>
+<p>Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zijn beschikbaar in de tabel <span class="varname">Klanten</span>. In het subformulier staan de gegevens over de order zelf: <span class="varname">ordercode</span> en <span class="varname">orderdatum</span>. Op dit subformulier is een ander subformulier opgenomen met daarin de details van de order. De gegevens hiervoor komen uit de tabel <span class="varname">Orderdetails</span>.</p>
+<div class="practice">
+<ol style="list-style-type: decimal">
+<li><p>Open zonodig database <span class="filepath">snoep365.accdb</span>.</p></li>
+<li><p>Kies <span class="uicontrol">tab Maken &gt; Wizard Formulier (groep Formulieren)</span>.</p></li>
+<li><p>Selecteer <span class="varname">Tabel: Klanten</span> in het vak <span class="uicontrol">Tabellen/query’s</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-wizard-t-customers-2"></span>
+<img src="images/forms/f-wizard-t-customers.png" alt="Wizard Formulier keuze velden." width="60%"><p class="caption">
+Figuur 6.28: Wizard Formulier keuze velden.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>
+<p>Voeg de volgende velden toe:</p>
+<ul>
+<li>Uit de tabel <span class="varname">Klanten</span>: <span class="varname">Klantcode</span>, <span class="varname">Achternaam</span>, <span class="varname">Voornaam</span>, <span class="varname">Straat</span>, <span class="varname">Postcode</span>, <span class="varname">Plaats</span>.</li>
+<li>Uit de tabel <span class="varname">Orders</span>: <span class="varname">Ordercode</span>, <span class="varname">Orderdatum</span>.</li>
+<li>Uit de tabel <span class="varname">Orderdetails</span>: <span class="varname">Dooscode</span>, <span class="varname">Hoeveelheid</span>.</li>
+</ul>
+</li>
+<li><p>Klik op <span class="uicontrol">Volgende</span>. Kies voor weergave volgens <span class="varname">Klanten</span> en voor <span class="uicontrol">Gekoppelde formulieren</span>.</p></li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-wizard-customerorders-dataview"></span>
+<img src="images/forms/f-wizard-customerorders-dataview.png" alt="Wizard gekoppelde formulieren." width="60%"><p class="caption">
+Figuur 6.29: Wizard gekoppelde formulieren.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Klik op <span class="uicontrol">Volgende</span>. Nu kun je de formulieren een naam geven.</p></li>
+<li>
+<p>Geef de formulieren de volgende namen:</p>
+<ul>
+<li>1e formulier: <span class="varname">OrdersKlanten</span>
+</li>
+<li>2e formulier: <span class="varname">OrdersKlantenSub1</span>
+</li>
+<li>Subformulier: <span class="varname">OrdersKlantenSub2</span>
+</li>
+</ul>
+</li>
+<li><p>Klik op <span class="uicontrol">Voltooien</span>.</p></li>
+</ol>
+<p>Het hoofdformulier <span class="varname">OrdersKlanten</span> wordt nu geopend. Het ontwerp moet nog wat aangepast worden omdat de opdrachtknop <span class="uicontrol">OrdersKlantenSub1</span> onder het label <span class="varname">OrdersKlanten</span> zit en daardoor niet gebruikt kan worden.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:f-customerorders-titles"></span>
+<img src="images/forms/f-customerorders-titles.png" alt="Titel hoofdformulier met daaronder de onbereikbare opdrachtknop om het subformulier te openen." width="25%"><p class="caption">
+Figuur 6.30: Titel hoofdformulier met daaronder de onbereikbare opdrachtknop om het subformulier te openen.
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>
+<p>Open het formulier <span class="varname">OrdersKlanten</span> in de <span class="uicontrol">Ontwerpweergave</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Verwijder het label <span class="varname">OrdersKlanten</span>.</li>
+<li>Selecteer de opdrachtknop en wijzig via het <span class="uicontrol">Eigenschappenvenster</span> de tekst van het bijschrift van <code>OrdersKlantenSub1</code> in <code>Ordergegevens</code>.</li>
+</ol>
+</li>
+<li><p>Pas desgewenst de opmaak van de drie formulieren verder aan.</p></li>
+<li><p>Schakel over naar de <span class="uicontrol">Formulierweergave</span> en test de werking van de opdrachtknop.</p></li>
+<li><p>Sluit het formulier en bewaar de wijzigingen.</p></li>
+</ol>
+</div>
+<div class="info">
+<p>Bij een standaardinstallatie van Access wordt elk document (tabel, query, formulier,rapport) in een afzonderlijk tabblad geopend. Bij gekoppelde formulieren is dat niet altijd handig. Bij het klikken op de opdrachtknop wordt het gekoppelde subformulier in een nieuw tabblad geopend. Je ziet dan de informatie in het hoofdformulier en het subformulier nooit tegelijk.</p>
+<p>Wanneer je dat wel wilt moet je de instellingen voor de database zo wijzigen dat documenten in overlappende vensters verschijnen in plaats van in tabbladen. Dat kan als volgt.</p>
+<ol style="list-style-type: decimal">
+<li>Kies <span class="uicontrol">Bestand &gt; Opties &gt; Huidige database</span>.</li>
+<li>Selecteer <span class="uicontrol">Overlappende vensters</span> onder <span class="uicontrol">Opties voor documentvensters</span>.</li>
+</ol>
+</div>
+</div>
+<div id="forms-exercises" class="section level2" number="6.12">
+<h2>
+<span class="header-section-number">6.12</span> Opgaven<a class="anchor" aria-label="anchor" href="#forms-exercises"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ex-form001" class="section level3 unnumbered">
+<h3>form001 - Klanten<a class="anchor" aria-label="anchor" href="#ex-form001"><i class="fas fa-link"></i></a>
+</h3>
+<p>Maak een formulier klanten dat lijkt op de volgende afbeelding. Noem het formulier <span class="varname">form001</span>.</p>
+<div class="inline-figure"><img src="exercises/images/form001.png"></div>
+</div>
+<div id="ex-form002" class="section level3 unnumbered">
+<h3>form002 - Bonbons in dozen<a class="anchor" aria-label="anchor" href="#ex-form002"><i class="fas fa-link"></i></a>
+</h3>
+<p>Maak een hoofdformulier met subformulier dat laat zien in welke dozen een bepaalde bonbon zit is en ook hoeveel daarvan. Noem de formulieren <span class="varname">form002 hoofd</span> en <span class="varname">form002 sub</span>.</p>
+<div class="inline-figure"><img src="exercises/images/form002.png"></div>
+</div>
+<div id="ex-form003" class="section level3 unnumbered">
+<h3>form003 - Dozen per klant<a class="anchor" aria-label="anchor" href="#ex-form003"><i class="fas fa-link"></i></a>
+</h3>
+<p>Maak een hoofdformulier met subformulier waarbij in het hoofdformulier de gegevens van een doos staan en in het subformulier de totale afzet per klant van deze doos. Maak daartoe eerst een query die het totale aantal bestelde dozen per doos per klant uitrekent. Noem de query <span class="varname">Dozen per klant</span> en de formulieren <span class="varname">form003 hoofd</span> en <span class="varname">form003 sub</span>.</p>
+<div class="inline-figure"><img src="exercises/images/form003.png"></div>
+
+</div>
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    $(solveme[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    $(selects[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  update_total_correct();
+}
+
+</script><div class="chapter-nav">
+<div class="prev"><a href="queries.html"><span class="header-section-number">5</span> Query’s</a></div>
+<div class="next"><a href="reports.html"><span class="header-section-number">7</span> Rapporten</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Op deze pagina</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#forms"><span class="header-section-number">6</span> Formulieren</a></li>
+<li>
+<a class="nav-link" href="#forms-about"><span class="header-section-number">6.1</span> Over formulieren maken</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#forms-explanation-mainsub">Hoofd- en subformulieren</a></li>
+<li><a class="nav-link" href="#forms-explanation-linked">Gekoppelde formulieren</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#forms-controls-layout"><span class="header-section-number">6.2</span> Besturingselementen en Indelingen</a></li>
+<li><a class="nav-link" href="#forms-autoform"><span class="header-section-number">6.3</span> Taak: Automatisch formulier</a></li>
+<li><a class="nav-link" href="#forms-customers-orders"><span class="header-section-number">6.4</span> Taak: Hoofd- en subformulier</a></li>
+<li><a class="nav-link" href="#forms-customers-data-entry"><span class="header-section-number">6.5</span> Taak: Invoerformulier Klanten</a></li>
+<li><a class="nav-link" href="#forms-pralines-data-entry"><span class="header-section-number">6.6</span> Taak: Invoerformulier Bonbons</a></li>
+<li><a class="nav-link" href="#forms-boxes-data-entry"><span class="header-section-number">6.7</span> Taak: Invoerformulier Dozen</a></li>
+<li><a class="nav-link" href="#forms-orders-data-entry"><span class="header-section-number">6.8</span> Taak: Invoerformulier Orders</a></li>
+<li><a class="nav-link" href="#forms-orders-total"><span class="header-section-number">6.9</span> Taak: Ordertotaal</a></li>
+<li><a class="nav-link" href="#forms-sales-boxes"><span class="header-section-number">6.10</span> Taak: Formulier met grafiek</a></li>
+<li><a class="nav-link" href="#forms-customerorders"><span class="header-section-number">6.11</span> Taak: Gekoppelde formulieren</a></li>
+<li>
+<a class="nav-link" href="#forms-exercises"><span class="header-section-number">6.12</span> Opgaven</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ex-form001">form001 - Klanten</a></li>
+<li><a class="nav-link" href="#ex-form002">form002 - Bonbons in dozen</a></li>
+<li><a class="nav-link" href="#ex-form003">form003 - Dozen per klant</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Laatste productiedatum 01 januari 2022.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Dit boek is gemaakt met de <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

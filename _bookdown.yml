@@ -1,0 +1,41 @@
+book_filename: leeraccess
+#new_session: yes
+before_chapter_script:
+- R/_common.R
+- R/webex.R
+delete_merged_file: yes
+language:
+  label:
+    fig: 'Figuur '
+    tab: 'Tabel '
+    eq: 'Vergelijking '
+    thm: 'Stelling '
+    lem: 'Lemma '
+    cor: 'Conclusie '
+    prp: 'Voorstel '
+    cnj: 'Vermoeden '
+    def: 'Definitie '
+    exm: 'Voorbeeld '
+    exr: 'Opgave '
+    proof: 'Bewijs '
+    remark: 'Opmerking '
+    solution: 'Oplossing '
+  ui:
+    edit: 'Bewerken '
+    chapter_name: ''
+    appendix_name: 'Bijlage '
+
+rmd_files:
+    - "index.Rmd"
+    - "preface.Rmd"
+    - "01-intro.Rmd"
+    - "02-explore.Rmd"
+    - "03-data.Rmd"
+    - "04-tables.Rmd"
+    - "05-queries.Rmd"
+    - "06-forms.Rmd"
+    - "07-reports.Rmd"
+    - "08-integration.Rmd"
+    - "09-tools.Rmd"
+    - "10-macros.Rmd"
+    - "11-normalization.Rmd"

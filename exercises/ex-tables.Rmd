@@ -1,0 +1,63 @@
+### tabl001 - Dubbele namen voorkomen {-#ex-tabl001}
+
+In de tabel [Leveranciers]{.varname} zit het veld [Leverancier]{.varname}. Dit is de naam van de leverancier. Het is nu nog mogelijk om tweemaal dezelfde leveranciersnaam in te voeren, wat onwenselijk is. Om dit voorkomen moet de eigenschap [Geïndexeerd]{.uicontrol} van dit veld de waarde [Ja (Geen duplicaten)]{.uicontrol} krijgen. Breng deze wijziging aan.
+
+### tabl002 - Tussenvoegsel in namen {-#ex-tabl002}
+
+De klant met klantcode 15 heeft als achternaam: `Molen, van de` en als Voornaam: `Robert`. Als je nu etiketten zou gaan maken komt daar op te staan: `Robert Molen, van de`. Dit staat niet professioneel en je wilt dat de naam die op het etiket vermeld wordt `Robert van de Molen` is. Een mogelijke oplossing zou kunnen zijn door de achternaam te wijzigen in `van de Molen`. Echter deze oplossing heeft als nadeel dat het sorteren op achternaam dan een ongewenste volgorde oplevert. Bedenk een betere oplossing, hierbij mag het ontwerp van de tabel gewijzigd worden. Het is niet de bedoeling dat je deze wijziging in de database aanbrengt.
+
+### tabl003 - Titelveld met keuzelijst {-#ex-tabl003}
+
+Uit een klanten-tevredenheids-onderzoek blijkt dat enkele belangrijke klanten het op prijs stellen dat hun titel bij een mailing vermeld wordt. Voeg een veld [Titel]{.varname} toe aan de tabel [Klanten]{.varname}, gebruik het gegevenstype [Wizard Opzoeken]{.uicontrol} met als waarden: ing. , ir., drs., mr., dr.
+
+### tabl004 - Valutanotatie {-#ex-tabl004}
+
+Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie \@ref(tables-new-manually). Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
+
++ Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
++ Je gebruikt het hulpbestand [Vervoer.accdb]{.filepath} waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+
+Open de tabel [Vervoer]{.varname} en merk op dat de vervoerskosten niet in een valutanotatie met eurosymbool worden weergegeven. Verander de waarde van de eigenschap [Notatie]{.uicontrol} van het veld [Vervoerskosten]{.varname} in `Euro`. Schakel daarna over naar de gegevensbladweergave en bekijk het resultaat van deze verandering.
+
+### tabl005 - Samengestelde sleutel {-#ex-tabl005}
+
+Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie \@ref(tables-new-manually). Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
+
++ Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
++ Je gebruikt het hulpbestand [Vervoer.accdb]{.filepath} waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+
+In de tabel [Vervoer]{.varname} heeft het veld [ID vervoersbedrijf]{.varname} regelmatig dezelfde waarde. Zo zie je dertien keer de waarde `1`. Daarom kan dit veld niet als primaire sleutel dienen. De waarde van iedere afleverprovincie komt drie keer voor omdat ieder vervoerbedrijf per provincie een tarief heeft. Het veld [Aflever-provincie]{.varname} kan dus ook niet dienen als primaire sleutel. De combinatie van de velden [ID vervoersbedrijf]{.varname} en [Aflever-provincie]{.varname} is wel uniek en kan dus als primaire sleutel gebruikt worden.
+
+Stel de primaire sleutel in de tabel Vervoer in.
+
+### tabl006 - Veld doelgroep met keuzelijst {-#ex-tabl006}
+
+De behoefte bestaat om iedere klant in te kunnen delen in een van de volgende doelgroepen: top klant, goede klant, kleine klant. Daarvoor moet het ontwerp van de tabel [Klanten]{.varname} worden aangepast. Maak in deze tabel een nieuw veld met de naam [Doelgroep]{.varname}. Voor dit veld moet een keuzelijst maken met de hiervoor genoemde waarden.
+
+### tabl007 - Relatie maken {-#ex-tabl007}
+
+Breng een relatie aan tussen de tabellen [Doosdetails]{.varname} en [Bonbons]{.varname} en dwing tevens de referentiële integriteit af.
+
+### tabl008 - Tabel Werknemers {-#ex-tabl008}
+
+Eind 2010 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 2011 bij te gaan houden welke werknemer een order heeft ingevoerd. Er bestaat al een Excel bestand met daarin de gegevens van alle werknemers. Voer de volgende opdrachten uit:
+
++ Importeer het Excelbestand [Werknemers.xlsx]{.filepath} en geef de tabel de naam [Werknemers]{.varname}. Zorg voor een geschikte primaire sleutel voor deze tabel.
++ Breid de tabel [Orders]{.varname} uit met het veld [Werknemercode]{.varname}.
++ Breng een relatie aan tussen de tabellen [Orders]{.varname} en [Werknemers]{.varname} en dwing tevens de referentiële integriteit af.
+
+### tabl009 - Contactregistratie {-#ex-tabl009}
+
+De afdeling marketing wil alle contacten (telefonisch, schriftelijk , email, bezoeken) registreren om de kosten die voor een klant gemaakt worden, te kunnen berekenen. Van ieder contact wordt het soort contact, de datum, de begintijd en de eindtijd, het onderwerp en eventuele kosten (om bijvoorbeeld een relatiegeschenk te sturen) bijgehouden. Als bijvoorbeeld een werknemer een half uur met een brief bezig is geweest dan moet later berekend kunnen worden dat dit `0,5 * €60 =  €30` heeft gekost.
+
+Maak hiervoor een nieuwe tabel met de naam [Contacten]{.varname} en koppel deze aan de tabel [Klanten]{.varname} en dwing tevens de referentiële integriteit af.
+
+### tabl010 - Klachtenregistratie {-#ex-tabl010}
+
+Er komen de laatste tijd nogal wat klachten binnen van klanten. De klachten kunnen ingedeeld worden in onder andere de volgende categorieën: `Verpakking beschadigd`, `Doos is niet op de afgesproken datum geleverd`, `Houdbaarheidsdatum is verlopen`, `Bonbons smaken niet`.
+
+Een klacht heeft altijd betrekking op een order. Maak een nieuwe tabel [Klachten]{.varname} en koppel deze aan de tabel [Orders]{.varname} en dwing tevens de referentiële integriteit af.
+
+### tabl011 - Referentiële integriteit {-#ex-tabl011}
+
+Controleer of bij de tabellen [Klanten]{.varname}, [Orders]{.varname}, [Orderdetails]{.varname}, [Dozen]{.varname}, [Doosdetails]{.varname} en [Bonbons]{.varname} de referentiële integriteit bij de relaties is aangebracht. Zo niet, breng deze dan aan.

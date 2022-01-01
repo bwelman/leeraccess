@@ -1,0 +1,27 @@
+### data001 - Bonbons toevoegen {-#ex-data001}
+
+Voeg de volgende twee bonbons toe:
+
+|Veld         |Bonbon 1           |Bonbon 2            |
+|:------------|:------------------|:-------------------|
+|Bonbonnaam   |Cashew Mokka Toffee|Amandel Mokka Toffee|
+|Bonboncode   |F04                |F05                 |
+|Beschrijving |Zoete, crèmige mokka en cashew omgeven met toffee.|Zoete, crèmige mokka en amandel omgeven met toffee.|
+|Chocoladetype|Toffee             |Toffee              |
+|Vullingtype  |Mokkacrème         |Mokkacrème          |
+|Noottype     |Cashew             |Amandel             |
+|Kosten       |€ 0,24             |€ 0,19              |
+
+### data002 - Order toevoegen {-#ex-data002}
+
+Een klant plaatst een nieuwe order volgens de gegevens hierna. Bedenk zelf hoe je het beste deze order in kunt voeren. Voer daarna deze order in. De ordercode moet de eerstvolgende beschikbare ordercode zijn.
+
+```
+Bestelling op 23 april 2010, 10 uur. Klant Rebecca Smit bestelt telefonisch drie dozen Kers en twee dozen Mars.
+```
+
+Een aantal uren later komt er telefonisch onderstaande wijziging op deze order. Bedenk zelf hoe je het beste deze wijziging kunt doorvoeren. Breng daarna de wijziging aan.
+
+```
+Orderwijziging 23 april 2010, 16 uur. De twee dozen Mars moeten geschrapt worden.
+```

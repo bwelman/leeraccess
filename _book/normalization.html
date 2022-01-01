@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>11 Normaliseren | Leer Microsoft Access</title>
+<meta name="author" content="Ben Welman">
+<meta name="description" content="Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm. In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou in principe in...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="11 Normaliseren | Leer Microsoft Access">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm. In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou in principe in...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="11 Normaliseren | Leer Microsoft Access">
+<meta name="twitter:description" content="Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm. In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou in principe in...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Source%20Sans%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Source%20Code%20Pro-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Bitter-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1284000-4', 'auto');
+      ga('send', 'pageview');
+
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/textbook.css">
+<link rel="stylesheet" href="include/elements.css">
+<link rel="stylesheet" href="include/webex.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Ga naar de hoofdinhoud</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Leer Microsoft Access</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Toon inhoudsopgave</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Zoeken" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Inhoudsopgave</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welkom</a></li>
+<li><a class="" href="voorwoord.html">Voorwoord</a></li>
+<li class="book-part">Basis</li>
+<li><a class="" href="introductie.html"><span class="header-section-number">1</span> Beginnen met Access</a></li>
+<li><a class="" href="explore.html"><span class="header-section-number">2</span> Database SNOEP verkennen</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">3</span> Gegevens toevoegen/wijzigen</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabellen</a></li>
+<li><a class="" href="queries.html"><span class="header-section-number">5</span> Query’s</a></li>
+<li><a class="" href="forms.html"><span class="header-section-number">6</span> Formulieren</a></li>
+<li><a class="" href="reports.html"><span class="header-section-number">7</span> Rapporten</a></li>
+<li class="book-part">Gevorderd</li>
+<li><a class="" href="integration.html"><span class="header-section-number">8</span> Integratie met Office</a></li>
+<li><a class="" href="tools.html"><span class="header-section-number">9</span> Hulpmiddelen</a></li>
+<li><a class="" href="macros.html"><span class="header-section-number">10</span> Macro’s</a></li>
+<li><a class="active" href="normalization.html"><span class="header-section-number">11</span> Normaliseren</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="normalization" class="section level1" number="11">
+<h1>
+<span class="header-section-number">11</span> Normaliseren<a class="anchor" aria-label="anchor" href="#normalization"><i class="fas fa-link"></i></a>
+</h1>
+<div class="intro">
+<p>Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm.</p>
+</div>
+<p>In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou in principe in één grote tabel kunnen, maar dat is niet erg efficiënt. Gebruikers hebben vaak een specifieke informatiebehoefte, ze willen slechts bepaalde gegevens zien die aan bepaalde voorwaarden voldoen. Het ontwerp moet er voor zorgen dat je aan de informatiebehoefte van de databasegebruiker kunt voldoen. Dat kan niet goed met één grote tabel. Ook het onderhoud van gegevens verloopt moeizaam in een dergelijke tabel.</p>
+<p>In een relationele database worden de gegevens in afzonderlijke tabellen ondergebracht. Door middel van <span class="term">sleutelvelden</span> worden de tabellen met elkaar verbonden. Hierdoor kunnen gerelateerde gegevens uit verschillende tabellen opgevraagd worden. Hierbij is het van belang dat de gegevens goed over logisch samenhangende tabellen verdeeld zijn en dat de gegevens maar op één plaats worden opgeslagen, dus in één veld in één tabel. Ook mogen gegevens niet tegenstrijdig (<span class="term">inconsistent</span>) zijn, zoals bijvoorbeeld de vermelding van een niet bestaand klantnummer in een tabel facturen.</p>
+<div class='{.info-data-latex=""}'>
+<p>Als hetzelfde gegeven vaker dan 1 keer worden opgeslagen, dan heet dat ook wel <span class="term">redundantie</span>.</p>
+</div>
+<p>Elk record moet iets unieks hebben waarmee je het record in de tabel kunt vinden. Dit unieke is de inhoud (waarde) van een of meerdere velden en wordt de <span class="term">primaire sleutel</span> van de tabel genoemd.</p>
+<p>Een goed ontwerp van de database is van belang. En dit ontwerp wordt gemaakt voordat met de bouw van de database begonnen wordt. Vergelijk het met de bouw van een huis waar de architect eerst een tekening maakt en pas dan gaat de aannemer het huis bouwen. Om tot een goed ontwerp te komen heeft Edgar Codd een ontwerptechniek bedacht die bekend staat onder de naam <span class="term">normaliseren</span>. Via een aantal stappen wordt de tabellenstructuur van de database vastgesteld. Na elke stap ontstaat een nieuwe vorm van de database die daardoor steeds verder genormaliseerd wordt. Er bestaan 5 <span class="term">normaalvormen</span>, waarbij de eerste normaalvorm het minst en de vijfde normaalvorm het meest genormaliseerd is. In de praktijk zijn de meeste databases genormaliseeerd tot de derde normaalvorm.</p>
+<p>De notatiewijze voor een gegevensverzameling (tabel), de verzamelde gegevens (velden in de tabel) en de sleutel ziet er als volgt uit:</p>
+<p><span class="term">KLANT</span>(<span class="key">klantnr</span>, naam, straat, huisnr, postcode, plaats)</p>
+<p>Hierbij is <span class="term">KLANT</span> de naam van de gegevensverzameling, de tabelnaam dus. En tussen de haakjes staan de veldnamen. De onderstreepte veldnamen vormen de sleutel van de tabel.</p>
+<div id="norm-sleutel" class="section level2" number="11.1">
+<h2>
+<span class="header-section-number">11.1</span> Sleutel<a class="anchor" aria-label="anchor" href="#norm-sleutel"><i class="fas fa-link"></i></a>
+</h2>
+<p>In de tabellen van een relationele database zijn gelijksoortige gegevens opgeslagen in de velden van records (rijen). Records moeten gevonden kunnen worden via een unieke waarde van deze gegevens. Zo’n unieke waarde wordt een <span class="term">kandidaatsleutel</span> genoemd. Vaak is er in een tabel maar één kandidaatsleutel, maar het is mogelijk dat er meerdere kandidaatsleutels zijn. Uit de beschikbare kandidaatsleutels wordt er eentje gekozen tot de <span class="term">(primaire) sleutel</span>. Een tabel moet daarom zo ontworpen worden dat er een sleutel gedefinieerd kan worden. Wanneer zo’n sleutel niet uit de gegevens samengesteld kan worden moet er een kunstmatig sleutelveld gemaakt worden. Vaak is dat een nummer, een id. Enkele voorbeelden van mogelijke sleutelvelden:</p>
+<ul>
+<li>Artikelnummer</li>
+<li>Klantnummer</li>
+<li>Ordernummer</li>
+<li>Factuurnummer</li>
+<li>Burgerservicenummer (BSN)</li>
+<li>IBAN</li>
+</ul>
+<p>Een sleutel bestaat uit 1 of meerdere veldnamen uit een tabel. Iedere sleutelwaarde is uniek; d.w.z. dat iedere sleutelwaarde slechts één keer in de tabel mag voorkomen. Verder moet de sleutel minimaal zijn, uit zo min mogelijk veldnamen bestaan.</p>
+<div id="norm-vb1" class="section level4 unnumbered">
+<h4>Voorbeeld 1<a class="anchor" aria-label="anchor" href="#norm-vb1"><i class="fas fa-link"></i></a>
+</h4>
+<p>Mogelijke unieke kenmerken voor een auto zijn het chassisnummer en het kenteken. Hierdoor kan bijvoorbeeld het kenteken een sleutel zijn in een tabel met gegevens van auto’s:</p>
+<p><span class="term">AUTO</span>(<span class="key">kenteken</span>, merk, type, gewicht, brandstof, kleur)</p>
+</div>
+<div id="norm-vb2" class="section level4 unnumbered">
+<h4>Voorbeeld 2<a class="anchor" aria-label="anchor" href="#norm-vb2"><i class="fas fa-link"></i></a>
+</h4>
+<p>Een tabel <span class="term">PRODUCTEN</span> heeft de volgende inhoud:</p>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; ">
+<thead><tr>
+<th style="text-align:right;">
+afmeting
+</th>
+<th style="text-align:left;">
+kleur
+</th>
+<th style="text-align:right;">
+lengte
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+rood
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+groen
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+blauw
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+geel
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+rood
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+groen
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+blauw
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+geel
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Zowel afmeting, kleur als lengte kan niet als sleutel voor de tabel dienen, omdat in elk veld (kolom) geen unieke waarde voorkomt. Via een combinatie van velden is wel een unieke waarde te vinden. Ga na dat de volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:</p>
+<ul>
+<li>
+<span class="key">afmeting</span>, <span class="key">lengte</span>
+</li>
+<li>
+<span class="key">kleur</span>, <span class="key">lengte</span>
+</li>
+</ul>
+</div>
+<div id="norm-vb3" class="section level4 unnumbered">
+<h4>Voorbeeld 3<a class="anchor" aria-label="anchor" href="#norm-vb3"><i class="fas fa-link"></i></a>
+</h4>
+<p>Een deel van de inhoud van een tabel met adresgegevens ziet er als volgt uit:</p>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; ">
+<thead><tr>
+<th style="text-align:left;">
+straat
+</th>
+<th style="text-align:right;">
+huisnummer
+</th>
+<th style="text-align:left;">
+postcode
+</th>
+<th style="text-align:left;">
+plaats
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Dorpstraat
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+1234 AB
+</td>
+<td style="text-align:left;">
+Janstad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dorpstraat
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+1234 AB
+</td>
+<td style="text-align:left;">
+Janstad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dorpstraat
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+4321 BA
+</td>
+<td style="text-align:left;">
+Karelsdijk
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ga na dat de sleutel niet uit één veld kan bestaan en dat <span class="key">postcode</span>, <span class="key">huisnr</span> een geschikte kandidaatsleutel is:</p>
+</div>
+<div id="norm-vb4" class="section level4 unnumbered">
+<h4>Voorbeeld 4<a class="anchor" aria-label="anchor" href="#norm-vb4"><i class="fas fa-link"></i></a>
+</h4>
+<p>Een bedrijf heeft de volgende gegevensverzameling voor klanten:</p>
+<p><span class="term">KLANTEN</span>(naam, adres, postcode, plaats, telnr)</p>
+<p>Het kan voorkomen dat twee klanten op hetzelfde adres wonen. Indien dit het geval is hebben ze echter verschillende namen: bijvoorbeeld H. Linde sr. en H. Linde jr. Het kan ook voorkomen dat exact dezelfde klantnaam tweemaal in de tabel voorkomt. In dat geval betreft het twee klanten die op verschillende adressen wonen.</p>
+<p>Ga na dat de sleutel hier niet uit één veld kan bestaande te vinden en dat de volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:</p>
+<ul>
+<li>
+<span class="key">naam</span>, <span class="key">telnr</span>
+</li>
+<li>
+<span class="key">naam</span>, <span class="key">adres</span>, <span class="key">postcode</span>
+</li>
+</ul>
+<p>In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.</p>
+</div>
+<div id="norm-vb5" class="section level4 unnumbered">
+<h4>Voorbeeld 5<a class="anchor" aria-label="anchor" href="#norm-vb5"><i class="fas fa-link"></i></a>
+</h4>
+<p>Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) en 400 leden. Men heeft de volgende informatiebehoeften:</p>
+<ul>
+<li>Eens per jaar moeten etiketten geprint kunnen worden voor alle leden.</li>
+<li>Eens per half jaar moet een lijst uitgedraaid kunnen worden met alle boeken die de bibliotheek bezit en die er als volgt uitziet (het aantal wordt berekend bij het maken van deze lijst):</li>
+</ul>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr>
+<th style="text-align:left;">
+ISBN
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+<th style="text-align:left;">
+Auteur
+</th>
+<th style="text-align:right;">
+Aantal
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+9080022217
+</td>
+<td style="text-align:left;">
+Praktijk van het zweefvliegen
+</td>
+<td style="text-align:left;">
+W. Adriaansen
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9062552277
+</td>
+<td style="text-align:left;">
+De wolken en het weer
+</td>
+<td style="text-align:left;">
+G. de Bont
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Van ieder boek dat uitgeleend wordt moet bijgehouden worden: het nummer van het boek, het nummer van het lid en de datum waarop het boek uiterlijk terug bezorgd dient te worden. Eens per week worden er etiketten en brieven uitgeprint betreffende de boeken die minstens 1 maand te laat zijn.</li>
+<li>Op het etiket staan de gegevens van het lid waarvan 1 of meerdere boeken minstens 1 maand te laat zijn. In de brief staan de gegevens van het lid en de gegevens van de boeken die minstens 1 maand te laat zijn.</li>
+<li>De database met leden-, boeken- en uitleenadministratie heeft drie tabellen:</li>
+</ul>
+<p><span class="term">LID</span>(<span class="key">Lidnr</span>, Naam, Adres, Postcode, Plaats)</p>
+<p><span class="term">BOEK</span>(<span class="key">Boeknr</span>, ISBN, Titel, Auteur)</p>
+<p><span class="term">UITLEEN</span>(<span class="key">Boeknr</span>, Lidnr, Terugdatum)</p>
+<p>Een gedeeltelijke invulling van deze tabellen is hierna te zien.</p>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; ">
+<caption style="font-size: initial !important;">
+<span id="tab:vb5-lid">Tabel 11.1: </span>tabel LID
+</caption>
+<thead><tr>
+<th style="text-align:right;">
+Lidnr
+</th>
+<th style="text-align:left;">
+Naam
+</th>
+<th style="text-align:left;">
+Adres
+</th>
+<th style="text-align:left;">
+Postcode
+</th>
+<th style="text-align:left;">
+Plaats
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+G. Hannes
+</td>
+<td style="text-align:left;">
+Orion 2
+</td>
+<td style="text-align:left;">
+3434 TT
+</td>
+<td style="text-align:left;">
+Tiel
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+G. Rotgans
+</td>
+<td style="text-align:left;">
+Venus 23
+</td>
+<td style="text-align:left;">
+3434 RR
+</td>
+<td style="text-align:left;">
+Tiel
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+R. Wagner
+</td>
+<td style="text-align:left;">
+Jupiter 2
+</td>
+<td style="text-align:left;">
+3434 SP
+</td>
+<td style="text-align:left;">
+Tiel
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; ">
+<caption style="font-size: initial !important;">
+<span id="tab:vb5-boek">Tabel 11.2: </span>tabel BOEK
+</caption>
+<thead><tr>
+<th style="text-align:right;">
+Boeknr
+</th>
+<th style="text-align:left;">
+ISBN
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+<th style="text-align:left;">
+Auteur
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+9080022217
+</td>
+<td style="text-align:left;">
+Praktijk van het zweefvliegen
+</td>
+<td style="text-align:left;">
+W. Adriaansen
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+9062552277
+</td>
+<td style="text-align:left;">
+De wolken en het weer
+</td>
+<td style="text-align:left;">
+G. de Bont
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+9062552277
+</td>
+<td style="text-align:left;">
+De wolken en het weer
+</td>
+<td style="text-align:left;">
+G. de Bont
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="inline-table"><table class="table table-condensed" style="font-size: 14px; width: auto !important; ">
+<caption style="font-size: initial !important;">
+<span id="tab:vb5-uitleen">Tabel 11.3: </span>tabel UITLEEN
+</caption>
+<thead><tr>
+<th style="text-align:right;">
+Lidnr
+</th>
+<th style="text-align:right;">
+Boeknr
+</th>
+<th style="text-align:left;">
+Terugdatum
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+12-10-2011
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+12-10-2011
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+11-10-2011
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>In de tabel <span class="term">UITLEEN</span> is <span class="varname">Terugdatum</span> de datum waarop de uitleentermijn afloopt. Als een boek terug wordt gebracht, wordt het betreffende record (= rij uit de tabel) uit de tabel <span class="term">UITLEEN</span> verwijderd. In de tabel <span class="term">UITLEEN</span> staan dus alleen gegevens over boeken die op dit moment uitgeleend zijn. Wanneer het boek opnieuw uitgeleend wordt dan wordt er een nieuw record met een nieuwe <span class="varname">Terugdatum</span> aangemaakt. Er is een plan voor een nieuwe opzet waarbij alle uitleenrecords gedurende een jaar bewaard worden. De opzet van de tabel moet hierdoor gewijzigd worden.</p>
+<p>Ga na dat in de huidige opzet van de tabel <span class="term">UITLEEN</span> het veld <span class="varname">Boeknr</span> inderdaad als sleutel kan dienen, dat dit in de nieuwe opzet niet meer kan en dat de combinatie <span class="key">Boeknr</span>, <span class="key">Terugdatum</span> in de nieuwe opzet een kandidaatsleutel is.</p>
+</div>
+</div>
+<div id="norm-proces" class="section level2" number="11.2">
+<h2>
+<span class="header-section-number">11.2</span> Normalisatieproces<a class="anchor" aria-label="anchor" href="#norm-proces"><i class="fas fa-link"></i></a>
+</h2>
+<p>Bij het normalisatieproces worden de verzamelde gegevens (<span class="term">attributen</span>) verdeeld in afzonderlijke gegevensgroepen en wordt er voor verbindingen tussen deze groepen gezorgd. Het uiteenrafelen en groeperen van gegevens wordt <span class="term">normaliseren</span> genoemd.</p>
+<div class="info">
+<p>In plaats van de term gegevensgroep wordt ook de term <span class="term">objecttype</span>, <span class="term">entiteit</span> of <span class="term">tabel</span> gebruikt.</p>
+</div>
+<p>Het normalisatieproces bestaat uit een aantal stappen waarin de structuur van de database vastgesteld. Het resultaat van zo’n stap wordt een <span class="term">normaalvorm</span> genoemd. Gestart wordt met de nulde normaalvorm (0 NV). Daarna ontstaan achtereenvolgens de eerste normaalvorm (1 NV), de tweede normaalvorm (2 NV) en tot slot de derde normaalvorm (3 NV).</p>
+<p>Aan de hand van een voorbeeld wordt het normaliseren besproken.</p>
+<p>INFORMATIEBEHOEFTE</p>
+<p>De informatiebehoefte van groothandel Verschoor bestaat uit het genereren van facturen. Een voorbeeld van zo’n factuur is in de volgende afbeelding te zien.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-invoice"></span>
+<img src="images/normalization/example-invoice.png" alt="Voorbeeld van een factuur van Verschoor." width="100%"><p class="caption">
+Figuur 11.1: Voorbeeld van een factuur van Verschoor.
+</p>
+</div>
+<div id="norm-0nv" class="section level3" number="11.2.1">
+<h3>
+<span class="header-section-number">11.2.1</span> Nulde normaalvorm (0 NV)<a class="anchor" aria-label="anchor" href="#norm-0nv"><i class="fas fa-link"></i></a>
+</h3>
+<p>De eerste stap is het bepalen van de benodigde gegevens, uitgaande van de informatiebehoefte. Op de factuur zijn verschillende soorten gegevens te zien. Deze kunnen onderscheiden worden in:</p>
+<div id="constante-gegevens" class="section level4 unnumbered">
+<h4>Constante gegevens<a class="anchor" aria-label="anchor" href="#constante-gegevens"><i class="fas fa-link"></i></a>
+</h4>
+<p>Dit zijn gegevens die steeds hetzelfde zijn. Op de factuur zijn dit de gegevens van de groothandel zelf (naam en adresgegevens). Deze gegevens kunnen in de loop van de tijd wel veranderen, maar gedurende een bepaalde periode mogen ze als constant beschouwd worden. Het is zelfs mogelijk deze gegevens vooraf op de factuur te drukken.</p>
+<div class="info">
+<p><strong>Constante gegevens worden niet opgenomen naar de database.</strong></p>
+</div>
+</div>
+<div id="procesgegevens" class="section level4 unnumbered">
+<h4>Procesgegevens<a class="anchor" aria-label="anchor" href="#procesgegevens"><i class="fas fa-link"></i></a>
+</h4>
+<p>Procesgegevens zijn gegevens die uit andere gegevens kunnen worden afgeleid, bijvoorbeeld doordat ze uit die andere gegevens berekend kunnen worden. Op de factuur komen de volgende procesgegevens voor:</p>
+<ul>
+<li>
+<code>Bedrag</code>, wordt berekend via <code>Aantal</code> x <code>Prijs</code>
+</li>
+<li>
+<code>Subtotaal</code>, wordt berekend door alle bedragen op te tellen.</li>
+<li>
+<code>Tot. excl. BTW</code>, berekend uit <code>Subtotaal</code> - <code>Korting</code>
+</li>
+<li>
+<code>BTW</code>, wordt berekend via 21% x <code>Tot. excl. BTW</code>
+</li>
+<li>
+<code>Tot. incl. BTW</code>, berekend uit <code>Tot. excl. BTW</code> - <code>BTW</code>
+</li>
+</ul>
+<div class="info">
+<p><strong>Procesgegevens worden niet opgenomen in de database.</strong></p>
+</div>
+</div>
+<div id="elementaire-gegevens" class="section level4 unnumbered">
+<h4>Elementaire gegevens<a class="anchor" aria-label="anchor" href="#elementaire-gegevens"><i class="fas fa-link"></i></a>
+</h4>
+<p>Elementaire gegevens zijn alle essentiële gegevens die niet opgesplitst kunnen worden. Op de factuur komen de volgende elementaire gegevens voor: <code>datum</code>, <code>Klantnaam</code>, <code>Adres</code>, <code>Postcode</code>, <code>Plaats</code>, <code>Telefoon</code>, <code>Artikelnr</code>, <code>Artikelomschrijving</code>, <code>Aantal</code>, <code>Prijs</code> en <code>Korting</code>.</p>
+<div class="info">
+<p><strong>Elementaire gegevens worden in de database opgenomen.</strong></p>
+</div>
+</div>
+<div id="samengestelde-gegevens" class="section level4 unnumbered">
+<h4>Samengestelde gegevens<a class="anchor" aria-label="anchor" href="#samengestelde-gegevens"><i class="fas fa-link"></i></a>
+</h4>
+<p>Dit zijn gegevens die opgesplitst kunnen worden in elementaire gegevens. De zo ontstane elementaire gegevens worden in de database opgenomen. Op de factuur is <code>Factuurcode</code> een samengesteld gegeven, omdat deze te splitsen is in een factuurnummer (10000) en een afkorting van de verkoper (POY). Aan de groep met elementaire gegevens wordt daarom toegevoegd <code>Factuurnr</code> en <code>Verkoper</code>.</p>
+<div class="info">
+<p><code>Adres</code> zou ook opgesplitst kunnen worden in straatnaam en huisnummer. Voor deze informatiebehoefte is dit niet van belang en daarom is hiervoor niet gekozen.</p>
+</div>
+<p>De verzamelde lijst met elementaire gegevens (eigenschappen, attributen) voor de factuur is dan</p>
+<p><span class="term">FACTUUR</span>(Factuurnr, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Artikelnr, Artikelomschrijving, Aantal, Prijs, Korting)</p>
+<p>De attributen die vaker dan één keer voorkomen worden ook wel een <span class="term">Repeterende Groep (Repeating Group)</span> genoemd, afgekort als [RG]{.term. Omdat op de factuur meerdere factuurregels met artikelen voorkomen vormen de attributen <span class="varname">Artikelnr</span>, <span class="varname">Artikelomschrijving</span>, <span class="varname">Aantal</span> en <span class="varname">Prijs</span> een RG. Het is als voorbereiding op de volgende stap handig om een RG in de lijst aan te duiden.</p>
+<p><span class="term">FACTUUR</span>(Factuurnr, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting, RG [Artikelnr, Artikelomschrijving, Aantal, Prijs])</p>
+<p>Als laatste moet een sleutel worden aangewezen. Dit wordt <span class="varname">Factuurnr</span> en dit attribuut wordt in de lijst onderstreept. De 0 NV ziet er dan als volgt uit:</p>
+<p><span class="term">FACTUUR</span>(<span class="key">Factuurnr</span>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting, RG [Artikelnr, Artikelomschrijving, Aantal, Prijs])</p>
+</div>
+</div>
+<div id="norm-1nv" class="section level3" number="11.2.2">
+<h3>
+<span class="header-section-number">11.2.2</span> Eerste normaalvorm (1 NV)<a class="anchor" aria-label="anchor" href="#norm-1nv"><i class="fas fa-link"></i></a>
+</h3>
+<p>Om van de nulde naar de eerste normaalvorm te komen worden alle RG’s afgesplitst en in een nieuwe gegevensgroep (tabel) ondergebracht. Om een koppeling tussen de tabellen mogelijk te maken wordt de sleutel van de tabel waaruit de RG vandaan komt
+aan de nieuwe tabel toegevoegd. Van de nieuwe tabel wordt dan de sleutel vastgesteld. Meestal is dit een combinatie van een sleutelattribuut uit de RG met de sleutel van de oorspronkelijke tabel, de <span class="term">vreemde sleutel (foreign key)</span>.</p>
+<p>In de 0 NV komt maar 1 RG voor met <span class="varname">Artikelnr</span> als kandidaatsleutel:</p>
+<p>RG[Artikelnr, Artikelomschrijving, Aantal, Prijs]</p>
+<p>Deze gegevensgroep wordt ondergebracht in een nieuwe tabel <span class="term">FACTUURREGEL</span> waaraan de sleutel van de oorspronkelijke tabel, <span class="key">Factuurnr</span>, wordt toegevoegd. Samen vormen deze de samengestelde sleutel van de nieuwe tabel <span class="term">FACTUURREGEL</span>.</p>
+<p>De 1 NV wordt dan:</p>
+<p><span class="term">FACTUUR</span>(<span class="key">Factuurnr</span>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting)</p>
+<p><span class="term">FACTUURREGEL</span>(<span class="key">Factuurnr</span>, <span class="key">Artikelnr</span>, Artikelomschrijving, Aantal, Prijs)</p>
+</div>
+<div id="norm-2nv" class="section level3" number="11.2.3">
+<h3>
+<span class="header-section-number">11.2.3</span> Tweede normaalvorm (2 NV)<a class="anchor" aria-label="anchor" href="#norm-2nv"><i class="fas fa-link"></i></a>
+</h3>
+<p>Om van de eerste naar de tweede normaalvorm te komen moeten alle gegevensgroepen (tabellen) met een samengestelde sleutel onderzocht worden. Van alle attributen die geen onderdeel van de sleutel vormen, moet bekeken worden of deze functioneel afhankelijk zijn van een deel van de sleutel. Zo ja, dan moeten deze attributen in een nieuwe tabel worden ondergebracht en moet het sleuteldeel waarvan ze afhankelijk zijn aan deze tabel worden toegevoegd.</p>
+<div class="info">
+<p>Een attribuut A is functioneel afhankelijk van attribuut B als bij iedere waarde van B precies één waarde van A hoort. Zo is de titel van een boek functioneel afhankelijk van het ISBN nummer omdat bij ieder ISBN nummer precies één titel hoort.</p>
+</div>
+<p>Alleen tabel <span class="term">FACTUURREGEL</span> heeft een samengestelde sleutel en hiervan moeten de niet-sleutelvelden onderzocht worden op eventuele functionele afhankelijkheid van een deel van de sleutel, van <span class="key">Factuurnr</span> of van <span class="key">Artikelnr</span>.</p>
+<ul>
+<li><p><span class="varname">Artikelomschrijving</span>, is functioneel afhankelijk van <span class="key">Artikelnr</span>. Immers bij ieder artikelnummer hoort precies één omschrijving van het artikel.</p></li>
+<li><p><span class="varname">Aantal</span> is niet functioneel afhankelijk van <span class="key">Artikelnr</span> en ook niet van <span class="key">Factuurnr</span>. Het is een waarde die door de klant wordt bepaald en kan per factuur een andere waarde hebben.</p></li>
+<li>
+<p><span class="varname">Prijs</span>, is meestal niet functioneel afhankelijk van <span class="key">Artikelnr</span>. Dit komt omdat de prijs meestal van de verkoopdatum afhangt en er in de loop van de tijd prijswijzigingen kunnen optreden. Ook kan de prijs door onderhandelingen bepaald worden. Het attribuut <span class="varname">Prijs</span> bevat dus de waarde van de verkoopprijs. In dit voorbeeld wordt gekozen om het oorspronkelijke attribuut <span class="varname">Prijs</span> te vervangen door twee nieuwe attributen:</p>
+<ul>
+<li>
+<span class="varname">Verkoopprijs</span>, deze is niet functioneel afhankelijk van <span class="key">Artikelnr</span>
+</li>
+<li>
+<span class="varname">Adviesprijs</span>, deze is wel functioneel afhankelijk van <span class="key">Artikelnr</span>
+</li>
+</ul>
+</li>
+</ul>
+<p>Het onderzoek heeft nu opgeleverd dat twee attributen functioneel afhankelijk zijn van <span class="key">Artikelnr</span>, namelijk <span class="varname">Artikelomschrijving</span> en <span class="varname">Adviesprijs</span>. Deze twee gegevens worden ondergebracht in een nieuwe tabel <span class="term">ARTIKEL</span> en tevens wordt het veld <span class="key">Artikelnr</span> hieraan toegevoegd, daar zijn de twee gegevens immers van afhankelijk. Dit veld is tevens de sleutel van de nieuwe tabel.</p>
+<p>De 2 NV wordt dan:</p>
+<p><span class="term">FACTUUR</span>(<span class="key">Factuurnr</span>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting)</p>
+<p><span class="term">FACTUURREGEL</span>(<span class="key">Factuurnr</span>, <span class="key">Artikelnr</span>, Artikelomschrijving, Aantal, Verkoopprijs)</p>
+<p><span class="term">ARTIKEL</span>(<span class="key">Artikelnr</span>, Artikelomschrijving, Adviesprijs)</p>
+</div>
+<div id="norm-3nv" class="section level3" number="11.2.4">
+<h3>
+<span class="header-section-number">11.2.4</span> Derde normaalvorm (3 NV)<a class="anchor" aria-label="anchor" href="#norm-3nv"><i class="fas fa-link"></i></a>
+</h3>
+<p>Om van de tweede naar de derde normaalvorm te komen moeten alle tabellen onderzocht worden. Wanneer hierin niet-sleutel attributen zitten die functioneel afhankelijk zijn van andere niet-sleutel attributen, dan moeten deze afhankelijke attributen in een nieuwe tabel worden ondergebracht en moet het attribuut waarvan ze afhankelijk zijn aan deze tabel worden toegevoegd.</p>
+<p>Veronderstel dat in dit voorbeeld de <span class="varname">Klantnaam</span> uniek is. In dat geval zijn in de tabel <span class="term">FACTUUR</span> de attributen <span class="varname">Adres</span>, <span class="varname">Postcode</span>, <span class="varname">Plaats</span> en <span class="varname">Telefoon</span> functioneel afhankelijk van het attribuut <span class="varname">Klantnaam</span> want bij iedere Klantnaam hoort precies één waarde voor Adres, Postcode, Plaats en Telefoon.</p>
+<div class="info">
+<p>Ook wanneer de Klantnaam niet uniek is, worden dit soort bij elkaar behorende gegevens toch in een nieuwe tabel ondergebracht waarbij dan een uniek klantnummer wordt bedacht.</p>
+</div>
+<p>De klantgegevens worden in een nieuwe tabel <span class="term">KLANT</span> ondergebracht en het veld <span class="varname">Klantnaam</span> wordt hiervan de sleutel.</p>
+<p>De 3 NV wordt dan:</p>
+<p><span class="term">FACTUUR</span>(<span class="key">Factuurnr</span>, Verkoper, Datum, Klantnaam, Korting)</p>
+<p><span class="term">KLANT</span>(<span class="key">Klantnaam</span>, Adres, Postcode, Plaats, Telefoon)</p>
+<p><span class="term">FACTUURREGEL</span>(<span class="key">Factuurnr</span>, <span class="key">Artikelnr</span>, Artikelomschrijving, Aantal, Verkoopprijs)</p>
+<p><span class="term">ARTIKEL</span>(<span class="key">Artikelnr</span>, Artikelomschrijving, Adviesprijs)</p>
+</div>
+<div id="norm-summary" class="section level3" number="11.2.5">
+<h3>
+<span class="header-section-number">11.2.5</span> Samenvatting normalisatieproces<a class="anchor" aria-label="anchor" href="#norm-summary"><i class="fas fa-link"></i></a>
+</h3>
+<dl>
+<dt>0 NV</dt>
+<dd>Inventarisatie van attributen (velden maken, repeterende groepen (RG) aangeven, sleutel onderstrepen.
+</dd>
+<dt>1 NV</dt>
+<dd>Repeterende groepen afsplitsen als aparte tabellen en de sleutel van de “oude” tabel meenemen. De sleutel van de nieuwe tabel is een samengestelde sleutel.
+</dd>
+<dt>2 NV</dt>
+<dd>Alleen voor tabellen met samengestelde sleutels: attributen afsplitsen die afhankelijk zijn van een deel van de sleutel. Dit wordt de sleutel van een nieuwe tabel.
+</dd>
+<dt>3 NV</dt>
+<dd>Voor alle tabellen: als een attribuut afhankelijk is van een niet-sleutelveld, dan deze afhankelijkheid afsplitsen naar een nieuwe tabel.
+</dd>
+</dl>
+</div>
+</div>
+<div id="norm-gsd" class="section level2" number="11.3">
+<h2>
+<span class="header-section-number">11.3</span> Gegevens Structuur Diagram (GSD)<a class="anchor" aria-label="anchor" href="#norm-gsd"><i class="fas fa-link"></i></a>
+</h2>
+<p>Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen tabellen op een overzichtelijke manier kunnen worden weergegeven.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-dsd1"></span>
+<div id="htmlwidget-b95bf3bcebaa73a29ee1" style="width:100%;height:50px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b95bf3bcebaa73a29ee1">{"x":{"diagram":"digraph dsd1 {\n  graph [rankdir=LR, bgcolor=transparent]\n  node [shape = rectangle, fontname = Helvetica]\n  KLANT\n  FACTUUR\n  FACTUURREGEL\n  ARTIKEL\n  KLANT->FACTUUR[arrowhead = crow]\n  FACTUUR->FACTUURREGEL[arrowhead = crow]\n  FACTUURREGEL->ARTIKEL[arrowtail = crow, dir=back]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p class="caption">
+Figuur 11.2: Gegevensstructuurdiagram van de tabellen met de onderlinge relaties.
+</p>
+</div>
+<p>Tussen deze vier tabellen bestaan verschillende relaties, zoals:</p>
+<ul>
+<li>
+<span class="term">Klant</span> - <span class="term">FACTUUR</span> : Een factuur hoort bij precies één klant en een klant kan meerdere facturen hebben. In het GSD gaat er vanuit KLANT meerdere lijnen naar FACTUUR, aangegeven via een vertakking aan het eind.</li>
+<li>
+<span class="term">FACTUUR</span> - <span class="term">Factuurregel</span> : Een factuurregel hoort bij één factuur en op een factuur kunnen meerdere factuurregels staan.</li>
+<li>
+<span class="term">FACTUURREGEL</span> - <span class="term">Artikel</span> : Een factuurregel heeft altijd betrekking op één artikel en een bepaald artikel kan op meerdere factuurregels voorkomen.</li>
+</ul>
+<p>Vaak wordt bij de pijl ook het attribuut (veld) vermeld waarmee de koppeling tot stand wordt gebracht.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-dsd2"></span>
+<div id="htmlwidget-54797bb1b5f7059a9587" style="width:100%;height:50px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-54797bb1b5f7059a9587">{"x":{"diagram":"digraph dsd2 {\n  graph [rankdir=LR, bgcolor=transparent]\n  node [shape = rectangle, fontname = Helvetica]\n  KLANT\n  FACTUUR\n  FACTUURREGEL\n  ARTIKEL\n  KLANT->FACTUUR[arrowhead = crow, label=\"Klantnaam\"]\n  FACTUUR->FACTUURREGEL[arrowhead = crow, label=\"Factuurnr\"]\n  FACTUURREGEL->ARTIKEL[arrowtail = crow, dir=back, label=\"Artikelnr\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p class="caption">
+Figuur 11.3: Gegevensstructuurdiagram nu met koppelvelden
+</p>
+</div>
+<p>Bij een GSD worden de volgende symbolen gebruikt:</p>
+<ul>
+<li>Rechthoek: voor een tabel.</li>
+<li>Enkele lijn: voor een relatie van één op één.</li>
+<li>Vertakte lijn: voor een relatie van een op veel.</li>
+</ul>
+<p>Een relatiediagram in Access ziet er als volgt uit</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:example-relations"></span>
+<img src="images/normalization/example-relations.png" alt="Relaties weergegeven in Microsoft Access" width="100%"><p class="caption">
+Figuur 11.4: Relaties weergegeven in Microsoft Access
+</p>
+</div>
+</div>
+<div id="norm-case" class="section level2" number="11.4">
+<h2>
+<span class="header-section-number">11.4</span> Case - Normalisatie dierenkliniek<a class="anchor" aria-label="anchor" href="#norm-case"><i class="fas fa-link"></i></a>
+</h2>
+<p>Een dierenkliniek houdt op dit moment de behandeling van dieren bij in een Excel tabel. Deze heeft de volgende vorm.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<img src="images/normalization/animal-clinic-table.png" alt="Behandelingen dieren" width="100%"><p class="caption">
+Figuur 11.5: Behandelingen dieren
+</p>
+</div>
+<p>Het plan is om deze gegevens in een database bij te gaan houden waarvoor een genormaliseerde structuur van tabellen moet worden opgesteld.</p>
+<div id="nv" class="section level4 unnumbered">
+<h4>0 NV<a class="anchor" aria-label="anchor" href="#nv"><i class="fas fa-link"></i></a>
+</h4>
+<p>Alle gegevens zijn elementaire gegevens, behalve het attribuut <code>behandeling.</code> Dit is een samengesteld gegeven dat opgesplitst kan worden in een <span class="varname">behandelnr</span> en een <span class="varname">behandelnaam</span>.</p>
+<p>Per dier worden meerdere behandelingen bijgehouden, <span class="varname">bezoekdatum</span> en <span class="varname">behandeling</span> vormen dus een Repeterende Groep (RG).</p>
+<p><span class="term">DIER</span>(<span class="key">diernr</span>, diernaam, diertype, leeftijd, eigenaar, RG [bezoekdatum, behandelnr, behandelnaam])</p>
+</div>
+<div id="nv-1" class="section level4 unnumbered">
+<h4>1 NV<a class="anchor" aria-label="anchor" href="#nv-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>De repeterende groep wordt afgesplitst van tabel <span class="term">DIER</span> en in een nieuwe tabel <span class="term">BEZOEK</span> geplaatst. Aan deze tabel wordt de sleutel van tabel <span class="term">DIER</span> toegevoegd. De sleutel van de nieuwe tabel is samengesteld uit drie velden. Ga dit na.</p>
+<p><span class="term">DIER</span>(<span class="key">diernr</span>, diernaam, diertype, leeftijd, eigenaar)</p>
+<p><span class="term">BEZOEK</span>(<span class="key">diernr</span>, <span class="key">bezoekdatum</span>, <span class="key">behandelnr</span>, behandelnaam)</p>
+</div>
+<div id="nv-2" class="section level4 unnumbered">
+<h4>2 NV<a class="anchor" aria-label="anchor" href="#nv-2"><i class="fas fa-link"></i></a>
+</h4>
+<p>In tabel <span class="term">BEZOEK</span> hangt het veld <span class="varname">behandelnaam</span> alleen af van het veld <span class="key">behandelnr</span> en wordt daarom uit deze tabel gehaald en in een nieuwe tabel <span class="term">BEHANDELING</span> ondergebracht waaraan tevens het sleutelveld <span class="key">behandelnr</span> wordt toegevoegd.</p>
+<p><span class="term">DIER</span>(<span class="key">diernr</span>, diernaam, diertype, leeftijd, eigenaar)</p>
+<p><span class="term">BEZOEK</span>(<span class="key">diernr</span>, <span class="key">bezoekdatum</span>, <span class="key">behandelnr</span>)</p>
+<p><span class="term">BEHANDELING</span>(<span class="key">behandelnr</span>, behandelnaam)</p>
+</div>
+<div id="nv-3" class="section level4 unnumbered">
+<h4>3 NV<a class="anchor" aria-label="anchor" href="#nv-3"><i class="fas fa-link"></i></a>
+</h4>
+<p>Er zijn geen niet-sleutel velden te vinden die afhankelijk zijn van een sleutelveld. Daarom is de 3NV gelijk aan de 2NV.</p>
+</div>
+<div id="gegevens-structuur-diagram" class="section level4 unnumbered">
+<h4>Gegevens Structuur Diagram<a class="anchor" aria-label="anchor" href="#gegevens-structuur-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:animal-clinic-dsd"></span>
+<div id="htmlwidget-e4b018ea55913118e7fb" style="width:100%;height:50px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e4b018ea55913118e7fb">{"x":{"diagram":"digraph case {\n  graph [rankdir=LR, bgcolor=transparent]\n  node [shape = rectangle, fontname = Helvetica]\n  1[label=\"DIER\"]\n  2[label = \"BEZOEK\"]\n  3[label = \"BEHANDELING\"]\n  1->2[arrowhead = crow, label=\"diernr\"]\n  2->3[arrowtail = crow, dir=back, label=\"behandelnr\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p class="caption">
+Figuur 11.6: Gegevensstructuurdiagram dierenkliniek.
+</p>
+</div>
+</div>
+</div>
+<div id="norm-exercises" class="section level2" number="11.5">
+<h2>
+<span class="header-section-number">11.5</span> Opgaven<a class="anchor" aria-label="anchor" href="#norm-exercises"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ex-norm001" class="section level3 unnumbered">
+<h3>norm001 - Orders<a class="anchor" aria-label="anchor" href="#ex-norm001"><i class="fas fa-link"></i></a>
+</h3>
+<p>Normaliseer de volgende tabel met gegevens:</p>
+<div class="inline-figure"><img src="exercises/images/norm001-data.png"></div>
+</div>
+<div id="ex-norm003" class="section level3 unnumbered">
+<h3>norm003 - Cursusoverzicht<a class="anchor" aria-label="anchor" href="#ex-norm003"><i class="fas fa-link"></i></a>
+</h3>
+<p>Bij een bedrijf kunnen de werknemers cursussen volgen. De directie wenst periodiek een overzicht te krijgen van de door de werknemers gevolgde cursussen volgens onderstaande lay-out:</p>
+<div class="inline-figure"><img src="exercises/images/norm003-data.png"></div>
+<p>Dezelfde cursussen kunnen op meerdere tijdstippen worden aangeboden. Een werknemer kan eventueel een bepaalde cursus op een ander tijdstip opnieuw volgen.</p>
+<p>Ontwerp voor deze gegevens een genormaliseerd systeem.</p>
+</div>
+<div id="ex-norm004" class="section level3 unnumbered">
+<h3>norm004 - Garage<a class="anchor" aria-label="anchor" href="#ex-norm004"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een garage heeft een kaartenbak met alle klanten. Op de kaarten worden ook gegevens van de auto(’s) van de klant bijgehouden en gegevens van de beurten van die auto’s. Hieronder staan een paar voorbeelden van de layout van zo’n kaart:</p>
+<div class="inline-figure"><img src="exercises/images/norm004-data.png"></div>
+<p>Voor het beschreven kaartsysteem moet een database ontworpen worden. Ontwerp voor deze gegevens een genormaliseerd systeem zonder extra attributen toe te voegen en teken een GSD.</p>
+</div>
+<div id="ex-norm005" class="section level3 unnumbered">
+<h3>norm005 - Klantcontacten<a class="anchor" aria-label="anchor" href="#ex-norm005"><i class="fas fa-link"></i></a>
+</h3>
+<p>De tabel <span class="term">KLANT</span> bevat klantgegevens. De tabel <span class="term">CONTACT</span> bevat de gegevens van contactpersonen bij een klant. Bij een klant kunnen 0, 1 of meer contactpersonen horen en 1 contactpersoon hoort bij precies 1 klant. Bij de contactpersonen van een klant komt de combinatie achternaam en voornaam maar één keer voor. Verder kunnen meerdere contactpersonen van een klant hetzelfde telefoonnummer hebben.</p>
+<p><span class="term">KLANT</span>(Klantnr, Naam, Adres, Postcode, Plaats)</p>
+<p><span class="term">CONTACT</span>(Achternaam, Voornaam, Bedrijf, telefoonnr)</p>
+<ol style="list-style-type: decimal">
+<li>Definieer een geschikte sleutel bij de tabel <span class="term">CONTACT</span> zonder een extra veld toe te voegen.</li>
+<li>De tabellen <span class="term">CONTACT</span> en <span class="term">KLANT</span> moeten gekoppeld worden. Leg uit welke velden gekoppeld moeten worden en wat primaire en secundaire tabel is bij de koppeling.</li>
+<li>Stel dat je de structuur van de tabel <span class="term">CONTACT</span> mag veranderen. Wat is een meer gebruikelijke manier om de tabellen <span class="term">CONTACT</span> en <span class="term">KLANT</span> te koppelen en wat is dan de nieuwe structuur? Het doel is een eenvoudiger invoer met behoud van de relatie.</li>
+</ol>
+</div>
+<div id="ex-norm006" class="section level3 unnumbered">
+<h3>norm006 - Hoveniersbedrijf<a class="anchor" aria-label="anchor" href="#ex-norm006"><i class="fas fa-link"></i></a>
+</h3>
+<p>Het hoveniersbedrijf “Fruithobby” drijft op kleine schaal handel in uitsluitend fruitbomen. De fruitbomen worden aangekocht, in voorraad opgeslagen en doorverkocht aan de hobbyist. Het bedrijf voert een viertal soorten fruitbomen: appel, peer, pruim en noot en betrekt deze van een drietal leveranciers die de volgende aanbiedingen hebben gedaan:</p>
+<div class="inline-figure"><img src="exercises/images/norm006-data.png"></div>
+<p>Ontwerp hiervoor een genormaliseerde database. Geef van iedere tabel de structuur (velden + sleutel).</p>
+</div>
+<div id="ex-norm007" class="section level3 unnumbered">
+<h3>norm007 - Onderdelen<a class="anchor" aria-label="anchor" href="#ex-norm007"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een autobedrijf gebruikt een gegevensbank voor het beheer van onderdelen zoals uitlaten, remvoeringen en schokdempers ten behoeve van montage in verschillende autotypen. Elk onderdeel heeft een uniek onderdeelnummer en een onderdeelomschrijving. In verband met technische wijzigingen van autotypen is per onderdeel aangegeven het beginbouwjaar en het eindbouwjaar van het autotype (of autotypen) waarvoor dit onderdeel geschikt is.</p>
+<p>Zo moet bijvoorbeeld opgeslagen kunnen worden dat een bepaald onderdeel geschikt is voor een Audi 100 met bouwjaren ’83 t/m ’88. En ook dat dit onderdeel geschikt is voor een Audi 80 van de bouwjaren ’80 t/m ’87.</p>
+<p>Om het onderdelenverbruik te voorspellen wordt van elk autotype het verkoopaantal (= aantal verkochte auto’s) per bouwjaar geregistreerd. Tevens is per autotype een type-omschrijving opgenomen. Per onderdeel is de verkoopprijs aangegeven. Tevens zijn de montagekosten en de normtijd, die per autotype kunnen verschillen, in de gegevensbank opgenomen.</p>
+<p>Ontwerp voor deze informatiebehoefte een genormaliseerde database.</p>
+</div>
+<div id="ex-norm008" class="section level3 unnumbered">
+<h3>norm008 - Relaties<a class="anchor" aria-label="anchor" href="#ex-norm008"><i class="fas fa-link"></i></a>
+</h3>
+<p>Bekijk de volgende tabellen:</p>
+<p><span class="term">STUDENT</span>(studentnr, studentnaam, adres, woonplaats, klas, …)</p>
+<p><span class="term">STAGEBEDRIJF</span>(bedrijfsnr, bedrijfsnaam, …)</p>
+<ol style="list-style-type: decimal">
+<li>Welk proces zal van deze twee tabellen gebruik maken?</li>
+<li>De gegevens die het proces genereert worden opgeslagen in een aparte tabel <span class="term">STAGEPLAATS</span>. Geef aan hoe deze tabel eruit zal zien.</li>
+</ol>
+</div>
+<div id="ex-norm009" class="section level3 unnumbered">
+<h3>norm009 - Optimaliseren database<a class="anchor" aria-label="anchor" href="#ex-norm009"><i class="fas fa-link"></i></a>
+</h3>
+<p>Bekijk de volgende tabel:</p>
+<p><span class="term">ROOSTER</span>(<span class="key">dag</span>, <span class="key">uur</span>, <span class="key">lokaal</span>, docentcode, klas)</p>
+<p>De tabel moet voldoende mogelijkheden hebben om in de praktijk te kunnen voldoen. Om dit te testen zijn een aantal vragen geformuleerd.</p>
+<p>Kun je met deze tabel de vragen niet beantwoorden, kijk dan of je de vragen wel kunt beantwoorden door nieuwe velden aan de tabel toe te voegen.</p>
+<ol style="list-style-type: decimal">
+<li>Het veld <span class="varname">dag</span> heeft als waarden “ma, di,…, vr”. Biedt de tabel de mogelijkheid dat een docent twee keer in de week dezelfde klas lesgeeft?</li>
+<li>Is deze tabel ook te gebruiken om collegezalen in te roosteren die geschikt zijn voor meerdere klassen?</li>
+<li>Is het in dit roosterbestand mogelijk om werkcolleges op te nemen? Aan een werkcollege neemt de helft van het aantal studenten van een klas deel.</li>
+<li>Is het mogelijk met deze tabel groepen studenten te clusteren uit diverse groepen klassen en studiejaren?</li>
+</ol>
+</div>
+<div id="ex-norm010" class="section level3 unnumbered">
+<h3>norm010 - Sleutels en tabellen<a class="anchor" aria-label="anchor" href="#ex-norm010"><i class="fas fa-link"></i></a>
+</h3>
+<p>Ga uit van de volgende verzameling gegevens van docenten:</p>
+<div class="inline-figure"><img src="exercises/images/norm010-data.png"></div>
+<ol style="list-style-type: decimal">
+<li>Geef voor elk veld aan wat het gegevenstype is.</li>
+<li>Wat is de sleutel van de tabel? Is dit een primaire sleutel?</li>
+<li>Welke zou de sleutel zijn als het veld uit de vorige vraag niet in de tabel voorkwam? Is dit dan nog steeds een primaire sleutel?</li>
+</ol>
+</div>
+<div id="ex-norm011" class="section level3 unnumbered">
+<h3>norm011 - Doe-het-zelf zaak<a class="anchor" aria-label="anchor" href="#ex-norm011"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een doe-het-zelfzaak verkoopt een groot aantal artikelen. Bestellingen ter aanvulling van de voorraad worden gedaan via een inkooporder.</p>
+<p>De bestellingen gaan per leverancier altijd via dezelfde inkoper. De inkoper maakt de diverse prijsafspraken voor de te leveren artikelen. De levering van een artikel is niet gebonden aan één leverancier. Op een inkooporder staat altijd minstens één orderregel. Het maximum aantal orderregels is 24. Voor een voorbeeld van een inkooporder zie de volgende afbeelding.</p>
+<div class="inline-figure"><img src="exercises/images/norm011-data.png"></div>
+<ol style="list-style-type: decimal">
+<li>Ontwerp een database passend bij het orderformulier. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.</li>
+<li>Maak een bijbehorend gegevensstructuurdiagram.</li>
+</ol>
+</div>
+<div id="ex-norm012" class="section level3 unnumbered">
+<h3>norm012 - Vrachtbrief<a class="anchor" aria-label="anchor" href="#ex-norm012"><i class="fas fa-link"></i></a>
+</h3>
+<p>Een groothandel vervoert binnen Nederland zelf de vrachten naar de diverse klanten. De vrachtwagen wordt bij de expeditie geladen en de vracht wordt vervolgens naar de diverse klanten gebracht.</p>
+<p>Per dag wordt voor elke vrachtwagen één vrachtbrief gemaakt met daarop de informatie voor de chauffeur. In de figuur hierna staat een voorbeeld van zo’n vrachtbrief.</p>
+<div class="inline-figure"><img src="exercises/images/norm012-data.png"></div>
+<ol style="list-style-type: decimal">
+<li>Ontwerp een genormaliseerde database passend bij de vrachtbrief. Ga ervan uit dat een vrachtwagen uniek geïdentificeerd wordt met het kenteken. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.</li>
+<li>Wat verandert er in het ontwerp als niet het kenteken de auto’s uniek zou identificeren, maar alleen het autonummer?</li>
+<li>Maak een bijbehorend gegevensstructuurdiagram.</li>
+</ol>
+</div>
+<div id="ex-norm013" class="section level3 unnumbered">
+<h3>norm013 - Bestelbon<a class="anchor" aria-label="anchor" href="#ex-norm013"><i class="fas fa-link"></i></a>
+</h3>
+<p>Bekijk onderstaande bestelbon van de firma DataRex.</p>
+<div class="inline-figure"><img src="exercises/images/norm013-data.png"></div>
+<ol style="list-style-type: decimal">
+<li>Welke procesgegevens zijn er in de bestelbon te vinden?</li>
+<li>Leg uit wat wordt bedoeld met een herhalende (of repeterende) groep. Waaruit bestaat deze bij de bestelbon?</li>
+<li>Ontwerp een genormaliseerde database passend bij de bestelbon. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.</li>
+<li>Maak een bijbehorend gegevensstructuurdiagram.</li>
+</ol>
+</div>
+<div id="ex-norm014" class="section level3 unnumbered">
+<h3>norm014 - Boekingen<a class="anchor" aria-label="anchor" href="#ex-norm014"><i class="fas fa-link"></i></a>
+</h3>
+<p>Het boekingsbureau Cultuur heeft voor het seizoen 2001 - 2002 het Passe-partout ingevoerd. Cultuurliefhebbers kunnen uit een bijzonder gevarieerd aanbod 5 voorstellingen kiezen en deze tegen een vriendenprijsje bezoeken. Het boekingsbureau heeft van elke voorstelling een aantal toegangs-kaarten beschikbaar en doet de overgebleven kaarten in de losse verkoop. Als de belangstelling groter is dan het beschikbaar aantal kaarten dan wordt een wachtlijst bijgehouden. De office-manager van boekingsbureau Cultuur heeft gevraagd om hiervoor een database te ontwerpen. Zij wil naast het aanmaken en afdrukken van de passe-partouts ook overzichtslijsten van de deelnemers per voorstelling. Een voorbeeld van een passe-partout zie je in de figuur hierna</p>
+<div class="inline-figure"><img src="exercises/images/norm014-data.png"></div>
+<ol style="list-style-type: decimal">
+<li>Normaliseer het passe-partout. Geef alle stappen van het normalisatieproces duidelijk weer. Houd hierbij rekening met de volgende zaken.
+<ul>
+<li>De datum van uitgifte van het Passe-partout wordt bij het aanmaken vastgelegd als eigenschap van het passepartout.</li>
+<li>De data op de regel van de voorstelling is de datum van die betreffende voorstelling.</li>
+<li>Bij een Passe-partout moeten kaarten van 5 verschillende voorstellingen zijn gekocht.</li>
+<li>Een voorstelling wordt geïdentificeerd met een identificatienummer, dat niet staat afgedrukt op het passepartout.</li>
+</ul>
+</li>
+<li>Maak het bijbehorende gegevensstructuurdiagram in Bachman weergave. Geef ook de verbindingsvelden aan.</li>
+</ol>
+</div>
+<div id="ex-norm015" class="section level3 unnumbered">
+<h3>norm015 - Integratie<a class="anchor" aria-label="anchor" href="#ex-norm015"><i class="fas fa-link"></i></a>
+</h3>
+<p>In verband met het Europese kampioenschap voetbal wil de NOS in samenwerking met een aantal kranten een klein geautomatiseerd informatiesysteem ontwikkelen. De bedoeling is de televisiekijkers en de krantenlezers zo goed mogelijk te informeren over het kampioenschap. Hiervoor zijn een aantal informatiebehoeftes opgesteld. Bepaal de tabellen met de velden die nodig zijn om in de informatiebehoefte te kunnen voorzien. Indien nodig kun je de eerder gemaakte tabellen uitbreiden met nieuwe velden.</p>
+<p><em>Informatiebehoeftes</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Een overzicht per land met de spelers die opgesteld kunnen worden en wie de trainer is. Het is mogelijk dat spelers dezelfde naam hebben. De namen van de landen kunnen niet hetzelfde zijn.</p></li>
+<li><p>Een overzicht van de begeleiders per land en hun functie.</p></li>
+<li><p>Een lijst met topscorers (naam en aantal goals)</p></li>
+<li><p>Een lijst van clubs met daarop de spelers die door de club aan een bepaald ander land worden uitgeleend.</p></li>
+<li><p>Integreer de vier afzonderlijke informatiebehoeftestructuren tot één totale geïntegreerde informatie-behoefte-structuur. Maak een weergave voor deze geïntegreerde structuur.</p></li>
+</ol>
+</div>
+<div id="ex-norm016" class="section level3 unnumbered">
+<h3>norm016 - Postcodes<a class="anchor" aria-label="anchor" href="#ex-norm016"><i class="fas fa-link"></i></a>
+</h3>
+<p>In een bestand zijn alle plaatsen, straatnamen, huisnummers en postcodes van Nederland opgeslagen. In de volgende afbeelding zie je een deel van de tabel.</p>
+<div class="inline-figure"><img src="exercises/images/norm016-data.png"></div>
+<p>Bij een gegeven straat, huisnummer en plaats hoort een postcode. De cijfers geven de stad, het dorp, de buurt of wijk aan. Het komt niet voor dat twee plaatsnamen dezelfde cijfers hebben. De letters zijn specifieker en geven de straat of een deel daarvan aan.</p>
+<ol style="list-style-type: decimal">
+<li>Welk attribuut is functioneel afhankelijk van welk ander attribuut?</li>
+<li>Bepaal een sleutel voor deze tabel.</li>
+</ol>
+</div>
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    $(solveme[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    $(selects[i]).after(" <span class='webex-icon'></span>");
+  }
+
+  update_total_correct();
+}
+
+</script><div class="chapter-nav">
+<div class="prev"><a href="macros.html"><span class="header-section-number">10</span> Macro’s</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Op deze pagina</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#normalization"><span class="header-section-number">11</span> Normaliseren</a></li>
+<li><a class="nav-link" href="#norm-sleutel"><span class="header-section-number">11.1</span> Sleutel</a></li>
+<li>
+<a class="nav-link" href="#norm-proces"><span class="header-section-number">11.2</span> Normalisatieproces</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#norm-0nv"><span class="header-section-number">11.2.1</span> Nulde normaalvorm (0 NV)</a></li>
+<li><a class="nav-link" href="#norm-1nv"><span class="header-section-number">11.2.2</span> Eerste normaalvorm (1 NV)</a></li>
+<li><a class="nav-link" href="#norm-2nv"><span class="header-section-number">11.2.3</span> Tweede normaalvorm (2 NV)</a></li>
+<li><a class="nav-link" href="#norm-3nv"><span class="header-section-number">11.2.4</span> Derde normaalvorm (3 NV)</a></li>
+<li><a class="nav-link" href="#norm-summary"><span class="header-section-number">11.2.5</span> Samenvatting normalisatieproces</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#norm-gsd"><span class="header-section-number">11.3</span> Gegevens Structuur Diagram (GSD)</a></li>
+<li><a class="nav-link" href="#norm-case"><span class="header-section-number">11.4</span> Case - Normalisatie dierenkliniek</a></li>
+<li>
+<a class="nav-link" href="#norm-exercises"><span class="header-section-number">11.5</span> Opgaven</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ex-norm001">norm001 - Orders</a></li>
+<li><a class="nav-link" href="#ex-norm003">norm003 - Cursusoverzicht</a></li>
+<li><a class="nav-link" href="#ex-norm004">norm004 - Garage</a></li>
+<li><a class="nav-link" href="#ex-norm005">norm005 - Klantcontacten</a></li>
+<li><a class="nav-link" href="#ex-norm006">norm006 - Hoveniersbedrijf</a></li>
+<li><a class="nav-link" href="#ex-norm007">norm007 - Onderdelen</a></li>
+<li><a class="nav-link" href="#ex-norm008">norm008 - Relaties</a></li>
+<li><a class="nav-link" href="#ex-norm009">norm009 - Optimaliseren database</a></li>
+<li><a class="nav-link" href="#ex-norm010">norm010 - Sleutels en tabellen</a></li>
+<li><a class="nav-link" href="#ex-norm011">norm011 - Doe-het-zelf zaak</a></li>
+<li><a class="nav-link" href="#ex-norm012">norm012 - Vrachtbrief</a></li>
+<li><a class="nav-link" href="#ex-norm013">norm013 - Bestelbon</a></li>
+<li><a class="nav-link" href="#ex-norm014">norm014 - Boekingen</a></li>
+<li><a class="nav-link" href="#ex-norm015">norm015 - Integratie</a></li>
+<li><a class="nav-link" href="#ex-norm016">norm016 - Postcodes</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Laatste productiedatum 01 januari 2022.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>Dit boek is gemaakt met de <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
