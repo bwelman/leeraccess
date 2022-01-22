@@ -17,8 +17,6 @@ description: |
   Het studieboek bevat veel opgaven.
 ---
 
-:::{.welcome}
-
 # Welkom {.unnumbered}
 
 ```{asis, echo = knitr::is_html_output()}
@@ -56,6 +54,3 @@ Andere studieboeken:
 + [Leer Excel](https://leerexcel.netlify.app/)
 
 + [Data Analyse met Excel](https://excelanalyse.netlify.app/)
-
-:::
-

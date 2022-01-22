@@ -1,4 +1,3 @@
-:::{.welcome}
 # Voorwoord {.unnumbered}
 
 Dit leerboek is bedoeld als een grondige kennismaking met Microsoft Access en ontwikkeld voor met name studenten in het middelbaar en hoger onderwijs en gebruikers van Microsoft Access. Hierdoor is er weinig aandacht voor het ontwerpen van databases, maar ligt de aandacht op het maken van queries, formulieren en rapporten. De hoofdstukken over deze onderdelen bevatten dan ook veel opgaven.
@@ -42,5 +41,3 @@ Wat zit er in elk hoofdstuk. En in welke volgorde kun je het studieboek doorneme
 ## Software {.unnumbered}
 
 In dit studieboek wordt gewerkt met [Access 365 NL]{.term}, maar het studieboek is ook bruikbaar voor andere Accessversies zoals 2016 en 2019 en zelfs de oudere 2010 en 2007 versies.
-
-:::
