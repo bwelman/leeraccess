@@ -46,16 +46,10 @@ Mogelijke unieke kenmerken voor een auto zijn het chassisnummer en het kenteken.
 Een tabel [PRODUCTEN]{.term} heeft de volgende inhoud:
 
 ```{r vb2, echo=FALSE}
-tribble(
-	~afmeting, ~kleur, ~lengte,
-	8, "rood", 50,
-	10, "groen", 50,
-	12, "blauw", 50,
-	14, "geel", 50,
-	8, "rood", 100,
-	10, "groen", 100,
-	12, "blauw", 100,
-	14, "geel", 100) %>%
+mydf <- data.frame(afmeting = c(8, 10, 12, 14, 8, 10, 12, 14),
+				   kleur = c("rood", "groen", "blauw", "geel", "rood", "groen", "blauw", "geel"),
+				   lengte = c(rep(50, 4), rep(100, 4)))
+mydf %>%
 	kbl() %>% 
 	kable_styling(full_width = FALSE, bootstrap_options = "condensed", font_size = 14, position = "left")
 ```
@@ -70,11 +64,11 @@ Zowel afmeting, kleur als lengte kan niet als sleutel voor de tabel dienen, omda
 Een deel van de inhoud van een tabel met adresgegevens ziet er als volgt uit:
 
 ```{r vb3, echo=FALSE}
-tribble(
-	~straat, ~huisnummer, ~postcode, ~plaats,
-	"Dorpstraat", 12, "1234 AB", "Janstad",
-	"Dorpstraat", 14, "1234 AB", "Janstad",
-	"Dorpstraat", 12, "4321 BA", "Karelsdijk") %>% 
+mydf <- data.frame(straat = c("Dorpstraat", "Dorpstraat", "Dorpstraat"),
+				   huisnummer = c(12, 14, 12),
+				   postcode = c("1234 AB", "1234 AB", "4321 BA"),
+				   plaats = c("Janstad", "Janstad", "Karelsdijk"))
+mydf %>%
 	kbl() %>% 
 	kable_styling(full_width = FALSE, bootstrap_options = "condensed", font_size = 14, position = "left")
 ```
@@ -99,23 +93,20 @@ In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.
 #### Voorbeeld 5 {-#norm-vb5}
 
 ```{r bieb, echo=FALSE}
-LID <- tribble(
-	~Lidnr, ~Naam, ~Adres, ~Postcode, ~Plaats,
-	1, "G. Hannes" , "Orion 2"  , "3434 TT", "Tiel",
-    2, "G. Rotgans", "Venus 23" , "3434 RR", "Tiel",
-    3, "R. Wagner"  , "Jupiter 2", "3434 SP", "Tiel")
+LID <- data.frame(Lidnr = c(1, 2, 3),
+				  Naam = c("G. Hannes","G. Rotgans", "R. Wagner"),
+				  Adres = c("Orion 2", "Venus 23", "Jupiter 2"),
+				  Postcode = c("3434 TT", "3434 RR", "3434 SP"),
+				  Plaats = c(rep("Tiel", 3)))
 
-BOEK <- tribble(
-	 ~Boeknr, ~ISBN, ~Titel, ~Auteur,
-    1, "9080022217", "Praktijk van het zweefvliegen", "W. Adriaansen",
-    2, "9062552277", "De wolken en het weer", "G. de Bont",
-    3, "9062552277", "De wolken en het weer", "G. de Bont")
+BOEK <- data.frame(Boeknr = c(1, 2, 3),
+				   ISBN = c("9080022217", "9062552277", "9062552277"),
+				   Titel = c("Praktijk van het zweefvliegen", "De wolken en het weer", "De wolken en het weer"),
+				   Auteur = c("W. Adriaansen", "G. de Bont", "G. de Bont"))
 
-UITLEEN <- tribble(
-	~Lidnr, ~Boeknr, ~Terugdatum,
-    2, 1,"12-10-2011",
-    2, 2, "12-10-2011",
-    3, 3, "11-10-2011")
+UITLEEN <- data.frame(Lidnr  = c(2, 2, 3),
+					  Boeknr = c(1, 2, 3),
+					  Terugdatum = c("12-10-2011", "12-10-2011", "11-10-2011"))
 ```
 
 Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) en 400 leden. Men heeft de volgende informatiebehoeften:
@@ -124,11 +115,11 @@ Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) 
 + Eens per half jaar moet een lijst uitgedraaid kunnen worden met alle boeken die de bibliotheek bezit en die er als volgt uitziet (het aantal wordt berekend bij het maken van deze lijst):
 
 ```{r vb5-boeken, echo=FALSE}
-BOEK %>% 
-	select(ISBN, Titel, Auteur) %>%
-	count(ISBN, Titel, Auteur) %>%
-	rename(Aantal = n) %>% 
-	arrange(Aantal) %>%
+mydf <- data.frame(ISBN = c("9080022217", "9062552277"),
+				   Titel = c("Praktijk van het zweefvliegen", "De wolken en het weer"),
+				   Auteur = c("W. Adriaansen", "G. de Bont"),
+				   Aantal = c(1, 2))
+mydf %>%
 	kbl() %>% 
 	kable_styling(full_width = FALSE, bootstrap_options = "condensed", font_size = 14)
 ```
@@ -328,18 +319,8 @@ De 3 NV wordt dan:
 
 Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen tabellen op een overzichtelijke manier kunnen worden weergegeven.
 
-```{r example-dsd1, echo=FALSE, fig.cap="Gegevensstructuurdiagram van de tabellen met de onderlinge relaties."}
-grViz(diagram = "digraph dsd1 {
-  graph [rankdir=LR, bgcolor=transparent]
-  node [shape = rectangle, fontname = Helvetica]
-  KLANT
-  FACTUUR
-  FACTUURREGEL
-  ARTIKEL
-  KLANT->FACTUUR[arrowhead = crow]
-  FACTUUR->FACTUURREGEL[arrowhead = crow]
-  FACTUURREGEL->ARTIKEL[arrowtail = crow, dir=back]
-}", height = 50)
+```{r example-dsd1, echo=FALSE, fig.cap="Gegevensstructuurdiagram van de tabellen met de onderlinge relaties.", out.width="70%"}
+knitr::include_graphics("images/normalization/example-dsd1.png")
 ```
 
 Tussen deze vier tabellen bestaan verschillende relaties, zoals:
@@ -350,19 +331,8 @@ Tussen deze vier tabellen bestaan verschillende relaties, zoals:
 
 Vaak wordt bij de pijl ook het attribuut (veld) vermeld waarmee de koppeling tot stand wordt gebracht.
 
-```{r example-dsd2, echo=FALSE, fig.cap="Gegevensstructuurdiagram nu met koppelvelden"}
-grViz(diagram = "digraph dsd2 {
-  graph [rankdir=LR, bgcolor=transparent]
-  node [shape = rectangle, fontname = Helvetica]
-  KLANT
-  FACTUUR
-  FACTUURREGEL
-  ARTIKEL
-  KLANT->FACTUUR[arrowhead = crow, label='Klantnaam']
-  FACTUUR->FACTUURREGEL[arrowhead = crow, label='Factuurnr']
-  FACTUURREGEL->ARTIKEL[arrowtail = crow, dir=back, label='Artikelnr']
-}", height = 50)
-
+```{r example-dsd2, echo=FALSE, fig.cap="Gegevensstructuurdiagram nu met koppelvelden", out.width="100%"}
+knitr::include_graphics("images/normalization/example-dsd2.png")
 ```
 
 Bij een GSD worden de volgende symbolen gebruikt:
@@ -419,16 +389,8 @@ Er zijn geen niet-sleutel velden te vinden die afhankelijk zijn van een sleutelv
 
 #### Gegevens Structuur Diagram {-}
 
-```{r animal-clinic-dsd, echo=FALSE, fig.cap="Gegevensstructuurdiagram dierenkliniek."}
-grViz(diagram = "digraph case {
-  graph [rankdir=LR, bgcolor=transparent]
-  node [shape = rectangle, fontname = Helvetica]
-  1[label='DIER']
-  2[label = 'BEZOEK']
-  3[label = 'BEHANDELING']
-  1->2[arrowhead = crow, label='diernr']
-  2->3[arrowtail = crow, dir=back, label='behandelnr']
-}", height = 50)
+```{r animal-clinic-dsd, echo=FALSE, fig.cap="Gegevensstructuurdiagram dierenkliniek.", out.width="70%"}
+knitr::include_graphics("images/normalization/animal-clinic-dsd.png")
 ```
 
 ## Opgaven {#norm-exercises}

@@ -4,12 +4,7 @@ options(digits = 3)
 # packages ---------------------------------------------------------------------
 
 suppressMessages(library(knitr))
-suppressMessages(library(tidyverse))
 suppressMessages(library(kableExtra))
-suppressMessages(library(patchwork))
-suppressMessages(library(scales))
-suppressMessages(library(DiagrammeR))
-suppressMessages(library(readxl))
 
 # knitr chunk options ----------------------------------------------------------
 
@@ -41,7 +36,7 @@ options(kableExtra.html.bsTable = TRUE)
 
 # ggplot2 options
 
-theme_set(theme_bw())
+# theme_set(theme_bw())
 
 # NL vertaling torf functie uit package webexercises
 torf_nl <- function(answer) {

@@ -1,0 +1,13 @@
+Package: textbook
+Title: Studieboek leeraccess
+Version: 0.1
+URL: https://github.com/bwelman/textbook
+Imports: 
+    bookdown,
+    bslib,
+    downlit,
+    kableExtra,
+    knitr,
+    webexercises,
+    xml2
+Encoding: UTF-8
