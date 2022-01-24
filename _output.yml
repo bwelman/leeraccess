@@ -6,7 +6,7 @@ bookdown::bs4_book:
   includes:
     in_header: include/google_analytics.html
     after_body: include/webex.js
-  template: "S:/tools/bs4_book_nl.html"
+  template: "include/bs4_book_nl.html"
   theme:
     primary: "#A4373A"
     fg: "#2b2121"
