@@ -1,10 +1,8 @@
 # Formulieren {#forms}
 
 ::: {.intro data-latex=""}
-+ Hoofdformulier, subformulier en gekoppeld formulier.
-+ Het werken met besturingselementen.
-+ Gegenereerde formulieren en handmatige aanpassingen.
-+ Het opmaken van een formulier.
++ Soorten formulieren: hoofdformulier, subformulier en gekoppeld formulier.
++ Het maken van formulieren: gegenereerd, handmatig
 + Berekeningen in een formulier.
 + Formulieren met een grafiek.
 :::
@@ -30,7 +28,8 @@ Subformulier: Bevat de orders van de klant (afkomstig uit tabel [Orders]{.varnam
 
 Het hoofdformulier en subformulier zijn gekoppeld, zo dat in het subformulier alleen records worden weergegeven die gerelateerd zijn aan het record in het hoofdformulier.
 
-```{r f-customers-orders-1, fig.cap="[Hoofdformulier Klanten met subformulier Orders.", out.width="50%"}
+
+```{r f-customers-orders-1, fig.cap="Hoofdformulier Klanten met subformulier Orders.", out.width="50%"}
 knitr::include_graphics("images/forms/f-customers-orders.png")
 ```
 :::
@@ -82,7 +81,7 @@ knitr::include_graphics("images/forms/layout-controls-stacked.png")
 
 #### Besturingselementen bewerken {-}
 
-Omdat op formulieren vaak besturingselementen anders geordend moeten worden is het van belang om te weten hoe je besturingselementen kunt bewerken en verplaatsen. Veel bewerkingen kun je op meerdere besturingselementen tegelijk uitvoeren. Om besturingselementen te bewerken moet je deze altijd eerst selecteren. Zorg er ook voor dat altijd het Eigenschappenvenster zichtbaar is.
+Omdat op formulieren vaak besturingselementen anders geordend moeten worden is het van belang om te weten hoe je besturingselementen kunt bewerken en verplaatsen. Veel bewerkingen kun je op meerdere besturingselementen tegelijk uitvoeren. Om besturingselementen te bewerken moet je deze altijd eerst selecteren. Zorg er ook voor dat altijd het [Eigenschappenvenster]{.uicontrol} zichtbaar is.
 
 + [selecteren]{.term}: Klik op het besturingselement.
 + [meervoudige selectie]{.term}: Klik met ingedrukte Shift toets op de besturingselementen, of sleep met de muis een rechthoekig kader om de besturingselementen.
@@ -135,7 +134,7 @@ knitr::include_graphics("images/forms/textbox-label.png")
 Alle bijschriften staan verticaal gerangschikt en alle tekstvakken ook. Dit heet een [Gestapelde indeling]{.term}. Hierdoor kan een enkel besturingselement niet op een willekeurige plaats op het formulier gezet worden. Is dat wel de bedoeling, dan moet je eerst de indeling voor dat besturingselement verwijderen via [tab Schikken > Indeling verwijderen (groep Tabel)]{.uicontrol}.
 :::
 
-6. Selecteer de tekst `Dozen` in de [Formulierkoptekst]{.uicontrol} en wijzig deze in `Inventaris`. Wijzig dan de eigenschappen [Tekengewicht]{.uicontrol} in `vet` en [Tekengrootte]{.uicontrol} in `20`.
+6. Selecteer de tekst `Dozen` in de [Formulierkoptekst]{.uicontrol} en wijzig deze in [Inventaris]{.userinput}. Wijzig dan de eigenschappen [Tekengewicht]{.uicontrol} in `vet` en [Tekengrootte]{.uicontrol} in `20`.
 
 ::: {.info data-latex=""}
 Het [Eigenschappenvenster]{.uicontrol} staat meestal aan de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden via sneltoets [F4]{.uicontrol}. En om hierin sneller een bepaalde eigenschap te vinden kun je deze alfabetisch sorteren met de knop ![](../common/images/button-sort-ascending.png) rechtsboven in het venster.
@@ -238,7 +237,9 @@ knitr::include_graphics("images/forms/f-customer-entry.png")
 
 3. Klik [tab Maken > Formulier (groep Formulieren)]{.uicontrol}. Het formulier wordt aangemaakt en geopend in de [Indelingsweergave]{.uicontrol}.
 
+::: {.info data-latex=""}
 Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel een een-op-veel relatie heeft met de tabel [Orders]{.varname}, wordt automatisch een subgegevensblad gebaseerd op de tabel [Orders]{.varname}, aan het formulier toegevoegd. Het subgegevensblad geeft alle records uit [Orders]{.varname} weer die betrekking hebben op het huidige record van tabel [Klanten]{.varname}.
+:::
 
 4. Selecteer het subgegevensblad en verwijder deze met toets [Delete]{.uicontrol}.
 
@@ -252,9 +253,9 @@ Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel e
 
 9. Selecteer de tekst `Klanten` in het label in de formulierkoptekst en wijzig deze in `De chocolade fijnproever`. Wijzig de opmaak van de tekst in `MS Sans Serif`, `14 pt`, `vet` en `cursief`.
 
-10. Selecteer het besturingselement [Label]{.uicontrol} via [tab Ontwerp > Label (groep Besturingselementen)]{.uicontrol} ![](images/common/control-label.png)  en teken onder de eerste formulierkoptekst een kader voor de tweede koptekst. Voer als tekst in `Klant invoer en wijziging`. Wijzig de opmaak van de tekst in `MS Sans Serif`, `14 pt`, `Vet`, `kleur Zwart`.
+10. Selecteer het besturingselement [Label]{.uicontrol} via [tab Ontwerp > Label (groep Besturingselementen)]{.uicontrol} ![](images/common/control-label.png)  en teken onder de eerste formulierkoptekst een kader voor de tweede koptekst. Voer als tekst in [Klant invoer en wijziging]{.userinput}. Wijzig de opmaak van de tekst in `MS Sans Serif`, `14 pt`, `Vet`, `kleur Zwart`.
 
-11. Selecteer alle besturingselementen in de sectie [Detail]{.uicontrol} door vanuit de linkerbovenhoek met ingedrukte linkermuisknop een kader naar de rechteronderhoek te trekken. Laat daarna de muisknop los. Alle besturingselementen in de sectie Detail zijn nu geselecteerd.
+11. Selecteer alle besturingselementen in de sectie [Detail]{.uicontrol} door vanuit de linkerbovenhoek met ingedrukte linkermuisknop een kader naar de rechteronderhoek te trekken. Laat daarna de muisknop los.
 
 12. Kies [tab Schikken > Indeling verwijderen (groep Tabel)]{.uicontrol}. De geselecteerde besturingselementen zijn nu uit de gestapelde indeling gehaald en daardoor vrij op het formulier te verplaatsen.
 
@@ -294,7 +295,7 @@ knitr::include_graphics("images/forms/f-praline-entry.png")
 
 6. Verwijder het logo in de formulierkoptekst.
 
-7. Bewaar het formulier onder de naam [Bonbon informatie]{.varname} via de knop [Opslaan]{.uicontrol}  ![](images/common/button-save.png)** in de [Werkbalk Snelle toegang]{.uicontrol}.
+7. Bewaar het formulier onder de naam [Bonbon informatie]{.varname}.
 
 8. Wijzig de opmaak van de koptekst in: `Calibri`, `22 pt`, `vet`, `kleur wit` en `achtergrond groen`.
 
@@ -377,7 +378,7 @@ knitr::include_graphics("images/forms/q-choose-praline-design.png")
 knitr::include_graphics("images/forms/f-boxes-subform.png")
 ```
 
-6. Selecteer de [Keuzelijst met invoervak]{.uicontrol} en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap [Alleen lijst]{.uicontrol} de waarde `Ja` heeft. Zo niet, dan de waarde wijzigen in `Ja`.
+6. Selecteer de [Keuzelijst met invoervak]{.uicontrol} en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap [Alleen lijst]{.uicontrol} de waarde `Ja` heeft. Zo niet, dan de waarde wijzigen.
 
 ::: {.info data-latex=""}
 Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.
@@ -390,7 +391,7 @@ Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en ku
 
 ## Taak: Invoerformulier Orders {#forms-orders-data-entry}
 
-Voor het bekijken van een bestaande order en het invoeren van een nieuwe order moet een orderformulier gemaakt worden, zie de volgend afbeelding.
+Voor het bekijken van een bestaande order en het invoeren van een nieuwe order moet een orderformulier gemaakt worden, zie figuur \@ref(fig:f-orderdata-entry).
 
 ```{r f-orderdata-entry, fig.cap="Invoerformulier orders.", out.width="60%"}
 knitr::include_graphics("images/forms/f-orderdata-entry.png")
@@ -411,7 +412,7 @@ Maak daarna een formulier met subformulier en baseer het hoofdformulier op de qu
 
 3. Voeg van beide tabellen alle velden toe.
 
-::: {.info data-latex="Tip"}
+::: {.info data-latex=""}
 Met de keuze `*` kun je alle velden van een tabel toevoegen.
 :::
 
@@ -455,7 +456,7 @@ knitr::include_graphics("images/forms/q-orderdetails-boxes-design.png")
 
 7. Ken de volgende namen toe: [Ordergegevens hoofdformulier]{.varname} en [Ordergegevens subformulier]{.varname} en klik op [Voltooien]{.uicontrol}. Het formulier wordt geopend.
 
-16. Pas desgewenst de lay-out van beide formulieren aan zodat het lijkt op het gewenste formulier voor ordergegevens.
+8. Pas desgewenst de lay-out van beide formulieren aan zodat het lijkt op het gewenste formulier voor ordergegevens.
 :::
 
 ## Taak: Ordertotaal {#forms-orders-total}
@@ -491,11 +492,15 @@ knitr::include_graphics("images/forms/f-orderdatasub-properties.png")
 
 ## Taak: Formulier met grafiek {#forms-sales-boxes}
 
-De opdracht is om een grafiek te maken voor het jaar 2010 waarin de omzet per maand per doos bekeken kan worden. Zie het volgende voorbeeld.
+INFORMATIEBEHOEFTE
+
+Maak een formulier met een kolomgrafiek met de omzet per maand per doos in 2010, zie figuur \@ref(fig:f-sales-boxes-chart)
 
 ```{r f-sales-boxes-chart, fig.cap="Formulier met grafiek.", out.width="60%"}
 knitr::include_graphics("images/forms/f-sales-boxes-chart.png")
 ```
+
+ANALYSE
 
 De verschillende onderdelen in de grafiek kunnen uit bepaalde tabellen gehaald of berekend worden.
 
@@ -564,9 +569,9 @@ Wanneer je na het sluiten de query weer opent in de [Ontwerpweergave]{.uicontrol
 
 5. Beantwoord de eerste drie vragen van de Wizard achtereenvolgens als volgt:
 
-   + De gegevens voor de grafiek zijn afkomstig van de query **Omzet per doos per maand in 2010**.
-   + Voeg de velden Maand en Omzet aan de grafiek toe.
-   + Kies als grafiektype een **Kolomdiagram**.
+   + De gegevens voor de grafiek zijn afkomstig van de query [Omzet per doos per maand in 2010]{.varname}.
+   + Voeg de velden [Maand]{.varname} en [Omzet]{.varname} aan de grafiek toe.
+   + Kies als grafiektype een [Kolomdiagram]{.uicontrol}.
     
    De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten aanpassen.
 
@@ -578,13 +583,13 @@ knitr::include_graphics("images/forms/chartwizard-layout-default.png")
 
 7. Sleep het veld [Omzet]{.varname} naar het vak voor de verticale as. De weergave langs de verticale as wijzigt in `SomVanOmzet`.
 
-```{r chartwizard-layout-data, fig.cap="Definitieve indeling grafiek", out.width="60%"}
+```{r chartwizard-layout-data, fig.cap="Definitieve indeling grafiek.", out.width="60%"}
 knitr::include_graphics("images/forms/chartwizard-layout-data.png")
 ```
 
 8. Klik op [Volgende]{.uicontrol}. Hier selecteer je het veld in het formulier dat gekoppeld moet worden aan het veld in de grafiek. In beide gevallen is dat [Doosnaam]{.varname}.
 
-```{r chartwizard-linking-fields, fig.cap="Koppeling tussen velden formulier en grafiek", out.width="60%"}
+```{r chartwizard-linking-fields, fig.cap="Koppeling tussen velden formulier en grafiek.", out.width="60%"}
 knitr::include_graphics("images/forms/chartwizard-linking-fields.png")
 ```
 
@@ -603,9 +608,9 @@ In de Ontwerpweergave wordt een voorbeeldgrafiek getoond en niet een grafiek met
 
 De gemakkelijkste manier om gekoppelde formulieren te maken is met behulp van de [Wizard Formulier]{.uicontrol}. Deze Wizard maakt de benodigde formulieren, zorgt voor de onderlinge koppeling en brengt op het hoofdformulier een opdrachtknop aan waarmee het subformulier geopend kan worden.
 
-De opdracht is om een formulier te maken waarbij de gegevens van een klant getoond worden en dat via klik op een opdrachtknop de ordergegevens van de klant in een nieuw formulier getoond worden. Zie de volgende afbeelding.
+De opdracht is om een formulier te maken waarbij de gegevens van een klant getoond worden en dat via klik op een opdrachtknop de ordergegevens van de klant in een nieuw formulier getoond worden. Zie figuur \@ref(fig:f-customerorders-linked-2).
 
-```{r f-customerorders-linked-2, fig.cap="Twee formulieren gekoppeld met gesynchroniseerde gegevens.", out.width="60%"}
+```{r f-customerorders-linked-2, fig.cap="Twee formulieren gekoppeld met gesynchroniseerde gegevens.", out.width="75%"}
 knitr::include_graphics("images/forms/f-customerorders-linked.png")
 ```
 
@@ -652,8 +657,8 @@ knitr::include_graphics("images/forms/f-customerorders-titles.png")
 
 9. Open het formulier [OrdersKlanten]{.varname} in de [Ontwerpweergave]{.uicontrol}.
 
-   1. Verwijder het label [OrdersKlanten]{.varname}.
-   2. Selecteer de opdrachtknop en wijzig via het [Eigenschappenvenster]{.uicontrol} de tekst van het bijschrift van `OrdersKlantenSub1` in `Ordergegevens`.
+   + Verwijder het label [OrdersKlanten]{.varname}.
+   + Selecteer de opdrachtknop en wijzig via het [Eigenschappenvenster]{.uicontrol} de tekst van het bijschrift in `Ordergegevens`.
 
 10. Pas desgewenst de opmaak van de drie formulieren verder aan.
 
@@ -662,7 +667,6 @@ knitr::include_graphics("images/forms/f-customerorders-titles.png")
 12. Sluit het formulier en bewaar de wijzigingen.
 
 :::
-
 
 ::: {.info data-latex=""}
 Bij een standaardinstallatie van Access wordt elk document (tabel, query, formulier,rapport) in een afzonderlijk tabblad geopend. Bij gekoppelde formulieren is dat niet altijd handig. Bij het klikken op de opdrachtknop wordt het gekoppelde subformulier in een nieuw tabblad geopend. Je ziet dan de informatie in het hoofdformulier en het subformulier nooit tegelijk.

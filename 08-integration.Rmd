@@ -37,7 +37,7 @@ knitr::include_graphics("images/integration/word-mailmerge-wizard.png")
 
 5. Selecteer in het dialoogvenster [Microsoft Word-document selecteren]{.wintitle} het hulpbestand [Sneeuwwitje.docx]{.filepath} en klik op [Openen]{.uicontrol}. Microsoft Word wordt opgestart en verschijnt met het document. Op het lint is de [tab Verzendlijsten]{.uicontrol} geactiveerd en aan de rechterkant is het paneel [Afdruk samenvoegen]{.wintitle} verschenen. Onder in dit paneel is te zien dat de Wizard zich in stap 3 van de 6 zit.
 
-```{r mailmerge_wizard_step3, fig.cap="Voortgang wizard samenvoegen: stap 3 van 6.", out.width="50%"}
+```{r mailmerge-wizard-step3, fig.cap="Voortgang wizard samenvoegen: stap 3 van 6.", out.width="50%"}
 knitr::include_graphics("images/integration/mailmerge-wizard-step3.png")
 ```
 

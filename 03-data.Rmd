@@ -19,7 +19,7 @@ Je kunt rechtstreeks in een tabel de belangrijkste gegevensbewerkingen uitvoeren
 
 #### Record bewerken {-}
 
-Open de tabel en gebruik dan de muis of de pijltjestoeten om naar het veld te gaan dat gewijzigd moet worden. Klik in de cel en breng de wijzigingen aan. Zodra je een wijziging aanbrengt verschijnt aan de linkerkant van het record een icoon met een potlood: ![](images/common/icon-edit.png). Dit is het teken dat het record in de bewerkingsmodus (*edit mode*) zit. Zodra je het record verlaat verdwijnt het symbool en zijn de wijzigingen opgeslagen.
+Open de tabel en gebruik dan de muis of de pijltjestoeten om naar het veld te gaan dat gewijzigd moet worden. Klik in de cel en breng de wijzigingen aan. Zodra je een wijziging aanbrengt verschijnt aan de linkerkant van het record een icoon met een potlood: ![](images/common/icon-edit.png). Dit is het teken dat het record in de bewerkingsmodus ([edit mode]{.term}) zit. Zodra je het record verlaat verdwijnt het symbool en zijn de wijzigingen opgeslagen.
 
 #### Record toevoegen {-}
 
@@ -49,26 +49,26 @@ Met het formulier [Inschrijving]{.varname} kunnen alleen nieuwe records worden t
 Het formulier [Inschrijving]{.varname} bevat blanco vakken (velden) waar je de gegevens typt. Het invoegsymbool geeft aan waar de tekst verschijnt die je intypt. Je kunt het invoegsymbool verplaatsen door op een ander veld te klikken of door herhaaldelijk op de TAB te drukken.
 :::
 
-3. Voer de gegevens in die in de volgende afbeelding te zien zijn.
+3. Voer de gegevens in zoals in figuur \@ref(fig:form-registration) te zien is.
 
 ```{r form-registration, fig.cap="Gegevensinvoer via formulier inschrijving", out.width="75%"}
 knitr::include_graphics("images/data/form-registration.png")
 ```
 
-   Er is weer een potlood te zien wat er op duidt dat het formulier in de bewerkingsmodus is en dat de gegevens nog niet zijn opgeslagen.
-
 ::: {.info  data-latex=""}
+Er is weer een potlood te zien wat er op duidt dat het formulier in de bewerkingsmodus is en dat de gegevens nog niet zijn opgeslagen.
+
 Het record wordt automatisch opgeslagen wanneer je het formulier sluit of naar een ander record gaat.
 :::
 
-4. Sluit het formulier via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster. De records die je via het formulier Inschrijving toevoegt worden opgeslagen in de tabel [Klanten]{.varname}. In de volgende stap ga je dit controleren.
+4. Sluit het formulier via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster. De records die je via het formulier Inschrijving toevoegt worden opgeslagen in de tabel [Klanten]{.varname}.
 
 5. Open tabel [Klanten]{.varname}, ga naar het laatste record en controleer of dit het eerder toegevoegde record is.
 
 6. Sluit tabel [Klanten]{.varname}.
 :::
 
-## Taak: Nieuwe bonbon toevoegen {#data-nnew-praline}
+## Taak: Nieuwe bonbon toevoegen {#data-new-praline}
 
 Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuwe records toevoegen.
 
@@ -80,6 +80,7 @@ Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuw
 3. Klik in de statusregel op de knop ![](images/common/button-record-new.png) Nieuw (leeg) record .
 
 4. Voer de volgende bonbongegevens in:
+
    + Bonbonnaam: Pecan Mokka Toffee
    + Bonboncode: F03
    + Beschrijving: Zoete crèmige mokka en pekan, omgeven met toffee
@@ -88,7 +89,7 @@ Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuw
    + Noottype: Pecan
    + Kosten: 0,25
 
-5. Sluit formulier [Bonbons]{.varname} via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster. De records die je via het formulier [Bonbons]{.varname} toevoegt worden opgeslagen in de tabel [Bonbons]{.varname}. In de volgende stap ga je dit controleren.
+5. Sluit formulier [Bonbons]{.varname} via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster. De records die je via het formulier [Bonbons]{.varname} toevoegt worden opgeslagen in de tabel [Bonbons]{.varname}.
 
 6. Open tabel [Bonbons]{.varname} en controleer of het record is toegevoegd.
 
@@ -97,7 +98,9 @@ Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuw
 
 ## Taak: Nieuwe doos toevoegen {#data-new-box}
 
-Het formulier [Dozen]{.varname} bevat een subformulier. In het hoofdformulier met de naam [Dozen]{.varname} staat de volgende informatie: [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}. Bovendien staat op dit formulier een extra veld [Dooskosten]{.varname}. Deze kosten zijn berekend via de som van (`Bonbonkosten * Hoeveelheid`) van alle bonbons die in de doos zitten. In het subformulier met de naam [Dozen subformulier]{.varname} zijn de bewerkbare velden: [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens, inclusief de dooscode, wordt opgeslagen in de tabel [Doosdetails]{.varname}. In de volgende stappen wordt een nieuwe doos toegevoegd via het formulier [Dozen]{.varname}.
+Het hoofdformulier [Dozen]{.varname} bevat ook een subformulier. In het hoofdformulier met de naam [Dozen]{.varname} staat de volgende informatie: [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}. Bovendien staat op dit formulier een extra veld [Dooskosten]{.varname}. Deze kosten zijn berekend via de som van `Bonbonkosten * Hoeveelheid` van alle bonbons die in de doos zitten.
+
+In het subformulier met de naam [Dozen subformulier]{.varname} zijn de bewerkbare velden: [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens, inclusief de dooscode, wordt opgeslagen in tabel [Doosdetails]{.varname}. In de volgende stappen wordt een nieuwe doos toegevoegd via het formulier [Dozen]{.varname}.
 
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
@@ -115,7 +118,7 @@ Het formulier [Dozen]{.varname} bevat een subformulier. In het hoofdformulier me
 
 5. Klik onder Inhoud in het veld [Code]{.varname} op de keuzepijl en selecteer bonboncode B02 Butterscotch Bosbes. De overige bonbongegevens als bonbonnaam, chocolade, noot, vulling en kosten worden automatisch ingevuld. Alleen het veld [Aantal]{.varname} moet nog ingevuld worden.
 
-6. Voer in bij Aantal 3.
+6. Voer in bij [Aantal]{.varname} 3.
 
 7. Voeg de volgende bonbons aan de doos toe:
 
@@ -129,7 +132,7 @@ Het formulier [Dozen]{.varname} bevat een subformulier. In het hoofdformulier me
 
    De Dooskosten van €4,53 wordt automatisch berekend.
 
-8. Voer in bij Doosprijs 25,00 en bij Magazijnvoorraad 120.
+8. Voer in bij [Doosprijs]{.varname} 25,00 en bij [Magazijnvoorraad]{.varname} 120.
 
 9. Sluit het formulier [Dozen]{.varname}.
 
@@ -146,20 +149,20 @@ Het is meestal het beste om validatie en restrictie van gegevens in de ontwerpwe
 
 Als de gegevens die in een besturingselement van een formulier worden ingevoerd niet afhankelijk zijn van een veld in een tabel dan moet je de eigenschappen voor validatie in het formulier definiëren.
 
-#### Voorbeeld {-}
-
+::: {.dem data-latex=""}
 Een memo van de afdeling Marketing van Snoopy Bonbons meldt dat de prijs van de doos Butterscotch moet worden gewijzigd in € 7,75.
 
-::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
 2. Open het formulier [Dozen]{.varname} en navigeer naar de doos Butterscotch.
 
-3. Wijzig de Doosprijs van € 27,75 in € 7,75 en druk op TAB toets. Er verschijnt een validatiebericht met de mededeling dat deze prijs niet juist is en hoe we het probleem kunnen verhelpen.
+3. Wijzig de [Doosprijs]{.varname} van € 27,75 in € 7,75 en druk op TAB toets. Er verschijnt een validatiebericht met de mededeling dat deze prijs niet juist is en hoe we het probleem kunnen verhelpen.
 
    `Doosprijs te laag. Neem contact op met Marketing voor prijsinformatie, en geef een prijs op die minimaal gelijk is aan de dooskosten maal 2.`
 
-   Omdat aan het veld doosprijs een validatieregel is gekoppeld, wordt de prijs van 7,75 verworpen.
+::: {.info data-latex=""}
+Omdat aan het veld doosprijs een validatieregel is gekoppeld, wordt de prijs van 7,75 verworpen.
+:::
 
 4. Klik op [OK]{.uicontrol}.
 

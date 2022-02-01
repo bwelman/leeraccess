@@ -103,7 +103,7 @@ Aan de hand van de gegevens uit de tabellen kun je gemakkelijk een aantal bereke
 
 Het gemiddeld aantal bonbons in een doos kun je niet zomaar uitrekenen. Hiervoor zou je het totaal aantal bonbons in alle dozen moeten weten. Dit is de som van alle getallen in de kolom [Hoeveelheid]{.varname} in de tabel [Doosdetails]{.varname}.
 
-## Beveiliging macro's {#explore-security}
+## Beveiliging en macro's {#explore-security}
 
 Sommige databases zoals snoep365 bevatten macro's. Deze zijn in de meeste gevallen gemaakt om bepaalde taken in de database uit te voeren. Maar virusmakers kunnen deze mogelijkheden ook gebruiken om een virus te verspreiden. Wanneer een dergelijke database niet op een vertrouwde locatie staat of ondertekend is door een vertrouwde uitgever, dan toont Access bij het openen van de database een beveiligingswaarschuwing. De macro's in de database zijn dan uitgeschakeld.
 
@@ -139,7 +139,7 @@ In het voorbeeldscherm wordt de map [C:\\Temp]{.filepath} als vertrouwde locatie
 
 Eventueel kun je de manier wijzigen waarop Access met alle macro's in alle databases omgaat. Voer deze actie als volgt uit.
 
-[Kies Bestand > Opties > Vertrouwenscentrum > Instellingen voor het Vertrouwenscentrum > Macro-instellingen]{.uicontrol}.
+Kies [Bestand > Opties > Vertrouwenscentrum > Instellingen voor het Vertrouwenscentrum > Macro-instellingen]{.uicontrol}.
 
 ```{r security-trust-center, fig.cap="Dialoogvenster vertrouwenscentrum.", out.width="75%"}
 knitr::include_graphics("images/common/security-trust-center.png")
@@ -152,28 +152,28 @@ Het wordt niet aanbevolen om alle macro's in te schakelen, je bent dan de contro
 Voor deze verkenning moet je het bestand [snoep365.accdb]{.filepath} geopend hebben.
 
 ::: {.indo data-latex=""}
-Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen. Zie hiervoor \@ref(explore-security).
+Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen, zie hiervoor \@ref(explore-security).
 :::
 
 ```{r explore-access-window, fig.cap="Venster Access met database snoep365 met de groep Tabellen geopend.", out.width="75%"}
 knitr::include_graphics("images/common/access-window.png")
 ```
 
-Het navigatievenster staat links en hierin zijn alle objecten van de database te vinden. De objecten worden onderverdeeld in groepen: [Tabellen, Query's, Formulieren, Rapporten, Macro's. In figuur \@ref(fig:explore-access-window) is het venster van de groep [Tabellen]{.uicontrol} opengevouwen. Het navigatievenster zelf en de vensters voor de groepen kunnen open- en dichtgevouwen worden.
+Het navigatievenster staat links en hierin zijn alle objecten van de database te vinden. De objecten worden onderverdeeld in groepen: [Tabellen]{.uicontrol}, [Query's]{.uicontrol}, [Formulieren]{.uicontrol}, [Rapporten]{.uicontrol}, [Macro's]{.uicontrol}. In figuur \@ref(fig:explore-access-window) is het venster van de groep [Tabellen]{.uicontrol} opengevouwen. Het navigatievenster zelf en de vensters voor de groepen kunnen open- en dichtgevouwen worden.
 
 + ![](images/common/button-object-selection.png) - selectie getoonde objecten
 
-+ ![](images/common/button-group-open.png) -groep openvouwen
++ ![](images/common/button-group-open.png) - groep openvouwen
 
 + ![](images/common/button-group-close.png) - groep dichtvouwen
 
-+ ![](images/common/button-navigation-close.png) -navigatievenster dichtvouwen
++ ![](images/common/button-navigation-close.png) - navigatievenster dichtvouwen
 
-+ ![](images/common/button-navigation-open.png) -navigatievenster openvouwen
++ ![](images/common/button-navigation-open.png) - navigatievenster openvouwen
 
 Door dubbelklikken op een object in het navigatievenster wordt het object geopend en in het documentvenster getoond. Wanneer je nog meer objecten opent, dan toont Access deze standaard in de vorm van tabbladen.
 
-```{r document-tabs, fig.cap="Documentvenster met de tabellen Klanten en Orders in tabbladen.", out.width="40%"}
+```{r document-tabs, fig.cap="Documentvenster met de tabellen Klanten en Orders in tabbladen.", out.width="50%"}
 knitr::include_graphics("images/explore/document-tabs.png")
 ```
 
@@ -255,7 +255,7 @@ Ontwerpweergave
 
 2. Open het formulier [Bonbons]{.varname}. Het formulier wordt in de Formulierweergave geopend.
 
-```{r form-pralines-form-view, fig.cap="Formulier bonbons in formulierweergave. De gegevens van het eerste record worden weergegeven.", out.width="60%"}
+```{r form-pralines-form-view, fig.cap="Formulier bonbons in formulierweergave. De gegevens van het eerste record worden weergegeven.", out.width="70%"}
 knitr::include_graphics("images/explore/form-pralines-form-view.png")
 ```
 
@@ -265,7 +265,7 @@ knitr::include_graphics("images/explore/form-pralines-form-view.png")
    + Kies [tab Start > Weergave (groep Weergaven) > Ontwerpweergave]{.uicontrol}.
    + Rechter muisklik op de formuliernaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
    
-```{r form-pralines-design-view, fig.cap="Formulier bonbons in ontwerpweergave.", out.width="60%"}
+```{r form-pralines-design-view, fig.cap="Formulier bonbons in ontwerpweergave.", out.width="70%"}
 knitr::include_graphics("images/explore/form-pralines-design-view.png")
 ```
 
@@ -276,8 +276,6 @@ In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoe
 4. Zet het formulier [Bonbons]{.varname} weer in de Formulierweergave.
 
 5. Blader door de records met de navigatieknoppen linksonder in het documentvenster.
-
-   Betekenis navigatieknoppen:
 
    + ![](images/common/button-record-first.png) -Eerste record
 
@@ -294,14 +292,14 @@ In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoe
 
 ## Taak: Opdrachtknop gebruiken {#explore-commandbutton}
 
-Het formulier [Dozen]{.varname} kan, behalve voor de invoer van gegevens, ook gebruikt worden voor het bekijken van gegevens. Op dit formulier staat een knop met de tekst [Verkoop]{.uicontrol}.
+Het formulier [Dozen]{.varname} kan, behalve voor de invoer van gegevens, ook gebruikt worden voor het bekijken van gegevens. Op dit formulier staat een knop met de tekst [Verkoop]{.varname}.
 
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
 2. Open het formulier [Dozen]{.varname}.
 
-3. Klik in het formulier op de knop [Verkoop]{.uicontrol}. Het formulier [Doosverkoop]{.varname} wordt nu getoond. Je ziet nu alle orders die betrekking hebben op de geselecteerde doos uit het formulier [Dozen]{.varname} en zelfs de totale verkoop van deze doos.
+3. Klik in het formulier op de knop [Verkoop]{.varname}. Het formulier [Doosverkoop]{.varname} wordt nu getoond. Je ziet nu alle orders die betrekking hebben op de geselecteerde doos uit het formulier [Dozen]{.varname} en zelfs de totale verkoop van deze doos.
 
 4. Sluit alle formulieren.
 :::
@@ -315,7 +313,7 @@ Een formulier kan ook gebruikt worden om een record te zoeken. In de volgende st
 
 2. Open het formulier [Dozen]{.varname}.
 
-3. Klik in het veld [Doosnaam]{.uicontrol} en kies in het lint [tab Start >]{.uicontrol} ![](images/common/button-find.png) [Zoeken (groep Zoeken)]{.uicontrol}. Het dialoogvenster [Zoeken en vervangen]{.wintitle} verschijnt.
+3. Klik in het veld [Doosnaam]{.varname} en kies in het lint [tab Start >]{.uicontrol} ![](images/common/button-find.png) [Zoeken (groep Zoeken)]{.uicontrol}. Het dialoogvenster [Zoeken en vervangen]{.wintitle} verschijnt.
 
 4. Typ [herfst]{.userinput} in het vak [Zoeken naar]{.uicontrol} en selecteer bij [Waar:]{.uicontrol} de keuze [Gedeelte van veld]{.uicontrol}.
 
@@ -363,7 +361,7 @@ knitr::include_graphics("images/explore/query-pralines-box-datasheet.png")
    + Kies [tab Start > Weergave (groep Weergaven) > Ontwerpweergave]{.uicontrol}.
    + Rechter muisklik op de querynaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
 
-```{r query-pralines-box-design, fig.cap="Query bonbons per doos in ontwerpweergave.", out.width="60%"}
+```{r query-pralines-box-design, fig.cap="Query bonbons per doos in ontwerpweergave.", out.width="75%"}
 knitr::include_graphics("images/explore/query-pralines-box-design.png")
 ```
 
@@ -400,7 +398,7 @@ Ontwerpweergave
 
 2. Open het rapport [Bonbons per doos]{.varname}. Het rapport wordt in de Rapportweergave geopend.
 
-```{r report-pralines-box-report, fig.cap="Rapport bonbons per doos in rapportweergave.", out.width="60%"}
+```{r report-pralines-box-report, fig.cap="Rapport bonbons per doos in rapportweergave.", out.width="70%"}
 knitr::include_graphics("images/explore/report-pralines-box-report.png")
 ```
 
@@ -412,7 +410,7 @@ knitr::include_graphics("images/explore/report-pralines-box-report.png")
 
 4. Zet het rapport [Bonbons per doos]{.varname} in de Ontwerpweergave.
 
-```{r report-pralines-box-design, fig.cap="Rapport bonbons per doos in ontwerpweergave.", out.width="60%"}
+```{r report-pralines-box-design, fig.cap="Rapport bonbons per doos in ontwerpweergave.", out.width="70%"}
 knitr::include_graphics("images/explore/report-pralines-box-design.png")
 ```
 
@@ -481,10 +479,10 @@ Informatiebehoefte: Toon alle bonbons met het chocoladetype Wit.
 4. Kies [tab Start > knop Selectie (groep Sorteren en filteren) > Is gelijk aan Wit]{.uicontrol}.
 
 ::: {.info data-latex=""}
-Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is. Dat op de tabel een filtering is toegepast kun je zien.
+Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is. Dat op de tabel een filtering is toegepast kun je zien:
 
-+ Aan de rechterkant van de kolomkop Chocoladetype staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
-+ In de statusbalk: ![](images/explore/statusbar-filtered.png)
++ Aan de rechterkant van de kolomkop [Chocoladetype]{.varname} staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
++ In de statusbalk zie je ![](images/explore/statusbar-filtered.png)
 :::
 
 :::
@@ -535,7 +533,7 @@ De filtering wordt ook opgeheven door klikken op de knop [Gefilterd]{.uicontrol}
 
 #### Getalfilter {-}
 
-Informatiebehoefte: Toon alle bonbons met met kosten van € 0,25 t/m € 0,35.
+Informatiebehoefte: Toon alle bonbons met kosten van € 0,25 t/m € 0,35.
 
 ::: {.practice data-latex=""}
 1. Klik op het pijlpuntje aan de rechterkant in de kolomkop [Bonbonkosten]{.varname} en kies dan [Getalfilters > Tussen...]{.uicontrol}.

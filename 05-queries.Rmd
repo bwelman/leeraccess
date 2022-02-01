@@ -69,7 +69,7 @@ knitr::include_graphics("images/queries/q-customername-ordercodes-fields.png")
 
 12. Klik in het vak [Sorteervolgorde]{.uicontrol} van de kolom [Achternaam]{.varname} en kies [Oplopend]{.uicontrol}.
 
-```{r q-customername-ordercodes-design-1, fig.cap="Ontwerp query klanten en ordercodes.", out.width="60%"}
+```{r q-customername-ordercodes-design-1, fig.cap="Ontwerp query klanten en ordercodes.", out.width="70%"}
 knitr::include_graphics("images/queries/q-customername-ordercodes-design.png")
 ```
 
@@ -128,7 +128,7 @@ ANALYSE
 
 Alle gewenste informatie wordt al geleverd door de query die je gemaakt hebt in \@ref(queries-customername-ordercodes). Er zijn echter twee aanvullende voorwaarden (criteria):
 
-+ Het veld Provincie (in de tabel Klanten) moet de waarde UT hebben.
++ Het veld Provincie (in de tabel Klanten) moet de waarde `UT` hebben.
 + Het veld Orderdatum (in de tabel Orders) moet een waarde hebben die kan lopen van 1-12-2009 t/m 31-12-2009.
 
 ::: {.practice data-latex=""}
@@ -136,13 +136,13 @@ Alle gewenste informatie wordt al geleverd door de query die je gemaakt hebt in 
 
 2. Open de query [Klantnaam+Ordercodes]{.varname} in de [Ontwerpweergave]{.uicontrol}.
 
-```{r q-customername-ordercodes-design-2, fig.cap="Ontwerpweergave query Klantnaam+Ordercodes.", out.width="60%"}
+```{r q-customername-ordercodes-design-2, fig.cap="Ontwerpweergave query Klantnaam+Ordercodes.", out.width="70%"}
 knitr::include_graphics("images/queries/q-customername-ordercodes-design.png")
 ```
 
-3. Sleep het veld [Provincie]{.varname} uit de tabel [Klanten]{.varname} naar de kolom naast [Ordercode]{.varname}). Sleep het veld [Orderdatum]{.varname} uit de tabel [Orders]{.varname} naar de volgende kolom.
+3. Sleep het veld [Provincie]{.varname} uit de tabel [Klanten]{.varname} naar de kolom naast [Ordercode]{.varname}. Sleep het veld [Orderdatum]{.varname} uit de tabel [Orders]{.varname} naar de volgende kolom.
 
-```{r q-utrecht-dec2009-fields, fig.cap="Velden in het queryraster.", out.width="75%"}
+```{r q-utrecht-dec2009-fields, fig.cap="Velden in het queryraster.", out.width="80%"}
 knitr::include_graphics("images/queries/q-utrecht-dec2009-fields.png")
 ```
 
@@ -150,7 +150,7 @@ knitr::include_graphics("images/queries/q-utrecht-dec2009-fields.png")
 
 5. Typ onder [Orderdatum]{.varname} in het vak [Criteria]{.uicontrol} in [Like "*12-2009"]{.userinput}.
 
-```{r q-utrecht-dec2009-criteria, fig.cap="Orderdatum met Like operator.", out.width="75%"}
+```{r q-utrecht-dec2009-criteria, fig.cap="Orderdatum met Like operator.", out.width="80%"}
 knitr::include_graphics("images/queries/q-utrecht-dec2009-criteria.png")
 ```
 
@@ -181,9 +181,9 @@ In de laatste maand van het kalenderjaar wordt geconstateerd dat de uiterste ver
 
 ANALYSE
 
-De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staan in de tabel Klanten. De soort dozen die afgenomen zijn, zijn te vinden in het veld Dooscode in de tabel Orderdetails. Om een order aan een klant kunnen koppelen is ook nog de tabel Orders nodig. De tabel Orders vormt de verbindende schakel tussen de tabel Klanten en de tabel Orderdetails. Verder moet als criterium in de query gebruikt worden dat het veld Dooscode de waarde KERS heeft.
+De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staan in de tabel [Klanten]{.varname}. De soort dozen die afgenomen zijn, zijn te vinden in het veld [Dooscode]{.varname} in de tabel [Orderdetails]{.varname}. Om een order aan een klant kunnen koppelen is ook nog de tabel [Orders]{.varname} nodig. De tabel [Orders]{.varname} vormt de verbindende schakel tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Verder moet als criterium in de query gebruikt worden dat het veld [Dooscode]{.varname} de waarde `KERS` heeft.
 
-Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de benodigde velden uit de tabellen Klanten en Orderdetails toe te voegen. De Wizard zorgt er dan voor dat automatisch de tabel Orders wordt toegevoegd omdat deze de verbinding vormt tussen de tabellen Klanten en Orderdetails. Bij het handmatig vanaf nul maken van de query moet je er zelf aan denken om de tabel Orders toe te voegen. Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.
+Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de benodigde velden uit de tabellen [Klanten]{.varname} en [Orderdetails]{.varname} toe te voegen. De Wizard zorgt er dan voor dat automatisch de tabel [Orders]{.varname} wordt toegevoegd omdat deze de verbinding vormt tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Bij het handmatig vanaf nul maken van de query moet je er zelf aan denken om de tabel [Orders]{.varname} toe te voegen. Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.
 
 ::: {.info data-latex=""}
 Dat er minimaal 1 doos is afgenomen hoeft niet als criterium te worden opgenomen omdat bij gekoppelde tabellen automatisch hieraan voldaan wordt.
@@ -212,19 +212,19 @@ Je kunt ook dubbelklikken op een veld om deze toe te voegen of weer te verwijder
 knitr::include_graphics("images/queries/q-customers-cher-fields.png")
 ```
 
-8. Klik op [Volgende]{.uicontrol. Je kunt nu aangegeven of Details of Totalen getoond moeten worden.
+8. Klik op [Volgende]{.uicontrol}. Je kunt nu aangegeven of Details of Totalen getoond moeten worden.
 
 9. Selecteer [Details (alle velden van alle records weergeven)]{.uicontrol} en klik op [Volgende]{.uicontrol}.
 
 10. Geef de query als naam [Klanten en Kers]{.varname}, selecteer [Het queryontwerp wijzigen]{.uicontrol} en klik op [Voltooien]{.uicontrol}. De query wordt opgeslagen en verschijnt daarna in de ontwerpweergave.
 
-```{r q-customers-cher-design, fig.cap="Ontwerpweergave query Klanten en Kers.", out.width="75%"}
+```{r q-customers-cher-design, fig.cap="Ontwerpweergave query Klanten en Kers.", out.width="80%"}
 knitr::include_graphics("images/queries/q-customers-cher-design.png")
 ```
 
 11. Typ [KERS]{.userinput} onder [Dooscode]{.varname} in het vak [Criteria]{.uicontrol} en laat dit veld niet weergeven.
 
-```{r q-customers-cher-criteria, fig.cap="Selectiecriterium in ontwerp query, criterium dooscode wordt kers.", out.width="75%"}
+```{r q-customers-cher-criteria, fig.cap="Selectiecriterium in ontwerp query, criterium dooscode wordt kers.", out.width="80%"}
 knitr::include_graphics("images/queries/q-customers-cher-criteria.png")
 ```
 
@@ -239,9 +239,9 @@ De eenvoudige selectiequery's werken met individuele records. Wanneer je via een
 
 Wanneer een query in de ontwerpweergave staat dan zie je op het lint [tab Ontwerp > Totalen (groep Weergeven/verbergen)]{.uicontrol} het symbool ![Knop totalen](images/queries/button-totals.png).
 
-Met deze knop kun je de rij Totaal in het queryraster zichtbaar en onzichtbaar maken. Access voegt een vak [Totaal]{.uicontrol} toe voor elk veld, net onder het vak [Tabel]{.uicontrol}.
+Met deze knop kun je de rij [Totaal]{.uicontrol} in het queryraster zichtbaar en onzichtbaar maken. Access voegt een vak [Totaal]{.uicontrol} toe voor elk veld, net onder het vak [Tabel]{.uicontrol}.
 
-```{r q-pralines-box-design, fig.cap="Query ontwerp met de zichtbare rij totaal.", out.width="75%"}
+```{r q-pralines-box-design, fig.cap="Query ontwerp met de zichtbare rij totaal.", out.width="80%"}
 knitr::include_graphics("images/queries/q-pralines-box-design.png")
 ```
 
@@ -258,8 +258,8 @@ Berekeningen
 
 Table: (\#tab:grouping-options) Opties voor het samenvatten
 
-|Keuze Totaal|Toelichting|
-|------------|-----------|
+|Keuze Totaal|Toelichting                     |
+|------------|--------------------------------|
 |`Group By`|Maakt subgroepen van records gebaseerd op de waarden in dit veld.|
 |`Som`|Telt de waarden in dit veld op.|
 |`Gem`|Berekent het gemiddelde van de waarden in dit veld.|
@@ -310,7 +310,7 @@ Omdat voor de kolom met de gemiddelde kosten geen nieuwe naam is opgegeven, gene
 
 In dit voorbeeld wordt het veld [Doosprijs]{.varname} 4 keer gebruikt met verschillende berekeningen. Het resultaat van de query is één record met daarin de 4 uitkomsten van de berekeningen.
 
-```{r q-boxprice-statistics-design, fig.cap="Ontwerp query doosprijs statistieken.", out.width="75%"}
+```{r q-boxprice-statistics-design, fig.cap="Ontwerp query doosprijs statistieken.", out.width="80%"}
 knitr::include_graphics("images/queries/q-boxprice-statistics-design.png")
 ```
 
@@ -350,7 +350,7 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Uiteraard is het 
 
 2.  Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}.  Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle}.
 
-```{r q-show-table, fig.cap="Dialoogvenster Tabel weergeven.", out.width="60%"}
+```{r q-show-table, fig.cap="Dialoogvenster Tabel weergeven.", out.width="70%"}
 knitr::include_graphics("images/queries/q-show-table.png")
 ```
 
@@ -419,24 +419,24 @@ Maak een gesorteerd overzicht van alle orderregels met daarop per order: orderco
 
 ANALYSE
 
-Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de tabel Orderdetails. De doosprijs zit in de tabel Dozen. Je hebt dus de tabellen Orderdetails en Dozen nodig. Het bedrag van de orderregel zit in geen enkele tabel omdat dit bedrag uit de andere gegevens berekend kan worden: `Orderregelbedrag = Hoeveelheid * Doosprijs`.
+Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de tabel [Orderdetails]{.varname}. De doosprijs zit in de tabel [Dozen]{.varname. Het bedrag van de orderregel zit in geen enkele tabel omdat dit bedrag uit de andere gegevens berekend kan worden: `Orderregelbedrag = Hoeveelheid * Doosprijs`.
 
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
 2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle} (zie eventueel figuur \@ref(fig:q-show-table)).
 
-3. Voeg achtereenvolgens de tabellen [Orderdetails]{.varname} en [Dozen]{.varname} toe en klik daarna op [Sluiten]{.uicontrol}. De tabellen[Orderdetails]{.varname} en [Dozen]{.varname} zijn nu aan het queryvenster toegevoegd.
+3. Voeg achtereenvolgens de tabellen [Orderdetails]{.varname} en [Dozen]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
 4. Voeg achtereenvolgens de velden [Ordercode]{.varname}, [Dooscode]{.varname}, [Hoeveelheid]{.varname} (uit tabel [Orderdetails]{.varname}) en [Doosprijs]{.varname} (uit tabel [Dozen]{.varname}) aan het queryraster toe door dubbel te klikken op het veld.
 
-```{r q-orderrow-amount-design1, fig.cap="Ontwerp met tabellen en velden.", out.width="60%"}
+```{r q-orderrow-amount-design1, fig.cap="Ontwerp met tabellen en velden.", out.width="70%"}
 knitr::include_graphics("images/queries/q-orderrow-amount-design1.png")
 ```
 
 5. Zet de sorteervolgorde bij [Ordercode]{.varname} en [Dooscode]{.varname} op [Oplopend]{.uicontrol}. Klik in rij veld van de eerste lege kolom en typ in [Regelbedrag: Hoeveelheid*Doosprijs]{.userinput}. Access zet blokhaken om de veldnamen.
 
-```{r q-orderrow-amount-design2, fig.cap="Ontwerp uitgebreid met berekend veld.", out.width="75%"}
+```{r q-orderrow-amount-design2, fig.cap="Ontwerp uitgebreid met berekend veld.", out.width="80%"}
 knitr::include_graphics("images/queries/q-orderrow-amount-design2.png")
 ```
 
@@ -454,23 +454,21 @@ Alle objecten in Access hebben eigenschappen. Deze eigenschappen bepalen onder a
 Om geldbedragen van een valutasymbool te voorzien moet de eigenschap [Notatie]{.uicontrol} van het veld [Regelbedrag]{.varname} gewijzigd worden.
 :::
 
-8. Zorg dat het [Eigenschappenvenster]{.uicontrol} zichtbaar is. Klik ergens in het veld [Regelbedrag]{.varname}.
+8. Zorg dat het [Eigenschappenvenster]{.uicontrol} zichtbaar is. Klik ergens in het veld [Regelbedrag]{.varname}. Klik in het vak [Notatie]{.uicontrol} en kies dan met de keuzelijst voor `Euro`.
 
 ```{r field-format-currency, fig.cap="Eigenschappenvenster van het veld Regelbedrag.", out.width="50%"}
 knitr::include_graphics("images/queries/field-format-currency.png")
 ```
 
-9. Klik in het vak [Notatie]{.uicontrol} en kies dan met de keuzelijst voor `Euro`.
-
-10. Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
+9. Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
 
 ```{r q-orderrow-amount-result-formatted, fig.cap="Resultaat query met financiële opmaak van de bedragen.", out.width="75%"}
 knitr::include_graphics("images/queries/q-orderrow-amount-result-formatted.png")
 ```
 
-11. Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster [Opslaan als]{.wintitle} verschijnt zodat de naam van de query kan worden opgegeven.
+10. Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster [Opslaan als]{.wintitle} verschijnt zodat de naam van de query kan worden opgegeven.
 
-12. Typ als naam in [Orderregelbedrag]{.varname} en klik op [OK]{.uicontrol}.
+11. Typ als naam in [Orderregelbedrag]{.varname} en klik op [OK]{.uicontrol}.
 :::
 
 ## Taak: Eerste order per klant {#queries-first-order-dates}
@@ -481,14 +479,14 @@ Maak een overzicht van de eerste order per klant. Geef per klant de klantcode, d
 
 ANALYSE
 
-De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een query gemaakt te worden die de klantgegevens en de orderdata toont. Het vinden van de eerste order kan gerealiseerd worden door in de Totalen rij de “Group By” te vervangen door “Min”.
+De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een query gemaakt te worden die de klantgegevens en de orderdata toont. Het vinden van de eerste order kan gerealiseerd worden door in de Totalen rij de [Group By]{.uicontrol} te vervangen door [Min]{.uicontrol}.
 
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
-2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle} (zie evnetueel figuur \@ref(fig:q-show-table)).
+2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}.
 
-3. Voeg achtereenvolgens de tabellen [Klanten]{.varname} en [Orders]{.varname} toe en klik daarna op [Sluiten]{.uicontrol}. De tabellen zijn nu aan het queryvenster toegevoegd.
+3. Voeg achtereenvolgens de tabellen [Klanten]{.varname} en [Orders]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
 4. Voeg achtereenvolgens de velden [Klantcode]{.varname}, [Achternaam]{.varname} en [Voornaam]{.varname} (uit [Klanten]{.varname}) en [Orderdatum]{.varname} (uit [Orders]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
 
@@ -496,7 +494,7 @@ De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een qu
 
 6. Wijzig de kolomtitel voor [Orderdatum]{.varname} door aan het begin van de veldnaam in te typen [Eerste orderdatum:]{.userinput}.
 
-```{r q-first-order-dates-design1, fig.cap="Tabellen en velden voor query Eerste order per klant.", out.width="60%"}
+```{r q-first-order-dates-design1, fig.cap="Tabellen en velden voor query Eerste order per klant.", out.width="70%"}
 knitr::include_graphics("images/queries/q-first-order-dates-design1.png")
 ```
 
@@ -504,13 +502,13 @@ knitr::include_graphics("images/queries/q-first-order-dates-design1.png")
 
 8. Zet de sorteervolgorde bij [Achternaam]{.varname} en [Voornaam]{.varname} op [Oplopend]{.uicontrol}.
 
-```{r q-first-order-dates-design2, fig.cap="Ontwerp query eerste order per klant.", out.width="60%"}
+```{r q-first-order-dates-design2, fig.cap="Ontwerp query eerste order per klant.", out.width="70%"}
 knitr::include_graphics("images/queries/q-first-order-dates-design2.png")
 ```
 
 9. Schakel naar de [Gegevensbladweergave]{.uicontrol}.
 
-```{r q-first-order-dates-result, fig.cap="Resultaat query eerste order per klant.", out.width="60%"}
+```{r q-first-order-dates-result, fig.cap="Resultaat query eerste order per klant.", out.width="70%"}
 knitr::include_graphics("images/queries/q-first-order-dates-result.png")
 ```
 
@@ -536,19 +534,19 @@ De benodigde gegevens over een bepaalde order staan in de tabellen [Orders]{.var
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
-2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle} (zie eventueel figuur \@ref(fig:q-show-table)).
+2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}.
 
-3. Voeg de tabellen [Orders]{.varname} en [Orderdetails]{.varname} toe en klik daarna op [Sluiten]{.uicontrol}. De tabellen zijn nu aan het queryvenster toegevoegd.
+3. Voeg de tabellen [Orders]{.varname} en [Orderdetails]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
 4. Voeg achtereenvolgens de velden [Ordercode]{.varname}, [Klantcode]{.varname}, [Orderdatum]{.varname} (uit [Orders]{.varname}), [Dooscode]{.varname} en [Hoeveelheid]{.varname} (uit [Orderdetails]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
 
-```{r q-information-order-design1, fig.cap="Tabellen en velden voor de query.", out.width="60%"}
+```{r q-information-order-design1, fig.cap="Tabellen en velden voor de query.", out.width="70%"}
 knitr::include_graphics("images/queries/q-information-order-design1.png")
 ```
 
 5. Klik in de kolom [Ordercode]{.varname} in het vak [Criteria]{.uicontrol} en typ in [[Voer ordercode in]]{.userinput}.
 
-```{r q-information-order-design2, fig.cap="Tabellen en velden voor de query.", out.width="60%"}
+```{r q-information-order-design2, fig.cap="Tabellen en velden voor de query.", out.width="70%"}
 knitr::include_graphics("images/queries/q-information-order-design2.png")
 ```
 
@@ -556,7 +554,7 @@ knitr::include_graphics("images/queries/q-information-order-design2.png")
 
 7. Voer een waarde in, bijvoorbeeld [30]{.userinput} en klik op [OK]{.uicontrol}.
 
-```{r q-information-order-result, fig.cap="Resultaat van de query.", out.width="60%"}
+```{r q-information-order-result, fig.cap="Resultaten voor de order met ordercode 30.", out.width="70%"}
 knitr::include_graphics("images/queries/q-information-order-result.png")
 ```
 
@@ -583,10 +581,9 @@ Verwijder
 Bijwerk
 : Verandert waarden in een of meerdere records. De bestaande waarden worden dan vervangen door nieuwe waarden, een soort zoek en vervang actie. De veranderingen kunnen niet teruggedraaid worden en daarom is het aan te bevelen om altijd eerst een backup of kopie van de database of van de tabel te maken voordat een toevoeqquery uitgevoerd wordt.
 
-
 Omdat actiequery's gegevens in de database veranderen kunnen deze query's een beveiligingsrisico vormen. Om een beveiliging hiertegen te bieden worden in Access en het Vertrouwenscentrum een aantal controles uitgevoerd. Het vertrouwenscentrum kan inhoud uitschakelen. Bij het openen van een dergelijke database geeft Access de berichtenbalk met een beveiligingswaarschuwing weer.
 
-```{r securitywarning, fig.cap="Berichtenbalk met beveiligingswaarschuwing.", out.width="75%"}
+```{r securitywarning, fig.cap="Berichtenbalk met beveiligingswaarschuwing.", out.width="80%"}
 knitr::include_graphics("images/common/security-warning.png")
 ```
 
@@ -621,9 +618,9 @@ Alle benodigde gegevens staan in de tabel [Bonbons]{.varname}. Hiervan hebben we
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
-2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle} (zie eventueel figuur \@ref(fig:q-show-table)).
+2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}.
 
-3. Voeg de tabel [Bonbons]{.varname} toe en klik daarna op [Sluiten]{.uicontrol}. De tabel is aan het queryvenster toegevoegd.
+3. Voeg de tabel [Bonbons]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
 4. Voeg achtereenvolgens de velden [Chocoladetype]{.varname} en [Bonbonkosten]{.varname} aan het queryraster toe door dubbel te klikken op de velden.
 
@@ -669,9 +666,9 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Het selecteren op
 
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
-2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster [Tabel weergeven]{.wintitle} (zie eventueel figuur \@ref(fig:q-show-table)).
+2. Kies [tab Maken > Queryontwerp (groep Query's)]{.uicontrol}.
 
-3. Voeg de tabel [Klanten]{.varname} toe en klik daarna op [Sluiten]{.uicontrol}. De tabel is nu aan het queryvenster toegevoegd.
+3. Voeg de tabel [Klanten]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
 4. Voeg alle velden toe door een dubbelklik op het sterretje (`*`) en voeg daarna nog een keer afzonderlijk het veld [Provincie]{.varname} toe.
 
@@ -695,7 +692,7 @@ knitr::include_graphics("images/queries/q-customers-friesland-design.png")
 
 3. Geef de nieuwe tabel als naam [Friese klanten]{.varname} en geef aan dat deze in de huidige database geplaatst moet worden..
 
-```{r q-maketable-dialogbox, fig.cap="Naam specificeren van de nieuwe tabel en de database waarin deze terecht moet komen.", out.width="60%"}
+```{r q-maketable-dialogbox, fig.cap="Naam specificeren van de nieuwe tabel en de database waarin deze terecht moet komen.", out.width="70%"}
 knitr::include_graphics("images/queries/q-maketable-dialogbox.png")
 ```
 
@@ -723,7 +720,7 @@ Een kruistabelquery berekent de som, gemiddelde of een andere samenvattingswaard
 
 Wanneer je een kruistabelquery maakt, moet je opgeven welke velden de rijkoppen bevatten, welk veld de kolomkoppen bevat en welk veld de waarden bevat die moeten worden samengevat. Voor de rijkoppen kun je meerdere velden gebruiken (maximaal 3), maar voor de kolomkoppen en de samen te vatten gegevens kun je maar één veld gebruiken. Verder kun je ook expressies gebruiken voor de rijkoppen, kolomkoppen en samen te vatten gegevens.
 
-De gemakkelijkste en snelste manier om een kruistabelquery te maken is met behulp van de Wizard Kruistabelquery. Voor complexere query's kun je vaak wel met deze Wizard beginnen, maar moet je daarna voor het fijnere werk overstappen naar de ontwerpweergave.
+De gemakkelijkste en snelste manier om een kruistabelquery te maken is met behulp van de [Wizard Kruistabelquery]{.uicontrol}. Voor complexere query's kun je vaak wel met deze Wizard beginnen, maar moet je daarna voor het fijnere werk overstappen naar de ontwerpweergave.
 
 INFORMATIEBEHOEFTE
 
@@ -736,13 +733,14 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}.
 ::: {.practice data-latex=""}
 1. Open zonodig database [snoep365.accdb]{.filepath}.
 
-2.  Kies [tab Maken > Wizard Query (groep Query's) > Wizard Kruistabelquery > OK]{.uicontrol}. In het scherm dat getoond wordt kun je de tabel of query selecteren welke de velden voor de kruistabel bevat.
+2.  Kies [tab Maken > Wizard Query (groep Query's) > Wizard Kruistabelquery > OK]{.uicontrol}.  
+    In het scherm dat getoond wordt kun je de tabel of query selecteren welke de velden voor de kruistabel bevat.
 
 3.  Selecteer de tabel [Klanten]{.varname} en klik op [Volgende]{.uicontrol}. Nu kun je de velden kiezen die de waarden voor de rijkoppen bevatten.
 
 4.  Voeg [Provincie]{.varname} toe.
 
-```{r q-crosstab-rowhead, fig.cap="Selectie velden voor rijkoppen", out.width="60%"}
+```{r q-crosstab-rowhead, fig.cap="Selectie velden voor rijkoppen", out.width="70%"}
 knitr::include_graphics("images/queries/q-crosstab-rowhead.png")
 ```
 
@@ -750,7 +748,7 @@ knitr::include_graphics("images/queries/q-crosstab-rowhead.png")
 
 6.  Selecteer veld [Regio]{.varname}.
 
-```{r q-crosstab-columnhead, fig.cap="Selectie veld voor kolomkop.", out.width="60%"}
+```{r q-crosstab-columnhead, fig.cap="Selectie veld voor kolomkop.", out.width="70%"}
 knitr::include_graphics("images/queries/q-crosstab-columnhead.png")
 ```
 
@@ -758,7 +756,7 @@ knitr::include_graphics("images/queries/q-crosstab-columnhead.png")
 
 8.  Selecteer veld [Klantcode]{.varname} en functie `Aantal`. Deselecteer tevens de optie om een totaal te berekenen voor elke rij.
 
-```{r q-crosstab-values, fig.cap="Selectie veld en functie voor samenvatting.", out.width="60%"}
+```{r q-crosstab-values, fig.cap="Selectie veld en functie voor samenvatting.", out.width="70%"}
 knitr::include_graphics("images/queries/q-crosstab-values.png")
 ```
 

@@ -27,12 +27,13 @@ Access beschikt over het hulpmiddel [Tabelanalyse]{.uicontrol} om redundante geg
 
 Je kunt opgeven welke tabellen je de wizard wilt laten maken of je kunt jouw tabel door de wizard laten normaliseren. Nadat je de voorgestelde nieuwe tabellen hebt opgegeven, helpt de wizard de gegevens te saneren die in de oorspronkelijke tabel op inconsistente wijze werden herhaald. In de laatste stap kun je een query maken waarmee alle informatie in de gesplitste tabellen kan worden weergegeven in een enkel gegevensblad dat overeenkomt met de oorspronkelijke tabel.
 
-In de afbeelding hierna is een voorbeeld van een tabel [Contacts]{.varname} te zien. Hierin is te zien dat veel gegevens meervoudig worden opgeslagen. Deze tabel is niet dus niet genormaliseerd. Access kan deze tabel splitsen in twee tabellen zo dat zo min mogelijk gegevens meervoudig worden opgeslagen.
+In figuur \@ref(fig:tools-table-contacts) is een voorbeeld van een tabel [Contacts]{.varname} te zien. Hierin is te zien dat veel gegevens meervoudig worden opgeslagen. Deze tabel is niet dus niet genormaliseerd. Access kan deze tabel splitsen in twee tabellen zo dat zo min mogelijk gegevens meervoudig worden opgeslagen.
 
 ```{r tools-table-contacts, fig.cap="Tabel contacten.", out.width="75%"}
 knitr::include_graphics("images/tools/table-contacts.png")
 ```
 
+::: {.practice data-latex=""}
 1. Open het hulpbestand [tools.accdb]{.filepath}.
 
 2. Selecteer de tabel [Contacts]{.varname}.
@@ -77,7 +78,7 @@ knitr::include_graphics("images/tools/tables-splitted.png")
 
 11. Klik op [Volgende]{.uicontrol}. In het scherm dat nu verschijnt kan een bijbehorende query gemaakt worden.
 
-12. Selecteer [Geen query maken]{.uicontrol} en klik op [Voltooien]{.uicontrol}. Er zijn nu drie tabellen: [Contacts]{.varname} (oorspronkelijke tabel), [Contactpersons]{.varname} (nieuwe tabel), [Tabel1]{.varname} (nieuwe tabel)
+12. Laat geen query maken en klik op [Voltooien]{.uicontrol}. Er zijn nu drie tabellen: [Contacts]{.varname} (oorspronkelijke tabel), [Contactpersons]{.varname} (nieuwe tabel), [Tabel1]{.varname} (nieuwe tabel)
 
 ::: {.warning data-latex=""}
 Er kan een waarschuwingsvenster verschijnen met de mededeling dat de opdracht of actie [OnderElkaar]{.uicontrol} niet beschikbaar is. Klik in dat geval op [OK]{.uicontrol}.
@@ -88,6 +89,7 @@ Er kan een waarschuwingsvenster verschijnen met de mededeling dat de opdracht of
 14. Verwijder de tabel [Contacts]{.varname}.
 
 15. Wijzig de naam van [Tabel1]{.varname} in [Contacts]{.varname}.
+:::
 
 ## Database comprimeren {#tools-compact-repair}
 

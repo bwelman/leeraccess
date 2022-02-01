@@ -147,7 +147,7 @@ Open via een van de hiervoor genoemde methodes het bestand [snoep365.accdb]{.fil
 
 Het programmavenster van Access bestaat van boven naar beneden uit een gedeelte voor de besturing van het programma, het werkblad voor de documentvensters en de statusbalk.
 
-```{r access-window, fig.cap="Programmavenster Access.", out.width="75%"}
+```{r access-window, fig.cap="Programmavenster Access.", out.width="80%"}
 knitr::include_graphics("images/common/access-window.png")
 ```
 
@@ -156,9 +156,9 @@ Bestand
 
 Werkbalk Snelle Toegang
 :  In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Access staan hierop drie knoppen:
-: + ![Opslaan](images/common/button-save.png) - Opslaan
-: + ![Ongedaan maken](images/common/button-undo.png) - Ongedaan maken
-: + ![Opnieuw](images/common/button-redo.png) - Opnieuw
+: + ![](images/common/button-save.png) - Opslaan
+: + ![](images/common/button-undo.png) - Ongedaan maken
+: + ![](images/common/button-redo.png) - Opnieuw
 
 Lint
 : Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals Start, Maken, .... Elk tabblad heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde contextuele tabbladen. Een voorbeeld hiervan is het tabblad Tabel, welke alleen verschijnt wanneer een tabel geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
@@ -182,7 +182,7 @@ Navigatievenster
 Documentvensters
 : Wanneer een object wordt geopend dan verschijnt deze in een eigen documentvenster.
 
-## Nieuwe database venster {#intro-database-new}
+## Nieuwe database {#intro-database-new}
 
 Aan het maken van een database hoort eigenlijk een proces van informatieanalyse vooraf te gaan, gevolgd door een normalisatieproces. Dan is de structuur van de database bekend en weet je welke tabellen met welke velden je moet maken. Daarom is het maken van een nieuwe database geen doel van deze cursus. Wanneer je weet wat er gemaakt moet worden is het maken van een database niet moeilijk meer. Hierna volgen een paar richtlijnen hoe je te werk zou kunnen gaan.
 
@@ -203,7 +203,7 @@ In deze cursus wordt een database met de bestandsnaam snoep365.accdb gebruikt. O
 
 2.  Kies [Bestand > Opslaan als]{.uicontrol}.
 
-```{r saveas, fig.cap="Dialoogvenster Opslaan als", out.width="60%"}
+```{r saveas, fig.cap="Dialoogvenster Opslaan als", out.width="80%"}
 knitr::include_graphics("images/common/saveas.png")
 ```
 
