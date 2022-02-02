@@ -29,7 +29,7 @@ Je kunt opgeven welke tabellen je de wizard wilt laten maken of je kunt jouw tab
 
 In figuur \@ref(fig:tools-table-contacts) is een voorbeeld van een tabel [Contacts]{.varname} te zien. Hierin is te zien dat veel gegevens meervoudig worden opgeslagen. Deze tabel is niet dus niet genormaliseerd. Access kan deze tabel splitsen in twee tabellen zo dat zo min mogelijk gegevens meervoudig worden opgeslagen.
 
-```{r tools-table-contacts, fig.cap="Tabel contacten.", out.width="75%"}
+```{r tools-table-contacts, fig.cap="Tabel contacten.", out.width="90%"}
 knitr::include_graphics("images/tools/table-contacts.png")
 ```
 
@@ -48,7 +48,7 @@ knitr::include_graphics("images/tools/table-contacts.png")
 
 7. Selecteer [Zelf een keuze maken]{.uicontrol} en klik op [Volgende]{.uicontrol}.
 
-```{r table-analyzer-wizard, fig.cap="Wizard tabelanalyse", out.width="75%"}
+```{r table-analyzer-wizard, fig.cap="Wizard tabelanalyse", out.width="80%"}
 knitr::include_graphics("images/tools/table-analyzer-wizard.png")
 ```
 
@@ -60,7 +60,7 @@ In deze stap kun je nieuwe tabellen maken en velden daaraan toevoegen.
 
 9. Geef de nieuwe tabel de naam [Contactpersons]{.varname} en klik [OK]{.uicontrol}.
 
-```{r table-generated, fig.cap="Nieuw aangemaakte tabel contactpersoon", out.width="75%"}
+```{r table-generated, fig.cap="Nieuw aangemaakte tabel contactpersoon", out.width="80%"}
 knitr::include_graphics("images/tools/table-generated.png")
 ```
 
@@ -72,7 +72,7 @@ knitr::include_graphics("images/tools/table-generated.png")
 
 10. Sleep de velden [CompanyName]{.varname} en [Tel]{.varname} naar de nieuwe tabel [Contactpersons]{.varname}.
 
-```{r tables-splitted, fig.cap="Eindresultaat tabel Contactpersons", out.width="75%"}
+```{r tables-splitted, fig.cap="Eindresultaat tabel Contactpersons", out.width="80%"}
 knitr::include_graphics("images/tools/tables-splitted.png")
 ```
 

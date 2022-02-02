@@ -594,7 +594,7 @@ Verder is het raadzaam om altijd eerst een backup te maken van de tabellen die g
 ::: {.demo data-latex=""}
 **Kopie tabel maken**
 
-1. Geef in het navigatievenster een rechter muisklik op de naam van de tabel en kies uit het snelmenu voor [Kopiëren]{.uicontrol.
+1. Geef in het navigatievenster een rechter muisklik op de naam van de tabel en kies uit het snelmenu voor [Kopiëren]{.uicontrol}.
 2. Geef opnieuw een rechter muisklik en kies nu voor [Plakken]{.uicontrol} en geef de nieuwe tabel een verschillende naam.
 
 Om een tabel weer te herstellen na een wijziging ga je als volgt te werk:

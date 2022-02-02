@@ -29,7 +29,7 @@ Subformulier: Bevat de orders van de klant (afkomstig uit tabel [Orders]{.varnam
 Het hoofdformulier en subformulier zijn gekoppeld, zo dat in het subformulier alleen records worden weergegeven die gerelateerd zijn aan het record in het hoofdformulier.
 
 
-```{r f-customers-orders-1, fig.cap="Hoofdformulier Klanten met subformulier Orders.", out.width="50%"}
+```{r f-customers-orders-1, fig.cap="Hoofdformulier Klanten met subformulier Orders.", out.width="60%"}
 knitr::include_graphics("images/forms/f-customers-orders.png")
 ```
 :::
@@ -120,7 +120,7 @@ Als je het subgegevensblad niet in het formulier wilt hebben, kun je dit in de [
 
 5. Schakel over naar de [Ontwerpweergave]{.uicontrol}.
 
-```{r f-stock-in-trade-design, fig.cap="Ontwerpweergave formulier inventaris.", out.width="60%"}
+```{r f-stock-in-trade-design, fig.cap="Ontwerpweergave formulier inventaris.", out.width="70%"}
 knitr::include_graphics("images/forms/f-stock-in-trade-design.png")
 ```
 
@@ -374,7 +374,7 @@ knitr::include_graphics("images/forms/q-choose-praline-design.png")
 
 5. Selecteer het zojuist ingevoerde label dat bij de keuzelijst hoort en druk dan op de [Delete]{.uicontrol} toets om deze te verwijderen.
 
-```{r f-boxes-subform, fig.cap="Keuzelijst op subformulier dozen.", out.width="60%"}
+```{r f-boxes-subform, fig.cap="Keuzelijst op subformulier dozen.", out.width="70%"}
 knitr::include_graphics("images/forms/f-boxes-subform.png")
 ```
 
@@ -404,7 +404,7 @@ De gegevens op het subformulier zijn afkomstig uit de tabel [Orderdetails]{.varn
 Maak daarna een formulier met subformulier en baseer het hoofdformulier op de query [Orders-Klanten]{.varname} en het subformulier op de query [Orderdetails-Dozen]{.varname}. Voeg de gewenste velden voor zowel het hoofdformulier als het subformulier toe.
 
 ::: {.practice data-latex=""}
-**Query [Orders-Klanten]{.varname}**
+**Query Orders-Klanten**
 
 1. Open zonodig database [snoep365.accdb]{.filepath}
 
@@ -432,7 +432,7 @@ knitr::include_graphics("images/forms/q-orders-customers-design.png")
 
 3. Maak een kolom met de naam [Totaal]{.varname} die de berekening `Hoeveelheid*Doosprijs` uitvoert.
 
-```{r q-orderdetails-boxes-design, fig.cap="Ontwerp query orderdetails dozen.", out.width="60%"}
+```{r q-orderdetails-boxes-design, fig.cap="Ontwerp query orderdetails dozen.", out.width="70%"}
 knitr::include_graphics("images/forms/q-orderdetails-boxes-design.png")
 ```
 
@@ -475,7 +475,7 @@ knitr::include_graphics("images/forms/f-orderdata-entry-totals.png")
 3. Selecteer in het [Eigenschappenvenster]{.uicontrol} het type [Formulier]{.uicontrol} en stel dan [Standaardweergave]{.uicontrol} in op [Doorlopend formulier]{.uicontrol}.  
    Deze instelling is nodig omdat anders het totaal niet kan worden berekend.
 
-```{r f-orderdatasub-properties, fig.cap="Standaardweergave subformulier.", out.width="60%"}
+```{r f-orderdatasub-properties, fig.cap="Standaardweergave subformulier.", out.width="70%"}
 knitr::include_graphics("images/forms/f-orderdatasub-properties.png")
 ```
 
@@ -537,7 +537,7 @@ De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en d
 
 5. Wijzig in de derde kolom de [Group By]{.uicontrol} in `Som` en in de vierde kolom in `Waar`. Voeg in de vierde kolom als criterium toe `2010`. Laat dit laatste veld niet weergeven.
 
-```{r q-sales-box-month-design, fig.cap="Ontwerp query omzet", out.width="60%"}
+```{r q-sales-box-month-design, fig.cap="Ontwerp query omzet", out.width="80%"}
 knitr::include_graphics("images/forms/q-sales-box-month-design.png")
 ```
 
@@ -575,7 +575,7 @@ Wanneer je na het sluiten de query weer opent in de [Ontwerpweergave]{.uicontrol
     
    De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten aanpassen.
 
-```{r chartwizard-layout-default, fig.cap="Voorstel indeling grafiek.", out.width="60%"}
+```{r chartwizard-layout-default, fig.cap="Voorstel indeling grafiek.", out.width="70%"}
 knitr::include_graphics("images/forms/chartwizard-layout-default.png")
 ```
 
@@ -583,13 +583,13 @@ knitr::include_graphics("images/forms/chartwizard-layout-default.png")
 
 7. Sleep het veld [Omzet]{.varname} naar het vak voor de verticale as. De weergave langs de verticale as wijzigt in `SomVanOmzet`.
 
-```{r chartwizard-layout-data, fig.cap="Definitieve indeling grafiek.", out.width="60%"}
+```{r chartwizard-layout-data, fig.cap="Definitieve indeling grafiek.", out.width="70%"}
 knitr::include_graphics("images/forms/chartwizard-layout-data.png")
 ```
 
 8. Klik op [Volgende]{.uicontrol}. Hier selecteer je het veld in het formulier dat gekoppeld moet worden aan het veld in de grafiek. In beide gevallen is dat [Doosnaam]{.varname}.
 
-```{r chartwizard-linking-fields, fig.cap="Koppeling tussen velden formulier en grafiek.", out.width="60%"}
+```{r chartwizard-linking-fields, fig.cap="Koppeling tussen velden formulier en grafiek.", out.width="70%"}
 knitr::include_graphics("images/forms/chartwizard-linking-fields.png")
 ```
 
@@ -623,7 +623,7 @@ Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zij
 
 3. Selecteer [Tabel: Klanten]{.varname} in het vak [Tabellen/query's]{.uicontrol}.
 
-```{r f-wizard-t-customers-2, fig.cap="Wizard Formulier keuze velden.", out.width="60%"}
+```{r f-wizard-t-customers-2, fig.cap="Wizard Formulier keuze velden.", out.width="70%"}
 knitr::include_graphics("images/forms/f-wizard-t-customers.png")
 ```
 
@@ -635,7 +635,7 @@ knitr::include_graphics("images/forms/f-wizard-t-customers.png")
 
 5. Klik op [Volgende]{.uicontrol}. Kies voor weergave volgens [Klanten]{.varname} en voor [Gekoppelde formulieren]{.uicontrol}.
 
-```{r f-wizard-customerorders-dataview, fig.cap="Wizard gekoppelde formulieren.", out.width="60%"}
+```{r f-wizard-customerorders-dataview, fig.cap="Wizard gekoppelde formulieren.", out.width="70%"}
 knitr::include_graphics("images/forms/f-wizard-customerorders-dataview.png")
 ```
 

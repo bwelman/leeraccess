@@ -29,7 +29,7 @@ In deze taak wordt aan klanten een standaardbrief gestuurd met daarin de aankond
 
 3. Geef een rechter muisklik op de tabelnaam en kies [Exporteren > Word Merge]{.uicontrol}.
 
-```{r word-mailmerge-wizard, fig.cap="Wizard Afdruk samenvoegen.", out.width="60%"}
+```{r word-mailmerge-wizard, fig.cap="Wizard Afdruk samenvoegen.", out.width="70%"}
 knitr::include_graphics("images/integration/word-mailmerge-wizard.png")
 ```
 

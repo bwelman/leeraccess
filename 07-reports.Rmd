@@ -31,7 +31,7 @@ In deze taak worden adresetiketten van de klanten gemaakt met de [Wizard etikett
 
 4. Selecteer maateenheid `Engels`, fabrikant `Avery` en dan product `Avery L7160`, zie figuur \@ref(fig:label-wizard-avery7160).
 
-```{r label-wizard-avery7160, fig.cap="Keuze etikettype Avery L7160.", out.width="60%"}
+```{r label-wizard-avery7160, fig.cap="Keuze etikettype Avery L7160.", out.width="75%"}
 knitr::include_graphics("images/reports/label-wizard-avery7160.png")
 ```
 
@@ -39,7 +39,7 @@ knitr::include_graphics("images/reports/label-wizard-avery7160.png")
 
 6. Accepteer de standaardinstellingen en klik op [Volgende]{.uicontrol}.
 
-```{r label-wizard-fields, fig.cap="Gegevens op het etiket.", out.width="60%"}
+```{r label-wizard-fields, fig.cap="Gegevens op het etiket.", out.width="75%"}
 knitr::include_graphics("images/reports/label-wizard-fields.png")
 ```
 
@@ -61,7 +61,7 @@ Door dubbel te klikken op een veldnaam wordt deze op de plaats van de cursor ing
 
 10. Geef het rapport de naam [Adresetiketten klanten]{.varname} en klik op [Voltooien]{.uicontrol}.
 
-```{r report-customers-printpreview, fig.cap="Afdrukvoorbeeld.", out.width="60%"}
+```{r report-customers-printpreview, fig.cap="Afdrukvoorbeeld.", out.width="75%"}
 knitr::include_graphics("images/reports/report-customers-printpreview.png")
 ```
 
@@ -119,7 +119,7 @@ ANALYSE
 
 3. Kies [tab Maken > Wizard rapport (groep Rapporten)]{.uicontrol}.
 
-```{r group-wizard-fields, fig.cap="Selecteer de op te nemen velden.", out.width="60%"}
+```{r group-wizard-fields, fig.cap="Selecteer de op te nemen velden.", out.width="70%"}
 knitr::include_graphics("images/reports/group-wizard-fields.png")
 ```
 
@@ -127,7 +127,7 @@ knitr::include_graphics("images/reports/group-wizard-fields.png")
 
 5. Verwijder eventuele reeds aanwezige groepeerniveaus ([Ordercode]{.varname}) en voeg [Doosnaam]{.varname} als groepeerniveau toe.
 
-```{r group-wizard-levels, fig.cap="Selecteer de velden waarop gegroepeerd moet worden.", out.width="60%"}
+```{r group-wizard-levels, fig.cap="Selecteer de velden waarop gegroepeerd moet worden.", out.width="70%"}
 knitr::include_graphics("images/reports/group-wizard-levels.png")
 ```
 
@@ -135,7 +135,7 @@ knitr::include_graphics("images/reports/group-wizard-levels.png")
 
 7. Geef aan dat oplopend op [Ordercode]{.varname} gesorteerd moet worden.
 
-```{r group-wizard-sort, fig.cap="Sorteervelden en opties voor totalen specificeren.", out.width="60%"}
+```{r group-wizard-sort, fig.cap="Sorteervelden en opties voor totalen specificeren.", out.width="70%"}
 knitr::include_graphics("images/reports/group-wizard-sort.png")
 ```
 
@@ -149,7 +149,7 @@ knitr::include_graphics("images/reports/group-wizard-summary.png")
 
 10. Selecteer indeling [Overzicht]{.uicontrol}.
 
-```{r group-wizard-layout, fig.cap="Opmaak van het rapport aangeven.", out.width="60%"}
+```{r group-wizard-layout, fig.cap="Opmaak van het rapport aangeven.", out.width="70%"}
 knitr::include_graphics("images/reports/group-wizard-layout.png")
 ```
 
@@ -177,7 +177,7 @@ In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en
 
 4. Selecteer maateenheid `Metrisch`, fabrikant `Zweckform` en dan product `Zweckform 3415`.
 
-```{r label-wizard-zweckform3415, fig.cap="Keuze etikettype Zweckform 3415.", out.width="60%"}
+```{r label-wizard-zweckform3415, fig.cap="Keuze etikettype Zweckform 3415.", out.width="75%"}
 knitr::include_graphics("images/reports/label-wizard-zweckform3415.png")
 ```
 
@@ -245,7 +245,7 @@ knitr::include_graphics("images/reports/label-praline-alignment.png")
 
 19. Schakel over naar [Afdrukvoorbeeld]{.uicontrol}.
 
-```{r report-pralines-result, fig.cap="Afdrukvoorbeeld bonbonsoorten.", out.width="75%"}
+```{r report-pralines-result, fig.cap="Afdrukvoorbeeld bonbonsoorten.", out.width="80%"}
 knitr::include_graphics("images/reports/report-pralines-result.png")
 ```
 

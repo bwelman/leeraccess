@@ -12,7 +12,7 @@ Macro's kunnen handelingen automatiseren die veel voorkomen of vrij complex zijn
 
 In feite bestaat een macro in Access uit een lijst van achter elkaar uit te voeren acties. Voor de meeste acties zijn een of meer argumenten nodig. Voor het maken van macro's heb je geen programmeerkennis nodig. 
 
-```{r macro-window-1, fig.cap="[Macrovenster met actiecatalogus.", out.width="75%"}
+```{r macro-window-1, fig.cap="Macrovenster met actiecatalogus.", out.width="75%"}
 knitr::include_graphics("images/common/macro-window.png")
 ```
 
@@ -164,7 +164,7 @@ Deze macro bestaat nog niet en wordt in de volgende stap gemaakt.
 knitr::include_graphics("images/common/macro-window.png")
 ```
 
-10. Klik op de keuzepijl in het vak [Nieuwe actie toevoegen]{.uicontrol} en selecteer uit de lijst de actie [NaarBesturingselementGaan{.uicontrol} en voer als **Argument** in [Klantcode]{.varname}.
+10. Klik op de keuzepijl in het vak [Nieuwe actie toevoegen]{.uicontrol} en selecteer uit de lijst de actie [NaarBesturingselementGaan]{.uicontrol} en voer als Argument in [Klantcode]{.varname}.
 
 11. Typ [Klantcode]{.varname} in het vak [Besturingselementnaam]{.uicontrol}.
 
