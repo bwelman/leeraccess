@@ -1,7 +1,7 @@
-Package: textbook
+Package: leeraccess
 Title: Studieboek leeraccess
 Version: 0.1
-URL: https://github.com/bwelman/textbook
+URL: https://github.com/bwelman/leeraccess
 Imports: 
     bookdown,
     bslib,
