@@ -1,0 +1,39 @@
+# Voorwoord {.unnumbered}
+
+Dit leerboek is bedoeld als een grondige kennismaking met Microsoft Access en ontwikkeld voor met name studenten in het middelbaar en hoger onderwijs en gebruikers van Microsoft Access. Hierdoor is er weinig aandacht voor het ontwerpen van databases, maar ligt de aandacht op het maken van queries, formulieren en rapporten. De hoofdstukken over deze onderdelen bevatten veel oefeningen om te oefenen met het verzamelen van informatie uit de database.
+
+Dit studieboek verschilt op meerdere manieren van andere studieboeken.
+
+-   De onderdelen zijn ontwikkeld om je te leren hoe je een bepaalde taak kunt uitvoeren en beheersen, niet meer en niet minder. Dat heeft geresulteerd in concrete stapsgewijs opgebouwde taken zonder overbodige informatie die alleen maar voor afleiding kan zorgen.
+
+-   De inhoud van de taken en opgaven is vooral bepaald door competenties die het hoger onderwijs stelt. Veel van de opgaven zijn voortgekomen uit ervaringen van studenten in de beroepspraktijk tijdens stages en afstuderen.
+
+## Organisatie studieboek {.unnumbered}
+
+Het studieboek is gebouwd rond de database `{{< var database >}}` van het fictieve bedrijf SNOOPY dat een assortiment aan bonbondozen verkoopt aan klanten. De hoofdstukken in dit boek hebben een logische opbouw over het werken met deze database.
+
+-   @sec-intro is een kennismaking met het programma Access zelf en de inhoud van databases in het algemeen.
+
+-   @sec-explore is een verkenning van de database `{{< var database >}}`, zoals uit welke tabellen deze database is opgebouwd en waarvoor deze tabellen dienen. Met deze database ga je wat experimenteren om verschillende aspecten over het werken met Access te ontdekken.
+
+-   @sec-data behandelt het toevoegen en/of wijzigen van gegevens, wat vaak een van de belangrijkste werkzaamheden van de gebruiker is.
+
+-   @sec-tables richt zich op het maken van tabellen en het leggen van relaties tussen tabellen.
+
+-   @sec-queries gaat in op het verkrijgen van gewenste informatie uit een database, ook een veel voorkomende actie van eindgebruikers. Om de gewenste informatie te leveren zijn query's nodig. Je leert hoe je deze query's kunt maken.
+
+-   @sec-forms behandelt formulieren waarmee je een georganiseerd en opgemaakt overzicht van velden in tabellen en query's kunt weergeven. Formulieren zijn ook belangrijk voor de gegevensinvoer.
+
+-   @sec-reports behandelt rapporten, overzichten die meestal bedoeld zijn om af te drukken. Ook etiketten zijn een vorm van rapporten.
+
+-   @sec-integration behandelt een paar mogelijkheden om Access te laten samenwerken met Excel en Word.
+
+-   @sec-tools laat zien welke hulpmiddelen binnen Access beschikbaar zijn om een database te analyseren, problemen op te sporen en te corrigeren.
+
+-   @sec-macros laat zien hoe je handelingen die veel voorkomen of vrij complex zijn, kunt automatiseren met behulp van macro's.
+
+-   @sec-normalization is een theoretisch hoofdstuk dat uitlegt hoe je via een stapsgewijs normalisatieproces een relationele database kunt ontwerpen. Voor dit hoofdstuk heb je Access niet nodig.
+
+## Software {.unnumbered}
+
+In dit studieboek wordt gewerkt met **Access 365**, maar het studieboek is ook bruikbaar voor andere Accessversies zoals 2016 en 2019 en zelfs de oudere 2010 en 2007 versies.

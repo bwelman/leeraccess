@@ -1,0 +1,593 @@
+# Database SNOEP verkennen {#sec-explore}
+
+::: {.callout-note appearance="simple" icon="false"}
+**DOELSTELLINGEN**
+
+-   Kennis maken met de voorbeelddatabase `{{< var database >}}`.
+-   Wat te doen bij beveiligingswaarschuwingen.
+-   De vensters en navigatiemogelijkheden binnen Access.
+-   De weergavemogelijkheden van tabellen, formulieren, rapporten en query's.
+-   De werking van een opdrachtknop op een formulier.
+-   Hoe je een record kunt zoeken, sorteren en filteren.
+-   Het afdrukken van tabellen, query's, formulieren en rapporten.
+:::
+
+De cursus is opgebouwd rond het voorbeeldbestand `{{< var database >}}`. In dit hoofdstuk komt aan bod uit welke tabellen deze database is opgebouwd en waarvoor deze tabellen dienen. Met deze voorbeelddatabase ga je wat experimenteren om een aantal aspecten over het werken met Access te ontdekken. Sommige functies worden in andere hoofdstukken verder uitgediept.
+
+## Voorbeelddatabase SNOEP {#sec-explore-about}
+
+De voorbeelddatabase `{{< var database >}}` bevat gegevens over SNOOPY, een bedrijf dat bonbondozen verkoopt aan klanten. In de dozen zitten verschillende soorten bonbons. De informatie wordt in 6 tabellen bijgehouden:
+
+-   [Klanten]{.varname}
+-   [Orders]{.varname}
+-   [Orderdetails]{.varname}
+-   [Dozen]{.varname}
+-   [Doosdetails]{.varname}
+-   [Bonbons]{.varname}
+
+![De tabellen en hun relaties in de database.](images/explore/example-db-design.png){#fig-example-db-design}
+
+De klantgegevens staan in de tabel [Klanten]{.varname}. De orders van de klanten worden opgeslagen in de tabellen [Orders]{.varname} en [Orderdetails]{.varname}. De gegevens van een doos bonbons, bijvoorbeeld naam en prijs, staan in de tabel [Dozen]{.varname}. In de tabel [Doosdetails]{.varname} staat welke bonbons en hoeveel daarvan in elke doos zitten. De tabel [Bonbons]{.varname} bevat gegevens over de naam van de bonbons, het chocoladetype, de vulling en bevat zelfs een plaatje.
+
+::: callout-note
+Iedere tabel in de database moet een veld of een combinatie van velden hebben waarmee je elke regel in de tabel uniek kunt identificeren. Dit is vaak een nummer, zoals artikelnummer, personeelsnummer. In de database terminologie wordt deze informatie de **primaire sleutel** van de tabel genoemd. De waarde van de primaire sleutel kan maar één keer voorkomen in de tabel. Dubbele waarden voor de primaire sleutel zijn dus verboden. De meeste tabellen hebben een primaire sleutel die uit één veld bestaat, maar soms is een combinatie van velden nodig om tot een unieke combinatie te komen. In de tabellen [Klanten]{.varname}, [Orders]{.varname}, [Dozen]{.varname} en [Bonbons]{.varname} bestaat de sleutel uit 1 veld. En in de tabellen [Orderdetails]{.varname} en [Doosdetails]{.varname} vormen twee velden samen de sleutel. Zie @fig-example-db-design.
+:::
+
+De zes tabellen worden hierna kort besproken.
+
+### Tabel Klanten {#sec-explore-table-customers}
+
+![Tabel Klanten.](images/explore/table-customers.png){#fig-table-customers}
+
+In de tabel [Klanten]{.varname} worden verschillende gegevens van een klant bijgehouden. Iedere klant heeft een unieke klantcode. Het veld [Klantcode]{.varname} is de primaire sleutel van de tabel. Iedere regel uit een tabel heet ook wel een record. De klanten zijn gesorteerd op de waarden in het sleutelveld.
+
+Ga na dat er 325 klanten in de tabel [Klanten]{.varname} zitten.
+
+### Tabel Orders {#sec-explore-table-orders}
+
+![Tabel Orders.](images/explore/table-orders.png){#fig-table-orders}
+
+In de tabel [Orders]{.varname} is [Ordercode]{.varname} de primaire sleutel, de waarde van [Ordercode]{.varname} is uniek. Een bepaalde klantcode kan in deze tabel wel vaker voorkomen omdat een klant meerdere orders kan plaatsen. Een order hoort altijd bij één klant.
+
+Ga na dat er 784 orders in de tabel [Orders]{.varname} zitten.
+
+### Tabel Orderdetails {#sec-explore-table-orderdetails}
+
+![Tabel Orderdetails.](images/explore/table-orderdetails.png){#fig-table-orderdetails}
+
+Een order kan meerdere dozen bevatten, maar in een order kan elke dooscode slechts één keer voorkomen. Wel kan een bepaalde doos in meerdere orders besteld zijn, zodat een dooscode bij meerdere ordercodes kan horen. De tabel [Orderdetails]{.varname} bevat 1537 records (orderregels).
+
+Ga na dat op de order met ordercode 3 twee verschillende dozen besteld zijn, want de tabel bevat twee regels met ordercode 3. In totaal zijn drie dozen besteld op deze order, twee dozen met de dooscode KERS en 1 doos met de dooscode NORT.
+
+De combinatie van [Ordercode]{.varname} en [Dooscode]{.varname} is steeds uniek. Daarom bestaat de sleutel in de tabel [Orderdetails]{.varname} uit de combinatie van deze twee velden.
+
+::: callout-note
+Het totale aantal bestelde dozen op alle orders is de som van alle getallen uit de kolom [Hoeveelheid]{.varname}. Dit aantal is in de tabel niet af te lezen. In een ander onderdeel in deze cursus wordt uitgelegd hoe je dit kunt laten berekenen.
+:::
+
+### Tabel Dozen {#sec-explore-table-boxes}
+
+![Tabel Dozen.](images/explore/table-boxes.png){#fig-table-boxes}
+
+In de tabel [Dozen]{.varname} is [Dooscode]{.varname} de sleutel. Er zijn in totaal 18 soorten dozen die ieder een unieke dooscode hebben. Deze tabel vormt het artikelbestand van het bedrijf Snoopy.
+
+### Tabel Doosdetails {#sec-explore-table-boxdetails}
+
+![Tabel Doosdetails.](images/explore/table-boxdetails.png){#fig-table-boxdetails}
+
+In de tabel [Doosdetails]{.varname} wordt bijgehouden welke soorten bonbons en hoeveel daarvan in een bepaalde doos zitten. Zo kun je aflezen dat in de doos ALLS zes soorten bonbons zitten, van elk twee stuks, totaal dus twaalf bonbons. In deze tabel bestaat de sleutel uit de combinatie van de velden [Dooscode]{.varname} en [Bonboncode]{.varname}.
+
+### Tabel Bonbons {#sec-explore-table-pralines}
+
+![Tabel Bonbons.](images/explore/table-pralines.png){#fig-table-pralines}
+
+In de tabel [Bonbons]{.varname} wordt van elke bonbonsoort een aantal eigenschappen bijgehouden. De sleutel is het veld [Bonboncode]{.varname}. De tabel bevat 41 records (bonbonsoorten).
+
+Aan de hand van de gegevens uit de tabellen kun je gemakkelijk een aantal berekeningen maken.
+
+1.  Wat is het gemiddelde aantal bonbonsoorten per doos? Hiervoor moet je het totaal aantal records in de tabel [Doosdetails]{.varname} delen door het totaal aantal doossoorten. Dus $\frac{84}{18}= 4,7$.
+
+2.  Wat is het gemiddelde aantal doossoorten per order? Hiervoor moet je het totaal aantal orderregels delen door het totaal aantal orders. Dus $\frac{1537}{784}$ = 2,0.
+
+Het gemiddeld aantal bonbons in een doos kun je niet zomaar uitrekenen. Hiervoor zou je het totaal aantal bonbons in alle dozen moeten weten. Dit is de som van alle getallen in de kolom [Hoeveelheid]{.varname} in de tabel [Doosdetails]{.varname}.
+
+## Beveiliging en macro's {#sec-explore-security}
+
+Sommige databases zoals `{{< var database >}}` bevatten macro's. Deze zijn in de meeste gevallen gemaakt om bepaalde taken in de database uit te voeren. Maar virusmakers kunnen deze mogelijkheden ook gebruiken om een virus te verspreiden. Wanneer een dergelijke database niet op een vertrouwde locatie staat of ondertekend is door een vertrouwde uitgever, dan toont Access bij het openen van de database een beveiligingswaarschuwing. De macro's in de database zijn dan uitgeschakeld.
+
+![Beveiligingswaarschuwing bij het openen van een database met macro's.](images/common/security-warning.png){#fig-security-warning}
+
+Je kunt de macro's op een van de volgende manieren inschakelen.
+
+### Macro's eenmalig inschakelen {.unnumbered}
+
+Klik in het gebied met de beveiligingswaarschuwing op de knop [Inhoud inschakelen]{.uicontrol}.
+
+Deze methode wordt niet aanbevolen omdat je iedere keer wanneer je de database opent deze waarschuwing krijgt en steeds weer opnieuw moet aangeven dat de macro's ingeschakeld moeten worden.
+
+### Uitgever toevoegen aan lijst met vertrouwde uitgevers {.unnumbered}
+
+Wanneer de maker van de database deze van een digitaal certificaat heeft voorzien, dan kun je de maker toevoegen aan de lijst met Vertrouwde uitgevers. Access schakelt dan automatisch alle macro's in die door deze maker gemaakt zijn, in alle databases. Dit is een heel veilige methode, maar meestal gebruiken alleen de grotere bedrijven een digitaal certificaat. De database `{{< var database >}}` is niet van een certificaat voorzien.
+
+### Database op een vertrouwde locatie plaatsen {.unnumbered}
+
+Access kent vertrouwde locaties (mappen). Access schakelt automatisch alle macro's in van alle databases die op een vertrouwde locatie staan. Dit is de meest gemakkelijke manier om veilig te werken en niet voortdurend door beveiligingswaarschuwingen gestoord te worden en wordt ook aanbevolen voor de database `{{< var database >}}`. Voer deze actie als volgt uit.
+
+Kies [Bestand \> Opties \> Vertrouwenscentrum \> Instellingen voor het Vertrouwenscentrum \> Vertrouwde locaties \> Nieuwe locatie toevoegen]{.uicontrol}.
+
+![Dialoogvenster Vertrouwde locatie van Microsoft Office.](images/common/security-trusted-location.png){#fig-security-trusted-location}
+
+In het voorbeeldscherm wordt de map `C:\temp` als vertrouwde locatie toegevoegd..
+
+### Beveiliging voor alle macro's instellen {.unnumbered}
+
+
+Eventueel kun je de manier wijzigen waarop Access met alle macro's in alle databases omgaat. Voer deze actie als volgt uit.
+
+Kies [Bestand \> Opties \> Vertrouwenscentrum \> Instellingen voor het Vertrouwenscentrum \> Macro-instellingen]{.uicontrol}.
+
+![Dialoogvenster vertrouwenscentrum.](images/common/security-trust-center.png){#fig-security-trust-center}
+
+Het wordt niet aanbevolen om alle macro's in te schakelen, je bent dan de controle over de beveiliging kwijt.
+
+## Database verkennen {#sec-explore-database}
+
+Voor deze verkenning moet je het bestand `{{< var database >}}` geopend hebben.
+
+::: callout-note
+Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen, zie hiervoor @sec-explore-security.
+:::
+
+![Venster Access met met de groep Tabellen uit database `{{< var database >}}` geopend.](images/common/access-window.png){#fig-explore-access-window}
+
+Het navigatievenster staat links en hierin zijn alle objecten van de database te vinden. De objecten worden onderverdeeld in groepen: [Tabellen]{.uicontrol}, [Query's]{.uicontrol}, [Formulieren]{.uicontrol}, [Rapporten]{.uicontrol}, [Macro's]{.uicontrol}. In @fig-explore-access-window is het venster van de groep [Tabellen]{.uicontrol} opengevouwen. Het navigatievenster zelf en de vensters voor de groepen kunnen open- en dichtgevouwen worden.
+
+-   ![](images/common/button-object-selection.png) - selectie getoonde objecten
+
+-   ![](images/common/button-group-open.png) - groep openvouwen
+
+-   ![](images/common/button-group-close.png) - groep dichtvouwen
+
+-   ![](images/common/button-navigation-close.png) - navigatievenster dichtvouwen
+
+-   ![](images/common/button-navigation-open.png) - navigatievenster openvouwen
+
+Door dubbelklikken op een object in het navigatievenster wordt het object geopend en in het documentvenster getoond. Wanneer je nog meer objecten opent, dan toont Access deze standaard in de vorm van tabbladen.
+
+![Documentvenster met de tabellen Klanten en Orders in tabbladen.](images/explore/document-tabs.png){#fig-document-tabs}
+
+::: callout-note
+Je kunt de manier waarop de objecten getoond worden wijzigen via [Bestand \> Opties \> Huidige database]{.uicontrol}. In figuur @fig-document-window-options zie je de mogelijkheden voor de documentvensters.
+
+![Opties voor documentvensters.](images/common/document-window-options.png){#fig-document-window-options}
+
+Wanneer je voor [Overlappende vensters]{.uicontrol} kiest, dan worden de objecten in een eigen venster getoond, waarbij de vensters boven elkaar liggen.
+:::
+
+Wanneer je meer ruimte in de breedte nodig hebt dan kun je het navigatievenster dichtvouwen. Heb je meer ruimte in de lengte nodig, dan kun je het lint verbergen door dubbel te klikken op een tab. Opnieuw dubbelklikken zorgt er voor dat het lint weer zichtbaar wordt.
+
+## Tabel verkennen {#sec-explore-tables}
+
+Tabellen zijn de belangrijkste onderdelen van een database, want hierin zijn alle gegevens opgeslagen.
+
+De twee belangrijkste weergaven van een tabel zijn:
+
+Gegevensbladweergave
+
+:   In deze weergave kun je de inhoud van de records zien, deze wijzigen en ook kun je nieuwe records toevoegen.
+
+Ontwerpweergave
+
+:   In deze weergave kun je het ontwerp van de tabel zien en deze aanpassen.
+
+::: {#prp-explore-tables}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de tabel [Klanten]{.varname}. De tabel wordt in de [Gegevensbladweergave]{.uicontrol} geopend.
+
+3.  Zet de tabel [Klanten]{.varname} in de Ontwerpweergave op een van de volgende manieren:
+
+    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    -   Rechter muisklik op de tabelnaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+
+4.  Zet de tabel [Klanten]{.varname} weer in de [Gegevensbladweergave]{.uicontrol} op een van de volgende manieren:
+
+    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-datasheet-view.png).
+    -   Kies [tab Start \> Weergave (groep Weergaven) \> Gegevensbladweergave]{.uicontrol}.
+    -   Rechter muisklik op de tabelnaam in het navigatievenster en dan [Openen]{.uicontrol}.
+
+5.  Sluit de tabel [Klanten]{.varname} via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster.
+
+6.  Open de tabel [Orders]{.varname} in de [Gegevensbladweergave]{.uicontrol}.
+
+::: {.callout-note}
+In de tabel [Orders]{.varname} staat voor de records een uitklapknopje [+]{.uicontrol}. Door hierop de klikken worden de detailgegevens van de order zichtbaar. Deze detailgegevens komen uit de tabel [Orderdetails]{.varname}. Dat bij een bepaalde order de bijbehorende orderdetails gevonden kunnen worden komt omdat in beide tabellen het veld [Ordercode]{.varname} voorkomt.
+:::
+
+7.  Klik voor een paar records op het uitklapknopje om te zien welke dozen en hoeveel daarvan op deze order geleverd zijn.
+
+![Orderdetails van order 3.](images/explore/table-orders-details3.png){#fig-table-orders-details3}
+
+8.  Sluit de tabel [Orders]{.varname}.
+:::
+
+## Formulier verkennen {#sec-explore-forms}
+
+Formulieren zijn vooral van belang bij het tonen, toevoegen en bewerken van gegevens.
+
+De belangrijkste weergaven van een formulier zijn:
+
+Formulierweergave
+
+:   In deze weergave worden de gegevens getoond en kun je deze bewerken en invoeren.
+
+Gegevensbladweergave
+
+:   Een weergave die op die van de tabel lijkt
+
+Ontwerpweergave
+
+:   In deze weergave kun je het ontwerp van het formulier zien en deze aanpassen.
+
+::: {#prp-explore-forms}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open het formulier [Bonbons]{.varname}. Het formulier wordt in de Formulierweergave geopend.
+
+![Formulier bonbons in formulierweergave. De gegevens van het eerste record worden weergegeven.](images/explore/form-pralines-form-view.png){#fig-form-pralines-form-vie}
+
+3.  Zet het formulier [Bonbons]{.varname} in de [Ontwerpweergave]{.uicontrol} op een van de volgende manieren:
+
+    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    -   Rechter muisklik op de formuliernaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+
+![Formulier bonbons in ontwerpweergave.](images/explore/form-pralines-design-view.png){#fig-form-pralines-design-view}
+
+::: {.callout-note}
+In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoegen zoals tekstvakken, labelvakken, keuzelijsten, aankruisvakjes, enz.
+:::
+
+4.  Zet het formulier [Bonbons]{.varname} weer in de Formulierweergave.
+
+5.  Blader door de records met de navigatieknoppen linksonder in het documentvenster.
+
+    -   ![](images/common/button-record-first.png) -Eerste record
+
+    -   ![](images/common/button-record-previous.png) - Vorige record
+
+    -   ![](images/common/button-record-next.png) - Volgende record
+
+    -   ![](images/common/button-record-last.png) - Laatste record
+
+    -   ![](images/common/button-record-new.png) - Nieuw (leeg) record
+
+6.  Sluit het formulier.
+:::
+
+## Opdrachtknop gebruiken {#sec-explore-commandbutton}
+
+Het formulier [Dozen]{.varname} kan, behalve voor de invoer van gegevens, ook gebruikt worden voor het bekijken van gegevens. Op dit formulier staat een knop met de tekst [Verkoop]{.varname}.
+
+::: {#prp-explore-commandbutton}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open het formulier [Dozen]{.varname}.
+
+3.  Klik in het formulier op de knop [Verkoop]{.varname}. Het formulier [Doosverkoop]{.varname} wordt nu getoond. Je ziet nu alle orders die betrekking hebben op de geselecteerde doos uit het formulier [Dozen]{.varname} en zelfs de totale verkoop van deze doos.
+
+4.  Sluit alle formulieren.
+:::
+
+## Record zoeken {#sec-explore-search-records}
+
+Een formulier kan ook gebruikt worden om een record te zoeken. In de volgende stappen worden dozen met "herfst" in de naam opgezocht.
+
+::: {#prp-explore-search-records}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open het formulier [Dozen]{.varname}.
+
+3.  Klik in het veld [Doosnaam]{.varname} en kies in het lint [tab Start \>]{.uicontrol} ![](images/common/button-find.png) [Zoeken (groep Zoeken)]{.uicontrol}. Het dialoogvenster ***Zoeken en vervangen*** verschijnt.
+
+4.  Typ `herfst` in het vak [Zoeken naar]{.uicontrol} en selecteer bij [Waar:]{.uicontrol} de keuze [Gedeelte van veld]{.uicontrol}.
+
+![Dialoogvenster zoeken en vervangen.](images/explore/find-replace-dialogbox.png){#fig-find-replace-dialogbox}
+
+5.  Klik op [Volgende zoeken]{.uicontrol}. De inhoud van de doos Herfstverrassing wordt getoond.
+
+6.  Klik op [Annuleren]{.uicontrol} om het zoekvenster te sluiten.
+
+7.  Sluit het formulier.
+:::
+
+## Query verkennen {#sec-explore-queries}
+
+Query's zijn van belang wanneer je gegevens uit tabellen wil selecteren of samenvatten. Een query is eigenlijk een gespecificeerde vraag aan de database om bepaalde informatie aan te leveren.
+
+De twee belangrijkste weergaven van een query zijn:
+
+Gegevensbladweergave
+
+:   In deze weergave kun je de inhoud van de query zien.
+
+Ontwerpweergave
+
+:   In deze weergave kun je het ontwerp van de query zien en deze aanpassen.
+
+::: {#prp-explore-queries}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de query [Bonbons per doos]{.varname}.
+
+::: {.callout-note}
+Access voert de query uit en produceert een gegevensblad met daarin de resultaten van de query, zie @fig-query-pralines-box-datasheet.
+
+De resultaten van deze query zijn uit meerdere tabellen afkomstig. Om te weten welke tabellen gebruikt worden moet de query in de ontwerpweergave gezet worden.
+:::
+
+![Query bonbons per doos in gegevensbladweergave](images/explore/query-pralines-box-datasheet.png){#fig-query-pralines-box-datasheet}
+
+3.  Zet de query [Bonbons per doos]{.varname} in de Ontwerpweergave op een van de volgende manieren:
+
+    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    -   Rechter muisklik op de querynaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+
+![Query bonbons per doos in ontwerpweergave.](images/explore/query-pralines-box-design.png){#fig-query-pralines-box-design}
+
+::: {.callout-note}
+In het bovenste deel van het venster zie je de tabellen die voor deze query gebruikt zijn. De lijn met pijltjes verbinden de veldnamen waarmee de tabellen aan elkaar gerelateerd zijn.
+
+In het onderste deel van het venster tref je in de eerste rij de namen van de gebruikte velden aan. In de derde kolom staat een expressie, een soort formule waarmee bewerkingen op de velden worden uitgevoerd. De hier geformuleerde expressie is `Som([Bonbons].[Bonbonkosten]*[Doosdetails].[Hoeveelheid])`. Tussen de blokhaken staan de namen van de tabellen en velden.
+
+Om de expressie in zijn geheel te kunnen zien kun je de kolom breder maken door de kolomrand naar rechts te slepen.
+:::
+
+4.  Zet de query in de Gegevensbladweergave.
+
+5.  Sluit de query.
+:::
+
+## Rapport verkennen {#sec-explore-reports}
+
+Met rapporten kun je de informatie uit de tabellen mooi opgemaakt op het scherm tonen of op papier afdrukken. De getoonde gegevens kunnen afkomstig zijn uit meerdere tabellen en/of query's. Ook berekende waarden zijn mogelijk. Verder kun je een rapport opmaken met titels, kopjes en kop- en voetregels.
+
+De belangrijkste weergaven van een rapport zijn:
+
+Rapportweergave
+
+:   In deze weergave kun je de inhoud van het rapport zien.
+
+Afdrukvoorbeeld
+
+:   De weergave van het rapport wanneer deze wordt afgedrukt.
+
+Ontwerpweergave
+
+:   In deze weergave kun je het ontwerp van het rapport zien en deze aanpassen.
+
+::: {#prp-explore-reports}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open het rapport [Bonbons per doos]{.varname}. Het rapport wordt in de Rapportweergave geopend.
+
+![Rapport bonbons per doos in rapportweergave](images/explore/report-pralines-box-report.png){#fig-report-pralines-box-report}
+
+3.  Zet het rapport [Bonbons per doos]{.varname} in Afdrukvoorbeeld op een van de volgende manieren:
+
+    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-print-preview.png).
+    -   Kies[tab Start \> Weergave (groep Weergaven) \> Afdrukvoorbeeld]{.uicontrol}.
+    -   Rechter muisklik op de rapportnaam in het navigatievenster en dan [Afdrukvoorbeeld]{.uicontrol}.
+
+4.  Zet het rapport [Bonbons per doos]{.varname} in de Ontwerpweergave.
+
+![Rapport bonbons per doos in ontwerpweergave](images/explore/report-pralines-box-design.png){#fig-report-pralines-box-design}
+
+::: {.callout-note}
+In de ontwerpweergave lijkt het rapport veel op een formulier en kun je het rapport opmaken en besturingselementen toevoegen zoals tekstvakken, labelvakken, keuzelijsten, aankruisvakjes, enz.
+:::
+
+5.  Zet het rapport weer in de Rapportweergave.
+
+6.  Sluit het rapport
+:::
+
+## Sorteren {#sec-explore-sorting}
+
+Je kunt de records in een tabel sorteren op basis van de waarden in een of meerdere velden. Het sorteren kan zowel in oplopende als aflopende volgorde.
+
+In de volgende oefening moet de tabel [Klanten]{.varname} gewijzigd worden zodat een overzicht ontstaat van eerst de plaats, dan de achternaam en dan de voornaam.
+
+![Tabel klanten gesorteerd eerst op plaats, dan op achternaam en vervolgens op voornaam.](images/explore/table-customers-sorted.png){#fig-table-customers-sorted}
+
+::: {#prp-explore-sorting}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de tabel [Klanten]{.varname}. De tabel wordt in de Gegevensbladweergave geopend.
+
+3.  Selecteer de kolom [Plaats]{.varname} via een klik op de kop van de kolom en sleep de kolom naar links zodat dit de eerste kolom in de tabel wordt.
+
+4.  Verplaats op dezelfde manier de kolommen [Achternaam]{.varname} en [Voornaam]{.varname} naar respectievelijk de 2e en 3e positie in de tabel.
+
+5.  Klik in de kolom [Plaats]{.varname} op het pijltje aan de rechterkant van de kolomkop en kies uit het snelmenu voor [Sorteren van A naar Z]{.uicontrol}.
+
+::: {.callout-note}
+Access reorganiseert de records in alfabetische volgorde op plaatsnaam en toont een klein naar boven wijzend pijltje (![](images/common/button-arrow-down-sortedup.png)) aan de rechterkant van de kolomkop om de sorteervolgorde aan te geven.
+:::
+
+6.  Hef de sortering op via [tab Start \> Sorteeracties verwijderen (groep Sorteren en filteren)]{.uicontrol}.
+
+7.  Om op meerdere velden te sorteren selecteer je de kolommen [Plaats]{.varname}, [Achternaam]{.varname} en [Voornaam]{.varname}.
+
+8.  Kies [tab Start \> Oplopend]{.uicontrol} ![](images/common/button-sort-ascending.png) [(groep Sorteren en filteren)]{.uicontrol}.
+
+::: {.callout-note}
+Access reorganiseert nu de records in oplopende alfabetische volgorde eerst op plaatsnaam, dan op achternaam en dan op voornaam. Aan de rechterkant van elk van deze drie kolomkoppen is nu het kleine naar boven wijzende pijltje te zien, zie @fig-table-customers-sorted.
+:::
+
+9.  Sluit de tabel [Klanten]{.varname} en kies bij de vraag om de wijzigingen op te slaan voor [Nee]{.uicontrol}.
+:::
+
+## Taak: Filteren {#sec-explore-filtering}
+
+Filteren is een actie waarbij records in een tabel getoond worden die aan bepaalde voorwaarden voldoen. Er zijn meerdere manieren om een filter in een tabel toe te passen. Een paar methodes komen in de volgende oefeningen aan de orde.
+
+### Eenvoudig filter {#sec-explore-filter-simpel}
+
+Informatiebehoefte: Toon alle bonbons met het chocoladetype Wit.
+
+::: {#prp-explore-filter-simpel}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de tabel [Bonbons]{.varname}. De tabel wordt in de Gegevensbladweergave geopend.
+
+3.  Klik in de kolom [Chocoladetype]{.varname} op een waarde Wit.
+
+4.  Kies [tab Start \> knop Selectie (groep Sorteren en filteren) \> Is gelijk aan Wit]{.uicontrol}.
+
+::: {.callout-note}
+Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is. Dat op de tabel een filtering is toegepast kun je zien:
+
+-   Aan de rechterkant van de kolomkop [Chocoladetype]{.varname} staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
+-   In de statusbalk zie je ![](images/explore/statusbar-filtered.png)
+:::
+:::
+
+### Wijziging filter {#sec-explore-filter-modify}
+
+Informatiebehoefte: Toon alle bonbons met het chocoladetype Melk.
+
+Hiervoor wordt het vorige filter gewijzigd.
+
+::: {#prp-explore-filter-modify}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Klik op het filtersymbool aan de rechterkant in de kolomkop [Chocoladetype]{.varname}.
+
+![Dialoogvenster filter.](images/explore/filter-chocolatetype.png){#fig-filter-chocolatetype}
+
+2.  Selecteer in het dialoogvenster type Melk en deselecteer type Wit. Klik dan op [OK]{.uicontrol}. Er worden nu 18 records getoond met chocoladetype Melk.
+
+::: {.callout-note}
+De opties die in @fig-filter-chocolatetype getoond worden hangen af van het type veld. Bij een tekstveld is er een submenu [Tekstfilters]{.uicontrol} en bij een numeriek veld is er een submenu [Getalfilters]{.uicontrol}.
+:::
+:::
+
+### Filter op 2 criteria {#sec-explore-filter-criteria2}
+
+Informatiebehoefte: Toon alle bonbons met het chocoladetype Melk en vullingtype Marsepein.
+
+Hiervoor wordt een tweede selectiecriterium toegevoegd.
+
+::: {#prp-explore-filter-criteria2}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Klik in de kolom [Vullingtype]{.varname} op een waarde Marsepein.
+
+2.  Kies [tab Start \> knop Selectie (groep Sorteren en filteren) \> Is gelijk aan Marsepein]{.uicontrol}.
+
+    Access toont nu 3 records met chocoladetype Melk en met vullingtype Marsepein.
+
+3.  Maak filtering ongedaan via [tab Start \> knop]{.uicontrol} ![](images/common/button-filter-toggle.png) [(groep Sorteren en filteren)]{.uicontrol}.
+
+::: {.callout-note}
+De filtering is nu opgeheven en alle records worden weer getoond.
+
+De filtering wordt ook opgeheven door klikken op de knop [Gefilterd]{.uicontrol} in de statusbalk. De tekst op de knop verandert dan in [Niet gefilterd]{.uicontrol}. Door hier weer op te klikken wordt het laatst gebruikte filter toegepast.
+:::
+:::
+
+### Getalfilter {#sec-explore-filter-number}
+
+Informatiebehoefte: Toon alle bonbons met kosten van € 0,25 t/m € 0,35.
+
+::: {#prp-explore-filter-number}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Klik op het pijlpuntje aan de rechterkant in de kolomkop [Bonbonkosten]{.varname} en kies dan [Getalfilters \> Tussen...]{.uicontrol}.
+
+![Dialoogvenster getalfilter Tussen getallen.](images/explore/filter-number-between.png){#fig-filter-number-between}
+
+2.  Voer in bij [Kleinste]{.uicontrol} 0,25 en bij [Grootste]{.uicontrol} 0,35 en klik dan op [OK]{.uicontrol}. Er worden nu 22 records getoond met bonbonkosten van 0,25 t/m 0,35.
+
+3.  Sluit de tabel [Bonbons]{.varname} en kies bij de vraag om de wijzigingen op te slaan voor [Nee]{.uicontrol}.
+:::
+
+## Afdrukken {#sec-explore-print}
+
+Voor het afdrukken maakt Access gebruik van de printers die onder Windows beschikbaar zijn.
+
+Afhankelijk van de gebruikte weergave van een Access object kan het resultaat afgedrukt worden. Zo kan bij tabellen en query's de gegevensbladweergave afgedrukt worden, bij rapporten de rapportweergave en bij formulieren de formulierweergave.
+
+::: callout-note
+Er is geen optie voor het afdrukken van de ontwerpweergave, maar Access heeft een hulpmiddel genaamd [Databasedocumentatie]{.uicontrol} waarmee je de ontwerp eigenschappen van de database objecten kunt afdrukken.
+:::
+
+De afdrukopties zijn beschikbaar via [Bestand \> Afdrukken]{.uicontrol}. Je hebt dan de volgende mogelijkheden:
+
+![Afdrukopties in Access.](images/common/print-options.png){#fig-print-options}
+
+Via de keuze [Afdrukvoorbeeld]{.uicontrol} zijn er een aantal instellingen mogelijk, zoals paginaformaat, afdrukstand en marges.
+
+## Opgaven {#sec-explore-exercises}
+
+::: {#exr-expl001}
+**Selectie Bonbons (expl001)**
+
+Maak via filteren een selectie van de bonbons met een Chocoladetype melk of puur waarvan de prijs hoogstens 0,30 is.
+
+`r hide("Tip")`
+Bij de selectie van numerieke velden heb je ook mogelijkheden om getalbereiken aan te geven:
+
+![Getalfilter](images/explore/expl001-filter-numbers.png)
+
+`r unhide()`
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 18 records.
+`r unhide()`
+:::
+
+::: {#exr-expl002}
+**Selectie Klanten op plaatsnaam (expl002)**
+
+Maak een selectie van de klanten die in Enschede, Hengelo of Almelo wonen.
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 12 records.
+`r unhide()`
+:::
+
+::: {#exr-expl003}
+**Selectie Klanten op postcode (expl003)**
+
+Maak een selectie van de klanten waarvan de postcode met 20 begint en die in Amsterdam wonen.
+
+`r hide("Tip")`
+Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
+
+![Tekstfilter](images/explore/expl003-filter-text.png)
+`r unhide()`
+
+`r hide("Antwoord")`
+Het resultaat bestaat uit 3 records.
+`r unhide()`
+:::

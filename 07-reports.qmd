@@ -1,0 +1,312 @@
+# Rapporten {#sec-reports}
+
+::: {.callout-note appearance="simple" icon="false"}
+**DOELSTELLINGEN**
+
++ Waarvoor je rapporten kunt gebruiken.
++ Hoe je etiketten met de Wizard kunt maken.
++ Het maken van een automatisch gegenereerd rapport met handmatige aanpassingen.
++ Het maken van een gegroepeerd rapport.
++ Het maken van een rapport met afbeeldingen van bonbons op etiketten.
+:::
+
+Rapporten zijn overzichten die meestal bedoeld zijn om af te drukken. Ook etiketten zijn een vorm van rapporten.
+
+## Over rapporten maken {#sec-reports-about}
+
+Rapporten zijn meestal overzichten en samenvattingen van grote hoeveelheden informatie.
+
+Als je een verkoopoverzicht op een overzichtelijke manier op papier willen afdrukken dan gebruik je een rapport. In een rapport kun je ook subtotalen en eindtotalen berekenen en afdrukken. Rapporten kun je vanaf nul met de hand maken, maar het is gemakkelijker om de Wizard te gebruiken.
+
+Een rapport kan ook dynamisch worden door gebruik te maken van parameters. Bij het genereren van het rapport wordt dan eerst om aanvullende informatie gevraagd. Als voorbeeld hiervan zie het rapport [Verkoop per doos]{.varname}. Wanneer je dit rapport opent dan word je achtereenvolgens eerst gevraagd om de begin- en einddatum in te voeren.
+
+## Etiketten maken {#sec-reports-labels}
+
+In deze taak worden adresetiketten van de klanten gemaakt met de [Wizard etiketten]{.uicontrol}. Eerst moet de tabel geselecteerd worden waarin de velden voorkomen die op het etiket moeten verschijnen. Daarna kan de [Wizard etiketten]{.uicontrol} gestart worden.
+
+::: {#prp-reports-labels}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1. Open de database.
+
+2. Selecteer de tabel [Klanten]{.varname}.
+
+3. Kies [tab Maken > Etiketten (groep rapporten)]{.uicontrol}.
+
+4. Selecteer maateenheid `Engels`, fabrikant `Avery` en dan product `Avery L7160`, zie @fig-label-wizard-avery7160.
+
+![Keuze etikettype Avery L7160.](images/reports/label-wizard-avery7160.png){#fig-label-wizard-avery7160}
+
+5. Klik op [Volgende]{.uicontrol}. In het scherm dat nu getoond wordt kun je het lettertype en de kleur voor de tekst wijzigen.
+
+6. Accepteer de standaardinstellingen en klik op [Volgende]{.uicontrol}.
+
+![Gegevens op het etiket.](images/reports/label-wizard-fields.png){#fig-label-wizard-fields}
+
+::: {.callout-note}
+Door dubbel te klikken op een veldnaam wordt deze op de plaats van de cursor ingevoegd. De veldnaam verschijnt dan tussen accolades op het modeletiket. Ook tekst en spaties kunnen worden ingetypt. Door op de Enter toets te drukken wordt een nieuwe regel gemaakt.
+:::
+
+7. Maak het volgende Modeletiket (met tussen de voor- en achternaam 1 spatie en tussen postcode en plaats 2 spaties):
+
+   ```
+   {Voornaam} {Achternaam}
+   {Straat}
+   {Postcode}  {Plaats}
+   ```
+
+8. Klik op [Volgende]{.uicontrol}. In het scherm dat nu getoond wordt kun je aangeven of de etiketten gesorteerd moeten worden en zo ja, op welke velden.
+
+9. Er moet op [Postcode]{.varname} gesorteerd worden. Voeg dit veld toe en klik op [Volgende]{.uicontrol}. Het laatste scherm van de Wizard wordt nu getoond. Hier kun je de naam voor het rapport specificeren.
+
+10. Geef het rapport de naam [Adresetiketten klanten]{.varname} en klik op [Voltooien]{.uicontrol}.
+
+![Afdrukvoorbeeld.](images/reports/report-customers-printpreview.png){#fig-report-customers-printpreview}
+
+11. Sluit het rapport.
+:::
+
+## Automatisch rapport {#sec-reports-autoreport}
+
+Access kan automatisch een rapport genereren op basis van een tabel of een query. Soms is het gegenereerde rapport voldoende, maar vaak zullen toch wat handmatige aanpassingen gedaan moeten worden.
+
+::: {#prp-reports-autoreport}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1. Open de database.
+
+2. Selecteer de query [Verkoop per regio per doos]{.varname}.
+
+3. Klik [tab Maken > Rapport (groep Rapporten)]{.uicontrol}. Het rapport wordt aangemaakt en geopend in de [Indelingsweergave]{.uicontrol}.
+
+Niet fraai is dat de waarde van [Regio]{.varname} voor elk record herhaald wordt en dat de geldbedragen niet juist opgemaakt zijn. In de volgende stappen worden hiervoor wijzigingen aangebracht.
+
+4. Sluit het rapport en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster ***Opslaan als*** verschijnt.
+
+5. Typ als naam in [Verkoop per regio per doos]{.varname} en klik op [OK]{.uicontrol}.
+
+6. Open het rapport [Verkoop per regio per doos]{.varname} in de [Ontwerpweergave]{.uicontrol}.
+
+7. Selecteer in de sectie [Details]{.uicontrol} het vak [Regio]{.varname}. Wijzig in het [Eigenschappenvenster]{.uicontrol} de waarde van eigenschap [Duplicaten verbergen]{.uicontrol} in `Ja`.
+
+::: {.callout-note}
+Het [Eigenschappenvenster]{.uicontrol} staat aan de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden via sneltoets [F4]{.uicontrol}.
+:::
+
+8. Selecteer in de sectie [Details]{.uicontrol} het veld [omzet]{.varname}. Wijzig in het [Eigenschappenvenster]{.uicontrol} de waarde van eigenschap [Notatie]{.uicontrol} in `Valuta`.
+
+9. Schakel naar de [Rapportweergave]{.uicontrol}. De waarde van het veld [Regio]{.varname} wordt nu maar één keer getoond en de omzet is als geldbedragen opgemaakt.
+
+10. Sluit het rapport en bewaar de wijzigingen.
+:::
+
+## Groepsrapport {#sec-reports-grouping}
+
+INFORMATIEBEHOEFTE
+: Maak een rapport waarop over een op te geven periode de verkoop per doos te zien is, alsmede de detailgegevens van elke order. Zie als voorbeeld @fig-group-report-result waarin een gedeelte van het rapport te zien is over november 2009.
+
+![Rapport November 2009 (gedeeltelijke weergave).](images/reports/group-report-result.png){#fig-group-report-result}
+
+ANALYSE
+: De benodigde gegevens zijn [Doosnaam]{.varname}, [Ordercode]{.varname}, [Orderdatum]{.varname}, [Aantal]{.varname} en een veld [Bedrag]{.varname} wat berekend wordt met de expressie `[Hoeveelheid]*[Doosprijs]`. Een query gemaakt voor deze gegevens is reeds beschikbaar onder de naam [Omzet per doos per order per periode]{.varname}.
+
+::: {#prp-reports-grouping}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1. Open de database.
+
+2. Selecteer query [Omzet per doos per order per periode]{.varname}.
+
+3. Kies [tab Maken > Wizard rapport (groep Rapporten)]{.uicontrol}.
+
+![Selecteer de op te nemen velden.](images/reports/group-wizard-fields.png){#fig-group-wizard-fields}
+
+4. Voeg alle velden van de query toe. Klik [Volgende]{.uicontrol}. In het scherm dat nu getoond wordt kun je aangeven of je groepeerniveaus wilt toevoegen.
+
+5. Verwijder eventuele reeds aanwezige groepeerniveaus ([Ordercode]{.varname}) en voeg [Doosnaam]{.varname} als groepeerniveau toe.
+
+![Selecteer de velden waarop gegroepeerd moet worden.](images/reports/group-wizard-levels.png){#fig-group-wizard-levels}
+
+6. Klik [Volgende]{.uicontrol}. In het scherm dat nu getoond wordt kun je de sorteervolgorde aangeven.
+
+7. Geef aan dat oplopend op [Ordercode]{.varname} gesorteerd moet worden.
+
+![Sorteervelden en opties voor totalen specificeren.](images/reports/group-wizard-sort.png){#fig-group-wizard-sort}
+
+8. Klik op de knop [Opties voor totalen...]{.uicontrol} en geef aan dat voor de velden [Aantal]{.varname} en [Bedrag]{.varname} ook de `Som` moet worden afgedrukt.
+
+![Totaalwaarden specificeren.](images/reports/group-wizard-summary.png){#fig-group-wizard-summary}
+
+9. Klik op [OK]{.uicontrol} en daarna op [Volgende]{.uicontrol}. Nu kun je aangeven hoe je het rapport opgemaakt wilt hebben.
+
+10. Selecteer indeling [Overzicht]{.uicontrol}.
+
+![Opmaak van het rapport aangeven.](images/reports/group-wizard-layout.png){#fig-group-wizard-layout}
+
+11. Klik op [Volgende]{.uicontrol}. Het laatste scherm van de Wizard wordt nu getoond. Hier kun je de naam voor het rapport specificeren.
+
+12. Geef het rapport de naam [Omzet per doos per order per periode]{.varname} en klik op [Voltooien]{.uicontrol}.
+
+Het rapport wordt gemaakt en in weergave [Afdrukvoorbeeld]{.uicontrole} geopend. Omdat de query de parameters begindatum en einddatum kent vraagt Access om een waarde hiervoor.
+
+13. Test met begindatum `1-11-2009` en einddatum `30-11-2009`.
+
+14. Sluit het rapport.
+:::
+
+## Bonbon afbeeldingen {#sec-reports-pictures}
+
+In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en de bijbehorende bonbonnaam en bonboncode. Daarvoor worden etiketten gebruikt met op elk etiket de gegevens van de bonbon.
+
+::: {#prp-reports-pictures}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1. Open de database.
+
+2. Selecteer de tabel [Bonbons]{.varname}.
+
+3. Kies [tab Maken > Etiketten (groep Rapporten)]{.uicontrol}.
+
+4. Selecteer maateenheid `Metrisch`, fabrikant `Zweckform` en dan product `Zweckform 3415`.
+
+![Keuze etikettype Zweckform 3415.](images/reports/label-wizard-zweckform3415.png){#fig-label-wizard-zweckform3415}
+
+5. Klik op [Volgende]{.uicontrol}. In het scherm dat nu getoond wordt kun je het lettertype en de kleur voor de tekst wijzigen.
+
+6. Accepteer de standaardinstellingen en klik op [Volgende]{.uicontrol}.
+
+7. Maak het volgende Modeletiket, met tussen de velden 1 spatie):
+
+   ```
+   {Bonboncode} {Bonbonnaam}
+   ```
+
+8. Klik op [Volgende]{.uicontrol}. Specificeer oplopend sorteren op [Bonboncode]{.varname}.
+
+9. Klik op [Volgende]{.uicontrol}. Noem het rapport [Overzicht bonbons]{.varname}.
+
+10. Klik op [Voltooien]{.uicontrol}. Het rapport wordt gegenereerd en verschijnt in de weergave [Afdrukvoorbeeld]{.uicontrol}.
+
+11. Schakel over naar de [Ontwerpweergave]{.uicontrol}.
+
+12. Klik op [tab Ontwerp > Kader voor afhankelijk object (groep Besturingselementen)]{.uicontrol} ![](../common/images/control_bound_object_frame.png)  en teken hiermee op het etiket een kader van ca. 2,5 cm bij 2,5cm.
+
+![Kader voor het object.](images/reports/label-praline-objectframe.png){#fig-label-praline-objectframe}
+
+13. Zorg dat het kader geselecteerd blijft en breng dan via het [Eigenschappenvenster]{.uicontrol} de volgende wijzigingen aan:
+
+    + In tab [Opmaak]{.uicontrol}: zet [Breedte]{.uicontrol} en [Hoogte]{.uicontrol} op `2,5 cm`. Het is mogelijk dat Access de afmetingen iets aanpast.
+
+![Afmetingen van het objectkader instellen.](images/reports/label-praline-dimensions.png){#fig-label-praline-dimensions}
+
+    + In tab [Gegevens]{.uicontrol}: stel eigenschap [Besturingselementbron]{.uicontrol} in op  `Plaatje`.
+
+![Besturingsbron voor het object instellen.](images/reports/label-praline-controlsource.png){#fig-label-praline-controlsource}
+
+14. Selecteer op het etiket het bijschrift dat zich grotendeels achter het kader bevindt.
+
+![Bijschrift selecteren.](images/reports/label-praline-label.png){#fig-label-praline-label}
+
+15. Verwijder het bijschrift met de [Delete]{.uicontrol} toets.
+
+16. Schakel over naar [Afdrukvoorbeeld]{.uicontrol}.
+
+Het is nu bijna goed. Alleen de afbeeldingen beginnen niet allemaal op dezelfde hoogte waardoor het beeld er wat schots en scheef uitziet. Voor de tekst van de [Bonboncode]{.varname} en [Bonbonnaam]{.varname} moet nu nog een vaste hoogte ingesteld worden zodat alle plaatjes op dezelfde hoogte geplaatst worden.
+
+17. Schakel over naar de [Ontwerpweergave]{.uicontrol}, selecteer het tekstvak en zet de eigenschap [Hoogte]{.uicontrol} op `1cm`. Stel ook de eigenschappen [Te vergroten]{.uicontrol} en [Te verkleinen]{.uicontrol} in op `Nee`.
+
+![Eigenschappen van het tekstvak.](images/reports/label-praline-textbox.png){#fig-label-praline-textbox}
+
+18. Lijn het plaatje en het tekstvak links uit.
+
+![Uitlijning van de objecten.](images/reports/label-praline-alignment.png){#fig-label-praline-alignment}
+
+19. Schakel over naar [Afdrukvoorbeeld]{.uicontrol}.
+
+![Afdrukvoorbeeld bonbonsoorten.](images/reports/report-pralines-result.png){#fig-report-pralines-result}
+
+20. Sluit het rapport en bewaar de wijzigingen.
+:::
+
+## Opgaven {#sec-reports-exercises}
+
+::: {#exr-rapp001}
+**Verkoop per regio per doos (rapp001)**
+
+Maak onderstaand rapport met per regio de verkoop per doos. Hierbij moet ook berekend en getoond worden de totale omzet per regio en het percentage van de omzet over alle regio's. Bewaar het rapport onder de naam [rapp001]{.varname}.
+
+![](images/reports/rapp001-report.png)
+:::
+
+::: {#exr-rapp002}
+**Omzet per doos per regio (rapp002)**
+
+Maak een rapport met daarop per doos de omzet per regio. Bewaar het rapport onder de naam [rapp002]{.varname}.
+
+![](images/reports/rapp002-report.png)
+:::
+
+::: {#exr-rapp003}
+**Dooskosten met Bonbonkosten (rapp003)**
+
+Maak een rapport dat de bonbons in elke doos geeft samen met de kosten van elke bonbon. Toon ook de totale kosten van de bonbons per doos. Bewaar dit rapport op onder de naam [rapp003]{.varname}.
+
+![](images/reports/rapp003-report.png)
+:::
+
+::: {#exr-rapp004}
+**Dooskosten met Bonbonkosten gegroepeerd (rapp004)**
+
+Maak een kopie van rapport [rapp003]{.varname} en noem de kopie [rapp004]{.varname}. Maak het rapport beter leesbaar door alle gegevens die bij een doos horen op één pagina af te drukken. Je kunt dit doen door een pagina-einde in te voegen voor de koptekst van elke groep (hier [Doos]{.varname}). Daarvoor moet je de eigenschap Nieuwe pagina voor de Koptekst ([Doos]{.varname}) instellen op de waarde Voor sectie.
+
+Maak verder nog wat kleine wijzigingen in de opmaak. Het tekstvak Som moet naar rechts verplaatst worden met een kleine horizontale lijn boven de tekst en het bedrag.
+
+![](images/reports/rapp004-report.png)
+:::
+
+::: {#exr-rapp005}
+**Omzet per doos per order per periode (rapp005)**
+
+Maak een kopie van het rapport [Omzet per doos per order per periode]{.varname} en noem de kopie [rapp005]{.varname}. Wijzig het ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt afgedrukt.
+
+![](images/reports/rapp005-report.png)
+:::
+
+::: {#exr-rapp006}
+**Doos per pagina (rapp006)**
+
+Maak een kopie van rapport [rapp005]{.varname} en noem het rapport [rapp006]{.varname}. Verander het ontwerp van het rapport zodanig dat iedere doos op een nieuwe pagina begint.
+
+`r hide("Tip")`
+Zet de eigenschap [Nieuwe pagina]{.uicontrol} voor de Koptekst (Doosnaam) op de waarde Voor sectie.
+`r unhide()`
+:::
+
+::: {#exr-rapp007}
+**Doosetiketten (rapp007)**
+
+Maak etiketten voor alle bonbondozen volgens het model zoals hierna afgebeeld. Bewaar het rapport onder de naam [rapp007]{.varname}.
+
+Etikettype “Avery J8163 99mmx38mm”, Letter Consolas 12pt normaal, zwart.
+
+```
+Alle Seizoenen
+
+Code   : ALLS
+Gewicht: 150 gram
+```
+:::
+
+::: {#exr-rapp008}
+**Jaarafzet dozen per regio (rapp008)**
+
+Maak een rapport met daarop per regio het aantal verkochte dozen in een bepaald jaar. Bij het openen van het rapport moet eerst gevraagd worden naar het jaar van verkoop waarop het rapport gebaseerd moet zijn. Bewaar het rapport onder de naam [rapp008]{.varname}.
+
+In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2009.
+
+`r hide("Tip")`
+Maak eerst een parameterquery [Jaarafzet dozen per regio]{.varname} die de benodigde gegevens voor het rapport levert en naar het verkoopjaar vraagt.
+`r unhide()`
+
+![](images/reports/rapp008-report.png)
+:::

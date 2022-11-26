@@ -1,0 +1,1033 @@
+# Query's {#sec-queries}
+
+::: {.callout-note appearance="simple" icon="false"}
+**DOELSTELLINGEN**
+
+-   Waarvoor je query's kunt gebruiken en welke soorten query's er zijn.
+-   Het maken van een eenvoudige selectiequery met behulp van de wizard.
+-   Voorwaarden in een query.
+-   Groeperen en berekeningen in een query.
+-   Parameterquery, bijwerkquery, tabelmaakquery en kruistabelquery.
+:::
+
+Het opvragen van informatie uit een database is de meest voorkomen actie van eindgebruikers. Om de gewenste informatie te leveren zijn query's nodig. Eenvoudige query's maakt de eindgebruiker vaak zelf, voor de wat complexere query's is hulp van een professional meestal gewenst.
+
+## Over query's maken {#sec-queries-about}
+
+De meest bekende vorm van een query is de selectiequery, dat is een soort vraag aan de database naar een bepaald verzameling gegevens. Een query kan echter meer dan een lijst met records produceren. Zo kunnen er in een query functies voorkomen die berekeningen (som, gemiddelde, ...) uitvoeren op de gegevens. En er zijn verschillende soorten query's. De volgende types komen in deze cursus aan bod:
+
+Selectiequery
+
+:   Haalt gegevens uit een of meerdere tabellen en toont het resultaat in een gegevensbladweergave. Je kunt deze query ook gebruiken om records te groepen en berekeningen uit te voeren zoals som, gemiddelde, aantal, ... Dit is de meest voorkomende soort query.
+
+Parameterquery
+
+:   Hierbij wordt eerst aan de gebruiker om een bepaalde waarde voor een of meerdere velden gevraagd. Daarna wordt het antwoord gebruikt om een selectiequerie uit te voeren. Een voorbeeld is een overzicht van orders vanaf een bepaalde datum.
+
+Bijwerkquery
+
+:   Hierbij is het mogelijk om via één actie een of meerdere wijzigingen in records aan te brengen die aan bepaalde voorwaarden voldoen. Een voorbeeld is een prijsverhoging van 10% voor een serie producten.
+
+Voor het maken van een query is het nodig dat eerst de informatiebehoefte goed gespecificeerd wordt. Na de analyse van deze informatiebehoefte kan dan begonnen worden met het maken van de query.
+
+## Klanten en orders {#sec-queries-customername-ordercodes}
+
+INFORMATIEBEHOEFTE
+
+Maak een gesorteerd overzicht van alle klanten met hun achternaam, voornaam en bijbehorende ordercodes.
+
+ANALYSE
+
+De achternaam en voornaam van de klant zitten in de tabel [Klanten]{.varname}. De ordercodes van de klant zitten in de tabel [Orders]{.varname}. Omdat dit een eenvoudige rechttoe rechtaan selectiequery is wordt gebruik gemaakt van de Wizard.
+
+::: {#prp-queries-customername-ordercodes}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Wizard Query (groep Query's)]{.uicontrol}. Het dialoogvenster ***Nieuwe Query*** verschijnt. Hierin kan de soort query gekozen worden.
+
+3.  Kies [Wizard Selectiequery \> OK]{.uicontrol}. In het volgende scherm kun je de velden kiezen die je in de query wilt hebben.
+
+4.  Selecteer bij [Tabellen/query's]{.uicontrol} via de keuzelijst [Tabel: Klanten]{.varname}. De velden van de tabel [Klanten]{.varname} worden getoond in het vak [Beschikbare velden]{.uicontrol}.
+
+![Wizard Selectiequery met tabel Klanten.](images/queries/q-wizard-t-customers.png){#fig-q-wizard-t-customers}
+
+5.  Selecteer het veld [Achternaam]{.varname} en klik op de knop ![](images/common/button-add-field.png). Het veld [Achternaam]{.varname} wordt verplaatst naar de geselecteerde velden.
+
+6.  Voeg op dezelfde manier het veld [Voornaam]{.varname} toe.
+
+7.  Selecteer [Tabel: Orders]{.varname} in het vak [Tabellen/query's]{.uicontrol}. De velden van de tabel [Orders]{.varname} worden getoond in het vak [Beschikbare velden]{.uicontrol}.
+
+8.  Voeg het veld [Ordercode]{.varname} toe.
+
+![Wizard selectiequery met geselecteerde velden.](images/queries/q-customername-ordercodes-fields.png){#fig-q-customername-ordercodes-fields}
+
+9.  Klik op [Volgende]{.uicontrol}. In het weergegeven scherm kun je aangeven of [Details]{.uicontrol} of [Totalen]{.uicontrol} getoond moeten worden.
+
+10. Selecteer [Details (alle velden van alle records weergeven)]{.uicontrol} en klik op [Volgende]{.uicontrol}.
+
+11. Geef de query als naam [Klantnaam+Ordercodes]{.varname}, selecteer [Het queryontwerp wijzigen]{.uicontrol} en klik [Voltooien]{.uicontrol}. Het ontwerp van de query wordt weergegeven.
+
+12. Klik in het vak [Sorteervolgorde]{.uicontrol} van de kolom [Achternaam]{.varname} en kies [Oplopend]{.uicontrol}.
+
+![Ontwerp query klanten en ordercodes.](images/queries/q-customername-ordercodes-design.png){#fig-q-customername-ordercodes-design-1}
+
+13. Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
+
+![Resultaat query klantnaam met ordercodes.](images/queries/q-customername-ordercodes-result.png){#fig-q-customername-ordercodes-result}
+
+14. Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met [Ja]{.uicontrol}.
+:::
+
+## Criteria in query's {#sec-queries-criteria}
+
+In een query kunnen voorwaarden worden opgenomen zodat alleen records worden opgenomen die aan deze voorwaarden voldoen. In het queryraster is daarvoor de rij Criteria beschikbaar.
+
+Een criterium lijkt op een formule en kan verwijzingen naar velden, operatoren en constante waarden (waarden die altijd hetzelfde zijn) bevatten. Zo'n formule wordt in Access ook wel een expressie genoemd. Wat in een criterium mag staan hangt af van het gegevenstype van het veld (tekst, numeriek, datum/tijd, ja/nee).
+
+| Categorie    | Operatoren                                        |
+|--------------|---------------------------------------------------|
+| Rekenkundig  | `+`, `-`, `*`, `/`, `\`, `^`, `Mod`               |
+| Vergelijking | `=`, `>`, `>=`, `<`, `<=`, `<>`                   |
+| Logisch      | `And`, `Or`, `Not`, `Xor`, `Eqv`                  |
+| Samenvoeging | `&`, `+`                                          |
+| Speciaal     | `Is Null`, `Is Not Null`, `Like`, `Between`, `In` |
+
+: Operatoren in criteria {#tbl-criteria-operators}
+
+Je kunt hiermee eenvoudige criteria maken, maar ook zeer ingewikkelde.
+
+Een speciale rol is er voor de `Like` operator. Deze vergelijkt een waarde met een bepaald patroon. Dat patroon kan de letterlijke tekenreeks zijn waarmee vergeleken moet worden, bijvoorbeeld Like "Noord". Maar het patroon mag ook jokertekens (wildcards) bevatten, bijvoorbeeld `Like "He*"`. Dit maakt het gebruik van de `Like` operator erg krachtig.
+
+Datumwaarden moeten omringd worden met het symbool `#`. Enkele voorbeelden van criteria met datums: `#5-12-2010#`,`>#1-9-2010#`, `>#1-9-2010# And <#15-9-2010#`.
+
+Jokertekens zijn tijdelijke aanduidingen voor andere tekens, die je gebruikt wanneer je niet het hele zoekpatroon kent maar slechts een deel daarvan. De drie meest gebruikte jokertekens zijn:
+
+-   `*`: Voor een willekeurig aantal tekens. Voorbeelden: `"A*"`, `"*dam"`
+
+-   `?`: Voor één willekeurig teken. Voorbeeld: `"b?k"`
+
+-   `#`: Voor één willekeurig cijfer. Voorbeeld `"1#5"`
+
+Zie verder [Voorbeelden van querycriteria (artikel Microsoft)](http://office.microsoft.com/nl-nl/access-help/voorbeelden-van-querycriteria-HA010066611.aspx)
+
+## Orders Utrechtse klanten {#sec-queries-utrecht-dec2009}
+
+Aan een bestaande query worden handmatig velden en criteria toegevoegd waarna de query onder een andere naam wordt opgeslagen.
+
+Om deze taak te kunnen uitvoeren is het noodzakelijk dat eerst \@sec-queries-customername-ordercodes is uitgevoerd.
+
+INFORMATIEBEHOEFTE
+
+Maak een gesorteerd overzicht met achternaam, voornaam en ordercodes van alle klanten die in de provincie Utrecht wonen en waarvan de orderdatum in december 2009 lag.
+
+ANALYSE
+
+Alle gewenste informatie wordt al geleverd door de query die je gemaakt hebt in \@sec-queries-customername-ordercodes. Er zijn echter twee aanvullende voorwaarden (criteria):
+
+-   Het veld Provincie (in de tabel Klanten) moet de waarde `UT` hebben.
+-   Het veld Orderdatum (in de tabel Orders) moet een waarde hebben die kan lopen van 1-12-2009 t/m 31-12-2009.
+
+::: {#prp-queries-utrecht-dec2009}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de query [Klantnaam+Ordercodes]{.varname} in de [Ontwerpweergave]{.uicontrol}.
+
+![Ontwerpweergave query Klantnaam+Ordercodes.](images/queries/q-customername-ordercodes-design.png){#fig-q-customername-ordercodes-design-2}
+
+3.  Sleep het veld [Provincie]{.varname} uit de tabel [Klanten]{.varname} naar de kolom naast [Ordercode]{.varname}. Sleep het veld [Orderdatum]{.varname} uit de tabel [Orders]{.varname} naar de volgende kolom.
+
+![Velden in het queryraster.](images/queries/q-utrecht-dec2009-fields.png){#fig-q-utrecht-dec2009-fields}
+
+4.  Typ onder [Provincie]{.varname} in het vak [Criteria]{.uicontrol} in `"UT"`.
+
+5.  Typ onder [Orderdatum]{.varname} in het vak [Criteria]{.uicontrol} in `Like "\*12-2009"`.
+
+![Orderdatum met Like operator.](images/queries/q-utrecht-dec2009-criteria.png){#fig-q-utrecht-dec2009-criteria}
+
+::: {.callout-note}
+-   Het sterretje `*` heet een **joker** en betekent dat op deze plaatst willekeurige tekst mag staan. In dit geval heeft het daardoor de betekenis van "een willekeurige dag".
+-   Op computers waar een Amerikaanse datumweergave (maand-dag-jaar) is ingesteld moet deze eerst op de Nederlandse datumweergave (dag-maand-jaar) worden ingesteld.
+:::
+
+6.  Schakel naar de [Gegevensbladweergave]{.uicontrol} en controleer dat alle klanten uit de provincie Utrecht komen en dat alle orderdata in december 2009 liggen.
+
+7.  Schakel naar de [Ontwerpweergave]{.uicontrol} en deselecteer de selectievakjes [Weergeven]{.uicontrol} onder [Provincie]{.varname} en [Orderdatum]{.varname}.
+
+8.  Schakel naar de [Gegevensbladweergave]{.uicontrol}.
+
+9.  Sla de query onder een andere naam op via [Bestand \> Object opslaan als]{.uicontrol} en geef in het dialoogvenster als naam op [Utrecht en orderdatum dec 2009]{.varname}.
+
+10. Klik op [OK]{.uicontrol} en sluit daarna de query.
+:::
+
+## Klanten met doos Kers {#sec-queries-customers-cher}
+
+Een selectiequery met drie tabellen.
+
+INFORMATIEBEHOEFTE
+
+In de laatste maand van het kalenderjaar wordt geconstateerd dat de uiterste verkoopdatum van de dozen KERS in zicht is. De verkoopafdeling wil daarom een "direct mail" campagne organiseren naar de klanten die ooit een doos KERS gekocht hebben. Maak een overzicht van alle klanten met hun achternaam, voornaam en volledige adres die ooit minstens 1 doos KERS gekocht hebben.
+
+ANALYSE
+
+De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staan in de tabel [Klanten]{.varname}. De soort dozen die afgenomen zijn, zijn te vinden in het veld [Dooscode]{.varname} in de tabel [Orderdetails]{.varname}. Om een order aan een klant kunnen koppelen is ook nog de tabel [Orders]{.varname} nodig. De tabel [Orders]{.varname} vormt de verbindende schakel tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Verder moet als criterium in de query gebruikt worden dat het veld [Dooscode]{.varname} de waarde `KERS` heeft.
+
+Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de benodigde velden uit de tabellen [Klanten]{.varname} en [Orderdetails]{.varname} toe te voegen. De Wizard zorgt er dan voor dat automatisch de tabel [Orders]{.varname} wordt toegevoegd omdat deze de verbinding vormt tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Bij het handmatig vanaf nul maken van de query moet je er zelf aan denken om de tabel [Orders]{.varname} toe te voegen. Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.
+
+::: callout-note
+Dat er minimaal 1 doos is afgenomen hoeft niet als criterium te worden opgenomen omdat bij gekoppelde tabellen automatisch hieraan voldaan wordt.
+:::
+
+::: {#prp-queries-customers-cher}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Wizard Query (groep Query's)]{.uicontrol}. Het dialoogvenster ***Nieuwe Query*** verschijnt. Hierin kan de soort query gekozen worden.
+
+3.  Selecteer [Wizard Selectiequery]{.uicontrol} en klik op [OK]{.uicontrol}. In het volgende scherm kun je de velden kiezen die je in de query wilt hebben.
+
+4.  Selecteer bij [Tabellen/query's]{.uicontrol} via de keuzelijst [Tabel: Klanten]{.varname}. De velden van de tabel [Klanten]{.varname} worden getoond in het vak [Beschikbare velden]{.uicontrol}, zie @fig-q-wizard-t-customers.
+
+5.  Voeg de volgende velden toe: [Voornaam]{.varname}, [Achternaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname}, [Plaats]{.varname}. Selecteer het veld en gebruik dan de knop \[\]images/common/button-add-field.png).
+
+::: {.callout-note}
+Je kunt ook dubbelklikken op een veld om deze toe te voegen of weer te verwijderen.
+:::
+
+6.  Selecteer onder [Tabellen/query's]{.uicontrol} [Tabel: Orderdetails]{.varname}. De velden van de tabel [Orderdetails]{.varname} worden getoond in het vak [Beschikbare velden]{.uicontrol}.
+
+7.  Voeg het veld [Dooscode]{.varname} toe.
+
+![Wizard selectiequery met toegevoegde velden.](images/queries/q-customers-cher-fields.png){#fig-q-customers-cher-fields}
+
+8.  Klik op [Volgende]{.uicontrol}. Je kunt nu aangegeven of Details of Totalen getoond moeten worden.
+
+9.  Selecteer [Details (alle velden van alle records weergeven)]{.uicontrol} en klik op [Volgende]{.uicontrol}.
+
+10. Geef de query als naam [Klanten en Kers]{.varname}, selecteer [Het queryontwerp wijzigen]{.uicontrol} en klik op [Voltooien]{.uicontrol}. De query wordt opgeslagen en verschijnt daarna in de ontwerpweergave.
+
+![Ontwerpweergave query Klanten en Kers.](images/queries/q-customers-cher-design.png){#fig-q-customers-cher-design}
+
+11. Typ `KERS` onder [Dooscode]{.varname} in het vak [Criteria]{.uicontrol} en laat dit veld niet weergeven.
+
+![Selectiecriterium in ontwerp query, criterium dooscode wordt kers.](images/queries/q-customers-cher-criteria.png){#fig-q-customers-cher-criteria}
+
+12. Schakel naar de [Gegevensbladweergave]{.uicontrol}.
+
+13. Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met [Ja]{.uicontrol}.
+:::
+
+## Groeperen en Berekeningen {#sec-queries-summarizing}
+
+De eenvoudige selectiequery's werken met individuele records. Wanneer je via een query bepaalde klanten uit de tabel Klanten selecteert dan zie je in het resultaat een record voor elke klant die hieraan voldoet. Je kunt echter records ook groeperen en dan berekeningen uitvoeren op de deelgroepen. Dat kun je vergelijken met het berekenen van totalen en subtotalen.
+
+Wanneer een query in de ontwerpweergave staat dan zie je op het lint [tab Ontwerp \> Totalen (groep Weergeven/verbergen)]{.uicontrol} het symbool ![Knop totalen](images/queries/button-totals.png).
+
+Met deze knop kun je de rij [Totaal]{.uicontrol} in het queryraster zichtbaar en onzichtbaar maken. Access voegt een vak [Totaal]{.uicontrol} toe voor elk veld, net onder het vak [Tabel]{.uicontrol}.
+
+![Query ontwerp met de zichtbare rij totaal.](images/queries/q-pralines-box-design.png){#fig-q-pralines-box-design}
+
+Voor elk toegevoegd veld is een keuzevak beschikbaar. De gemaakte keuze bepaalt of een veld gebruikt wordt voor een berekening of voor groeperen of voor filteren. De beschikbare mogelijkheden zijn in drie categorieën onder te brengen:
+
+Groeperen
+
+:   De keuze is dan: `Group By`. Het veld wordt gebruikt voor het maken van kleinere groepen waarop de berekeningen worden uitgevoerd. Deze keuze is ook de standaardwaarde.
+
+Filteren
+
+:   De keuze is dan: `Waar` (Engels: *Where*). Het vakje voor [Weergeven]{.uicontrol} wordt ook automatisch gewist en dat moet zo blijven. In het vak [Criteria]{.uicontrol} kun je met een expressie aangeven waarop gefilterd moet worden.
+
+Berekeningen
+
+:   Je kunt dan kiezen uit: `Som`, `Gem`, `Min`, `Max`, `Aantal`, `StDev`, `Var`, `Eerste`, `Laatste`, `Expressie`. De gekozen berekening wordt dan voor het veld uitgevoerd.
+
+| Keuze Totaal | Toelichting                                                       |
+|----------------|--------------------------------------------------------|
+| `Group By`   | Maakt subgroepen van records gebaseerd op de waarden in dit veld. |
+| `Som`        | Telt de waarden in dit veld op.                                   |
+| `Gem`        | Berekent het gemiddelde van de waarden in dit veld.               |
+| `Min`        | Bepaalt de kleinste waarde in dit veld.                           |
+| `Max`        | Bepaalt de grootste waarde in dit veld.                           |
+| `Aantal`     | Telt het aantal records.                                          |
+| `StDev`      | Berekent de standaarddeviatie van de waarden in dit veld.         |
+| `Var`        | Berekent de variantie van de waarden in dit veld.                 |
+| `Eerste`     | Bepaalt de eerste waarde in dit veld.                             |
+| `Laatste`    | Bepaalt de laatste waarde in dit veld.                            |
+| `Expressie`  | Berekent een expressie voor de waarden in dit veld.               |
+| `Waar`       | Voor het filteren op waarden in dit veld.                         |
+
+: Opties voor het samenvatten {#tbl-grouping-options}
+
+### Berekend veld {.unnumbered}
+
+Een berekend veld haalt waarden uit een of meerdere velden en voert er een berekening mee uit om nieuwe informatie te produceren. Je kunt eenvoudige berekeningen uitvoeren zoals optellen en vermenigvuldigen, maar ook de ingebouwde functies van Access gebruiken zoals `Som` en `Gem`. Je kunt alleen velden gebruiken die aan de query zijn toegevoegd. Ga als volgt te werk om een berekend veld te maken.
+
+1.  Klik in de rij [Veld]{.uicontrol} van een lege kolom.
+2.  Typ een naam voor berekening (het resultaat) in gevolgd door een dubbele punt (`:`).
+3.  Typ de expressie voor de berekening in.
+
+::: callout-note
+-   Je kunt veldnamen in de expressie opnemen. Veldnamen moeten tussen blokhaken staan: `[veldnaam]`. Wanneer een veldnaam geen spaties bevat dan zet Access deze blokhaken wanneer je de naam ingetypt hebt. Zitten er wel spaties in de naam dan zul je zelf deze blokhaken moeten intypen.
+
+-   Wanneer je een van de berekeningsopties voor het samenvatten gebruikt is het ook aan te bevelen om een nieuwe naam voor de veldnaam in te typen, anders genereert Access een naam voor het resultaat in de gegevensweergave. Deze nieuwe naam moet ook eindigen met een dubbele punt.
+:::
+
+Hierna volgen een paar voorbeelden. Bestudeer ze goed. Maak ze na en experimenteer er mee.
+
+::: {#exm-queries-praline-costs}
+**Gemiddelde bonbonkosten per chocoladetype**
+
+In dit voorbeeld wordt het veld [Chocoladetype]{.varname} gebruikt om te groeperen en het veld [Bonbonkosten]{.varname} voor de berekening van de gemiddelde bonbonkosten. Het resultaat bestaat uit een record per chocoladetype met daarin de gemiddelde prijs.
+
+![Ontwerp query gemiddelde bonbonkosten per chocoladetype.](images/queries/q-pralinecosts-chocolatetype-design.png){#fig-q-pralinecosts-chocolatetype-design}
+
+![Resultaat query gemiddelde bonbonkosten per chocoladetype.](images/queries/q-pralinecosts-chocolatetype-result.png){#fig-q-pralinecosts-chocolatetype-result}
+
+Omdat voor de kolom met de gemiddelde kosten geen nieuwe naam is opgegeven, genereert Access een naam hiervoor: [GemVanBonbonkosten]{.varname}.
+
+:::
+
+::: {#exm-queries-price-statistics}
+**Doosprijs statistieken**
+
+In dit voorbeeld wordt het veld [Doosprijs]{.varname} 4 keer gebruikt met verschillende berekeningen. Het resultaat van de query is één record met daarin de 4 uitkomsten van de berekeningen.
+
+![Ontwerp query doosprijs statistieken.](images/queries/q-boxprice-statistics-design.png){#fig-q-boxprice-statistics-design}
+
+![Resultaat query doosprijs statistieken.](images/queries/q-boxprice-statistics-result.png){#fig-q-boxprice-statistics-result}
+
+:::
+
+::: {#exm-queries-box-prices}
+**Gemiddelde doosprijs voor dozen van meer dan 200 gram**
+
+In dit voorbeeld wordt het veld [Doosprijs]{.varname} gebruikt om het gemiddelde te berekenen. Het veld [Gewicht]{.varname} wordt gebruikt om te filteren op dozen van meer dan 200 gram.
+
+![Ontwerp query gemiddelde doosprijs dozen zwaarder dan 200 gram.](images/queries/q-boxprice-200g-design.png){#fig-q-boxprice-200g-design}
+
+![Resultaat query gemiddelde doosprijs dozen zwaarder dan 200 gram.](images/queries/q-boxprice-200g-result.png){#fig-q-boxprice-200g-result}
+
+:::
+
+## Aantal klanten per provincie {#sec-queries-customers-province}
+
+Oefening van een selectiequery met groeperen en berekening met de functie `Aantal`.
+
+INFORMATIEBEHOEFTE
+
+Maak een overzicht van het aantal klanten per provincie.
+
+ANALYSE
+
+Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Uiteraard is het veld [Provincie]{.varname} nodig. Een klant wordt uniek geïdentificeerd door de [Klantcode]{.varname}, zodat het aantal klantcodes per provincie geteld moet worden. Hiervoor moet er gegroepeerd worden per [Provincie]{.varname}.
+
+::: {#prp-queries-customers-province}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster ***Tabel weergeven***.
+
+![Dialoogvenster Tabel weergeven.](images/queries/q-show-table.png){#fig-q-show-table}
+
+3.  Selecteer de tabel [Klanten]{.varname} en klik op [Toevoegen]{.uicontrol} en daarna op [Sluiten]{.uicontrol}. De tabel [Klanten]{.varname} is nu aan het queryvenster toegevoegd.
+
+4.  Voeg achtereenvolgens de velden [Provincie]{.varname} en [Klantcode]{.varname} aan het queryraster toe door dubbel te klikken op het veld.
+
+![Ontwerp query klanten per provincie](images/queries/q-customers-province-design.png){#fig-q-customers-province-design}
+
+5.  Klik op [tab Ontwerp \> knop Totalen (groep Weergeven/verbergen)]{.uicontrol}. Er wordt een rij [Totaal]{.uicontrol} aan het queryraster toegevoegd:
+
+![Totaalrij aan ontwerp query toegevoegd.](images/queries/q-customers-province-design-total.png){#fig-q-customers-province-design-total}
+
+6.  Klik in het vak onder de kolom [Klantcode]{.varname} in de rij [Totaal]{.uicontrol}. Er verschijnt dan een keuzepijl. Selecteer hiermee `Aantal`.
+
+![Groepering met aantal.](images/queries/q-customers-province-design-count.png){#fig-q-customers-province-design-count}
+
+7.  Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
+
+![Resultaat query aantal klanten per provincie.](images/queries/q-customers-province-result.png){#fig-}
+
+8.  Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster ***Opslaan als*** verschijnt zodat de naam van de query kan worden opgegeven.
+
+9.  Typ als naam in [Aantal klanten per provincie]{.varname} en klik op [OK]{.uicontrol}.
+:::
+
+## Kolomtitel wijzigen {#sec-queries-column-heading}
+
+Om deze taak uit te kunnen voeren is het noodzakelijk dat eerst @sec-queries-customers-province is uitgevoerd.
+
+Standaard gebruikt Access de veldnamen als kolomkop in de gegevensbladweergave. En voor samenvattings gegevens wordt een titel gegenereerd. Het is aan te bevelen om duidelijker namen te gebruiken.
+
+::: {#prp-queries-column-heading}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Open de query [Aantal klanten per provincie]{.varname} in de [Ontwerpweergave]{.uicontrol}.
+
+3.  Plaats de cursor in het vak met de veldnaam [Klantcode]{.varname} voor het begin van de naam, dus voor de `K` en typ in `Aantal klanten:`.
+
+![Ontwerp gewijzigde kolomtitel.](images/queries/q-customers-province-columnhead-design.png){#fig-q-customers-province-columnhead-design}
+
+4.  Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
+
+![Resultaat gewijzigde kolomtitel.](images/queries/q-customers-province-columnhead-result.png){#fig-q-customers-province-columnhead-result}
+
+5.  Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met [Ja]{.uicontrol}.
+:::
+
+## Bereken orderbedragen {#sec-queries-ordercalculation}
+
+INFORMATIEBEHOEFTE
+
+Maak een gesorteerd overzicht van alle orderregels met daarop per order: ordercode, dooscode, aantal dozen, doosprijs en het regelbedrag.
+
+ANALYSE
+
+Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de tabel [Orderdetails]{.varname}. De doosprijs zit in de tabel [Dozen]{.varname}. Het bedrag van de orderregel zit in geen enkele tabel omdat dit bedrag uit de andere gegevens berekend kan worden: `Orderregelbedrag = Hoeveelheid * Doosprijs`.
+
+::: {#prp-queries-ordercalculation}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster ***Tabel weergeven*** (zie eventueel @fig-q-show-table).
+
+3.  Voeg achtereenvolgens de tabellen [Orderdetails]{.varname} en [Dozen]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+
+4.  Voeg achtereenvolgens de velden [Ordercode]{.varname}, [Dooscode]{.varname}, [Hoeveelheid]{.varname} (uit tabel [Orderdetails]{.varname}) en [Doosprijs]{.varname} (uit tabel [Dozen]{.varname}) aan het queryraster toe door dubbel te klikken op het veld.
+
+![Ontwerp met tabellen en velden.](images/queries/q-orderrow-amount-design1.png){#fig-q-orderrow-amount-design1}
+
+5.  Zet de sorteervolgorde bij [Ordercode]{.varname} en [Dooscode]{.varname} op [Oplopend]{.uicontrol}. Klik in rij veld van de eerste lege kolom en typ in `Regelbedrag: Hoeveelheid*Doosprijs`. Access zet blokhaken om de veldnamen.
+
+![Ontwerp uitgebreid met berekend veld.](images/queries/q-orderrow-amount-design2.png){#fig-q-orderrow-amount-design2}
+
+6.  Schakel naar de [Gegevensbladweergave]{.uicontrol}. De bedragen moeten nog in een financiële getalnotatie worden opgemaakt.
+
+![Resultaat query zonder financiële opmaak van de bedragen.](images/queries/q-orderrow-amount-result-unformatted.png){#fig-q-orderrow-amount-result-unformatted}
+
+7.  Schakel over naar de [Ontwerpweergave]{.uicontrol}.
+
+::: callout-note
+Alle objecten in Access hebben eigenschappen. Deze eigenschappen bepalen onder andere het uiterlijk van het object. De instellingen van de eigenschappen en het wijzigen ervan gaat via het [Eigenschappenvenster]{.uicontrol}. Het in- en uitschakelen van de zichtbaarheid van het eigenschappenvenster gaat via [tab Ontwerp \> Eigenschappenvenster (groep Weergeven/verbergen)]{.uicontrol}. Nog sneller is het gebruik van de sneltoets [F4]{.uicontrol}.
+
+Om geldbedragen van een valutasymbool te voorzien moet de eigenschap [Notatie]{.uicontrol} van het veld [Regelbedrag]{.varname} gewijzigd worden.
+:::
+
+8.  Zorg dat het [Eigenschappenvenster]{.uicontrol} zichtbaar is. Klik ergens in het veld [Regelbedrag]{.varname}. Klik in het vak [Notatie]{.uicontrol} en kies dan met de keuzelijst voor `Euro`.
+
+![Eigenschappenvenster van het veld Regelbedrag.](images/queries/field-format-currency.png){#fig-field-format-currency}
+
+9.  Schakel over naar de [Gegevensbladweergave]{.uicontrol}.
+
+![Resultaat query met financiële opmaak van de bedragen.](images/queries/q-orderrow-amount-result-formatted.png){#fig-q-orderrow-amount-result-formatted}
+
+10. Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster ***Opslaan als*** verschijnt zodat de naam van de query kan worden opgegeven.
+
+11. Typ als naam in [Orderregelbedrag]{.varname} en klik op [OK]{.uicontrol}.
+:::
+
+## Eerste order per klant {#sec-queries-first-order-dates}
+
+INFORMATIEBEHOEFTE
+
+Maak een overzicht van de eerste order per klant. Geef per klant de klantcode, de naam en de datum waarop deze klant de eerste order heeft geplaatst.
+
+ANALYSE
+
+De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een query gemaakt te worden die de klantgegevens en de orderdata toont. Het vinden van de eerste order kan gerealiseerd worden door in de Totalen rij de [Group By]{.uicontrol} te vervangen door [Min]{.uicontrol}.
+
+::: {#prp-queries-first-order-dates}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
+
+3.  Voeg achtereenvolgens de tabellen [Klanten]{.varname} en [Orders]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+
+4.  Voeg achtereenvolgens de velden [Klantcode]{.varname}, [Achternaam]{.varname} en [Voornaam]{.varname} (uit [Klanten]{.varname}) en [Orderdatum]{.varname} (uit [Orders]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
+
+5.  Klik op [tab Ontwerp \> knop Totalen (groep Weergeven/verbergen)]{.uicontrol}.
+
+6.  Wijzig de kolomtitel voor [Orderdatum]{.varname} door aan het begin van de veldnaam in te typen `Eerste orderdatum:`.
+
+![Tabellen en velden voor query Eerste order per klant.](images/queries/q-first-order-dates-design1.png){#fig-q-first-order-dates-design1}
+
+7.  Klik in de kolom [Orderdatum]{.varname} in het vak [Totaal]{.uicontrol}, klik dan op de keuzepijl die verschijnt en selecteer `Min`.
+
+8.  Zet de sorteervolgorde bij [Achternaam]{.varname} en [Voornaam]{.varname} op [Oplopend]{.uicontrol}.
+
+![Ontwerp query eerste order per klant.](images/queries/q-first-order-dates-design2.png){#fig-q-first-order-dates-design2}
+
+9.  Schakel naar de [Gegevensbladweergave]{.uicontrol}.
+
+![Resultaat query eerste order per klant.](images/queries/q-first-order-dates-result.png){#fig-q-first-order-dates-result}
+
+10. Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster ***Opslaan als*** verschijnt zodat de naam van de query kan worden opgegeven.
+
+11. Typ als naam in [Datum eerste order per klant]{.varname} en klik op [OK]{.uicontrol}.
+:::
+
+## Parameterquery {#sec-queries-parameters}
+
+Een parameterquery is een query die tijdens de uitvoering een dialoogvenster toont waarin aan de gebruiker om aanvullende informatie wordt gevraagd, zoals criteria voor het ophalen van records of een waarde die je wilt invoegen in een veld. Je kunt de query zo ontwerpen dat er meerdere gegevens worden gevraagd, bijvoorbeeld een begin- en een einddatum. Vervolgens kunnen alle records worden opgehaald die tussen deze twee datums vallen.
+
+Parameterquery's zijn ook gemakkelijk als basis voor formulieren en rapporten. Op basis van een parameterquery kun je bijvoorbeeld een maandelijks inkomstenrapport maken. Bij het afdrukken van het rapport wordt via een dialoogvenster gevraagd voor welke maand je het rapport wilt afdrukken. Je geeft de maand op en vervolgens wordt het juiste rapport afgedrukt.
+
+INFORMATIEBEHOEFTE
+
+In het bedrijf Snoopy krijgt men regelmatig vragen van klanten over een bepaalde order via de telefoon. Je wilt dan snel een antwoord kunnen geven op zo'n vraag. Het doel is nu om de gegevens van een bepaalde order snel op het scherm te krijgen. Via een parameterquery die tijdens de uitvoering naar het ordernummer vraagt, is dat mogelijk.
+
+ANALYSE
+
+De benodigde gegevens over een bepaalde order staan in de tabellen [Orders]{.varname} en [Orderdetails]{.varname}. Vragen naar de ordercode kan geregeld worden via een criterium.
+
+::: {#prp-queries-parameter}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
+
+3.  Voeg de tabellen [Orders]{.varname} en [Orderdetails]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+
+4.  Voeg achtereenvolgens de velden [Ordercode]{.varname}, [Klantcode]{.varname}, [Orderdatum]{.varname} (uit [Orders]{.varname}), [Dooscode]{.varname} en [Hoeveelheid]{.varname} (uit [Orderdetails]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
+
+![Tabellen en velden voor de query.](images/queries/q-information-order-design1.png){#fig-q-information-order-design1}
+
+5.  Klik in de kolom [Ordercode]{.varname} in het vak [Criteria]{.uicontrol} en typ in `[Voer ordercode in]`.
+
+![Tabellen en velden voor de query.](images/queries/q-information-order-design2.png){#fig-q-information-order-design2}
+
+6.  Schakel naar de [Gegevensbladweergave]{.uicontrol}. Het dialoogvenster ***Parameterwaarde opgeven*** verschijnt.
+
+7.  Voer een waarde in, bijvoorbeeld `30` en klik op [OK]{.uicontrol}.
+
+![Resultaten voor de order met ordercode 30.](images/queries/q-information-order-result.png){#fig-q-information-order-result}
+
+8.  Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden met [Ja]{.uicontrol}. Het venster ***Opslaan als*** verschijnt zodat de naam van de query kan worden opgegeven.
+
+9.  Typ als naam in [Informatie bepaalde order]{.varname} en klik op [OK]{.uicontrol}.
+:::
+
+## Actiequery's {#sec-queries-actions}
+
+De meeste query's zijn selectiequery's, die gebruikt worden om gegevens te verzamelen en te tonen, maar deze gegevens niet veranderen. Maar Access heeft ook een andere categorie query's waarmee je gegevens kunt wijzigen of bijwerken en records kunt toevoegen. Deze categorie staat bekend als actiequery's. Het grote voordeel van een actiequery is dat je hiermee een grote hoeveelheid records kunt wijzigen zonder dat je programmeerkennis nodig hebt. De manier waarop je deze query's  maakt en de wijze van werken is nagenoeg steeds hetzelfde: eerst maak je een selectiequery en daarna wijzig je het type van de query.
+
+Access kent vier soorten actiequery's:
+
+Tabelmaak
+
+:   Selecteert een of meer records en maakt dan een nieuwe tabel hiervoor aan. Deze nieuwe tabel kan in de geopende database geplaatst worden, maar ook in een andere database. Je kunt een tabelmaakquery bijvoorbeeld gebruiken om verouderde gegevens naar een archief database te kopiëren.
+
+Toevoeg
+
+:   Selecteert een of meerdere records en voegt deze aan een andere tabel toe. Wanneer je bijvoorbeeld dat je nieuwe klanten hebt verworven waarvan de gegevens in een afzonderlijke tabel staan, dan kun je een toevoegquery gebruiken om de records naar de bestaande tabel klanten te verplaatsen.
+
+Verwijder
+
+:   Verwijdert een of meerdere records die aan een filter met voorwaarden voldoen. Je kunt bijvoorbeeld met een verwijderquery producten verwijderen die niet meer worden aangeboden.
+
+Bijwerk
+
+:   Verandert waarden in een of meerdere records. De bestaande waarden worden dan vervangen door nieuwe waarden, een soort zoek en vervang actie. De veranderingen kunnen niet teruggedraaid worden en daarom is het aan te bevelen om altijd eerst een backup of kopie van de database of van de tabel te maken voordat een toevoeqquery uitgevoerd wordt.
+
+Omdat actiequery's gegevens in de database veranderen kunnen deze query's een beveiligingsrisico vormen. Om een beveiliging hiertegen te bieden worden in Access en het Vertrouwenscentrum een aantal controles uitgevoerd. Het vertrouwenscentrum kan inhoud uitschakelen. Bij het openen van een dergelijke database geeft Access de berichtenbalk met een beveiligingswaarschuwing weer.
+
+![Berichtenbalk met beveiligingswaarschuwing.](images/common/security-warning.png){#fig-securitywarning}
+
+Wanneer je de uitgeschakelde inhoud wilt inschakelen, klik dan op [Inhoud inschakelen \> Opties]{.uicontrol} en kies de gewenste optie in het dialoogvenster dat verschijnt. Access schakelt uitgeschakelde inhoud in en de database wordt opnieuw geopend met volledige functionaliteit.
+
+Verder is het raadzaam om altijd eerst een backup te maken van de tabellen die gewijzigd worden. Dat gaat het gemakkelijkste met kopieren en plakken.
+
+::: {#exm-queries-copy-table}
+**Tabel kopieren**
+
+1.  Geef in het navigatievenster een rechter muisklik op de naam van de tabel en kies uit het snelmenu voor [Kopiëren]{.uicontrol}.
+2.  Geef opnieuw een rechter muisklik en kies nu voor [Plakken]{.uicontrol} en geef de nieuwe tabel een verschillende naam.
+
+Om een tabel weer te herstellen na een wijziging ga je als volgt te werk:
+
+1.  Geef in het navigatievenster een rechter muisklik op de naam van de gewijzigde tabel en kies uit het snelmenu voor [Knippen]{.uicontrol}.
+2.  Geef een rechter muisklik op de naam van de kopietabel en kies nu voor [Naam wijzigen]{.uicontrol} en geef de tabel de oorspronkelijke naam.
+
+:::
+
+## Bijwerkquery {#sec-queries-action-update}
+
+Een voorbeeld van een eenvoudige bijwerkquery waarmee in alle records van een tabel die aan een bepaalde voorwaarde voldoen de waarde van een veld gewijzigd wordt.
+
+INFORMATIEBEHOEFTE
+
+De bonbonkosten van alle bonbons met het witte chocoladetype moeten met 10% verhoogd worden.
+
+ANALYSE
+
+Alle benodigde gegevens staan in de tabel [Bonbons]{.varname}. Hiervan hebben we de velden [Chocoladetype]{.varname} en [Bonbonkosten]{.varname} nodig. Selecteren op chocoladetype wit kan door een criterium toe te voegen. De bonbonkosten met 10% verhogen kan door de bestaande waarde te vermenigvuldigen met `1,1`.
+
+::: {#prp-queries-action-update}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
+
+3.  Voeg de tabel [Bonbons]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+
+4.  Voeg achtereenvolgens de velden [Chocoladetype]{.varname} en [Bonbonkosten]{.varname} aan het queryraster toe door dubbel te klikken op de velden.
+
+5.  Wijzig het type query via [tab Ontwerp \> Bijwerken (groep Querytype)]{.uicontrol}. De rijen [Sorteervolgorde]{.uicontrol} en [Weergeven]{.uicontrol} verdwijnen en er komt een nieuwe rij [Wijzigen]{.uicontrol}.
+
+![Tabellen en velden voor de bijwerkquery.](images/queries/q-increase-costs-design1.png){#fig-q-increase-costs-design1}
+
+6.  Klik in de kolom [Chocoladetype]{.varname} in het vak [Criteria]{.uicontrol} en typ in `Wit`.
+
+7.  Klik in de kolom [Bonbonkosten]{.varname} in het vak [Wijzigen in]{.uicontrol} en typ in `[Bonbonkosten]*1,1`.
+
+![Ontwerp bijwerkquery.](images/queries/q-increase-costs-design2.png){#fig-q-increase-costs-design2}
+
+::: {.callout-note}
+Wanneer de waarde uit een veld gebruikt moet worden, dan moet de veldnaam tussen blokhaken `[ ... ]` gezet worden.
+:::
+
+8.  Sla de query op via de knop [Opslaan]{.uicontrol} ![](images/common/button-save.png) op de werkbalk [Snelle toegang]{.uicontrol} linksboven en geef de query de naam [Verhogen kosten witte bonbons met 10%]{.varname}.
+
+9.  Klik op ![](images/queries/button-run.png) [tab Ontwerp \> Uitvoeren (groep Resultaten)]{.uicontrol}. Er verschijnt nu een dialoogvenster waarin om een bevestiging gevraagd wordt om records bij te werken.
+
+10. Klik op [Ja]{.uicontrol}.
+
+11. Sluit de query.
+:::
+
+## Tabelmaakquery {#sec-queries-action-maketable}
+
+INFORMATIEBEHOEFTE
+
+De afdeling marketing wil alle klanten uit Friesland een speciaal aanbod doen. Ze hebben daarvoor een Access tabel nodig met daarin de klantgegevens van alleen de klanten uit de provincie Friesland.
+
+ANALYSE
+
+Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Het selecteren op Friesland kan via een criterium in de query. Allereerst moet deze selectiequery gemaakt worden. Daarna kan de selectiequery omgezet worden in een tabelmaakquery.
+
+::: {#prp-queries-action-maketable}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+**Selectiequery maken**
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
+
+3.  Voeg de tabel [Klanten]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+
+4.  Voeg alle velden toe door een dubbelklik op het sterretje (`*`) en voeg daarna nog een keer afzonderlijk het veld [Provincie]{.varname} toe.
+
+5.  Voer als criterium `"FR"` in onder het veld [Provincie]{.varname}. Laat verder dit veld [Provincie]{.varname} niet weergeven, omdat deze immers al wordt weergegeven via de tabel [Klanten]{.varname}.
+
+![Ontwerp tabelmaakquery.](images/queries/q-customers-friesland-design.png){#fig-q-customers-friesland-design}
+
+6.  Controleer de uitvoer van de query via de [Gegevensbladweergave]{.uicontrol}.
+
+7.  Bewaar de query onder de naam [Klanten Friesland]{.varname}.
+
+
+**Selectiequery omzetten naar Tabelmaakquery**
+
+8.  Open de query [Klanten Friesland]{.varname} in de [Ontwerpweergave]{.uicontrol}.
+
+9.  Klik op [Ontwerp \> Tabel maken (groep Querytype)]{.uicontrol}. Het dialoogvenster ***Tabel maken*** wordt geopend.
+
+10.  Geef de nieuwe tabel als naam [Friese klanten]{.varname} en geef aan dat deze in de huidige database geplaatst moet worden..
+
+![Naam specificeren van de nieuwe tabel en de database waarin deze terecht moet komen.](images/queries/q-maketable-dialogbox.png){#fig-q-maketable-dialogbox}
+
+11.  Klik op [OK]{.uicontrol}.
+
+12.  Klik op ![](images/queries/button-run.png) (Uitvoeren). Er verschijnt een waarschuwingsscherm met de vraag of de nieuwe tabel gemaakt moet worden.
+
+13.  Klik op [Ja]{.uicontrol}. De nieuwe tabel wordt gemaakt.
+
+14.  Sluit de query. Er verschijnt een dialoogvenster met de vraag of de wijzigingen in het ontwerp moeten worden opgeslagen.
+
+15.  Klik op [Ja]{.uicontrol}.
+
+::: callout-note
+wijzigingen bestaan er uit dat het type query van een selectiequery in een tabelmaakquery veranderd is. Dit is ook te zien in het navigatievenster onder [Query's]{.uicontrol}.
+
+Het icoon ![](images/queries/q-maketable-icon.png) voor de querynaam geeft aan dat het hier om een actiequery gaat.
+:::
+:::
+
+## Kruistabelquery {#sec-queries-crosstab}
+
+Een kruistabelquery berekent de som, gemiddelde of een andere samenvattingswaarde en groepeert de resultaten in rijen en kolommen. Een kruistabel is vergelijkbaar met een draaitabelrapport in Excel. Een kruistabelquery is vaak eenvoudiger leesbaar dan een gewone selectiequery met dezelfde gegevens. Door de horizontale en verticale groepering is het overzicht compacter.
+
+Wanneer je een kruistabelquery maakt, moet je opgeven welke velden de rijkoppen bevatten, welk veld de kolomkoppen bevat en welk veld de waarden bevat die moeten worden samengevat. Voor de rijkoppen kun je meerdere velden gebruiken (maximaal 3), maar voor de kolomkoppen en de samen te vatten gegevens kun je maar één veld gebruiken. Verder kun je ook expressies gebruiken voor de rijkoppen, kolomkoppen en samen te vatten gegevens.
+
+De gemakkelijkste en snelste manier om een kruistabelquery te maken is met behulp van de [Wizard Kruistabelquery]{.uicontrol}. Voor complexere query's kun je vaak wel met deze Wizard beginnen, maar moet je daarna voor het fijnere werk overstappen naar de ontwerpweergave.
+
+INFORMATIEBEHOEFTE
+
+Bepaal het aantal klanten per provincie en per regio en toon het resultaat in een kruistabel.
+
+ANALYSE
+
+Alle benodigde gegevens staan in de tabel [Klanten]{.varname}.
+
+::: {#prp-queries-crosstab}
+[Bestand]{.smallcaps}: `{{< var database >}}`
+
+1.  Open de database.
+
+2.  Kies [tab Maken \> Wizard Query (groep Query's) \> Wizard Kruistabelquery \> OK]{.uicontrol}.\
+    In het scherm dat getoond wordt kun je de tabel of query selecteren welke de velden voor de kruistabel bevat.
+
+3.  Selecteer de tabel [Klanten]{.varname} en klik op [Volgende]{.uicontrol}. Nu kun je de velden kiezen die de waarden voor de rijkoppen bevatten.
+
+4.  Voeg [Provincie]{.varname} toe.
+
+![Selectie velden voor rijkoppen](images/queries/q-crosstab-rowhead.png){#fig-q-crosstab-rowhead}
+
+5.  Klik op [Volgende]{.uicontrol}. Nu moet je het veld opgeven dat de waarden voor de kolomkoppen bevat.
+
+6.  Selecteer veld [Regio]{.varname}.
+
+![Selectie veld voor kolomkop.](images/queries/q-crosstab-columnhead.png){#fig-q-crosstab-columnhead}
+
+7.  Klik op [Volgende]{.uicontrol}. Nu kun je het veld kiezen dat de waarden voor de samen te vatten gegevens bevat alsmede de functie voor het samenvatten.
+
+8.  Selecteer veld [Klantcode]{.varname} en functie `Aantal`. Deselecteer tevens de optie om een totaal te berekenen voor elke rij.
+
+![Selectie veld en functie voor samenvatting.](images/queries/q-crosstab-values.png){#fig-q-crosstab-values}
+
+9.  Klik op [Volgende]{.uicontrol}.
+
+10. Noem de query [Aantal klanten per provincie per regio]{.varname}. Selecteer [Bekijk de query]{.uicontrol} en klik op [Voltooien]{.uicontrol}.
+
+![Resultaat kruistabel.](images/queries/q-crosstab-result.png){#fig-q-crosstab-result}
+:::
+
+## Opgaven {#sec-queries-exercises}
+
+::: {#exr-quer001}
+**Klanten uit Friesland en Groningen (quer001)**
+
+Maak een query om de klanten uit de provincies Friesland en Groningen te selecteren. Toon de velden [Achternaam]{.varname}, [Voornaam]{.varname} en [Plaats]{.varname}. Sla de query op onder de naam [quer001]{.varname}.
+
+`r hide("Tip")`
+Het veld [Provincie]{.varname} mag hier twee waarden hebben `FR` of `GR`. Dat kun je voor elkaar krijgen door in de regel voor [Criteria]{.uicontrol} de ene waarde te vermelden en bij de regel met [Of]{.uicontrol} de andere waarde.
+
+Een andere mogelijkheid is het gebruik van een expressie met de Of operator als criterium.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 40 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer002}
+**Direct mail campagne doos MARS (quer002)**
+
+Stel het is eind december 2010. De houdbaarheidsdatum van de doos MARS komt in zicht en er is nog veel in voorraad. Daarom wil je een direct mail campagne gaan uitvoeren naar de klanten die in de periode augustus t/m november 2010 minimaal 1 doos MARS hebben besteld. Toon de naam en het adres van deze klanten. Sla de query op onder de naam [quer002]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 4 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer003}
+**Bonbondozen met lage prijs (quer003)**
+
+Toon de Bonbondozen waarvan de prijs hoogstens € 17,50 bedraagt. Toon van de dozen de dooscode, de doosnaam en de prijs. Sla de query op onder de naam [quer003]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 4 dozen
+`r unhide()`
+:::
+
+::: {#exr-quer004}
+**Bonbons melk en puur met lage kosten (quer004)**
+
+Geef een overzicht van de bonbons met een chocoladetype melk of puur waarvan de prijs hoogstens 30 cent is. Sla de query op onder de naam [quer004]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 18 bonbons
+`r unhide()`
+:::
+
+::: {#exr-quer005}
+**Klanten uit Enschede, Hengelo of Almelo (quer005)**
+
+Geef een overzicht van de klanten (naam en adres) die in Enschede, Hengelo of Almelo wonen. Sla de query op onder de naam [quer005]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 12 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer006}
+**Klanten uit Amsterdam met postcode 20 (quer006)**
+
+Geef een overzicht van de klanten uit Amsterdam (naam en adres) waarvan de postcode met 20 begint. Sla de query op onder naam [quer006]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 3 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer007}
+**Bonbons zonder vulling (quer007)**
+
+Geef een overzicht van alle bonbons zonder vulling. Sla de query op onder de naam [quer007]{.varname}.
+
+`r hide("Tip")`
+Zoek eerst uit welke waarde het veld Vullingtype heeft als een bonbon geen vulling heeft.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 12 bonbons
+`r unhide()`
+:::
+
+::: {#exr-quer008}
+**Klanten niet uit Amsterdam (quer008)**
+
+Geef een overzicht van alle klanten die niet in Amsterdam wonen. Sla de query op onder de naam [quer008]{.varname}.
+
+`r hide("Tip")`
+Zoek eerst uit welke expressie je in een criterium moet gebruiken voor “niet gelijk aan”.
+`r unhide()`
+
+`r hide("Antwoord")`
+Resultaat query: 293 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer009}
+**Aantal bonbons per doos (quer009)**
+
+Maak een query van de doosnamen en het aantal bonbons per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer009]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer009-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer010}
+**Aantal bonbonsoorten per doos (quer010)**
+
+Maak een query van de doosnamen en het aantal bonbonsoorten per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer010]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer010-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer011}
+**Aantal orders per regio (quer011)**
+
+Geef een overzicht van het aantal orders per regio. De kolom met aantal moet een passende naam hebben. Sla de query op onder de naam [quer011]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer011-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer012}
+**Totale omzet per klant (quer012)**
+
+Geef een overzicht van het totale omzet per klant. Toon hierbij de klantcode, klantnaam en het omzettotaal. De kolom met omzet moet een passende naam en opmaak hebben.Sorteer daarbij zodanig dat de klanten met de grootste omzet bovenaan komen te staan. Sla de query op onder de naam [quer012]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer012-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer013}
+**Klanten die order geplaatst hebben (quer013)**
+
+Geef een overzicht van de klanten (klantcode en klantnaam) die ooit iets gekocht hebben. Sla de query op onder de naam [quer013]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 264 klanten
+`r unhide()`
+:::
+
+::: {#exr-quer014}
+**Klanten waarvan achternaam Jansen of Janssen is uit regio Noord (quer014)**
+
+Geef een overzicht van de klanten waarvan de achternaam Jansen of Janssen en die in de regio Noord wonen. Sla de query op onder de naam [quer014]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer014-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer015}
+**Bonbons met vulling en zonder noot (quer015)**
+
+Maak een overzicht van de bonbons die wel een vulling maar geen noot bevatten. Sla de query op onder naam [quer015]{.varname}.
+
+`r hide("Antwoord")`
+Resultaat query: 22 bonbons
+
+![](images/queries/quer015-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer016}
+**Dozen zwaarder dan 150 gram met prijs van hoogstens 35 euro (quer016)**
+
+Maak een overzicht van de dozen die zwaarder zijn dan 150 gram en maximaal € 35,- kosten. Alleen de dooscode, doosnaam en prijs hoeven getoond te worden. Sorteer de dozen oplopend op prijs. Sla de query op onder de naam [quer016]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer016-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer017}
+**Dozen met prijs tussen 17 en 25 en voorraad van minstens 400 (quer017)**
+
+Maak een overzicht van de voorraad van de dozen met een prijs tussen € 17,- en € 25,- en waarvan er minstens 400 in voorraad zijn. Toon de doosnaam, de dooscode, de prijs en de voorraad. Sla de query op onder de naam [quer017]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer017-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer018}
+**Totale omzet per provincie (quer018)**
+
+Geef een overzicht van de totale omzet per provincie. De kolom met aantal moet een passende naam en opmaak hebben. Sorteer aflopend op omzet. Sla de query op onder de naam [quer018]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer018-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer019}
+**Klanten die week voor de kerst besteld hebben (quer019)**
+
+Geef een overzicht van de klanten die de laatste week voor kerst 2010 (20-12-2010 t/m 24-12 2010) dozen bonbons hebben besteld. Toon de klantcode, de klantnaam en het klantadres. Elke klant mag maar 1 keer in het overzicht voorkomen. Sla de query op onder de naam [quer019]{.varname}.
+
+`r hide("Tip")`
+Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke records op Ja ingesteld worden. De eigenschappen van de query kunnen zichtbaar gemaakt worden in de Ontwerpweergave van de query het venster Eigenschappen zichtbaar te maken en daarna in het rechterbovengebied van het ontwerpvenster op een lege plek te klikken.
+`r unhide()`
+
+`r hide("Antwoord")`
+![](images/queries/quer019-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer020}
+**Dozen met lage omzet (quer020)**
+
+Maak een overzicht van de dozen met lage omzet, minder dan €2000. Toon de dooscode en de omzet per doos. De kolom met omzet moet een passende naam en opmaak hebben. Sorteer oplopend op omzet. Sla de query op onder de naam [quer020]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer020-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer021}
+**Klanten met omzet hoogstens 50 en postcode beginnend met 22 (quer021)**
+
+Geef een overzicht van de klanten waarvan de postcode begint met 22 en met een totale omzet van hoogstens € 50,-. Sla de query op onder de naam [quer021]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer021-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer023}
+**Klanten voor Zoet en bitter (quer023)**
+
+Geef een alfabetisch overzicht van de klanten die in 2009 minstens 1 doos “Zoet en bitter” gekocht hebben. Zorg er voor dat er geen dubbele records in het queryresultaat worden weergegeven. Sla de query op onder de naam [quer023]{.varname}.
+
+`r hide("Tip")`
+Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke waarden op Ja ingesteld worden.
+`r unhide()`
+
+`r hide("Antwoord")`
+![](images/queries/quer023-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer024}
+**Plaatsen met minstens 2 klanten (quer024)**
+
+Geef een alfabetisch overzicht van de plaatsen met minstens 2 klanten. Sla de query op onder de naam [quer024]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer024-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer025}
+**Parameterquery bonbons (quer025)**
+
+Er zijn diverse chocoladetypes voor bonbons: Butterscotch, Melk, Puur, Toffee en Wit. Maak een parameterquery om bonbons te tonen waarvan het chocoladetype tijdens het uitvoeren van de query gevraagd wordt. Toon daarbij de kolommen [Chocoladetype]{.varname}, [Bonbonnaam]{.varname}, [Bonbonkosten]{.varname} en [Bonbonbeschrijving]{.varname}. Sla de query op onder de naam [quer025]{.varname}.
+:::
+
+::: {#exr-quer026}
+**Bijwerkquery prijsverlaging (quer026)**
+
+Door een daling van de chocoladeprijs op de wereldmarkt kunnen de prijzen van alle dozen met 15% verlaagd worden.
+
+1.  Start met het maken van een backup van de database.
+2.  Ontwerp een bijwerkquery om de prijsverlaging door te voeren. Sla de query op onder de naam [quer026]{.varname} en voer deze uit..
+3.  Herstel de originele situatie door de backup van de database terug te plaatsen.
+
+::: {.callout-warning}
+1. Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
+
+2. Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 15% verlaagd worden.
+:::
+
+:::
+
+::: {#exr-quer027}
+**Kruistabel dozen per gewicht (quer027)**
+
+Maak een kruistabelquery met verticaal de doosnamen, horizontaal de gewichten van de doos en in de tabel de magazijnvoorraad. Sla de query op onder de naam [quer027]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer027-result.png)
+`r unhide()`
+:::
+
+::: {#exr-quer028}
+**Bijwerkquery prijsverhoging (quer028)**
+
+Door een stijging van de chocoladeprijs op de wereldmarkt moeten de prijzen van alle dozen met 10% verhoogd worden.
+
+1.  Start met het maken van een backup of kopie van de tabel of van de hele database.
+2.  Ontwerp een bijwerkquery om de prijsverhoging door te voeren. Sla de query op onder de naam [quer028]{.varname} en voer deze uit.
+3.  Herstel de originele situatie.
+
+::: {.callout-warning}
+1. Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
+
+2. Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 10% verhoogd worden.
+:::
+
+:::
+
+::: {#exr-quer029}
+**Kruistabel omzet per klant per maand (quer029)**
+
+Maak met behulp van een kruistabelquery een overzicht van de totale omzet per klant per maand in 2010. Maak daartoe eerst een gewone query Omzet per klant per maand in 2010 en gebruik deze query als basis voor de kruistabelquery. Voor de klant mogen de klantcodes gebruikt worden en voor de maand de maandnummers. Geef ook de totale omzet per klant in 2010 in de kruistabel weer. Sla de kruistabelquery op onder de naam [quer029]{.varname}.
+
+`r hide("Antwoord")`
+![](images/queries/quer029-result.png)
+`r unhide()`
+:::
+
