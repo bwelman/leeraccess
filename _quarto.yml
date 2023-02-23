@@ -9,7 +9,8 @@ book:
   date-format: long
   google-analytics: "G-YME027QNPL"
   site-url: https://leeraccess.netlify.app/
-
+  repo-url: https://github.com/bwelman/leeraccess
+  repo-actions: [issue]
   description: "Een taakgericht studieboek."
 
   chapters:
