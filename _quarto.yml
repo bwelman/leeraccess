@@ -5,7 +5,7 @@ project:
 book:
   title: "Leer Microsoft Access"
   author: "Ben Welman"
-  date: today
+  date: last-modified
   date-format: long
   google-analytics: "G-YME027QNPL"
   site-url: https://leeraccess.netlify.app/
