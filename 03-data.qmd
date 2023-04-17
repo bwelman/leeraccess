@@ -1,6 +1,6 @@
 # Gegevens toevoegen/wijzigen {#sec-data}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 -   Het gebruik van een formulier voor gegevensinvoer.

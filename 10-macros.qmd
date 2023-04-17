@@ -1,6 +1,6 @@
 # Macro's {#sec-macros}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 -   Wat je met macro's kunt.
@@ -120,7 +120,7 @@ Als basis van het nieuwe formulier kan het eerder gemaakte formulier [Zoek klant
 
 3.  Noem het nieuwe formulier [Zoek klant op naam]{.varname} en open het formulier in de Ontwerpweergave.
 
-4.  Maak het gedeelte voor de formulierkoptekst wat groter. Positioneer de muis boven de bovenrand van Details totdat deze wijzigt zoals in figuur \@ref(fig:customername-formheader) is weergegeven. Druk dan de linker muisknop in en sleep de rand wat naar beneden zodat er voldoende ruimte is voor de tweede keuzelijst.
+4.  Maak het gedeelte voor de formulierkoptekst wat groter. Positioneer de muis boven de bovenrand van Details totdat deze wijzigt zoals in @fig-customername-formheader is weergegeven. Druk dan de linker muisknop in en sleep de rand wat naar beneden zodat er voldoende ruimte is voor de tweede keuzelijst.
 
 ![Vergroten ruimte formulierkoptekst.](images/macros/customername-formheader.png){#fig-customername-formheader}
 

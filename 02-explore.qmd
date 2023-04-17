@@ -1,6 +1,9 @@
 # Database SNOEP verkennen {#sec-explore}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
 **DOELSTELLINGEN**
 
 -   Kennis maken met de voorbeelddatabase `{{< var database >}}`.
@@ -226,7 +229,7 @@ Formulierweergave
 
 Gegevensbladweergave
 
-:   Een weergave die op die van de tabel lijkt
+:   Een weergave die op die van de tabel lijkt.
 
 Ontwerpweergave
 
@@ -554,6 +557,7 @@ Via de keuze [Afdrukvoorbeeld]{.uicontrol} zijn er een aantal instellingen mogel
 
 Maak via filteren een selectie van de bonbons met een Chocoladetype melk of puur waarvan de prijs hoogstens 0,30 is.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Bij de selectie van numerieke velden heb je ook mogelijkheden om getalbereiken aan te geven:
 
@@ -566,14 +570,19 @@ Het resultaat bestaat uit 18 records.
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-expl002}
 **Selectie Klanten op plaatsnaam (expl002)**
 
 Maak een selectie van de klanten die in Enschede, Hengelo of Almelo wonen.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Het resultaat bestaat uit 12 records.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-expl003}
@@ -581,6 +590,7 @@ Het resultaat bestaat uit 12 records.
 
 Maak een selectie van de klanten waarvan de postcode met 20 begint en die in Amsterdam wonen.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
 
@@ -590,4 +600,6 @@ Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
 `r hide("Antwoord")`
 Het resultaat bestaat uit 3 records.
 `r unhide()`
+:::
+
 :::

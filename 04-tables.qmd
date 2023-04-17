@@ -1,6 +1,6 @@
 # Tabellen {#sec-tables}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 -   Inrichting van tabellen en relaties tussen tabellen.
@@ -30,9 +30,9 @@ Het ontwerp van de database bepaalt welk soort gegevens in een veld wordt opgesl
 
 Voor een veldnaam gelden de volgende eisen:
 
--   moet uniek zijn binnen de tabel
--   mag niet met een spatie beginnen
--   mag niet de volgende tekens bevatten: punt, uitroepteken en blokhaken \[ en \]
+-   moet uniek zijn binnen de tabel.
+-   mag niet met een spatie beginnen.
+-   mag niet de volgende tekens bevatten: punt, uitroepteken en blokhaken (\[ \]).
 
 ### Gegevenstype {#sec-tables-fields-datatypes}
 

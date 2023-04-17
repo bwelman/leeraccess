@@ -1,6 +1,6 @@
 # Hulpmiddelen {#sec-tools}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 + Tabellen kunnen analyseren en inconsistenties opsporen.
@@ -40,7 +40,7 @@ In @fig-tools-table-contacts is een voorbeeld van een tabel [Contacts]{.varname}
 
 2. Selecteer de tabel [Contacts]{.varname}.
 
-3. Kies [tab Hulpmiddelen voor databases > Tabel analyseren (groep Analyseren)]{.uicontrol. De wizard ***Tabelanalyse*** verschijnt met wat algemene uitleg over dubbele informatie.
+3. Kies [tab Hulpmiddelen voor databases > Tabel analyseren (groep Analyseren)]{.uicontrol}. De wizard ***Tabelanalyse*** verschijnt met wat algemene uitleg over dubbele informatie.
 
 4. Klik op [Volgende]{.uicontrol}. Een nieuw scherm van de wizard Tabelanalyse verschijnt met algemene uitleg over hoe dit probleem opgelost kan worden.
 

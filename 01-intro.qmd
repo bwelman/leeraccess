@@ -1,6 +1,6 @@
 # Beginnen met Access {#sec-intro}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 -   Wat databases zijn en hoe deze zijn opgebouwd.
@@ -52,11 +52,13 @@ In een tabel zijn gegevens in kolommen (**velden**) en rijen (**records**) inged
 
 Veld
 
-:   Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon, telefoonnummer, artikelprijs, ... In een tabel is elke kolom een veld.
+:   Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon, telefoonnummer, artikelprijs, ...
+:   *In een tabel is elke kolom een veld.*
 
 Record
 
-:   Een record is een verzameling van gegevens over een persoon, artikel, bedrijf, ... In een tabel is elke rij een record.
+:   Een record is een verzameling van gegevens over een persoon, artikel, bedrijf, ...
+:   *In een tabel is elke rij een record.*
 
 ### Query's {#sec-intro-queries}
 

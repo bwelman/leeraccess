@@ -1,6 +1,6 @@
 # Integratie met Office {#sec-integration}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 + Uitwisselen van gegevens van Access met Excel en Word.

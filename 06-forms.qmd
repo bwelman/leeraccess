@@ -1,6 +1,6 @@
 # Formulieren {#sec-forms}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 -   Soorten formulieren: hoofdformulier, subformulier en gekoppeld formulier.

@@ -1,6 +1,9 @@
 # Query's {#sec-queries}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
 **DOELSTELLINGEN**
 
 -   Waarvoor je query's kunt gebruiken en welke soorten query's er zijn.
@@ -722,6 +725,7 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}.
 
 Maak een query om de klanten uit de provincies Friesland en Groningen te selecteren. Toon de velden [Achternaam]{.varname}, [Voornaam]{.varname} en [Plaats]{.varname}. Sla de query op onder de naam [quer001]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Het veld [Provincie]{.varname} mag hier twee waarden hebben `FR` of `GR`. Dat kun je voor elkaar krijgen door in de regel voor [Criteria]{.uicontrol} de ene waarde te vermelden en bij de regel met [Of]{.uicontrol} de andere waarde.
 
@@ -733,14 +737,19 @@ Resultaat query: 40 klanten
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer002}
 **Direct mail campagne doos MARS (quer002)**
 
 Stel het is eind december 2010. De houdbaarheidsdatum van de doos MARS komt in zicht en er is nog veel in voorraad. Daarom wil je een direct mail campagne gaan uitvoeren naar de klanten die in de periode augustus t/m november 2010 minimaal 1 doos MARS hebben besteld. Toon de naam en het adres van deze klanten. Sla de query op onder de naam [quer002]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 4 klanten
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer003}
@@ -748,9 +757,12 @@ Resultaat query: 4 klanten
 
 Toon de Bonbondozen waarvan de prijs hoogstens € 17,50 bedraagt. Toon van de dozen de dooscode, de doosnaam en de prijs. Sla de query op onder de naam [quer003]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 4 dozen
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer004}
@@ -758,9 +770,12 @@ Resultaat query: 4 dozen
 
 Geef een overzicht van de bonbons met een chocoladetype melk of puur waarvan de prijs hoogstens 30 cent is. Sla de query op onder de naam [quer004]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 18 bonbons
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer005}
@@ -768,9 +783,12 @@ Resultaat query: 18 bonbons
 
 Geef een overzicht van de klanten (naam en adres) die in Enschede, Hengelo of Almelo wonen. Sla de query op onder de naam [quer005]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 12 klanten
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer006}
@@ -778,9 +796,12 @@ Resultaat query: 12 klanten
 
 Geef een overzicht van de klanten uit Amsterdam (naam en adres) waarvan de postcode met 20 begint. Sla de query op onder naam [quer006]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 3 klanten
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer007}
@@ -788,6 +809,7 @@ Resultaat query: 3 klanten
 
 Geef een overzicht van alle bonbons zonder vulling. Sla de query op onder de naam [quer007]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Zoek eerst uit welke waarde het veld Vullingtype heeft als een bonbon geen vulling heeft.
 `r unhide()`
@@ -797,11 +819,14 @@ Resultaat query: 12 bonbons
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer008}
 **Klanten niet uit Amsterdam (quer008)**
 
 Geef een overzicht van alle klanten die niet in Amsterdam wonen. Sla de query op onder de naam [quer008]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Zoek eerst uit welke expressie je in een criterium moet gebruiken voor “niet gelijk aan”.
 `r unhide()`
@@ -811,14 +836,19 @@ Resultaat query: 293 klanten
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer009}
 **Aantal bonbons per doos (quer009)**
 
 Maak een query van de doosnamen en het aantal bonbons per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer009]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer009-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer010}
@@ -826,9 +856,12 @@ Maak een query van de doosnamen en het aantal bonbons per doos. De kolom met aan
 
 Maak een query van de doosnamen en het aantal bonbonsoorten per doos. De kolom met aantal moet een passende naam hebben. De lijst moet oplopend gesorteerd zijn op doosnaam. Sla de query op onder de naam [quer010]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer010-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer011}
@@ -836,9 +869,12 @@ Maak een query van de doosnamen en het aantal bonbonsoorten per doos. De kolom m
 
 Geef een overzicht van het aantal orders per regio. De kolom met aantal moet een passende naam hebben. Sla de query op onder de naam [quer011]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer011-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer012}
@@ -846,9 +882,12 @@ Geef een overzicht van het aantal orders per regio. De kolom met aantal moet een
 
 Geef een overzicht van het totale omzet per klant. Toon hierbij de klantcode, klantnaam en het omzettotaal. De kolom met omzet moet een passende naam en opmaak hebben.Sorteer daarbij zodanig dat de klanten met de grootste omzet bovenaan komen te staan. Sla de query op onder de naam [quer012]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer012-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer013}
@@ -856,9 +895,12 @@ Geef een overzicht van het totale omzet per klant. Toon hierbij de klantcode, kl
 
 Geef een overzicht van de klanten (klantcode en klantnaam) die ooit iets gekocht hebben. Sla de query op onder de naam [quer013]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 264 klanten
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer014}
@@ -866,9 +908,12 @@ Resultaat query: 264 klanten
 
 Geef een overzicht van de klanten waarvan de achternaam Jansen of Janssen en die in de regio Noord wonen. Sla de query op onder de naam [quer014]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer014-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer015}
@@ -876,6 +921,7 @@ Geef een overzicht van de klanten waarvan de achternaam Jansen of Janssen en die
 
 Maak een overzicht van de bonbons die wel een vulling maar geen noot bevatten. Sla de query op onder naam [quer015]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Resultaat query: 22 bonbons
 
@@ -883,14 +929,19 @@ Resultaat query: 22 bonbons
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer016}
 **Dozen zwaarder dan 150 gram met prijs van hoogstens 35 euro (quer016)**
 
 Maak een overzicht van de dozen die zwaarder zijn dan 150 gram en maximaal € 35,- kosten. Alleen de dooscode, doosnaam en prijs hoeven getoond te worden. Sorteer de dozen oplopend op prijs. Sla de query op onder de naam [quer016]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer016-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer017}
@@ -898,9 +949,12 @@ Maak een overzicht van de dozen die zwaarder zijn dan 150 gram en maximaal € 3
 
 Maak een overzicht van de voorraad van de dozen met een prijs tussen € 17,- en € 25,- en waarvan er minstens 400 in voorraad zijn. Toon de doosnaam, de dooscode, de prijs en de voorraad. Sla de query op onder de naam [quer017]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer017-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer018}
@@ -908,9 +962,12 @@ Maak een overzicht van de voorraad van de dozen met een prijs tussen € 17,- en
 
 Geef een overzicht van de totale omzet per provincie. De kolom met aantal moet een passende naam en opmaak hebben. Sorteer aflopend op omzet. Sla de query op onder de naam [quer018]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer018-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer019}
@@ -918,6 +975,7 @@ Geef een overzicht van de totale omzet per provincie. De kolom met aantal moet e
 
 Geef een overzicht van de klanten die de laatste week voor kerst 2010 (20-12-2010 t/m 24-12 2010) dozen bonbons hebben besteld. Toon de klantcode, de klantnaam en het klantadres. Elke klant mag maar 1 keer in het overzicht voorkomen. Sla de query op onder de naam [quer019]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke records op Ja ingesteld worden. De eigenschappen van de query kunnen zichtbaar gemaakt worden in de Ontwerpweergave van de query het venster Eigenschappen zichtbaar te maken en daarna in het rechterbovengebied van het ontwerpvenster op een lege plek te klikken.
 `r unhide()`
@@ -927,14 +985,19 @@ Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermij
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer020}
 **Dozen met lage omzet (quer020)**
 
 Maak een overzicht van de dozen met lage omzet, minder dan €2000. Toon de dooscode en de omzet per doos. De kolom met omzet moet een passende naam en opmaak hebben. Sorteer oplopend op omzet. Sla de query op onder de naam [quer020]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer020-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer021}
@@ -942,9 +1005,12 @@ Maak een overzicht van de dozen met lage omzet, minder dan €2000. Toon de doos
 
 Geef een overzicht van de klanten waarvan de postcode begint met 22 en met een totale omzet van hoogstens € 50,-. Sla de query op onder de naam [quer021]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer021-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer023}
@@ -952,6 +1018,7 @@ Geef een overzicht van de klanten waarvan de postcode begint met 22 en met een t
 
 Geef een alfabetisch overzicht van de klanten die in 2009 minstens 1 doos “Zoet en bitter” gekocht hebben. Zorg er voor dat er geen dubbele records in het queryresultaat worden weergegeven. Sla de query op onder de naam [quer023]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap Unieke waarden op Ja ingesteld worden.
 `r unhide()`
@@ -961,14 +1028,19 @@ Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit te vermij
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-quer024}
 **Plaatsen met minstens 2 klanten (quer024)**
 
 Geef een alfabetisch overzicht van de plaatsen met minstens 2 klanten. Sla de query op onder de naam [quer024]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer024-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer025}
@@ -999,9 +1071,12 @@ Door een daling van de chocoladeprijs op de wereldmarkt kunnen de prijzen van al
 
 Maak een kruistabelquery met verticaal de doosnamen, horizontaal de gewichten van de doos en in de tabel de magazijnvoorraad. Sla de query op onder de naam [quer027]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer027-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-quer028}
@@ -1026,8 +1101,10 @@ Door een stijging van de chocoladeprijs op de wereldmarkt moeten de prijzen van 
 
 Maak met behulp van een kruistabelquery een overzicht van de totale omzet per klant per maand in 2010. Maak daartoe eerst een gewone query Omzet per klant per maand in 2010 en gebruik deze query als basis voor de kruistabelquery. Voor de klant mogen de klantcodes gebruikt worden en voor de maand de maandnummers. Geef ook de totale omzet per klant in 2010 in de kruistabel weer. Sla de kruistabelquery op onder de naam [quer029]{.varname}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/queries/quer029-result.png)
 `r unhide()`
 :::
 
+:::

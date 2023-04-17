@@ -1,6 +1,6 @@
 # Normaliseren {#sec-normalization}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
 **DOELSTELLINGEN**
 
 Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm.
@@ -313,7 +313,7 @@ De 3 NV wordt dan:
 
 Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen tabellen op een overzichtelijke manier kunnen worden weergegeven.
 
-![Gegevensstructuurdiagram van de tabellen met de onderlinge relaties.](images/normalization/example-dsd1.png){#fig-example-dsd1, echo=FALSE}
+![Gegevensstructuurdiagram van de tabellen met de onderlinge relaties.](images/normalization/example-dsd1.png){#fig-example-dsd1}
 
 Tussen deze vier tabellen bestaan verschillende relaties, zoals:
 
@@ -323,7 +323,7 @@ Tussen deze vier tabellen bestaan verschillende relaties, zoals:
 
 Vaak wordt bij de pijl ook het attribuut (veld) vermeld waarmee de koppeling tot stand wordt gebracht.
 
-![Gegevensstructuurdiagram nu met koppelvelden](images/normalization/example-dsd2.png){#fig-example-dsd2, echo=FALSE}
+![Gegevensstructuurdiagram nu met koppelvelden](images/normalization/example-dsd2.png){#fig-example-dsd2}
 
 Bij een GSD worden de volgende symbolen gebruikt:
 
@@ -379,7 +379,7 @@ Er zijn geen niet-sleutel velden te vinden die afhankelijk zijn van een sleutelv
 
 #### Gegevens Structuur Diagram {.unnumbered}
 
-![Gegevensstructuurdiagram dierenkliniek.](images/normalization/animal-clinic-dsd.png){#fig-animal-clinic-dsd, echo=FALSE}
+![Gegevensstructuurdiagram dierenkliniek.](images/normalization/animal-clinic-dsd.png){#fig-animal-clinic-dsd}
 
 ## Opgaven {#sec-norm-exercises}
 

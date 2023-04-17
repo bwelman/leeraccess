@@ -1,6 +1,9 @@
 # Rapporten {#sec-reports}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
 **DOELSTELLINGEN**
 
 + Waarvoor je rapporten kunt gebruiken.
@@ -195,11 +198,11 @@ In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en
 
 13. Zorg dat het kader geselecteerd blijft en breng dan via het [Eigenschappenvenster]{.uicontrol} de volgende wijzigingen aan:
 
-    + In tab [Opmaak]{.uicontrol}: zet [Breedte]{.uicontrol} en [Hoogte]{.uicontrol} op `2,5 cm`. Het is mogelijk dat Access de afmetingen iets aanpast.
+   -  In tab [Opmaak]{.uicontrol}: zet [Breedte]{.uicontrol} en [Hoogte]{.uicontrol} op `2,5 cm`. Het is mogelijk dat Access de afmetingen iets aanpast.
 
 ![Afmetingen van het objectkader instellen.](images/reports/label-praline-dimensions.png){#fig-label-praline-dimensions}
 
-    + In tab [Gegevens]{.uicontrol}: stel eigenschap [Besturingselementbron]{.uicontrol} in op  `Plaatje`.
+   -  In tab [Gegevens]{.uicontrol}: stel eigenschap [Besturingselementbron]{.uicontrol} in op  `Plaatje`.
 
 ![Besturingsbron voor het object instellen.](images/reports/label-praline-controlsource.png){#fig-label-praline-controlsource}
 
@@ -277,9 +280,12 @@ Maak een kopie van het rapport [Omzet per doos per order per periode]{.varname} 
 
 Maak een kopie van rapport [rapp005]{.varname} en noem het rapport [rapp006]{.varname}. Verander het ontwerp van het rapport zodanig dat iedere doos op een nieuwe pagina begint.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Zet de eigenschap [Nieuwe pagina]{.uicontrol} voor de Koptekst (Doosnaam) op de waarde Voor sectie.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-rapp007}
@@ -304,9 +310,11 @@ Maak een rapport met daarop per regio het aantal verkochte dozen in een bepaald 
 
 In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2009.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Tip")`
 Maak eerst een parameterquery [Jaarafzet dozen per regio]{.varname} die de benodigde gegevens voor het rapport levert en naar het verkoopjaar vraagt.
 `r unhide()`
+:::
 
 ![](images/reports/rapp008-report.png)
 :::
