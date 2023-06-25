@@ -5,7 +5,7 @@ project:
 book:
   title: "Leer Microsoft Access"
   author: "Ben Welman"
-  date: last-modified
+  date: today
   date-format: long
   google-analytics: "G-YME027QNPL"
   site-url: https://leeraccess.netlify.app/
@@ -56,6 +56,9 @@ format:
     code-fold: false
     link-external-newwindow: true
     callout-appearance: simple
+    author-meta: "Ben Welman"
+    description-meta: "Met dit taak georienteerd studieboek leer je werken met Microsoft Access."
+    keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]
 
 knitr:
   opts_chunk:

@@ -1,6 +1,6 @@
 # Welkom {.unnumbered}
 
-Dit is de online versie van het studieboek **Leer Access**. Dit taakgerichte boek is speciaal ontwikkeld voor studenten in het middelbaar hoger onderwijs. Er is veel aandacht voor het maken van queries, formulieren en rapportages. En bevat veel oefeningen.
+Dit is de gratis online versie van het studieboek **Leer Access**. Dit taakgerichte boek is speciaal ontwikkeld voor studenten in het middelbaar hoger onderwijs. Er is veel aandacht voor het maken van queries, formulieren en rapportages. En bevat veel oefeningen.
 
 Er zijn interactieve onderdelen in het boek om je te helpen de inhoud beter te begrijpen. Deze interactieve inhoud werkt alleen als je dit materiaal opent via een webbrowser die javascript ondersteunt.
 
