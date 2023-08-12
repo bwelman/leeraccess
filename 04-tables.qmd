@@ -41,7 +41,7 @@ De belangrijkste eigenschap van een veld is het gegevenstype, omdat hiermee word
 Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegevenstype `Numeriek` zijn. Zo is het veld voor de prijs van een artikel een numeriek veld en wordt het artikelnummer in een tekstveld opgeslagen.
 
 | Gegevenstype    | Waarden                                 | Toelichting                                                                                                                                                                                                                             |
-|---------------|---------------|-------------------------------------------|
+|-----------------|-----------------|--------------------------------------|
 | `Korte tekst`   | Alfanumeriek                            | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens.                                                                                                                                                                           |
 | `Lange tekst`   |                                         | Voor lange tekst, tot 1 GB. Voorheen bekend als Memo                                                                                                                                                                                    |
 | `Getal`         | Numeriek                                | Bereik van -2^31^ tot 2^31^ - 1.                                                                                                                                                                                                        |
@@ -121,7 +121,7 @@ Je kunt opslagruimte in de database besparen door het tweede onderdeel in te ste
 In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen worden en hun betekenis.
 
 | Symbool     | Betekenis                                                                                                                                                                 |
-|----------------|--------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | 0           | Gebruiker moet een cijfer (0 t/m 9) invoeren.                                                                                                                             |
 | 9           | Gebruiker mag een cijfer (0 t/m 9) invoeren.                                                                                                                              |
 | \#          | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd.                                           |
@@ -138,7 +138,7 @@ In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen wo
 | \\          | De tekens die hier rechtstreeks op volgen worden letterlijk weergegeven.                                                                                                  |
 | ""          | De tekens die tussen dubbele aanhalingstekens staan worden letterlijk weergegeven.                                                                                        |
 
-:  Tijdelijke aanduidingen en tekens voor een invoermasker {#tbl-inputmask-symbols}
+: Tijdelijke aanduidingen en tekens voor een invoermasker {#tbl-inputmask-symbols}
 
 Je kunt snel een invoermasker toevoegen via de [Wizard Invoermasker]{.uicontrol}, maar ook een masker handmatig specificeren door deze in te typen bij de eigenschap invoermasker van het veld. helemaal naar wens een invoermasker samenstellen en dat bij veldeigenschap invoeren.
 
@@ -153,9 +153,7 @@ Toelichting:
 -   `000-000` gebruiker moet zes cijfers invoeren.
 -   `;0` geeft aan dat de maskertekens samen met de gegevens worden opgeslagen.
 -   `;-` geeft aan dat een minteken als tijdelijke plaatsaanduiding wordt gebruikt i.p.v. een onderstrepingsteken.
-
 :::
-
 
 ::: {#exm-tables-zipcode}
 **Postcode**
@@ -167,7 +165,6 @@ Toelichting:
 -   `0000` gebruiker moet vier cijfers (0 t/m 9) achter elkaar invoeren.
 -   `\` geeft aan dat er een spatie wordt weergegeven. Deze hoeft niet te worden ingevoerd.
 -   `>LL` gebruiker moet twee letters invoeren die worden omgezet naar hoofdletters.
-
 :::
 
 ### Validatieregel en tekst {#sec-tables-fields-validationrules}
@@ -195,7 +192,7 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 @tbl-operators toont de meest gebruikte operatoren.
 
 | Operator | Functie                                  | Voorbeeld                        |
-|-----------------|-------------------------------|------------------------|
+|------------------|------------------------------|------------------------|
 | \<       | Kleiner dan                              | \<100                            |
 | \<=      | Kleiner dan of gelijk aan                | \<=15                            |
 | \>       | Groter dan                               | \>10                             |
@@ -209,14 +206,13 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 | BETWEEN  | Moet liggen tussen twee waarden          | BETWEEN 1 AND 9                  |
 | LIKE     | Tekenreeks moet overeenkomen met patroon | LIKE "Ams\*"                     |
 
-:  Operatoren in expressies {#tbl-operators}
+: Operatoren in expressies {#tbl-operators}
 
 ::: {#exm-tables-validation-date}
 **Datum validatie**
 
 -   Validatieregel: `>=#1-1-2010#`
 -   Validatietekst: `Voer een datum vanaf 1 januari 2010 in.`
-
 :::
 
 ::: {#exm-tables-validation-invoicenumber}
@@ -224,7 +220,6 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 
 -   Validatieregel: `Like "[0-9][0-9][0-9][0-9]"`
 -   Validatietekst: `Factuurnummer moet uit 4 cijfers bestaan.`
-
 :::
 
 ::: {#exm-tables-validation-email}
@@ -232,7 +227,6 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 
 -   Validatieregel: `Like "*@*.???"`
 -   Validatietekst: `Geen geldig email adres.`
-
 :::
 
 ## Nieuwe tabel handmatig maken {#sec-tables-manually}
@@ -401,13 +395,15 @@ Referentiële integriteit is een systeem van regels waarmee er voor gezorgd word
 
 De referentiële integriteit kun je instellen door in het dialoogvenster ***Relaties bewerken*** het vakje [Referentiële integriteit afdwingen]{.uicontrol} in te schakelen.
 
-Wanneer referentiële integriteit wordt ingesteld dan gelden de volgende regels:
+::: callout-important
+**Consequenties referentiële integriteit**
 
 -   Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.
 
--   Een record uit een primaire tabel kan niet worden verwijderd als er overeenkomstige records bestaan in een gerelateerde tabel. Zo kun je geen record uit de tabel [Klanten]{.varname} verwijderen als er in de tabel [Orders]{.varname} nog records voor deze klant bestaan.
+-   Je kunt een record niet uit de primaire tabel verwijderen als er gerelateerde records bestaan in andere tabellen. Zo kun je geen record uit de tabel [Klanten]{.varname} verwijderen als er in de tabel [Orders]{.varname} nog records voor deze klant bestaan.
 
--   Een waarde van de primaire-sleutel in de primaire tabel kan niet worden gewijzigd wanneer dit record gerelateerde records in de gerelateerde tabel heeft. Zo kun je de klantcode in de tabel [Klanten]{.varname} niet wijzigen als er records in de tabel [Orders]{.varname} aan deze klant zijn toegewezen.
+-   Je kunt de waarde van de primaire-sleutel in de primaire tabel niet wijzigen wanneer er gerelateerde records bestaan in andere tabellen. Zo kun je de klantcode in de tabel [Klanten]{.varname} niet wijzigen als er records in de tabel [Orders]{.varname} aan deze klant zijn toegewezen.
+:::
 
 Wanneer de referentiële integriteit is afgedwongen en een van de voorgaande regels wordt bij een actie geschonden, dan wordt een passende foutmelding weergegeven. In @fig-warning-referential-integrity zie je een voorbeeld hiervan.
 
@@ -482,8 +478,8 @@ Uit een klanten-tevredenheids-onderzoek blijkt dat enkele belangrijke klanten he
 
 Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie \@ref(tables-new-manually). Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
 
-+ Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
-+ Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+-   Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
+-   Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
 
 Open de tabel [Vervoer]{.varname} en merk op dat de vervoerskosten niet in een valutanotatie met eurosymbool worden weergegeven. Verander de waarde van de eigenschap [Notatie]{.uicontrol} van het veld [Vervoerskosten]{.varname} in `Euro`. Schakel daarna over naar de gegevensbladweergave en bekijk het resultaat van deze verandering.
 :::
@@ -493,8 +489,8 @@ Open de tabel [Vervoer]{.varname} en merk op dat de vervoerskosten niet in een v
 
 Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie @sec-tables-manually. Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
 
-+ Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
-+ Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+-   Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
+-   Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
 
 In de tabel [Vervoer]{.varname} heeft het veld [ID vervoersbedrijf]{.varname} regelmatig dezelfde waarde. Zo zie je dertien keer de waarde `1`. Daarom kan dit veld niet als primaire sleutel dienen. De waarde van iedere afleverprovincie komt drie keer voor omdat ieder vervoerbedrijf per provincie een tarief heeft. Het veld [Aflever-provincie]{.varname} kan dus ook niet dienen als primaire sleutel. De combinatie van de velden [ID vervoersbedrijf]{.varname} en [Aflever-provincie]{.varname} is wel uniek en kan dus als primaire sleutel gebruikt worden.
 
@@ -518,9 +514,9 @@ Breng een relatie aan tussen de tabellen [Doosdetails]{.varname} en [Bonbons]{.v
 
 Eind 2010 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 2011 bij te gaan houden welke werknemer een order heeft ingevoerd. Er bestaat al een Excel bestand met daarin de gegevens van alle werknemers. Voer de volgende opdrachten uit:
 
-+ Importeer het Excelbestand `Werknemers.xlsx` en geef de tabel de naam [Werknemers]{.varname}. Zorg voor een geschikte primaire sleutel voor deze tabel.
-+ Breid de tabel [Orders]{.varname} uit met het veld [Werknemercode]{.varname}.
-+ Breng een relatie aan tussen de tabellen [Orders]{.varname} en [Werknemers]{.varname} en dwing tevens de referentiële integriteit af.
+-   Importeer het Excelbestand `Werknemers.xlsx` en geef de tabel de naam [Werknemers]{.varname}. Zorg voor een geschikte primaire sleutel voor deze tabel.
+-   Breid de tabel [Orders]{.varname} uit met het veld [Werknemercode]{.varname}.
+-   Breng een relatie aan tussen de tabellen [Orders]{.varname} en [Werknemers]{.varname} en dwing tevens de referentiële integriteit af.
 :::
 
 ::: {#exr-tabl009}
@@ -544,4 +540,3 @@ Een klacht heeft altijd betrekking op een order. Maak een nieuwe tabel [Klachten
 
 Controleer of bij de tabellen [Klanten]{.varname}, [Orders]{.varname}, [Orderdetails]{.varname}, [Dozen]{.varname}, [Doosdetails]{.varname} en [Bonbons]{.varname} de referentiële integriteit bij de relaties is aangebracht. Zo niet, breng deze dan aan.
 :::
-

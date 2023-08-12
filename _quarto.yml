@@ -58,7 +58,7 @@ format:
     callout-appearance: simple
     author-meta: "Ben Welman"
     description-meta: "Met dit taak georienteerd studieboek leer je werken met Microsoft Access."
-    keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]
+    # keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]
 
 knitr:
   opts_chunk:
