@@ -46,7 +46,7 @@ De basis van het formulier kan via een standaarsformulier gemaakt worden. De keu
 
 5.  Schakel over naar de Ontwerpweergave.
 
-6.  Selecteer [Ontwerp \> Keuzelijst met invoervak (groep Besturingselementen)]{.uicontrol} ![](../common/images/combobox.png) en teken daarna rechts in het deel van de formulierkoptekst een rechthoekig kader voor de keuzelijst.
+6.  Selecteer [Ontwerp \> Keuzelijst met invoervak (groep Besturingselementen)]{.uicontrol} ![](images/common/combobox.png) en teken daarna rechts in het deel van de formulierkoptekst een rechthoekig kader voor de keuzelijst.
 
 ![Formulier met keuzelijst.](images/macros/customercode-combobox-framework.png){#fig-customercode-combobox-framework}
 

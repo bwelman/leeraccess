@@ -192,7 +192,7 @@ In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en
 
 11. Schakel over naar de [Ontwerpweergave]{.uicontrol}.
 
-12. Klik op [tab Ontwerp > Kader voor afhankelijk object (groep Besturingselementen)]{.uicontrol} ![](../common/images/control_bound_object_frame.png)  en teken hiermee op het etiket een kader van ca. 2,5 cm bij 2,5cm.
+12. Klik op [tab Ontwerp > Kader voor afhankelijk object (groep Besturingselementen)]{.uicontrol} ![](images/common/control-bound-object-frame.png) en teken hiermee op het etiket een kader van ca. 2,5 cm bij 2,5cm.
 
 ![Kader voor het object.](images/reports/label-praline-objectframe.png){#fig-label-praline-objectframe}
 
