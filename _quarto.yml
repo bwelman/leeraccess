@@ -12,6 +12,7 @@ book:
   repo-url: https://github.com/bwelman/leeraccess
   repo-actions: [issue]
   description: "Een taakgericht studieboek."
+  downloads: [pdf]
 
   chapters:
     - index.qmd
@@ -51,7 +52,7 @@ format:
       - include/textbook.scss
     cover-image: images/cover-access.svg
     fig-width: 6
-    fig-asp: 0.618
+    fig-aspdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAbElEQVR4Xs2RQQrAMAgEfZgf7W9LAguybljJpR3wEse5JOL3ZObDb4x1loDhHbBOFU6i2Ddnw2KNiXcdAXygJlwE8OFVBHDgKrLgSInN4WMe9iXiqIVsTMjH7z/GhNTEibOxQswcYIWYOR/zAjBJfiXh3jZ6AAAAAElFTkSuQmCC: 0.618
     fig-align: center
     code-fold: false
     link-external-newwindow: true
@@ -59,6 +60,18 @@ format:
     author-meta: "Ben Welman"
     description-meta: "Met dit taak georienteerd studieboek leer je werken met Microsoft Access."
     # keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]
+  pdf:
+    documentclass: scrbook
+    classoption: oneside
+    papersize: a4
+    geometry:
+     - top=25mm
+     - bottom=25mm
+     - left=25mm
+     - right=25mm
+    cite-method: biblatex
+    links-as-notes: true
+    author: [Ben Welman]
 
 knitr:
   opts_chunk:

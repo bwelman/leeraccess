@@ -44,7 +44,7 @@ De zes tabellen worden hierna kort besproken.
 
 In de tabel [Klanten]{.varname} worden verschillende gegevens van een klant bijgehouden. Iedere klant heeft een unieke klantcode. Het veld [Klantcode]{.varname} is de primaire sleutel van de tabel. Iedere regel uit een tabel heet ook wel een record. De klanten zijn gesorteerd op de waarden in het sleutelveld.
 
-Ga na dat er 325 klanten in de tabel [Klanten]{.varname} zitten.
+> Ga na dat er 325 klanten in de tabel [Klanten]{.varname} zitten.
 
 ### Tabel Orders {#sec-explore-table-orders}
 
@@ -52,7 +52,7 @@ Ga na dat er 325 klanten in de tabel [Klanten]{.varname} zitten.
 
 In de tabel [Orders]{.varname} is [Ordercode]{.varname} de primaire sleutel, de waarde van [Ordercode]{.varname} is uniek. Een bepaalde klantcode kan in deze tabel wel vaker voorkomen omdat een klant meerdere orders kan plaatsen. Een order hoort altijd bij één klant.
 
-Ga na dat er 784 orders in de tabel [Orders]{.varname} zitten.
+> Ga na dat er 784 orders in de tabel [Orders]{.varname} zitten.
 
 ### Tabel Orderdetails {#sec-explore-table-orderdetails}
 
@@ -60,7 +60,8 @@ Ga na dat er 784 orders in de tabel [Orders]{.varname} zitten.
 
 Een order kan meerdere dozen bevatten, maar in een order kan elke dooscode slechts één keer voorkomen. Wel kan een bepaalde doos in meerdere orders besteld zijn, zodat een dooscode bij meerdere ordercodes kan horen. De tabel [Orderdetails]{.varname} bevat 1537 records (orderregels).
 
-Ga na dat op de order met ordercode 3 twee verschillende dozen besteld zijn, want de tabel bevat twee regels met ordercode 3. In totaal zijn drie dozen besteld op deze order, twee dozen met de dooscode KERS en 1 doos met de dooscode NORT.
+> Ga na dat op de order met ordercode 3 twee verschillende dozen besteld zijn, want de tabel bevat twee regels met ordercode 3. In totaal zijn drie dozen besteld op deze order, twee dozen met de dooscode KERS en 1 doos met de dooscode NORT.
+
 
 De combinatie van [Ordercode]{.varname} en [Dooscode]{.varname} is steeds uniek. Daarom bestaat de sleutel in de tabel [Orderdetails]{.varname} uit de combinatie van deze twee velden.
 
