@@ -1,6 +1,7 @@
 project:
   type: book
   pre-render: R/generate-zip.R
+  resources: "bestanden-leeraccess.zip"
 
 book:
   title: "Leer Microsoft Access"
@@ -52,7 +53,7 @@ format:
       - include/textbook.scss
     cover-image: images/cover-access.svg
     fig-width: 6
-    fig-aspdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAbElEQVR4Xs2RQQrAMAgEfZgf7W9LAguybljJpR3wEse5JOL3ZObDb4x1loDhHbBOFU6i2Ddnw2KNiXcdAXygJlwE8OFVBHDgKrLgSInN4WMe9iXiqIVsTMjH7z/GhNTEibOxQswcYIWYOR/zAjBJfiXh3jZ6AAAAAElFTkSuQmCC: 0.618
+    fig-asp: 0.618
     fig-align: center
     code-fold: false
     link-external-newwindow: true
@@ -72,6 +73,7 @@ format:
     cite-method: biblatex
     links-as-notes: true
     author: [Ben Welman]
+    date: \today
 
 knitr:
   opts_chunk:

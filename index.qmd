@@ -9,7 +9,7 @@ Er zijn interactieve onderdelen in het boek om je te helpen de inhoud beter te b
 ::: callout-important
 ## Databestanden
 
-Bij dit studieboek horen databestanden. Deze heb je nodig om de oefeningen uit te kunnen voeren. Je kunt ze in één zipbestand downloaden: [Download databestanden](bestanden-leeraccess.zip).
+Bij dit studieboek horen databestanden. Deze heb je nodig om de oefeningen uit te kunnen voeren. Je kunt ze in één zipbestand downloaden: [Download databestanden](https://leeraccess.netlify.app/bestanden-leeraccess.zip).
 :::
 
 ### Hulp
@@ -34,9 +34,9 @@ Ben Welman
 
 Uitgebrachte studieboeken:
 
-| Nederlandstalig                                             | Engelstalig                                      |
-|-------------------------------------------------------------|--------------------------------------------------|
-| [Leer Excel](https://leerexcel.netlify.app/)                | [Learn Excel](https://learnexcel.netlify.app/)   |
-| [Leer Access](https://leeraccess.netlify.app/)              | [Learn Access](https://learnaccess.netlify.app/) |
-| [Data Analyse met Excel](https://excelanalyse.netlify.app/) |                                                  |
-| [Cursus bierbrouwen](https://brouwjebier.netlify.app/)      |                                                  |
+| Nederlandstalig | Engelstalig |
+|----|----|
+| [Leer Excel](https://leerexcel.netlify.app/) | [Learn Excel](https://learnexcel.netlify.app/) |
+| [Leer Access](https://leeraccess.netlify.app/) | [Learn Access](https://learnaccess.netlify.app/) |
+| [Data Analyse met Excel](https://excelanalyse.netlify.app/) |  |
+| [Cursus bierbrouwen](https://brouwjebier.netlify.app/) |  |
