@@ -40,20 +40,20 @@ De belangrijkste eigenschap van een veld is het gegevenstype, omdat hiermee word
 
 Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegevenstype `Numeriek` zijn. Zo is het veld voor de prijs van een artikel een numeriek veld en wordt het artikelnummer in een tekstveld opgeslagen.
 
-| Gegevenstype    | Waarden                                 | Toelichting                                                                                                                                                                                                                             |
-|-----------------|-----------------|--------------------------------------|
-| `Korte tekst`   | Alfanumeriek                            | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens.                                                                                                                                                                           |
-| `Lange tekst`   |                                         | Voor lange tekst, tot 1 GB. Voorheen bekend als Memo                                                                                                                                                                                    |
-| `Getal`         | Numeriek                                | Bereik van -2^31^ tot 2^31^ - 1.                                                                                                                                                                                                        |
-| `Groot getal`   |                                         | Bereik van -2^63^ tot 2^63^ - 1.                                                                                                                                                                                                        |
-| `Datum/tijd`    | Datum- en tijdwaarden                   |                                                                                                                                                                                                                                         |
-| `Valuta`        | Valutawaarden                           |                                                                                                                                                                                                                                         |
-| `Autonummering` | Nummers (uniek)                         | Nummers die automatisch gegenereerd worden voor elk record. Standaard is de veldlengte `Lange integer`. Autonummering wordt vaak als sleutelveld gebruikt.                                                                              |
-| `Ja/nee`        | Ja of Nee                               | Boolean waarden, slechts twee waarden mogelijk, Ja of Nee. Op de achtergrond gebruikt Access de waarde -1 voor alle Ja-waarden en de waarde 0 voor alle Nee-waarden. Je gebruikt dit veld ook voor waarden als WAAR/ONWAAR, of AAN/UIT. |
-| `OLE-object`    | Objecten uit andere Windows programma's | Foto's, afbeeldingen, grafieken, Excel werkblad, Word document, ...                                                                                                                                                                     |
-| `Hyperlink`     | Hyperlinks                              | Hyperlinks (ook email adressen).                                                                                                                                                                                                        |
-| `Bijlage`       | Pad en naam van een bestand             | Bestanden. Meerdere bestanden per bijlage is mogelijk.                                                                                                                                                                                  |
-| `Berekend`      | Verschillend                            | Expressie die gegevens uit een of meer velden gebruikt.                                                                                                                                                                                 |
+| Gegevenstype | Waarden | Toelichting |
+|------------------|------------------|------------------------------------|
+| `Korte tekst` | Alfanumeriek | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens. |
+| `Lange tekst` |   | Voor lange tekst, tot 1 GB. Voorheen bekend als Memo |
+| `Getal` | Numeriek | Bereik van -2^31^ tot 2^31^ - 1. |
+| `Groot getal` |   | Bereik van -2^63^ tot 2^63^ - 1. |
+| `Datum/tijd` | Datum- en tijdwaarden |   |
+| `Valuta` | Valutawaarden |   |
+| `Autonummering` | Nummers (uniek) | Nummers die automatisch gegenereerd worden voor elk record. Standaard is de veldlengte `Lange integer`. Autonummering wordt vaak als sleutelveld gebruikt. |
+| `Ja/nee` | Ja of Nee | Boolean waarden, slechts twee waarden mogelijk, Ja of Nee. Op de achtergrond gebruikt Access de waarde -1 voor alle Ja-waarden en de waarde 0 voor alle Nee-waarden. Je gebruikt dit veld ook voor waarden als WAAR/ONWAAR, of AAN/UIT. |
+| `OLE-object` | Objecten uit andere Windows programma's | Foto's, afbeeldingen, grafieken, Excel werkblad, Word document, ... |
+| `Hyperlink` | Hyperlinks | Hyperlinks (ook email adressen). |
+| `Bijlage` | Pad en naam van een bestand | Bestanden. Meerdere bestanden per bijlage is mogelijk. |
+| `Berekend` | Verschillend | Expressie die gegevens uit een of meer velden gebruikt. |
 
 : Gegevenstypes van Access {#tbl-datatypes-access}
 
@@ -120,23 +120,23 @@ Je kunt opslagruimte in de database besparen door het tweede onderdeel in te ste
 
 In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen worden en hun betekenis.
 
-| Symbool     | Betekenis                                                                                                                                                                 |
-|-------------------|-----------------------------------------------------|
-| 0           | Gebruiker moet een cijfer (0 t/m 9) invoeren.                                                                                                                             |
-| 9           | Gebruiker mag een cijfer (0 t/m 9) invoeren.                                                                                                                              |
-| \#          | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd.                                           |
-| L           | Gebruiker moet een letter invoeren.                                                                                                                                       |
-| ?           | Gebruiker mag een letter invoeren.                                                                                                                                        |
-| A           | Gebruiker moet een letter of een cijfer invoeren.                                                                                                                         |
-| a           | Gebruiker mag een letter of een cijfer invoeren.                                                                                                                          |
-| &           | Er moet een teken of een spatie ingevoerd worden.                                                                                                                         |
-| C           | Gebruiker mag tekens of spaties invoeren.                                                                                                                                 |
+| Symbool | Betekenis |
+|---------------------|---------------------------------------------------|
+| 0 | Gebruiker moet een cijfer (0 t/m 9) invoeren. |
+| 9 | Gebruiker mag een cijfer (0 t/m 9) invoeren. |
+| \# | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd. |
+| L | Gebruiker moet een letter invoeren. |
+| ? | Gebruiker mag een letter invoeren. |
+| A | Gebruiker moet een letter of een cijfer invoeren. |
+| a | Gebruiker mag een letter of een cijfer invoeren. |
+| & | Er moet een teken of een spatie ingevoerd worden. |
+| C | Gebruiker mag tekens of spaties invoeren. |
 | . , : ; - / | Tijdelijke plaatsaanduidingen voor decimalen, duizendtallen, en scheidingstekens voor datum en tijd. Het teken dat je kiest hangt af van de landinstellingen van Windows. |
-| \>          | Alle tekens die hierop volgen, worden omgezet naar hoofdletters.                                                                                                          |
-| \<          | Alle tekens die hierop volgen, worden omgezet naar kleine letters.                                                                                                        |
-| !           | Het invoermasker wordt van links naar rechts opgevuld in plaats van andersom.                                                                                             |
-| \\          | De tekens die hier rechtstreeks op volgen worden letterlijk weergegeven.                                                                                                  |
-| ""          | De tekens die tussen dubbele aanhalingstekens staan worden letterlijk weergegeven.                                                                                        |
+| \> | Alle tekens die hierop volgen, worden omgezet naar hoofdletters. |
+| \< | Alle tekens die hierop volgen, worden omgezet naar kleine letters. |
+| ! | Het invoermasker wordt van links naar rechts opgevuld in plaats van andersom. |
+| \\ | De tekens die hier rechtstreeks op volgen worden letterlijk weergegeven. |
+| "" | De tekens die tussen dubbele aanhalingstekens staan worden letterlijk weergegeven. |
 
 : Tijdelijke aanduidingen en tekens voor een invoermasker {#tbl-inputmask-symbols}
 
@@ -191,20 +191,20 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 
 @tbl-operators toont de meest gebruikte operatoren.
 
-| Operator | Functie                                  | Voorbeeld                        |
+| Operator | Functie | Voorbeeld |
 |------------------|------------------------------|------------------------|
-| \<       | Kleiner dan                              | \<100                            |
-| \<=      | Kleiner dan of gelijk aan                | \<=15                            |
-| \>       | Groter dan                               | \>10                             |
-| \>=      | Groter dan of gelijk aan                 | \>=0                             |
-| =        | Is gelijk aan                            | =21                              |
-| \<\>     | Is niet gelijk aan                       | \<\>0                            |
-| AND      | Logische EN                              | \>=1 AND \<=9                    |
-| OR       | Logische OF                              | "m" OR "v"                       |
-| NOT      | Logische NIET                            | NOT \>10                         |
-| IN       | Moet voorkomen in een lijst              | IN ("Berlijn","Londen","Parijs") |
-| BETWEEN  | Moet liggen tussen twee waarden          | BETWEEN 1 AND 9                  |
-| LIKE     | Tekenreeks moet overeenkomen met patroon | LIKE "Ams\*"                     |
+| \< | Kleiner dan | \<100 |
+| \<= | Kleiner dan of gelijk aan | \<=15 |
+| \> | Groter dan | \>10 |
+| \>= | Groter dan of gelijk aan | \>=0 |
+| = | Is gelijk aan | =21 |
+| \<\> | Is niet gelijk aan | \<\>0 |
+| AND | Logische EN | \>=1 AND \<=9 |
+| OR | Logische OF | "m" OR "v" |
+| NOT | Logische NIET | NOT \>10 |
+| IN | Moet voorkomen in een lijst | IN ("Berlijn","Londen","Parijs") |
+| BETWEEN | Moet liggen tussen twee waarden | BETWEEN 1 AND 9 |
+| LIKE | Tekenreeks moet overeenkomen met patroon | LIKE "Ams\*" |
 
 : Operatoren in expressies {#tbl-operators}
 
@@ -525,6 +525,8 @@ Eind 2010 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 20
 De afdeling marketing wil alle contacten (telefonisch, schriftelijk , email, bezoeken) registreren om de kosten die voor een klant gemaakt worden, te kunnen berekenen. Van ieder contact wordt het soort contact, de datum, de begintijd en de eindtijd, het onderwerp en eventuele kosten (om bijvoorbeeld een relatiegeschenk te sturen) bijgehouden. Als bijvoorbeeld een werknemer een half uur met een brief bezig is geweest dan moet later berekend kunnen worden dat dit `0,5 * €60 =  €30` heeft gekost.
 
 Maak hiervoor een nieuwe tabel met de naam [Contacten]{.varname} en koppel deze aan de tabel [Klanten]{.varname} en dwing tevens de referentiële integriteit af.
+
+Wanneer de tabel [Werknemers]{.varname} beschikbaar is (gemaakt in @exr-tabl008), neem dan bij de registratie van het contactmoment ook op door welke werknemer de registratie is afgehandeld. Hiervoor moet je de tabel [Contacten]{.varname} koppelen met de tabel [Werknemers]{.varname}.
 :::
 
 ::: {#exr-tabl010}
