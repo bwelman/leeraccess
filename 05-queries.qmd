@@ -90,7 +90,7 @@ In een query kunnen voorwaarden worden opgenomen zodat alleen records worden opg
 Een criterium lijkt op een formule en kan verwijzingen naar velden, operatoren en constante waarden (waarden die altijd hetzelfde zijn) bevatten. Zo'n formule wordt in Access ook wel een expressie genoemd. Wat in een criterium mag staan hangt af van het gegevenstype van het veld (tekst, numeriek, datum/tijd, ja/nee).
 
 | Categorie    | Operatoren                                        |
-|--------------|---------------------------------------------------|
+|:-------------|:--------------------------------------------------|
 | Rekenkundig  | `+`, `-`, `*`, `/`, `\`, `^`, `Mod`               |
 | Vergelijking | `=`, `>`, `>=`, `<`, `<=`, `<>`                   |
 | Logisch      | `And`, `Or`, `Not`, `Xor`, `Eqv`                  |
@@ -250,7 +250,7 @@ Berekeningen
 :   Je kunt dan kiezen uit: `Som`, `Gem`, `Min`, `Max`, `Aantal`, `StDev`, `Var`, `Eerste`, `Laatste`, `Expressie`. De gekozen berekening wordt dan voor het veld uitgevoerd.
 
 | Keuze Totaal | Toelichting |
-|---------------------|---------------------------------------------------|
+|:-----------------------------------|:-----------------------------------|
 | `Group By` | Maakt subgroepen van records gebaseerd op de waarden in dit veld. |
 | `Som` | Telt de waarden in dit veld op. |
 | `Gem` | Berekent het gemiddelde van de waarden in dit veld. |
@@ -331,11 +331,11 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Uiteraard is het 
 
 1.  Open de database.
 
-2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster ***Tabel weergeven***.
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont aan de rechterkant het dialoogvenster ***Tabellen toevoegen***.
 
-![Dialoogvenster Tabel weergeven.](images/queries/q-show-table.png){#fig-q-show-table}
+![Dialoogvenster Tabellen toevoegen](images/queries/q-show-table.png){#fig-q-show-table}
 
-3.  Selecteer de tabel [Klanten]{.varname} en klik op [Toevoegen]{.uicontrol} en daarna op [Sluiten]{.uicontrol}. De tabel [Klanten]{.varname} is nu aan het queryvenster toegevoegd.
+3.  Selecteer de tabel [Klanten]{.varname} en klik op [Geselecteerde tabellen toevoegen]{.uicontrol}. De tabel [Klanten]{.varname} is nu aan het queryvenster toegevoegd.
 
 4.  Voeg achtereenvolgens de velden [Provincie]{.varname} en [Klantcode]{.varname} aan het queryraster toe door dubbel te klikken op het veld.
 
@@ -397,7 +397,7 @@ Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de t
 
 1.  Open de database.
 
-2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster ***Tabel weergeven*** (zie eventueel @fig-q-show-table).
+2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}. Access maakt een nieuw leeg queryvenster en toont het dialoogvenster ***Tabellen toevoegen*** (zie eventueel @fig-q-show-table).
 
 3.  Voeg achtereenvolgens de tabellen [Orderdetails]{.varname} en [Dozen]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
 
@@ -451,7 +451,7 @@ De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een qu
 
 2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
 
-3.  Voeg achtereenvolgens de tabellen [Klanten]{.varname} en [Orders]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+3.  Voeg de tabellen [Klanten]{.varname} en [Orders]{.varname} aan het queryvenster toe.
 
 4.  Voeg achtereenvolgens de velden [Klantcode]{.varname}, [Achternaam]{.varname} en [Voornaam]{.varname} (uit [Klanten]{.varname}) en [Orderdatum]{.varname} (uit [Orders]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
 
@@ -497,7 +497,7 @@ De benodigde gegevens over een bepaalde order staan in de tabellen [Orders]{.var
 
 2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
 
-3.  Voeg de tabellen [Orders]{.varname} en [Orderdetails]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+3.  Voeg de tabellen [Orders]{.varname} en [Orderdetails]{.varname} aan het queryvenster toe.
 
 4.  Voeg achtereenvolgens de velden [Ordercode]{.varname}, [Klantcode]{.varname}, [Orderdatum]{.varname} (uit [Orders]{.varname}), [Dooscode]{.varname} en [Hoeveelheid]{.varname} (uit [Orderdetails]{.varname}) aan het queryraster toe door dubbel te klikken op de velden.
 
@@ -579,7 +579,7 @@ Alle benodigde gegevens staan in de tabel [Bonbons]{.varname}. Hiervan hebben we
 
 2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
 
-3.  Voeg de tabel [Bonbons]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+3.  Voeg de tabel [Bonbons]{.varname} aan het queryvenster toe.
 
 4.  Voeg achtereenvolgens de velden [Chocoladetype]{.varname} en [Bonbonkosten]{.varname} aan het queryraster toe door dubbel te klikken op de velden.
 
@@ -625,7 +625,7 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Het selecteren op
 
 2.  Kies [tab Maken \> Queryontwerp (groep Query's)]{.uicontrol}.
 
-3.  Voeg de tabel [Klanten]{.varname} aan het queryvenster toe en klik daarna op [Sluiten]{.uicontrol}.
+3.  Voeg de tabel [Klanten]{.varname} aan het queryvenster toe.
 
 4.  Voeg alle velden toe door een dubbelklik op het sterretje (`*`) en voeg daarna nog een keer afzonderlijk het veld [Provincie]{.varname} toe.
 
@@ -641,7 +641,7 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Het selecteren op
 
 8.  Open de query [Klanten Friesland]{.varname} in de [Ontwerpweergave]{.uicontrol}.
 
-9.  Klik op [Ontwerp \> Tabel maken (groep Querytype)]{.uicontrol}. Het dialoogvenster ***Tabel maken*** wordt geopend.
+9.  Klik op [Queryontwerp \> Tabel maken (groep Querytype)]{.uicontrol}. Het dialoogvenster ***Tabel maken*** wordt geopend.
 
 10. Geef de nieuwe tabel als naam [Friese klanten]{.varname} en geef aan dat deze in de huidige database geplaatst moet worden..
 

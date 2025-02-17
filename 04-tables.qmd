@@ -41,7 +41,7 @@ De belangrijkste eigenschap van een veld is het gegevenstype, omdat hiermee word
 Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegevenstype `Numeriek` zijn. Zo is het veld voor de prijs van een artikel een numeriek veld en wordt het artikelnummer in een tekstveld opgeslagen.
 
 | Gegevenstype | Waarden | Toelichting |
-|------------------|------------------|------------------------------------|
+|:-----------------|:-----------------|:----------------------------------|
 | `Korte tekst` | Alfanumeriek | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens. |
 | `Lange tekst` |   | Voor lange tekst, tot 1 GB. Voorheen bekend als Memo |
 | `Getal` | Numeriek | Bereik van -2^31^ tot 2^31^ - 1. |
@@ -121,7 +121,7 @@ Je kunt opslagruimte in de database besparen door het tweede onderdeel in te ste
 In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen worden en hun betekenis.
 
 | Symbool | Betekenis |
-|---------------------|---------------------------------------------------|
+|:---------------------|:-------------------------------------------------|
 | 0 | Gebruiker moet een cijfer (0 t/m 9) invoeren. |
 | 9 | Gebruiker mag een cijfer (0 t/m 9) invoeren. |
 | \# | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd. |
@@ -192,7 +192,7 @@ Bij het maken van expressies moet je rekening houden met het volgende:
 @tbl-operators toont de meest gebruikte operatoren.
 
 | Operator | Functie | Voorbeeld |
-|------------------|------------------------------|------------------------|
+|:-----------------|:-----------------------------|:-----------------------|
 | \< | Kleiner dan | \<100 |
 | \<= | Kleiner dan of gelijk aan | \<=15 |
 | \> | Groter dan | \>10 |
