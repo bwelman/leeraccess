@@ -40,9 +40,9 @@ Access kent geen knop of functie om de verwijderacties ongedaan te maken.
 
 ## Nieuwe klant toevoegen {#sec-data-new-customer}
 
-Met het formulier [Inschrijving]{.varname} kunnen alleen nieuwe records worden toegevoegd aan de tabel Klanten. Bladeren door de bestaande records is uitgeschakeld.
+Met het formulier [Inschrijving]{.varname} kunnen alleen nieuwe records worden toegevoegd aan de tabel [Klanten]{.varname}. Bladeren door de bestaande records is uitgeschakeld.
 
-::: {#prp-data-new-customer}
+::::: {#prp-data-new-customer}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -68,11 +68,11 @@ Het record wordt automatisch opgeslagen wanneer je het formulier sluit of naar e
 5.  Open tabel [Klanten]{.varname}, ga naar het laatste record en controleer of dit het eerder toegevoegde record is.
 
 6.  Sluit tabel [Klanten]{.varname}.
-:::
+:::::
 
 ## Nieuwe bonbon toevoegen {#sec-data-new-praline}
 
-Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuwe records toevoegen.
+Met het formulier [Bonbons]{.varname} kun je zowel door bestaande records bladeren als nieuwe records toevoegen.
 
 ::: {#prp-data-new-praline}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -102,9 +102,19 @@ Via het formulier Bonbons kun je zowel door bestaande records bladeren als nieuw
 
 ## Nieuwe doos toevoegen {#sec-data-new-box}
 
-Het hoofdformulier [Dozen]{.varname} bevat ook een subformulier. In het hoofdformulier met de naam [Dozen]{.varname} staat de volgende informatie: [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}. Bovendien staat op dit formulier een extra veld [Dooskosten]{.varname}. Deze kosten zijn berekend via de som van `Bonbonkosten * Hoeveelheid` van alle bonbons die in de doos zitten.
+Een nieuwe doos kun je toevoegen met het formulier [Dozen]{.varname}. Dit formulier wijkt af van de voorgaande twee, doordat er een ander formulier in is opgenomen. Deze constructie wordt een hoofdformulier met een subformulier genoemd.
 
-In het subformulier met de naam [Dozen subformulier]{.varname} zijn de bewerkbare velden: [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens, inclusief de dooscode, wordt opgeslagen in tabel [Doosdetails]{.varname}. In de volgende stappen wordt een nieuwe doos toegevoegd via het formulier [Dozen]{.varname}.
+Hoofdformulier ([Dozen]{.varname})
+
+:   Dit formulier bevat gegevens over de doos zelf (niet over de inhoud) zoals [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}.
+
+Subformulier ([Dozen subformulier]{.varname})
+
+:   Dit formulier bevat gegevens over de bonbons in de doos, zoals [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens worden opgeslagen in de tabel [Doosdetails]{.varname}.
+
+::: callout-note
+De inhoud van het veld [Dooskosten]{.varname} wordt berekend via de som van `Bonbonkosten * Hoeveelheid` voor alle bonbons in de doos. Omdat je deze waarde kunt berekenen, wordt deze niet in een tabel opgeslagen.
+:::
 
 ::: {#prp-data-new-box}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -155,7 +165,7 @@ Het is meestal het beste om validatie en restrictie van gegevens in de ontwerpwe
 
 Als de gegevens die in een besturingselement van een formulier worden ingevoerd niet afhankelijk zijn van een veld in een tabel dan moet je de eigenschappen voor validatie in het formulier definiëren.
 
-::: {#prp-data-restriction}
+:::: {#prp-data-restriction}
 [File]{.smallcaps}: `{{< var database >}}`
 
 Een memo van de afdeling Marketing van Snoopy Bonbons meldt dat de prijs van de doos Butterscotch moet worden gewijzigd in € 7,75.
@@ -175,8 +185,7 @@ De reden waarom dit bericht verschijnt is dat er een validatieregel aan het veld
 4.  Klik op [OK]{.uicontrol}.
 
 5.  Verander de doosprijs terug in € 27,75 en druk op TAB toets. Sluit daarna het formulier.
-
-:::
+::::
 
 ## Opgaven {#sec-data-exercises}
 
@@ -185,16 +194,15 @@ De reden waarom dit bericht verschijnt is dat er een validatieregel aan het veld
 
 Voeg de volgende twee bonbons toe:
 
-|Veld         |Bonbon 1           |Bonbon 2            |
-|:------------|:------------------|:-------------------|
-|Bonbonnaam   |Cashew Mokka Toffee|Amandel Mokka Toffee|
-|Bonboncode   |F04                |F05                 |
-|Beschrijving |Zoete, crèmige mokka en cashew omgeven met toffee.|Zoete, crèmige mokka en amandel omgeven met toffee.|
-|Chocoladetype|Toffee             |Toffee              |
-|Vullingtype  |Mokkacrème         |Mokkacrème          |
-|Noottype     |Cashew             |Amandel             |
-|Kosten       |€ 0,24             |€ 0,19              |
-
+| Veld | Bonbon 1 | Bonbon 2 |
+|:-----------------|:-------------------------|:---------------------------|
+| Bonbonnaam | Cashew Mokka Toffee | Amandel Mokka Toffee |
+| Bonboncode | F04 | F05 |
+| Beschrijving | Zoete, crèmige mokka en cashew omgeven met toffee. | Zoete, crèmige mokka en amandel omgeven met toffee. |
+| Chocoladetype | Toffee | Toffee |
+| Vullingtype | Mokkacrème | Mokkacrème |
+| Noottype | Cashew | Amandel |
+| Kosten | € 0,24 | € 0,19 |
 :::
 
 ::: {#exr-data002}
@@ -207,5 +215,4 @@ Een klant plaatst een nieuwe order volgens de gegevens hierna. Bedenk zelf hoe j
 Een aantal uren later komt er telefonisch onderstaande wijziging op deze order. Bedenk zelf hoe je het beste deze wijziging kunt doorvoeren. Breng daarna de wijziging aan.
 
 `Orderwijziging 23 april 2010, 16 uur. De twee dozen Mars moeten geschrapt worden.`
-
 :::
