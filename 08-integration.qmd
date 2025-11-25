@@ -42,7 +42,7 @@ In deze taak wordt aan klanten een standaardbrief gestuurd met daarin de aankond
 
 6. Klik op de link [Volgende: Uw brief schrijven]{.uicontrol}.
 
-7. Plaats de cursor in de eerste regel, kies dan [tab Verzendlijsten > Samenvoegvelden invoegen (groep Velden beschrijven en invoegen) > {.uicontrol}Voornaam]{.varname}.
+7. Plaats de cursor in de eerste regel, kies dan [tab Verzendlijsten > Samenvoegvelden invoegen (groep Velden beschrijven en invoegen) > Voornaam]{.varname}.
 
 8. Voeg daarna de velden [Achternaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname} en [Plaats]{.varname} zoals in het model hierna te zien is.
 

@@ -216,7 +216,7 @@ De verzamelde lijst met elementaire gegevens (eigenschappen, attributen) voor de
 
 **FACTUUR**(Factuurnr, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Artikelnr, Artikelomschrijving, Aantal, Prijs, Korting)
 
-De attributen die vaker dan één keer voorkomen worden ook wel een [Repeterende Groep (Repeating Group)]{.term} genoemd, afgekort als \[RG\]{.term. Omdat op de factuur meerdere factuurregels met artikelen voorkomen vormen de attributen [Artikelnr]{.varname}, [Artikelomschrijving]{.varname}, [Aantal]{.varname} en [Prijs]{.varname} een RG. Het is als voorbereiding op de volgende stap handig om een RG in de lijst aan te duiden.
+De attributen die vaker dan één keer voorkomen worden ook wel een **Repeterende Groep (Repeating Group)** genoemd, afgekort als **RG**. Omdat op de factuur meerdere factuurregels met artikelen voorkomen vormen de attributen [Artikelnr]{.varname}, [Artikelomschrijving]{.varname}, [Aantal]{.varname} en [Prijs]{.varname} een RG. Het is als voorbereiding op de volgende stap handig om een RG in de lijst aan te duiden.
 
 **FACTUUR**(Factuurnr, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting, RG \[Artikelnr, Artikelomschrijving, Aantal, Prijs\])
 
