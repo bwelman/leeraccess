@@ -333,17 +333,13 @@ Bij een GSD worden de volgende symbolen gebruikt:
 
 Een relatiediagram in Access ziet er als volgt uit
 
-```{r example-relations, echo=FALSE, fig.cap="Relaties weergegeven in Microsoft Access"}
-knitr::include_graphics("images/normalization/example-relations.png")
-```
+![Relaties weergegeven in Microsoft Access](images/normalization/example-relations.png){#fig-example-relations}
 
 ## Case - Normalisatie dierenkliniek {#sec-norm-case}
 
 Een dierenkliniek houdt op dit moment de behandeling van dieren bij in een Excel tabel. Deze heeft de volgende vorm.
 
-```{r echo=FALSE, fig.cap="Behandelingen dieren"}
-knitr::include_graphics("images/normalization/animal-clinic-table.png")
-```
+![Behandelingen dieren.](images/normalization/animal-clinic-table.png){#fig-animal-clinic-table}
 
 Het plan is om deze gegevens in een database bij te gaan houden waarvoor een genormaliseerde structuur van tabellen moet worden opgesteld.
 
@@ -421,7 +417,6 @@ De tabel **KLANT** bevat klantgegevens. De tabel **CONTACT** bevat de gegevens v
 **KLANT**(Klantnr, Naam, Adres, Postcode, Plaats)
 
 **CONTACT**(Achternaam, Voornaam, Bedrijf, telefoonnr)
-
 
 1.  Definieer een geschikte sleutel bij de tabel **CONTACT** zonder een extra veld toe te voegen.
 2.  De tabellen **CONTACT** en **KLANT** moeten gekoppeld worden. Leg uit welke velden gekoppeld moeten worden en wat primaire en secundaire tabel is bij de koppeling.
@@ -514,9 +509,9 @@ Per dag wordt voor elke vrachtwagen één vrachtbrief gemaakt met daarop de info
 
 ![](images/normalization//norm012-data.png)
 
-1. Ontwerp een genormaliseerde database passend bij de vrachtbrief. Ga ervan uit dat een vrachtwagen uniek geïdentificeerd wordt met het kenteken. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
-2. Wat verandert er in het ontwerp als niet het kenteken de auto's uniek zou identificeren, maar alleen het autonummer?
-3. Maak een bijbehorend gegevensstructuurdiagram.
+1.  Ontwerp een genormaliseerde database passend bij de vrachtbrief. Ga ervan uit dat een vrachtwagen uniek geïdentificeerd wordt met het kenteken. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
+2.  Wat verandert er in het ontwerp als niet het kenteken de auto's uniek zou identificeren, maar alleen het autonummer?
+3.  Maak een bijbehorend gegevensstructuurdiagram.
 :::
 
 ::: {#exr-norm013}
@@ -526,10 +521,10 @@ Bekijk onderstaande bestelbon van de firma DataRex.
 
 ![](images/normalization//norm013-data.png)
 
-1. Welke procesgegevens zijn er in de bestelbon te vinden?
-2. Leg uit wat wordt bedoeld met een herhalende (of repeterende) groep. Waaruit bestaat deze bij de bestelbon?
-3. Ontwerp een genormaliseerde database passend bij de bestelbon. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
-4. Maak een bijbehorend gegevensstructuurdiagram.
+1.  Welke procesgegevens zijn er in de bestelbon te vinden?
+2.  Leg uit wat wordt bedoeld met een herhalende (of repeterende) groep. Waaruit bestaat deze bij de bestelbon?
+3.  Ontwerp een genormaliseerde database passend bij de bestelbon. Geef daarbij alle gevolgde stappen van het normalisatieproces aan.
+4.  Maak een bijbehorend gegevensstructuurdiagram.
 :::
 
 ::: {#exr-norm014}
@@ -554,15 +549,15 @@ In verband met het Europese kampioenschap voetbal wil de NOS in samenwerking met
 
 *Informatiebehoeftes*
 
-1. Een overzicht per land met de spelers die opgesteld kunnen worden en wie de trainer is. Het is mogelijk dat spelers dezelfde naam hebben. De namen van de landen kunnen niet hetzelfde zijn.
+1.  Een overzicht per land met de spelers die opgesteld kunnen worden en wie de trainer is. Het is mogelijk dat spelers dezelfde naam hebben. De namen van de landen kunnen niet hetzelfde zijn.
 
-2. Een overzicht van de begeleiders per land en hun functie.
-   
-3. Een lijst met topscorers (naam en aantal goals)
+2.  Een overzicht van de begeleiders per land en hun functie.
 
-4. Een lijst van clubs met daarop de spelers die door de club aan een bepaald ander land worden uitgeleend.
-   
-5. Integreer de vier afzonderlijke informatiebehoeftestructuren tot één totale geïntegreerde informatie-behoefte-structuur.  Maak een weergave voor deze geïntegreerde structuur.
+3.  Een lijst met topscorers (naam en aantal goals)
+
+4.  Een lijst van clubs met daarop de spelers die door de club aan een bepaald ander land worden uitgeleend.
+
+5.  Integreer de vier afzonderlijke informatiebehoeftestructuren tot één totale geïntegreerde informatie-behoefte-structuur. Maak een weergave voor deze geïntegreerde structuur.
 :::
 
 ::: {#exr-norm016}
@@ -577,4 +572,3 @@ Bij een gegeven straat, huisnummer en plaats hoort een postcode. De cijfers geve
 1.  Welk attribuut is functioneel afhankelijk van welk ander attribuut?
 2.  Bepaal een sleutel voor deze tabel.
 :::
-
