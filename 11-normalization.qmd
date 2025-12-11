@@ -10,7 +10,7 @@ In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou 
 
 In een relationele database worden de gegevens in afzonderlijke tabellen ondergebracht. Door middel van **sleutelvelden** worden de tabellen met elkaar verbonden. Hierdoor kunnen gerelateerde gegevens uit verschillende tabellen opgevraagd worden. Hierbij is het van belang dat de gegevens goed over logisch samenhangende tabellen verdeeld zijn en dat de gegevens maar op één plaats worden opgeslagen, dus in één veld in één tabel. Ook mogen gegevens niet tegenstrijdig (**inconsistent**) zijn, zoals bijvoorbeeld de vermelding van een niet bestaand klantnummer in een tabel facturen.
 
-::: {.info-data-latex=""}
+::: callout-note
 Als hetzelfde gegeven vaker dan 1 keer worden opgeslagen, dan heet dat ook wel **redundantie**.
 :::
 

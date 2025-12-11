@@ -13,6 +13,7 @@ book:
   repo-url: https://github.com/bwelman/leeraccess
   repo-actions: [issue]
   description: "Een taakgericht studieboek."
+  favicon: images/favicon-access.png
   downloads: [pdf]
 
   chapters:
@@ -61,6 +62,7 @@ format:
     author-meta: "Ben Welman"
     description-meta: "Met dit taak georienteerd studieboek leer je werken met Microsoft Access."
     # keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]
+
   pdf:
     documentclass: scrbook
     classoption: oneside
