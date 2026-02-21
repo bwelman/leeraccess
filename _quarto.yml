@@ -52,7 +52,7 @@ format:
     theme:
       - cosmo
       - include/textbook.scss
-    cover-image: images/cover-access.svg
+    cover-image: resources/LeerAccess.png
     fig-width: 6
     fig-asp: 0.618
     fig-align: center
@@ -66,6 +66,7 @@ format:
   pdf:
     documentclass: scrbook
     classoption: oneside
+    include-in-header: latex/preamble.tex
     papersize: a4
     geometry:
      - top=25mm
@@ -74,8 +75,9 @@ format:
      - right=25mm
     cite-method: biblatex
     links-as-notes: true
-    author: [Ben Welman]
     date: \today
+    author: [Ben Welman]
+
 
 knitr:
   opts_chunk:
