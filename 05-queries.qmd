@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Waarvoor je query's kunt gebruiken en welke soorten query's er zijn.
 -   Het maken van een eenvoudige selectiequery met behulp van de wizard.
 -   Voorwaarden in een query.
@@ -151,7 +149,7 @@ Alle gewenste informatie wordt al geleverd door de query die je gemaakt hebt in 
 
 ![Orderdatum met Like operator.](images/queries/q-utrecht-dec2009-criteria.png){#fig-q-utrecht-dec2009-criteria}
 
-::: callout-note
+::: {.callout-note title="Toelichting criteria"}
 -   Het sterretje `*` heet een **joker** en betekent dat op deze plaatst willekeurige tekst mag staan. In dit geval heeft het daardoor de betekenis van "een willekeurige dag".
 -   Op computers waar een Amerikaanse datumweergave (maand-dag-jaar) is ingesteld moet deze eerst op de Nederlandse datumweergave (dag-maand-jaar) worden ingesteld.
 :::
@@ -181,7 +179,7 @@ De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staa
 
 Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de benodigde velden uit de tabellen [Klanten]{.varname} en [Orderdetails]{.varname} toe te voegen. De Wizard zorgt er dan voor dat automatisch de tabel [Orders]{.varname} wordt toegevoegd omdat deze de verbinding vormt tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Bij het handmatig vanaf nul maken van de query moet je er zelf aan denken om de tabel [Orders]{.varname} toe te voegen. Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.
 
-::: callout-note
+::: {.callout-note title="Toelichting"}
 Dat er minimaal 1 doos is afgenomen hoeft niet als criterium te worden opgenomen omdat bij gekoppelde tabellen automatisch hieraan voldaan wordt.
 :::
 
@@ -274,7 +272,7 @@ Een berekend veld haalt waarden uit een of meerdere velden en voert er een berek
 2.  Typ een naam voor berekening (het resultaat) in gevolgd door een dubbele punt (`:`).
 3.  Typ de expressie voor de berekening in.
 
-::: callout-note
+::: {.callout-note title="Veldnamen in expressies"}
 -   Je kunt veldnamen in de expressie opnemen. Veldnamen moeten tussen blokhaken staan: `[veldnaam]`. Wanneer een veldnaam geen spaties bevat dan zet Access deze blokhaken wanneer je de naam ingetypt hebt. Zitten er wel spaties in de naam dan zul je zelf deze blokhaken moeten intypen.
 
 -   Wanneer je een van de berekeningsopties voor het samenvatten gebruikt is het ook aan te bevelen om een nieuwe naam voor de veldnaam in te typen, anders genereert Access een naam voor het resultaat in de gegevensweergave. Deze nieuwe naam moet ook eindigen met een dubbele punt.
@@ -415,7 +413,7 @@ Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de t
 
 7.  Schakel over naar de [Ontwerpweergave]{.uicontrol}.
 
-::: callout-note
+::: {.callout-note title="Eigenschappen van objecten"}
 Alle objecten in Access hebben eigenschappen. Deze eigenschappen bepalen onder andere het uiterlijk van het object. De instellingen van de eigenschappen en het wijzigen ervan gaat via het [Eigenschappenvenster]{.uicontrol}. Het in- en uitschakelen van de zichtbaarheid van het eigenschappenvenster gaat via [tab Ontwerp \> Eigenschappenvenster (groep Weergeven/verbergen)]{.uicontrol}. Nog sneller is het gebruik van de sneltoets [F4]{.uicontrol}.
 
 Om geldbedragen van een valutasymbool te voorzien moet de eigenschap [Notatie]{.uicontrol} van het veld [Regelbedrag]{.varname} gewijzigd worden.
@@ -593,7 +591,7 @@ Alle benodigde gegevens staan in de tabel [Bonbons]{.varname}. Hiervan hebben we
 
 ![Ontwerp bijwerkquery.](images/queries/q-increase-costs-design2.png){#fig-q-increase-costs-design2}
 
-::: callout-note
+::: {.callout-note title="Veldnamen in expressies"}
 Wanneer de waarde uit een veld gebruikt moet worden, dan moet de veldnaam tussen blokhaken `[ ... ]` gezet worden.
 :::
 
@@ -657,8 +655,8 @@ Alle benodigde gegevens staan in de tabel [Klanten]{.varname}. Het selecteren op
 
 15. Klik op [Ja]{.uicontrol}.
 
-::: callout-note
-wijzigingen bestaan er uit dat het type query van een selectiequery in een tabelmaakquery veranderd is. Dit is ook te zien in het navigatievenster onder [Query's]{.uicontrol}.
+::: {.callout-note title="Wijziging type query"}
+De wijzigingen bestaan er uit dat het type query van een selectiequery in een tabelmaakquery veranderd is. Dit is ook te zien in het navigatievenster onder [Query's]{.uicontrol}.
 
 Het icoon ![](images/queries/q-maketable-icon.png) voor de querynaam geeft aan dat het hier om een actiequery gaat.
 :::
@@ -974,8 +972,8 @@ Door een daling van de chocoladeprijs op de wereldmarkt kunnen de prijzen van al
 2.  Ontwerp een bijwerkquery om de prijsverlaging door te voeren. Sla de query op onder de naam [quer026]{.varname} en voer deze uit..
 3.  Herstel de originele situatie door de backup van de database terug te plaatsen.
 
-::: callout-warning
-1.  Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
+::: {.callout-important title="Maak een backup voordat je een bijwerkquery uitvoert"}
+1.  Het is belangrijk om een bacup te maken voordat je een bijwerkquery uitvoert omdat je de aangebrachte wijzigingen niet terug kunt draaien.
 
 2.  Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 15% verlaagd worden.
 :::
@@ -1000,7 +998,7 @@ Door een stijging van de chocoladeprijs op de wereldmarkt moeten de prijzen van 
 2.  Ontwerp een bijwerkquery om de prijsverhoging door te voeren. Sla de query op onder de naam [quer028]{.varname} en voer deze uit.
 3.  Herstel de originele situatie.
 
-::: callout-warning
+::: {.callout-important title="Maak een backup voordat je een bijwerkquery uitvoert"}
 1.  Het maken van een backup is belangrijk omdat je de uitvoering van de query niet terug kunt draaien.
 
 2.  Wees er op bedacht dat wanneer je meerdere keren achter elkaar deze query uitvoert, de prijzen steeds weer met 10% verhoogd worden.

@@ -45,6 +45,9 @@ language:
   nl:
     crossref-prp-title: "Taak"
 
+filters:
+  - textbook
+
 format:
   html:
     include-after-body: include/webex-nl.js
@@ -58,7 +61,6 @@ format:
     fig-align: center
     code-fold: false
     link-external-newwindow: true
-    callout-appearance: simple
     author-meta: "Ben Welman"
     description-meta: "Met dit taak georienteerd studieboek leer je werken met Microsoft Access."
     # keywords: ["Access", "databases", "tabellen", "queries", "formulieren", "rapporten", "macros"]

@@ -1,8 +1,6 @@
 # Formulieren {#sec-forms}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Soorten formulieren: hoofdformulier, subformulier en gekoppeld formulier.
 -   Het maken van formulieren: gegenereerd, handmatig
 -   Berekeningen in een formulier.
@@ -99,7 +97,7 @@ In deze taak wordt een formulier gemaakt waarmee een magazijnmedewerker de magaz
 
 ![Eindresultaat formulier inventaris.](images/forms/f-stock-in-trade-result.png){#fig-f-stock-in-trade-result}
 
-::: {#prp-forms-autoform}
+::::::: {#prp-forms-autoform}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -108,7 +106,7 @@ In deze taak wordt een formulier gemaakt waarmee een magazijnmedewerker de magaz
 
 3.  Klik [tab Maken \> Formulier (groep Formulieren)]{.uicontrol}. Het formulier wordt aangemaakt en geopend in de [Indelingsweergave]{.uicontrol}.
 
-::: callout-note
+::: {.callout-note title="Subgegevensblad"}
 Als in Access een tabel wordt gevonden met een een-op-veel-relatie met de tabel of query waarmee je het formulier hebt gemaakt, dan wordt automatisch een subgegevensblad aan het formulier toegevoegd op basis van de gerelateerde tabel of query. Er worden geen gegevensbladen aan het formulier toegevoegd als er meer tabellen zijn die een een-op-veel-relatie hebben met de tabel op basis waarvan je het formulier hebt gemaakt.
 
 In dit geval is het formulier gebaseerd op de tabel [Dozen]{.varname} en is er een een-op-veel relatie tussen de tabel [Dozen]{.varname} en de tabel [Orderdetails]{.varname}. Het subgegevensblad geeft alle records uit [Orderdetails]{.varname} weer die betrekking hebben op het huidige record van tabel [Dozen]{.varname}.
@@ -122,7 +120,7 @@ Als je het subgegevensblad niet in het formulier wilt hebben, kun je dit in de [
 
 ![Ontwerpweergave formulier inventaris.](images/forms/f-stock-in-trade-design.png){#fig-f-stock-in-trade-design}
 
-::: callout-note
+::: {.callout-note title="Gestapelde indeling"}
 Bij een formulier die op deze manier gemaakt wordt heeft elk veld twee besturingselementen: een [Tekstvak]{.uicontrol} en een daaraan gekoppeld [Bijschrift]{.uicontrol}.
 
 ![Tekstvak met gekoppeld vak bijschrift.](images/forms/textbox-label.png){#fig-textbox-label}
@@ -132,7 +130,7 @@ Alle bijschriften staan verticaal gerangschikt en alle tekstvakken ook. Dit heet
 
 6.  Selecteer de tekst `Dozen` in de [Formulierkoptekst]{.uicontrol} en wijzig deze in `Inventaris`. Wijzig dan de eigenschappen [Tekengewicht]{.uicontrol} in `vet` en [Tekengrootte]{.uicontrol} in `20`.
 
-::: callout-note
+::: {.callout-note title="Eigenschappenvenster"}
 Het [Eigenschappenvenster]{.uicontrol} staat meestal aan de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden via sneltoets [F4]{.uicontrol}. En om hierin sneller een bepaalde eigenschap te vinden kun je deze alfabetisch sorteren met de knop ![](images/common/button-sort-ascending.png) rechtsboven in het venster.
 :::
 
@@ -140,7 +138,7 @@ Het [Eigenschappenvenster]{.uicontrol} staat meestal aan de rechterkant van het 
 
 ![Instelling eigenschap breedte.](images/forms/property-textboxes-width.png){#fig-property-textboxes-width}
 
-::: callout-note
+::: {.callout-note title="Eigenschap Vergrendeld"}
 De eigenschap [Vergrendeld]{.uicontrol} kan gebruikt worden om de waarde in een veld te beveiligen zodat de gebruiker deze niet kan wijzigen.
 :::
 
@@ -158,7 +156,7 @@ De eigenschap [Vergrendeld]{.uicontrol} kan gebruikt worden om de waarde in een 
 11. Sluit het formulier en laat de wijzigingen bewaren.
 
 12. Noem het formulier in [Inventaris]{.varname} en klik op [OK]{.uicontrol}.
-:::
+:::::::
 
 ## Hoofd- en subformulier {#sec-forms-customers-orders}
 
@@ -170,7 +168,7 @@ Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zij
 
 Om het subtotaal te berekenen heb je een query nodig die al deze gegevens als bron kan aanbieden aan het te maken subformulier. Een dergelijke query is reeds beschikbaar en heet [Orders met subtotalen]{.varname}. Deze query bevat ook het veld [Klantcode]{.varname}, zodat de koppeling tussen hoofd- en subformulier gemaakt kan worden.
 
-::: {#prp-forms-mainsub}
+:::: {#prp-forms-mainsub}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -204,10 +202,10 @@ Je kunt nu namen (titels) aan de formulieren geven. Er zijn al default titels be
 
 ![Formulier klanten en orders.](images/forms/f-customers-orders.png){#fig-f-customers-orders-2}
 
-::: callout-note
+::: {.callout-note title="Formulier aanpassen"}
 Desgewenst kan zowel het ontwerp van het hoofdformulier als van het subformulier gewijzigd worden.
 :::
-:::
+::::
 
 ## Invoerformulier Klanten {#sec-forms-customers-data-entry}
 
@@ -215,7 +213,7 @@ In deze taak wordt een formulier gemaakt waarmee voor een nieuwe klant de gegeve
 
 ![Invoerformulier klanten.](images/forms/f-customer-entry.png){#fig-f-customer-entry}
 
-::: {#prp-forms-customers}
+::::: {#prp-forms-customers}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -224,7 +222,7 @@ In deze taak wordt een formulier gemaakt waarmee voor een nieuwe klant de gegeve
 
 3.  Klik [tab Maken \> Formulier (groep Formulieren)]{.uicontrol}. Het formulier wordt aangemaakt en geopend in de [Indelingsweergave]{.uicontrol}.
 
-::: callout-note
+::: {.callout-note title="Subgegevensblad"}
 Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel een een-op-veel relatie heeft met de tabel [Orders]{.varname}, wordt automatisch een subgegevensblad gebaseerd op de tabel [Orders]{.varname}, aan het formulier toegevoegd. Het subgegevensblad geeft alle records uit [Orders]{.varname} weer die betrekking hebben op het huidige record van tabel [Klanten]{.varname}.
 :::
 
@@ -261,7 +259,7 @@ Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel e
 15. Schakel over naar de [Formulierweergave]{.uicontrol} en test de werking van het formulier.
 
 16. Sluit het formulier en bewaar de wijzigingen.
-:::
+:::::
 
 ## Invoerformulier Bonbons {#sec-forms-pralines-data-entry}
 
@@ -363,16 +361,12 @@ Echter [Dozen subformulier]{.varname} is gebaseerd op de tabel [Doosdetails]{.va
 
 ![Keuzelijst op subformulier dozen.](images/forms/f-boxes-subform.png){#fig-f-boxes-subform}
 
-9.  Selecteer de [Keuzelijst met invoervak]{.uicontrol} en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap [Alleen lijst]{.uicontrol} de waarde `Ja` heeft. Zo niet, dan de waarde wijzigen.
-
-::: callout-note
-Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.
-:::
+9.  Selecteer de [Keuzelijst met invoervak]{.uicontrol} en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap [Alleen lijst]{.uicontrol} de waarde `Ja` heeft. Zo niet, dan de waarde wijzigen.\
+    Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.
 
 10. Sluit het formulier [Dozen subformulier]{.varname} en bewaar de wijzigingen.
 
 11. Test de nieuwe keuzelijst uit.
-
 :::
 
 ## Invoerformulier Orders {#sec-forms-orders-data-entry}
@@ -387,7 +381,7 @@ De gegevens op het subformulier zijn afkomstig uit de tabel [Orderdetails]{.varn
 
 Maak daarna een formulier met subformulier en baseer het hoofdformulier op de query [Orders-Klanten]{.varname} en het subformulier op de query [Orderdetails-Dozen]{.varname}. Voeg de gewenste velden voor zowel het hoofdformulier als het subformulier toe.
 
-::: {#prp-forms-orders}
+:::: {#prp-forms-orders}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 **Query Orders-Klanten**
@@ -398,7 +392,7 @@ Maak daarna een formulier met subformulier en baseer het hoofdformulier op de qu
 
 3.  Voeg van beide tabellen alle velden toe.
 
-::: callout-note
+::: callout-tip
 Met de keuze `*` kun je alle velden van een tabel toevoegen.
 :::
 
@@ -435,7 +429,7 @@ Met de keuze `*` kun je alle velden van een tabel toevoegen.
 15. Ken de volgende namen toe: [Ordergegevens hoofdformulier]{.varname} en [Ordergegevens subformulier]{.varname} en klik op [Voltooien]{.uicontrol}. Het formulier wordt geopend.
 
 16. Pas desgewenst de lay-out van beide formulieren aan zodat het lijkt op het gewenste formulier voor ordergegevens.
-:::
+::::
 
 ## Ordertotaal {#sec-forms-orders-total}
 
@@ -498,7 +492,7 @@ Er moet dus een query gemaakt worden die de benodigde gegevens ([Doosnaam]{.varn
 
 De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en daarna het formulier met de grafiek.
 
-::: {#prp-forms-sales-boxes}
+::::: {#prp-forms-sales-boxes}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 **Query maken**
@@ -517,7 +511,7 @@ De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en d
 
 6.  Sluit de query en bewaar deze onder de naam [Omzet per doos per maand in 2010]{.varname}.
 
-::: callout-note
+::: {.callout-note title="Wijzigingen in query"}
 Wanneer je na het sluiten de query weer opent in de [Ontwerpweergave]{.uicontrol}, dan heeft Access een paar wijzigingen aangebracht in de kolom [Omzet]{.varname}.
 
 -   Waarde in rij [Veld]{.uicontrol} is nu: `Omzet: Som([Hoeveelheid]*[Doosprijs])`
@@ -560,15 +554,14 @@ De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten aanpassen.
 
 15. Klik op [Volgende]{.uicontrol}. Geef de grafiek de naam [Omzet per doos per maand in 2010]{.varname} en kies er voor om de legenda niet weer te geven en klik daarna op [Voltooien]{.uicontrol}.
 
-::: callout-warning
+::: {.callout-warning title="Geen echte gegevens in grafiek"}
 In de Ontwerpweergave wordt een voorbeeldgrafiek getoond en niet een grafiek met de echte gegevens.
 :::
 
 16. Sluit het formulier en bewaar de wijzigingen.
 
 17. Open het formulier in de [Formulierweergave]{.uicontrol}, blader door wat dozen en sluit daarna het formulier.
-
-:::
+:::::
 
 ## Gekoppelde formulieren {#sec-forms-customerorders}
 
@@ -593,9 +586,9 @@ Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zij
 
 4.  Voeg de volgende velden toe:
 
-    - Uit de tabel [Klanten]{.varname}: [Klantcode]{.varname}, [Achternaam]{.varname}, [Voornaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname}, [Plaats]{.varname}.
-    - Uit de tabel [Orders]{.varname}: [Ordercode]{.varname}, [Orderdatum]{.varname}.
-    - Uit de tabel [Orderdetails]{.varname}: [Dooscode]{.varname}, [Hoeveelheid]{.varname}.
+    -   Uit de tabel [Klanten]{.varname}: [Klantcode]{.varname}, [Achternaam]{.varname}, [Voornaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname}, [Plaats]{.varname}.
+    -   Uit de tabel [Orders]{.varname}: [Ordercode]{.varname}, [Orderdatum]{.varname}.
+    -   Uit de tabel [Orderdetails]{.varname}: [Dooscode]{.varname}, [Hoeveelheid]{.varname}.
 
 5.  Klik op [Volgende]{.uicontrol}. Kies voor weergave volgens [Klanten]{.varname} en voor [Gekoppelde formulieren]{.uicontrol}.
 
@@ -627,7 +620,7 @@ Het hoofdformulier [OrdersKlanten]{.varname} wordt nu geopend. Het ontwerp moet 
 12. Sluit het formulier en bewaar de wijzigingen.
 :::
 
-::: callout-note
+::: {.callout-tip title="Documenten in tabbladen of overlappende vensters"}
 Bij een standaardinstallatie van Access wordt elk document (tabel, query, formulier,rapport) in een afzonderlijk tabblad geopend. Bij gekoppelde formulieren is dat niet altijd handig. Bij het klikken op de opdrachtknop wordt het gekoppelde subformulier in een nieuw tabblad geopend. Je ziet dan de informatie in het hoofdformulier en het subformulier nooit tegelijk.
 
 Wanneer je dat wel wilt moet je de instellingen voor de database zo wijzigen dat documenten in overlappende vensters verschijnen in plaats van in tabbladen. Dat kan als volgt.

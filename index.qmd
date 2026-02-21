@@ -6,9 +6,7 @@ Dit is de gratis versie van het studieboek **Leer Access**. Dit taakgerichte boe
 Er zijn interactieve onderdelen in het boek om je te helpen de inhoud beter te begrijpen. Deze interactieve inhoud werkt alleen als je dit materiaal opent via een webbrowser die javascript ondersteunt.
 :::
 
-::: callout-important
-## Databestanden
-
+::: {.callout-important title="Databestanden"}
 Bij dit studieboek horen databestanden. Deze heb je nodig om de oefeningen uit te kunnen voeren. Je kunt ze in één zipbestand downloaden: [Download databestanden](https://leeraccess.netlify.app/bestanden-leeraccess.zip).
 :::
 
@@ -35,7 +33,7 @@ Ben Welman
 Uitgebrachte studieboeken:
 
 | Nederlandstalig | Engelstalig |
-|----|----|
+|------------------------------------|------------------------------------|
 | [Leer Excel](https://leerexcel.netlify.app/) | [Learn Excel](https://learnexcel.netlify.app/) |
 | [Leer Access](https://leeraccess.netlify.app/) | [Learn Access](https://learnaccess.netlify.app/) |
 | [Data Analyse met Excel](https://excelanalyse.netlify.app/) |  |

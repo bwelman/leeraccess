@@ -1,8 +1,6 @@
 # Hulpmiddelen {#sec-tools}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 + Tabellen kunnen analyseren en inconsistenties opsporen.
 + Het kunnen defragmenteren en repareren van databases.
 :::
@@ -52,7 +50,7 @@ In @fig-tools-table-contacts is een voorbeeld van een tabel [Contacts]{.varname}
 
 ![Wizard tabelanalyse](images/tools/table-analyzer-wizard.png){#fig-table-analyzer-wizard}
 
-::: {.callout-note}
+::: {.callout-note title="Nieuwe tabellen"}
 In deze stap kun je nieuwe tabellen maken en velden daaraan toevoegen.
 :::
 
@@ -62,7 +60,7 @@ In deze stap kun je nieuwe tabellen maken en velden daaraan toevoegen.
 
 ![Nieuw aangemaakte tabel contactpersoon](images/tools/table-generated.png){#fig-table-generated}
 
-::: {.callout-note}
+::: {.callout-note title="Relaties"}
 + Er is tevens een relatie tussen de twee tabellen aangemaakt.
 
 + De plaats en de afmetingen van de getoonde tabellen kunnen gewijzigd worden door de tabel zelf of de randen te verslepen.
@@ -76,7 +74,7 @@ In deze stap kun je nieuwe tabellen maken en velden daaraan toevoegen.
 
 12. Laat geen query maken en klik op [Voltooien]{.uicontrol}. Er zijn nu drie tabellen: [Contacts]{.varname} (oorspronkelijke tabel), [Contactpersons]{.varname} (nieuwe tabel), [Tabel1]{.varname} (nieuwe tabel)
 
-::: {.callout-warning}
+::: {.callout-warning title="Mogelijke waarschuwing"}
 Er kan een waarschuwingsvenster verschijnen met de mededeling dat de opdracht of actie [OnderElkaar]{.uicontrol} niet beschikbaar is. Klik in dat geval op [OK]{.uicontrol}.
 :::
 

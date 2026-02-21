@@ -1,8 +1,6 @@
 # Beginnen met Access {#sec-intro}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Wat databases zijn en hoe deze zijn opgebouwd.
 -   Beknopte kennismaking met de componenten (tabellen, query's, formulieren, rapporten, macro's, modules).
 -   Het opstarten en afsluiten van Access.
@@ -88,9 +86,7 @@ Via rapporten kun je gegevens met allerlei opmaken en stijlen afdrukken: gegeven
 
 ![Voorbeeld van een deel van een rapport.](images/intro/example-report.png){#fig-example-report}
 
-::: callout-note
-**Besturingselementen**
-
+::: {.callout-note title="Besturingselementen"}
 De elementen van een formulier of rapport die ervoor zorgen dat gegevens worden weergegeven of afgedrukt, heten besturingselementen. Voorbeelden van besturingselementen zijn knoppen, keuzelijsten en keuzevakjes.
 
 Met besturingselementen kun je onder andere het volgende weergeven: gegevens in een veld, de resultaten van een berekening, woorden voor een titel of bericht, een grafiek of een figuur of een ander object, zelfs een ander formulier of rapport.
@@ -115,7 +111,7 @@ Hierna verschijnt het opstartscherm van Access. In het linkerdeel staan de laats
 
 2.  Sluit Access via de sluitknop van het programmavenster. Dit is een knop met een [X]{.uicontrol} in de rechterbovenhoek van het venster.
 
-::: {.callout-note}
+::: {.callout-note title="Database opslaan"}
 In tegenstelling tot de meeste andere programma's hoef je in Access een database niet op te slaan. Alle gemaakte wijzigingen worden automatisch bewaard.
 :::
 :::
@@ -133,7 +129,7 @@ Veel gebruikte methodes om een reeds bestaande Access database te openen zijn:
 
 Open via een van de hiervoor genoemde methodes de database.
 
-::: {.callout-note}
+::: {.callout-note title="Database afsluiten"}
 Om een database af te sluiten en Access open te houden, kies je [Bestand \> Sluiten]{.uicontrol}.
 :::
 :::
@@ -162,7 +158,7 @@ Lint
 
 :   Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals Start, Maken, .... Elk tabblad heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde contextuele tabbladen. Een voorbeeld hiervan is het tabblad Tabel, welke alleen verschijnt wanneer een tabel geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
 
-::: callout-note
+::: {.callout-note title="Lint minimaliseren"}
 Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met de toetscombinatie [Ctrl + F1]{.uicontrol}. Je ziet dan alleen de tabs. Opnieuw indrukken van deze toetscombinatie brengt het volledige lint weer terug.
 :::
 
@@ -222,7 +218,7 @@ Een backup is in feite niets anders dan een kopie van een database die je op een
 
 Kies [Bestand \> Opslaan als]{.uicontrol}. Selecteer in het venster [Back-up van database]{.uicontrol} en klik [Opslaan als]{.uicontrol}. Je kunt daarna de opslagplaats en naam specificeren. Standaard is de voorgestelde naam de naam van het originele bestand, aangevuld met de actuele datum.
 
-::: callout-note
+::: {.callout-note title="Backup naam"}
 Wanneer je gegevens of objecten terugzet vanuit het backup bestand, wil je weten van welke database de backup gemaakt is, alsmede wanneer deze gemaakt is. Het is daarom aan te bevelen om de voorgestelde naam te gebruiken.
 :::
 
@@ -234,7 +230,7 @@ ACCDB
 
 :   Dit is het standaardformaat voor bestanden gemaakt met Access 2007 en later.
 
-::: callout-warning
+::: {.callout-warning title="Oude bestandsformaten"}
 Omdat de bestandsformaten gelijk zijn kun je bijvoorbeeld in Access 2007 een database openen die met Access 2016 gemaakt is. Echter nieuwe functies die in de oudere versies niet beschikbaar zijn zullen niet werken. Hierdoor kunnen problemen optreden.
 :::
 

@@ -1,8 +1,6 @@
 # Tabellen {#sec-tables}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Inrichting van tabellen en relaties tussen tabellen.
 -   De verschillende manieren om tabellen te maken.
 -   Eigenschappen van velden.
@@ -57,7 +55,7 @@ Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegeven
 
 : Gegevenstypes van Access {#tbl-datatypes-access}
 
-::: callout-note
+::: {.callout-note title="Wizard opzoeken als gegevenstype"}
 In Access kun je het gegevenstype van een veld ook zetten op [Wizard Opzoeken...]{.uicontrol}. Deze wizard helpt je om een opzoekveld te maken. Een opzoekveld toont of een lijst met waarden afkomstig uit een tabel of een query, of een lijst met waarden die je zelf invoert.
 :::
 
@@ -85,7 +83,7 @@ Vereist
 
 :   Kan bij de meeste gegevenstypes gebruikt worden. De mogelijke waarden zijn `Nee` (standaard) en `Ja`.
 
-::: callout-note
+::: {.callout-note title="Validatie van de onvoer"}
 Een speciale rol vervullen de gegevenstypes `Invoermasker`, `Validatieregel` en `Validatietekst`. Deze kunnen gebruikt worden bij de validatie van gegevens waarmee je kunt regelen dat de invoer van gegevens aan bepaalde voorwaarden voldoet.
 :::
 
@@ -114,7 +112,7 @@ Het invoermasker bepaalt ook het aantal tekens dat ingevoerd kan worden. Invoerm
 -   Het tweede onderdeel is optioneel en geeft aan of ook de maskertekens moeten worden opgeslagen in het veld. Bij de waarde 0 worden de maskertekens samen met de gegevens opgeslagen. Bij de waarde 1 worden de tekens wel weergegeven maar niet opgeslagen.
 -   Het derde onderdeel van het invoermasker is ook optioneel en bevat één teken of spatie dat als tijdelijke plaatsaanduiding wordt gebruikt. Standaard gebruikt Access het onderstrepingsteken (\_). Alleen wanneer je een ander teken wilt gebruiken moet je dit teken in het derde gedeelte van het masker opnemen.
 
-::: callout-note
+::: {.callout-note title="Besparen opslagruimte"}
 Je kunt opslagruimte in de database besparen door het tweede onderdeel in te stellen op 1.
 :::
 
@@ -305,7 +303,7 @@ Doel: Maak een keuzelijst bij een veld zodat de in te voeren waarden uit een lij
 
 Wanneer in een veld alleen maar een beperkt aantal vooraf gedefinieerde waarden kunnen worden ingevoerd, dan kan het gebruik van een keuzelijst erg handig zijn. Zo heeft de tabel [Klanten]{.varname} een veld [Regio]{.varname} waarin alleen de waarden `Noord` en `Zuid` zijn toegestaan. In de volgende stappen wordt het gegevenstype voor dit veld gewijzigd in een keuzelijst.
 
-::: callout-warning
+::: {.callout-important title="Keuzelijst en formulieren"}
 De keuzelijst werkt helaas niet automatisch bij de formulieren die gebaseerd zijn op deze tabel zoals het formulier [Inschrijving]{.varname}. Om de keuzelijst wel te laten werken moet in het ontwerp van het formulier [Inschrijving]{.varname} het veld [Regio]{.varname} eerst verwijderd en daarna weer toegevoegd worden. Dat wordt in deze taak niet uitgevoerd.
 :::
 
@@ -395,8 +393,7 @@ Referentiële integriteit is een systeem van regels waarmee er voor gezorgd word
 
 De referentiële integriteit kun je instellen door in het dialoogvenster ***Relaties bewerken*** het vakje [Referentiële integriteit afdwingen]{.uicontrol} in te schakelen.
 
-::: callout-important
-**Consequenties referentiële integriteit**
+::: {.callout-important title="Consequenties referentiële integriteit"}
 
 -   Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.
 
@@ -416,7 +413,7 @@ Je kunt referentiële integriteit bij een relatie tussen twee tabellen instellen
 -   De gekoppelde velden zijn van hetzelfde gegevenstype en numerieke velden moeten dezelfde veldlengte hebben.
 -   Bestaande gegevens in beide tabellen overtreden niet de regels voor referentiële integriteit.
 
-::: callout-warning
+::: {.callout-important title="AutoNummering en veldtype"}
 AutoNummering velden kunnen gekoppeld worden aan velden van het type `Numeriek` mits hiervan de eigenschap [Veldlengte]{.uicontrol} de waarde `Lange integer` heeft.
 :::
 

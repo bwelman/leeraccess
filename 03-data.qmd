@@ -1,8 +1,6 @@
 # Gegevens toevoegen/wijzigen {#sec-data}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Het gebruik van een formulier voor gegevensinvoer.
 -   Het bewerken, toevoegen en verwijderen van records in een tabel.
 -   Het gebruik van een hoofdformulier met subformulier.
@@ -49,7 +47,7 @@ Met het formulier [Inschrijving]{.varname} kunnen alleen nieuwe records worden t
 
 2.  Open formulier [Inschrijving]{.varname}.
 
-::: info
+::: {.callout-note title="Werkwijze formulier Inschrijving"}
 Het formulier [Inschrijving]{.varname} bevat blanco vakken (velden) waar je de gegevens typt. Het invoegsymbool geeft aan waar de tekst verschijnt die je intypt. Je kunt het invoegsymbool verplaatsen door op een ander veld te klikken of door herhaaldelijk op de TAB te drukken.
 :::
 
@@ -57,7 +55,7 @@ Het formulier [Inschrijving]{.varname} bevat blanco vakken (velden) waar je de g
 
 ![Gegevensinvoer via formulier inschrijving](images/data/form-registration.png){#fig-form-registration}
 
-::: info
+::: {.callout-note title="Bewerkingsmodus"}
 Er is weer een potlood te zien wat er op duidt dat het formulier in de bewerkingsmodus is en dat de gegevens nog niet zijn opgeslagen.
 
 Het record wordt automatisch opgeslagen wanneer je het formulier sluit of naar een ander record gaat.
@@ -112,7 +110,7 @@ Subformulier ([Dozen subformulier]{.varname})
 
 :   Dit formulier bevat gegevens over de bonbons in de doos, zoals [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens worden opgeslagen in de tabel [Doosdetails]{.varname}.
 
-::: callout-note
+::: {.callout-note title="Berekening van Dooskosten"}
 De inhoud van het veld [Dooskosten]{.varname} wordt berekend via de som van `Bonbonkosten * Hoeveelheid` voor alle bonbons in de doos. Omdat je deze waarde kunt berekenen, wordt deze niet in een tabel opgeslagen.
 :::
 
@@ -178,7 +176,7 @@ Een memo van de afdeling Marketing van Snoopy Bonbons meldt dat de prijs van de 
 
     `Doosprijs te laag. Neem contact op met Marketing voor prijsinformatie, en geef een prijs op die minimaal gelijk is aan de dooskosten maal 2.`
 
-::: callout-note
+::: {.callout-note title="Waarom het validatiebericht verschijnt"}
 De reden waarom dit bericht verschijnt is dat er een validatieregel aan het veld doosprijs is gekoppeld.
 :::
 

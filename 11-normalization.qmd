@@ -1,8 +1,6 @@
 # Normaliseren {#sec-normalization}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 Ontwerpen van een relationele database via een normalisatieproces tot en met de derde normaalvorm.
 :::
 
@@ -10,7 +8,7 @@ In een database worden gegevens over een bepaald onderwerp bijgehouden. Dit zou 
 
 In een relationele database worden de gegevens in afzonderlijke tabellen ondergebracht. Door middel van **sleutelvelden** worden de tabellen met elkaar verbonden. Hierdoor kunnen gerelateerde gegevens uit verschillende tabellen opgevraagd worden. Hierbij is het van belang dat de gegevens goed over logisch samenhangende tabellen verdeeld zijn en dat de gegevens maar op één plaats worden opgeslagen, dus in één veld in één tabel. Ook mogen gegevens niet tegenstrijdig (**inconsistent**) zijn, zoals bijvoorbeeld de vermelding van een niet bestaand klantnummer in een tabel facturen.
 
-::: callout-note
+::: {.callout-note title="Redundantie"}
 Als hetzelfde gegeven vaker dan 1 keer worden opgeslagen, dan heet dat ook wel **redundantie**.
 :::
 
@@ -178,7 +176,7 @@ De eerste stap is het bepalen van de benodigde gegevens, uitgaande van de inform
 
 Dit zijn gegevens die steeds hetzelfde zijn. Op de factuur zijn dit de gegevens van de groothandel zelf (naam en adresgegevens). Deze gegevens kunnen in de loop van de tijd wel veranderen, maar gedurende een bepaalde periode mogen ze als constant beschouwd worden. Het is zelfs mogelijk deze gegevens vooraf op de factuur te drukken.
 
-::: callout-note
+::: {.callout-note title="Conclusie"}
 **Constante gegevens worden niet opgenomen naar de database.**
 :::
 
@@ -192,7 +190,7 @@ Procesgegevens zijn gegevens die uit andere gegevens kunnen worden afgeleid, bij
 -   `BTW`, wordt berekend via 21% x `Tot. excl. BTW`
 -   `Tot. incl. BTW`, berekend uit `Tot. excl. BTW` - `BTW`
 
-::: callout-note
+::: {.callout-note title="Conclusie"}
 **Procesgegevens worden niet opgenomen in de database.**
 :::
 
@@ -200,7 +198,7 @@ Procesgegevens zijn gegevens die uit andere gegevens kunnen worden afgeleid, bij
 
 Elementaire gegevens zijn alle essentiële gegevens die niet opgesplitst kunnen worden. Op de factuur komen de volgende elementaire gegevens voor: `datum`, `Klantnaam`, `Adres`, `Postcode`, `Plaats`, `Telefoon`, `Artikelnr`, `Artikelomschrijving`, `Aantal`, `Prijs` en `Korting`.
 
-::: callout-note
+::: {.callout-note title="Conclusie"}
 **Elementaire gegevens worden in de database opgenomen.**
 :::
 

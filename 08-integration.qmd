@@ -1,8 +1,6 @@
 # Integratie met Office {#sec-integration}
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 + Uitwisselen van gegevens van Access met Excel en Word.
 + Een standaardbrieven in Word maken met een adressenbestand in Access.
 + Een tabel exporteren naar een nieuw RTF document.
@@ -58,8 +56,8 @@ In deze taak wordt aan klanten een standaardbrief gestuurd met daarin de aankond
 
 ![Voltooing van de samenvoeging.](images/integration/mailmerge-wizard-finishing.png){#fig-mailmerge-wizard-finishing}
 
-::: {.callout-note}
-Je hebt nu twee keuzenogelijkheden:
+::: {.callout-note title="Keuzemogelijkheden"}
+Let op, je hebt nu twee keuzemogelijkheden:
 
 + Met [Afdrukken]{.uicontrol} stuur je de brieven naar de printer.
 + Met [Afzonderlijke brieven bewerken]{.uicontrol} wordt er één Word document gemaakt.

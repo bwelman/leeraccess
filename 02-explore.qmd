@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**DOELSTELLINGEN**
-
+::: callout-intro
 -   Kennis maken met de voorbeelddatabase `{{< var database >}}`.
 -   Wat te doen bij beveiligingswaarschuwingen.
 -   De vensters en navigatiemogelijkheden binnen Access.
@@ -32,7 +30,7 @@ De voorbeelddatabase `{{< var database >}}` bevat gegevens over SNOOPY, een bedr
 
 De klantgegevens staan in de tabel [Klanten]{.varname}. De orders van de klanten worden opgeslagen in de tabellen [Orders]{.varname} en [Orderdetails]{.varname}. De gegevens van een doos bonbons, bijvoorbeeld naam en prijs, staan in de tabel [Dozen]{.varname}. In de tabel [Doosdetails]{.varname} staat welke bonbons en hoeveel daarvan in elke doos zitten. De tabel [Bonbons]{.varname} bevat gegevens over de naam van de bonbons, het chocoladetype, de vulling en bevat zelfs een plaatje.
 
-::: callout-note
+::: {.callout-note title="Primaire sleutel"}
 Iedere tabel in de database moet een veld of een combinatie van velden hebben waarmee je elke regel in de tabel uniek kunt identificeren. Dit is vaak een nummer, zoals artikelnummer, personeelsnummer. In de database terminologie wordt deze informatie de **primaire sleutel** van de tabel genoemd. De waarde van de primaire sleutel kan maar één keer voorkomen in de tabel. Dubbele waarden voor de primaire sleutel zijn dus verboden. De meeste tabellen hebben een primaire sleutel die uit één veld bestaat, maar soms is een combinatie van velden nodig om tot een unieke combinatie te komen. In de tabellen [Klanten]{.varname}, [Orders]{.varname}, [Dozen]{.varname} en [Bonbons]{.varname} bestaat de sleutel uit 1 veld. En in de tabellen [Orderdetails]{.varname} en [Doosdetails]{.varname} vormen twee velden samen de sleutel. Zie @fig-example-db-design.
 :::
 
@@ -62,10 +60,9 @@ Een order kan meerdere dozen bevatten, maar in een order kan elke dooscode slech
 
 > Ga na dat op de order met ordercode 3 twee verschillende dozen besteld zijn, want de tabel bevat twee regels met ordercode 3. In totaal zijn drie dozen besteld op deze order, twee dozen met de dooscode KERS en 1 doos met de dooscode NORT.
 
-
 De combinatie van [Ordercode]{.varname} en [Dooscode]{.varname} is steeds uniek. Daarom bestaat de sleutel in de tabel [Orderdetails]{.varname} uit de combinatie van deze twee velden.
 
-::: callout-note
+::: {.callout-note title="Totaal aantal bestelde dozen"}
 Het totale aantal bestelde dozen op alle orders is de som van alle getallen uit de kolom [Hoeveelheid]{.varname}. Dit aantal is in de tabel niet af te lezen. In een ander onderdeel in deze cursus wordt uitgelegd hoe je dit kunt laten berekenen.
 :::
 
@@ -125,7 +122,6 @@ In het voorbeeldscherm wordt de map `C:\temp` als vertrouwde locatie toegevoegd.
 
 ### Beveiliging voor alle macro's instellen {.unnumbered}
 
-
 Eventueel kun je de manier wijzigen waarop Access met alle macro's in alle databases omgaat. Voer deze actie als volgt uit.
 
 Kies [Bestand \> Opties \> Vertrouwenscentrum \> Instellingen voor het Vertrouwenscentrum \> Macro-instellingen]{.uicontrol}.
@@ -138,7 +134,7 @@ Het wordt niet aanbevolen om alle macro's in te schakelen, je bent dan de contro
 
 Voor deze verkenning moet je het bestand `{{< var database >}}` geopend hebben.
 
-::: callout-note
+::: {.callout-important title="Beveiligingswaarschuwing"}
 Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen, zie hiervoor @sec-explore-security.
 :::
 
@@ -160,7 +156,7 @@ Door dubbelklikken op een object in het navigatievenster wordt het object geopen
 
 ![Documentvenster met de tabellen Klanten en Orders in tabbladen.](images/explore/document-tabs.png){#fig-document-tabs}
 
-::: callout-note
+::: {.callout-note title="Vensterindeling"}
 Je kunt de manier waarop de objecten getoond worden wijzigen via [Bestand \> Opties \> Huidige database]{.uicontrol}. In figuur @fig-document-window-options zie je de mogelijkheden voor de documentvensters.
 
 ![Opties voor documentvensters.](images/common/document-window-options.png){#fig-document-window-options}
@@ -184,7 +180,7 @@ Ontwerpweergave
 
 :   In deze weergave kun je het ontwerp van de tabel zien en deze aanpassen.
 
-::: {#prp-explore-tables}
+:::: {#prp-explore-tables}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -207,7 +203,7 @@ Ontwerpweergave
 
 6.  Open de tabel [Orders]{.varname} in de [Gegevensbladweergave]{.uicontrol}.
 
-::: {.callout-note}
+::: {.callout-note title="Tonen van de detailgegevens"}
 In de tabel [Orders]{.varname} staat voor de records een uitklapknopje [+]{.uicontrol}. Door hierop de klikken worden de detailgegevens van de order zichtbaar. Deze detailgegevens komen uit de tabel [Orderdetails]{.varname}. Dat bij een bepaalde order de bijbehorende orderdetails gevonden kunnen worden komt omdat in beide tabellen het veld [Ordercode]{.varname} voorkomt.
 :::
 
@@ -216,7 +212,7 @@ In de tabel [Orders]{.varname} staat voor de records een uitklapknopje [+]{.uico
 ![Orderdetails van order 3.](images/explore/table-orders-details3.png){#fig-table-orders-details3}
 
 8.  Sluit de tabel [Orders]{.varname}.
-:::
+::::
 
 ## Formulier verkennen {#sec-explore-forms}
 
@@ -236,7 +232,7 @@ Ontwerpweergave
 
 :   In deze weergave kun je het ontwerp van het formulier zien en deze aanpassen.
 
-::: {#prp-explore-forms}
+:::: {#prp-explore-forms}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -253,7 +249,7 @@ Ontwerpweergave
 
 ![Formulier bonbons in ontwerpweergave.](images/explore/form-pralines-design-view.png){#fig-form-pralines-design-view}
 
-::: {.callout-note}
+::: {.callout-note title="Formulier opmaken"}
 In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoegen zoals tekstvakken, labelvakken, keuzelijsten, aankruisvakjes, enz.
 :::
 
@@ -272,7 +268,7 @@ In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoe
     -   ![](images/common/button-record-new.png) - Nieuw (leeg) record
 
 6.  Sluit het formulier.
-:::
+::::
 
 ## Opdrachtknop gebruiken {#sec-explore-commandbutton}
 
@@ -328,14 +324,14 @@ Ontwerpweergave
 
 :   In deze weergave kun je het ontwerp van de query zien en deze aanpassen.
 
-::: {#prp-explore-queries}
+::::: {#prp-explore-queries}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
 
 2.  Open de query [Bonbons per doos]{.varname}.
 
-::: {.callout-note}
+::: {.callout-note title="Queryresultaten"}
 Access voert de query uit en produceert een gegevensblad met daarin de resultaten van de query, zie @fig-query-pralines-box-datasheet.
 
 De resultaten van deze query zijn uit meerdere tabellen afkomstig. Om te weten welke tabellen gebruikt worden moet de query in de ontwerpweergave gezet worden.
@@ -351,7 +347,7 @@ De resultaten van deze query zijn uit meerdere tabellen afkomstig. Om te weten w
 
 ![Query bonbons per doos in ontwerpweergave.](images/explore/query-pralines-box-design.png){#fig-query-pralines-box-design}
 
-::: {.callout-note}
+::: {.callout-note title="Queryontwerp"}
 In het bovenste deel van het venster zie je de tabellen die voor deze query gebruikt zijn. De lijn met pijltjes verbinden de veldnamen waarmee de tabellen aan elkaar gerelateerd zijn.
 
 In het onderste deel van het venster tref je in de eerste rij de namen van de gebruikte velden aan. In de derde kolom staat een expressie, een soort formule waarmee bewerkingen op de velden worden uitgevoerd. De hier geformuleerde expressie is `Som([Bonbons].[Bonbonkosten]*[Doosdetails].[Hoeveelheid])`. Tussen de blokhaken staan de namen van de tabellen en velden.
@@ -362,7 +358,7 @@ Om de expressie in zijn geheel te kunnen zien kun je de kolom breder maken door 
 4.  Zet de query in de Gegevensbladweergave.
 
 5.  Sluit de query.
-:::
+:::::
 
 ## Rapport verkennen {#sec-explore-reports}
 
@@ -382,7 +378,7 @@ Ontwerpweergave
 
 :   In deze weergave kun je het ontwerp van het rapport zien en deze aanpassen.
 
-::: {#prp-explore-reports}
+:::: {#prp-explore-reports}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -401,14 +397,14 @@ Ontwerpweergave
 
 ![Rapport bonbons per doos in ontwerpweergave](images/explore/report-pralines-box-design.png){#fig-report-pralines-box-design}
 
-::: {.callout-note}
+::: {.callout-note title="Rapport opmaken"}
 In de ontwerpweergave lijkt het rapport veel op een formulier en kun je het rapport opmaken en besturingselementen toevoegen zoals tekstvakken, labelvakken, keuzelijsten, aankruisvakjes, enz.
 :::
 
 5.  Zet het rapport weer in de Rapportweergave.
 
 6.  Sluit het rapport
-:::
+::::
 
 ## Sorteren {#sec-explore-sorting}
 
@@ -429,21 +425,15 @@ In de volgende oefening moet de tabel [Klanten]{.varname} gewijzigd worden zodat
 
 4.  Verplaats op dezelfde manier de kolommen [Achternaam]{.varname} en [Voornaam]{.varname} naar respectievelijk de 2e en 3e positie in de tabel.
 
-5.  Klik in de kolom [Plaats]{.varname} op het pijltje aan de rechterkant van de kolomkop en kies uit het snelmenu voor [Sorteren van A naar Z]{.uicontrol}.
-
-::: {.callout-note}
-Access reorganiseert de records in alfabetische volgorde op plaatsnaam en toont een klein naar boven wijzend pijltje (![](images/common/button-arrow-down-sortedup.png)) aan de rechterkant van de kolomkop om de sorteervolgorde aan te geven.
-:::
+5.  Klik in de kolom [Plaats]{.varname} op het pijltje aan de rechterkant van de kolomkop en kies uit het snelmenu voor [Sorteren van A naar Z]{.uicontrol}.\
+    Access reorganiseert de records in alfabetische volgorde op plaatsnaam en toont een klein naar boven wijzend pijltje (![](images/common/button-arrow-down-sortedup.png)) aan de rechterkant van de kolomkop om de sorteervolgorde aan te geven.
 
 6.  Hef de sortering op via [tab Start \> Sorteeracties verwijderen (groep Sorteren en filteren)]{.uicontrol}.
 
 7.  Om op meerdere velden te sorteren selecteer je de kolommen [Plaats]{.varname}, [Achternaam]{.varname} en [Voornaam]{.varname}.
 
-8.  Kies [tab Start \> Oplopend]{.uicontrol} ![](images/common/button-sort-ascending.png) [(groep Sorteren en filteren)]{.uicontrol}.
-
-::: {.callout-note}
-Access reorganiseert nu de records in oplopende alfabetische volgorde eerst op plaatsnaam, dan op achternaam en dan op voornaam. Aan de rechterkant van elk van deze drie kolomkoppen is nu het kleine naar boven wijzende pijltje te zien, zie @fig-table-customers-sorted.
-:::
+8.  Kies [tab Start \> Oplopend]{.uicontrol} ![](images/common/button-sort-ascending.png) [(groep Sorteren en filteren)]{.uicontrol}.\
+    Access reorganiseert nu de records in oplopende alfabetische volgorde eerst op plaatsnaam, dan op achternaam en dan op voornaam. Aan de rechterkant van elk van deze drie kolomkoppen is nu het kleine naar boven wijzende pijltje te zien, zie @fig-table-customers-sorted.
 
 9.  Sluit de tabel [Klanten]{.varname} en kies bij de vraag om de wijzigingen op te slaan voor [Nee]{.uicontrol}.
 :::
@@ -456,7 +446,7 @@ Filteren is een actie waarbij records in een tabel getoond worden die aan bepaal
 
 Informatiebehoefte: Toon alle bonbons met het chocoladetype Wit.
 
-::: {#prp-explore-filter-simpel}
+:::: {#prp-explore-filter-simpel}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Open de database.
@@ -467,13 +457,13 @@ Informatiebehoefte: Toon alle bonbons met het chocoladetype Wit.
 
 4.  Kies [tab Start \> knop Selectie (groep Sorteren en filteren) \> Is gelijk aan Wit]{.uicontrol}.
 
-::: {.callout-note}
+::: {.callout-note title="Resultaat van filteren"}
 Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is. Dat op de tabel een filtering is toegepast kun je zien:
 
 -   Aan de rechterkant van de kolomkop [Chocoladetype]{.varname} staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
 -   In de statusbalk zie je ![](images/explore/statusbar-filtered.png)
 :::
-:::
+::::
 
 ### Wijziging filter {#sec-explore-filter-modify}
 
@@ -481,7 +471,7 @@ Informatiebehoefte: Toon alle bonbons met het chocoladetype Melk.
 
 Hiervoor wordt het vorige filter gewijzigd.
 
-::: {#prp-explore-filter-modify}
+:::: {#prp-explore-filter-modify}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Klik op het filtersymbool aan de rechterkant in de kolomkop [Chocoladetype]{.varname}.
@@ -490,10 +480,10 @@ Hiervoor wordt het vorige filter gewijzigd.
 
 2.  Selecteer in het dialoogvenster type Melk en deselecteer type Wit. Klik dan op [OK]{.uicontrol}. Er worden nu 18 records getoond met chocoladetype Melk.
 
-::: {.callout-note}
+::: {.callout-note title="Verschillende filteropties"}
 De opties die in @fig-filter-chocolatetype getoond worden hangen af van het type veld. Bij een tekstveld is er een submenu [Tekstfilters]{.uicontrol} en bij een numeriek veld is er een submenu [Getalfilters]{.uicontrol}.
 :::
-:::
+::::
 
 ### Filter op 2 criteria {#sec-explore-filter-criteria2}
 
@@ -501,7 +491,7 @@ Informatiebehoefte: Toon alle bonbons met het chocoladetype Melk en vullingtype 
 
 Hiervoor wordt een tweede selectiecriterium toegevoegd.
 
-::: {#prp-explore-filter-criteria2}
+:::: {#prp-explore-filter-criteria2}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 1.  Klik in de kolom [Vullingtype]{.varname} op een waarde Marsepein.
@@ -510,14 +500,13 @@ Hiervoor wordt een tweede selectiecriterium toegevoegd.
 
     Access toont nu 3 records met chocoladetype Melk en met vullingtype Marsepein.
 
-3.  Maak filtering ongedaan via [tab Start \> knop]{.uicontrol} ![](images/common/button-filter-toggle.png) [(groep Sorteren en filteren)]{.uicontrol}.
+3.  Maak filtering ongedaan via [tab Start \> knop]{.uicontrol} ![](images/common/button-filter-toggle.png) [(groep Sorteren en filteren)]{.uicontrol}.\
+    De filtering is nu opgeheven en alle records worden weer getoond.
 
-::: {.callout-note}
-De filtering is nu opgeheven en alle records worden weer getoond.
-
+::: {.callout-note title="Alternatief Filter in-/uitschakelen"}
 De filtering wordt ook opgeheven door klikken op de knop [Gefilterd]{.uicontrol} in de statusbalk. De tekst op de knop verandert dan in [Niet gefilterd]{.uicontrol}. Door hier weer op te klikken wordt het laatst gebruikte filter toegepast.
 :::
-:::
+::::
 
 ### Getalfilter {#sec-explore-filter-number}
 
@@ -541,7 +530,7 @@ Voor het afdrukken maakt Access gebruik van de printers die onder Windows beschi
 
 Afhankelijk van de gebruikte weergave van een Access object kan het resultaat afgedrukt worden. Zo kan bij tabellen en query's de gegevensbladweergave afgedrukt worden, bij rapporten de rapportweergave en bij formulieren de formulierweergave.
 
-::: callout-note
+::: {.callout-note title="Afdrukken ontwerpweergave"}
 Er is geen optie voor het afdrukken van de ontwerpweergave, maar Access heeft een hulpmiddel genaamd [Databasedocumentatie]{.uicontrol} waarmee je de ontwerp eigenschappen van de database objecten kunt afdrukken.
 :::
 
@@ -553,54 +542,42 @@ Via de keuze [Afdrukvoorbeeld]{.uicontrol} zijn er een aantal instellingen mogel
 
 ## Opgaven {#sec-explore-exercises}
 
-::: {#exr-expl001}
+:::: {#exr-expl001}
 **Selectie Bonbons (expl001)**
 
 Maak via filteren een selectie van de bonbons met een Chocoladetype melk of puur waarvan de prijs hoogstens 0,30 is.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Tip")`
-Bij de selectie van numerieke velden heb je ook mogelijkheden om getalbereiken aan te geven:
+`r hide("Tip")` Bij de selectie van numerieke velden heb je ook mogelijkheden om getalbereiken aan te geven:
 
 ![Getalfilter](images/explore/expl001-filter-numbers.png)
 
 `r unhide()`
 
-`r hide("Antwoord")`
-Het resultaat bestaat uit 18 records.
-`r unhide()`
+`r hide("Antwoord")` Het resultaat bestaat uit 18 records. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-expl002}
+:::: {#exr-expl002}
 **Selectie Klanten op plaatsnaam (expl002)**
 
 Maak een selectie van de klanten die in Enschede, Hengelo of Almelo wonen.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Het resultaat bestaat uit 12 records.
-`r unhide()`
+`r hide("Antwoord")` Het resultaat bestaat uit 12 records. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-expl003}
+:::: {#exr-expl003}
 **Selectie Klanten op postcode (expl003)**
 
 Maak een selectie van de klanten waarvan de postcode met 20 begint en die in Amsterdam wonen.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Tip")`
-Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
+`r hide("Tip")` Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:
 
-![Tekstfilter](images/explore/expl003-filter-text.png)
-`r unhide()`
+![Tekstfilter](images/explore/expl003-filter-text.png) `r unhide()`
 
-`r hide("Antwoord")`
-Het resultaat bestaat uit 3 records.
-`r unhide()`
+`r hide("Antwoord")` Het resultaat bestaat uit 3 records. `r unhide()`
 :::
-
-:::
+::::
