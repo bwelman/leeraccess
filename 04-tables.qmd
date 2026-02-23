@@ -39,7 +39,7 @@ De belangrijkste eigenschap van een veld is het gegevenstype, omdat hiermee word
 Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegevenstype `Numeriek` zijn. Zo is het veld voor de prijs van een artikel een numeriek veld en wordt het artikelnummer in een tekstveld opgeslagen.
 
 | Gegevenstype | Waarden | Toelichting |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | `Korte tekst` | Alfanumeriek | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens. |
 | `Lange tekst` |   | Voor lange tekst, tot 1 GB. Voorheen bekend als Memo |
 | `Getal` | Numeriek | Bereik van -2^31^ tot 2^31^ - 1. |
@@ -83,7 +83,7 @@ Vereist
 
 :   Kan bij de meeste gegevenstypes gebruikt worden. De mogelijke waarden zijn `Nee` (standaard) en `Ja`.
 
-::: {.callout-note title="Validatie van de onvoer"}
+::: {.callout-note title="Validatie van de invoer"}
 Een speciale rol vervullen de gegevenstypes `Invoermasker`, `Validatieregel` en `Validatietekst`. Deze kunnen gebruikt worden bij de validatie van gegevens waarmee je kunt regelen dat de invoer van gegevens aan bepaalde voorwaarden voldoet.
 :::
 
@@ -119,7 +119,7 @@ Je kunt opslagruimte in de database besparen door het tweede onderdeel in te ste
 In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen worden en hun betekenis.
 
 | Symbool | Betekenis |
-|:----------------------|:------------------------------------------------|
+|:----------------------|:-----------------------------------------------|
 | 0 | Gebruiker moet een cijfer (0 t/m 9) invoeren. |
 | 9 | Gebruiker mag een cijfer (0 t/m 9) invoeren. |
 | \# | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd. |
@@ -177,15 +177,19 @@ Validatietekst
 
 :   Hier komt de tekst die aan de gebruiker moet worden weergegeven wanneer deze een waarde invoert die niet voldoet aan de expressie in de eigenschap Validatieregel.
 
-Bij het maken van expressies moet je rekening houden met het volgende:
+::: {.callout-tip title="Syntax tips"}
+-   Veldnamen staan tussen vierkante haken: `[Orderdatum]`
 
--   Namen van tabelvelden moeten tussen vierkante haken staan, zoals bijvoorbeeld `[Orderdatum]`.
--   Datums moeten tussen hekjes (#) staan, zoals bijvoorbeeld `#31-12-2010#`.
--   Teksten moeten tussen dubbele aanhalingstekens staan, zoals bijvoorbeeld `"Amsterdam"`.
--   Jokertekens zijn toegestaan. De meest bekende zijn
-    -   `?` : één willekeurige letter
-    -   `*` : willekeurig aantal tekens
-    -   `#` : één willekeurig cijfer
+-   Datums staan tussen `#` symbolen: `#31-12-2010#`
+
+-   Tekst wordt tussen aanhalingstekens geplaatst: `"Amsterdam"`
+
+-   Jokertekens:
+
+    -   `?` : één teken
+    -   `*` : een willekeurig aantal tekens
+    -   `#` : één cijfer
+:::
 
 @tbl-operators toont de meest gebruikte operatoren.
 
@@ -394,7 +398,6 @@ Referentiële integriteit is een systeem van regels waarmee er voor gezorgd word
 De referentiële integriteit kun je instellen door in het dialoogvenster ***Relaties bewerken*** het vakje [Referentiële integriteit afdwingen]{.uicontrol} in te schakelen.
 
 ::: {.callout-important title="Consequenties referentiële integriteit"}
-
 -   Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.
 
 -   Je kunt een record niet uit de primaire tabel verwijderen als er gerelateerde records bestaan in andere tabellen. Zo kun je geen record uit de tabel [Klanten]{.varname} verwijderen als er in de tabel [Orders]{.varname} nog records voor deze klant bestaan.

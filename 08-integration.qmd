@@ -56,7 +56,7 @@ In deze taak wordt aan klanten een standaardbrief gestuurd met daarin de aankond
 
 ![Voltooing van de samenvoeging.](images/integration/mailmerge-wizard-finishing.png){#fig-mailmerge-wizard-finishing}
 
-::: {.callout-note title="Keuzemogelijkheden"}
+::: {.callout-note title="Keuze van uitvoer"}
 Let op, je hebt nu twee keuzemogelijkheden:
 
 + Met [Afdrukken]{.uicontrol} stuur je de brieven naar de printer.

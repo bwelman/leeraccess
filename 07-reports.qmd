@@ -44,7 +44,7 @@ In deze taak worden adresetiketten van de klanten gemaakt met de [Wizard etikett
 
 ![Gegevens op het etiket.](images/reports/label-wizard-fields.png){#fig-label-wizard-fields}
 
-::: {.callout-tip title="Weldnamen invoegen"}
+::: {.callout-tip title="Veldnamen invoegen"}
 Door dubbel te klikken op een veldnaam wordt deze op de plaats van de cursor ingevoegd. De veldnaam verschijnt dan tussen accolades op het modeletiket. Ook tekst en spaties kunnen worden ingetypt. Door op de Enter toets te drukken wordt een nieuwe regel gemaakt.
 :::
 

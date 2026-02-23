@@ -179,7 +179,7 @@ De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staa
 
 Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de benodigde velden uit de tabellen [Klanten]{.varname} en [Orderdetails]{.varname} toe te voegen. De Wizard zorgt er dan voor dat automatisch de tabel [Orders]{.varname} wordt toegevoegd omdat deze de verbinding vormt tussen de tabellen [Klanten]{.varname} en [Orderdetails]{.varname}. Bij het handmatig vanaf nul maken van de query moet je er zelf aan denken om de tabel [Orders]{.varname} toe te voegen. Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.
 
-::: {.callout-note title="Toelichting"}
+::: {.callout-note title="Aanvullend criterium niet nodig"}
 Dat er minimaal 1 doos is afgenomen hoeft niet als criterium te worden opgenomen omdat bij gekoppelde tabellen automatisch hieraan voldaan wordt.
 :::
 
@@ -538,6 +538,7 @@ Bijwerk
 
 :   Verandert waarden in een of meerdere records. De bestaande waarden worden dan vervangen door nieuwe waarden, een soort zoek en vervang actie. De veranderingen kunnen niet teruggedraaid worden en daarom is het aan te bevelen om altijd eerst een backup of kopie van de database of van de tabel te maken voordat een toevoeqquery uitgevoerd wordt.
 
+::: {.callout-important title="Beveiligingsrisico bij actiequery's"}
 Omdat actiequery's gegevens in de database veranderen kunnen deze query's een beveiligingsrisico vormen. Om een beveiliging hiertegen te bieden worden in Access en het Vertrouwenscentrum een aantal controles uitgevoerd. Het vertrouwenscentrum kan inhoud uitschakelen. Bij het openen van een dergelijke database geeft Access de berichtenbalk met een beveiligingswaarschuwing weer.
 
 ![Berichtenbalk met beveiligingswaarschuwing.](images/common/security-warning.png){#fig-securitywarning}
@@ -545,6 +546,7 @@ Omdat actiequery's gegevens in de database veranderen kunnen deze query's een be
 Wanneer je de uitgeschakelde inhoud wilt inschakelen, klik dan op [Inhoud inschakelen \> Opties]{.uicontrol} en kies de gewenste optie in het dialoogvenster dat verschijnt. Access schakelt uitgeschakelde inhoud in en de database wordt opnieuw geopend met volledige functionaliteit.
 
 Verder is het raadzaam om altijd eerst een backup te maken van de tabellen die gewijzigd worden. Dat gaat het gemakkelijkste met kopieren en plakken.
+:::
 
 ::: {#exm-queries-copy-table}
 **Tabel kopieren**
@@ -569,6 +571,10 @@ De bonbonkosten van alle bonbons met het witte chocoladetype moeten met 10% verh
 ANALYSE
 
 Alle benodigde gegevens staan in de tabel [Bonbons]{.varname}. Hiervan hebben we de velden [Chocoladetype]{.varname} en [Bonbonkosten]{.varname} nodig. Selecteren op chocoladetype wit kan door een criterium toe te voegen. De bonbonkosten met 10% verhogen kan door de bestaande waarde te vermenigvuldigen met `1,1`.
+
+::: {.callout-important title="Wees voorzichtig met updatequery's"}
+Maak een back-up (kopie) van de tabel, zodat je de oorspronkelijke situatie kunt herstellen. Een andere mogelijkheid is om een back-up (kopie) van de hele database te maken.
+:::
 
 :::: {#prp-queries-action-update}
 [Bestand]{.smallcaps}: `{{< var database >}}`

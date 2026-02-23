@@ -130,7 +130,7 @@ Alle bijschriften staan verticaal gerangschikt en alle tekstvakken ook. Dit heet
 
 6.  Selecteer de tekst `Dozen` in de [Formulierkoptekst]{.uicontrol} en wijzig deze in `Inventaris`. Wijzig dan de eigenschappen [Tekengewicht]{.uicontrol} in `vet` en [Tekengrootte]{.uicontrol} in `20`.
 
-::: {.callout-note title="Eigenschappenvenster"}
+::: {.callout-tip title="Eigenschappenvenster"}
 Het [Eigenschappenvenster]{.uicontrol} staat meestal aan de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden via sneltoets [F4]{.uicontrol}. En om hierin sneller een bepaalde eigenschap te vinden kun je deze alfabetisch sorteren met de knop ![](images/common/button-sort-ascending.png) rechtsboven in het venster.
 :::
 
@@ -249,11 +249,11 @@ Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel e
 14. Versleep de besturingselementen op het formulier zodanig dat de lay-out zo goed mogelijk lijkt op de gewenste indeling. Maak hiervoor gebruik van de hierna aangegeven tips.
 
 ::: callout-tip
--   Je kunt geselecteerde besturingselementen uitlijnen via [tab Schikken \> Uitlijnen (groep Formaat en volgorde)]{.uicontrol}.
--   Je hebt een nieuw [Bijschrift]{.uicontrol} nodig met de tekst `Naam:`.
--   Je kunt de afmetingen van de besturingselementen wijzigen met de eigenschappen [Breedte]{.uicontrol} en [Hoogte]{.uicontrol}.
--   Je kunt de plaats van linkerbovenhoek van een besturingselement wijzigen met de eigenschappen [Boven]{.uicontrol} en [Links]{.uicontrol}.
--   Je kunt de achtergrondkleur instellen met de eigenschap [Achtergrondkleur]{.uicontrol}.
+-   Lijn besturingselementen uit via [tab Schikken \> Uitlijnen (groep Formaat en volgorde)]{.uicontrol}.
+-   Voeg een nieuw [Bijschrift]{.uicontrol} met `Naam:` voor de velden voor- en achternaam.
+-   Wijzig de afmetingen van de besturingselementen met de eigenschappen [Breedte]{.uicontrol} en [Hoogte]{.uicontrol}.
+-   Wijzig de plaats van een besturingselement met de eigenschappen [Boven]{.uicontrol} en [Links]{.uicontrol}.
+-   Stel de achtergrondkleur in met de eigenschap [Achtergrondkleur]{.uicontrol}.
 :::
 
 15. Schakel over naar de [Formulierweergave]{.uicontrol} en test de werking van het formulier.
@@ -362,7 +362,10 @@ Echter [Dozen subformulier]{.varname} is gebaseerd op de tabel [Doosdetails]{.va
 ![Keuzelijst op subformulier dozen.](images/forms/f-boxes-subform.png){#fig-f-boxes-subform}
 
 9.  Selecteer de [Keuzelijst met invoervak]{.uicontrol} en controleer in Eigenschappenvenster (tab Gegevens) de eigenschap [Alleen lijst]{.uicontrol} de waarde `Ja` heeft. Zo niet, dan de waarde wijzigen.\
-    Door deze instelling kunnen alleen bonbonnamen uit de lijst gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.
+
+::: {.callout-note title="Eigenschap Alleen lijst"}
+Door deze instelling kunnen alleen vooraf gedefinieerde bonbonnamen uit de lijst geselecteerd worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.
+:::
 
 10. Sluit het formulier [Dozen subformulier]{.varname} en bewaar de wijzigingen.
 
@@ -392,7 +395,7 @@ Maak daarna een formulier met subformulier en baseer het hoofdformulier op de qu
 
 3.  Voeg van beide tabellen alle velden toe.
 
-::: callout-tip
+::: {.callout-tip title="Alle velden toevoegen"}
 Met de keuze `*` kun je alle velden van een tabel toevoegen.
 :::
 
@@ -511,7 +514,7 @@ De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en d
 
 6.  Sluit de query en bewaar deze onder de naam [Omzet per doos per maand in 2010]{.varname}.
 
-::: {.callout-note title="Wijzigingen in query"}
+::: {.callout-note title="Wijzigingen in berekende velden"}
 Wanneer je na het sluiten de query weer opent in de [Ontwerpweergave]{.uicontrol}, dan heeft Access een paar wijzigingen aangebracht in de kolom [Omzet]{.varname}.
 
 -   Waarde in rij [Veld]{.uicontrol} is nu: `Omzet: Som([Hoeveelheid]*[Doosprijs])`
