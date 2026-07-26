@@ -38,6 +38,7 @@ De belangrijkste eigenschap van een veld is het gegevenstype, omdat hiermee word
 
 Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegevenstype `Numeriek` zijn. Zo is het veld voor de prijs van een artikel een numeriek veld en wordt het artikelnummer in een tekstveld opgeslagen.
 
+::: {#tbl-datatypes-access}
 | Gegevenstype | Waarden | Toelichting |
 |:------------------|:------------------|:---------------------------------|
 | `Korte tekst` | Alfanumeriek | Voor korte tekst, alfanumerieke waarden, maximaal 255 tekens. |
@@ -53,7 +54,8 @@ Wanneer er met de inhoud van het veld gerekend moet worden, dan moet het gegeven
 | `Bijlage` | Pad en naam van een bestand | Bestanden. Meerdere bestanden per bijlage is mogelijk. |
 | `Berekend` | Verschillend | Expressie die gegevens uit een of meer velden gebruikt. |
 
-: Gegevenstypes van Access {#tbl-datatypes-access}
+: Gegevenstypes van Access
+:::
 
 ::: {.callout-note title="Wizard opzoeken als gegevenstype"}
 In Access kun je het gegevenstype van een veld ook zetten op [Wizard Opzoeken...]{.uicontrol}. Deze wizard helpt je om een opzoekveld te maken. Een opzoekveld toont of een lijst met waarden afkomstig uit een tabel of een query, of een lijst met waarden die je zelf invoert.
@@ -118,6 +120,7 @@ Je kunt opslagruimte in de database besparen door het tweede onderdeel in te ste
 
 In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen worden en hun betekenis.
 
+::: {#tbl-inputmask-symbols}
 | Symbool | Betekenis |
 |:----------------------|:-----------------------------------------------|
 | 0 | Gebruiker moet een cijfer (0 t/m 9) invoeren. |
@@ -136,7 +139,8 @@ In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen wo
 | \\ | De tekens die hier rechtstreeks op volgen worden letterlijk weergegeven. |
 | "" | De tekens die tussen dubbele aanhalingstekens staan worden letterlijk weergegeven. |
 
-: Tijdelijke aanduidingen en tekens voor een invoermasker {#tbl-inputmask-symbols}
+: Tijdelijke aanduidingen en tekens voor een invoermasker.
+:::
 
 Je kunt snel een invoermasker toevoegen via de [Wizard Invoermasker]{.uicontrol}, maar ook een masker handmatig specificeren door deze in te typen bij de eigenschap invoermasker van het veld. helemaal naar wens een invoermasker samenstellen en dat bij veldeigenschap invoeren.
 
@@ -193,6 +197,7 @@ Validatietekst
 
 @tbl-operators toont de meest gebruikte operatoren.
 
+::: {#tbl-operators}
 | Operator | Functie | Voorbeeld |
 |:-----------------|:-----------------------------|:-----------------------|
 | \< | Kleiner dan | \<100 |
@@ -208,7 +213,8 @@ Validatietekst
 | BETWEEN | Moet liggen tussen twee waarden | BETWEEN 1 AND 9 |
 | LIKE | Tekenreeks moet overeenkomen met patroon | LIKE "Ams\*" |
 
-: Operatoren in expressies {#tbl-operators}
+: Operatoren in expressies.
+:::
 
 ::: {#exm-tables-validation-date}
 **Datum validatie**

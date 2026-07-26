@@ -87,6 +87,7 @@ In een query kunnen voorwaarden worden opgenomen zodat alleen records worden opg
 
 Een criterium lijkt op een formule en kan verwijzingen naar velden, operatoren en constante waarden (waarden die altijd hetzelfde zijn) bevatten. Zo'n formule wordt in Access ook wel een expressie genoemd. Wat in een criterium mag staan hangt af van het gegevenstype van het veld (tekst, numeriek, datum/tijd, ja/nee).
 
+::: {#tbl-criteria-operators}
 | Categorie    | Operatoren                                        |
 |:-------------|:--------------------------------------------------|
 | Rekenkundig  | `+`, `-`, `*`, `/`, `\`, `^`, `Mod`               |
@@ -95,7 +96,8 @@ Een criterium lijkt op een formule en kan verwijzingen naar velden, operatoren e
 | Samenvoeging | `&`, `+`                                          |
 | Speciaal     | `Is Null`, `Is Not Null`, `Like`, `Between`, `In` |
 
-: Operatoren in criteria {#tbl-criteria-operators}
+: Operatoren in criteria.
+:::
 
 Je kunt hiermee eenvoudige criteria maken, maar ook zeer ingewikkelde.
 
@@ -247,6 +249,7 @@ Berekeningen
 
 :   Je kunt dan kiezen uit: `Som`, `Gem`, `Min`, `Max`, `Aantal`, `StDev`, `Var`, `Eerste`, `Laatste`, `Expressie`. De gekozen berekening wordt dan voor het veld uitgevoerd.
 
+::: {#tbl-grouping-options}
 | Keuze Totaal | Toelichting |
 |:-----------------------------------|:-----------------------------------|
 | `Group By` | Maakt subgroepen van records gebaseerd op de waarden in dit veld. |
@@ -262,7 +265,8 @@ Berekeningen
 | `Expressie` | Berekent een expressie voor de waarden in dit veld. |
 | `Waar` | Voor het filteren op waarden in dit veld. |
 
-: Opties voor het samenvatten {#tbl-grouping-options}
+: Opties voor het samenvatten.
+:::
 
 ### Berekend veld {.unnumbered}
 
