@@ -1,11 +1,11 @@
 # Tabellen {#sec-tables}
 
 ::: callout-intro
--   Inrichting van tabellen en relaties tussen tabellen.
--   De verschillende manieren om tabellen te maken.
--   Eigenschappen van velden.
--   Validatie van de invoer van gegevens via invoermaskers en validatieregels.
--   Begrijpen wat referentiële integriteit inhoudt.
+- Inrichting van tabellen en relaties tussen tabellen.
+- De verschillende manieren om tabellen te maken.
+- Eigenschappen van velden.
+- Validatie van de invoer van gegevens via invoermaskers en validatieregels.
+- Begrijpen wat referentiële integriteit inhoudt.
 :::
 
 ## Over tabellen {#sec-tables-about}
@@ -18,9 +18,9 @@ Met lege tabellen kun je niets. Dus zullen gegevens in tabellen ingevoerd moeten
 
 Velden vormen de ontwerponderdelen van een tabel. Gegevens worden in de velden opgeslagen. De eigenschappen van een veld bepalen de kenmerken en het gedrag van de gegevens die in het veld worden opgeslagen. Voor het maken van een veld is nodig:
 
--   Veldnaam (verplicht)
--   Gegevenstype (verplicht)
--   Beschrijving (optioneel)
+- Veldnaam (verplicht)
+- Gegevenstype (verplicht)
+- Beschrijving (optioneel)
 
 ### Veldnamen {#sec-tables-fields-names}
 
@@ -28,9 +28,9 @@ Het ontwerp van de database bepaalt welk soort gegevens in een veld wordt opgesl
 
 Voor een veldnaam gelden de volgende eisen:
 
--   moet uniek zijn binnen de tabel.
--   mag niet met een spatie beginnen.
--   mag niet de volgende tekens bevatten: punt, uitroepteken en blokhaken (\[ \]).
+- moet uniek zijn binnen de tabel.
+- mag niet met een spatie beginnen.
+- mag niet de volgende tekens bevatten: punt, uitroepteken en blokhaken (\[ \]).
 
 ### Gegevenstype {#sec-tables-fields-datatypes}
 
@@ -67,23 +67,23 @@ Bij een bepaald gegevenstype kun je extra veldeigenschappen instellen. Het gegev
 
 Veldlengte
 
-:   Van belang bij `Tekst`, `Numeriek` en soms ook bij `AutoNummering`. Voor een tekstveld kun je de maximale lengte van de tekst opgeven. Bij numeriek kun je aangeven welk soort getallen ingevoerd kunnen worden, zoals: `Byte`, `Integer`, `Lange Integer`, `Decimaal`, `Enkel` en `Dubbel`.
+: Van belang bij `Tekst`, `Numeriek` en soms ook bij `AutoNummering`. Voor een tekstveld kun je de maximale lengte van de tekst opgeven. Bij numeriek kun je aangeven welk soort getallen ingevoerd kunnen worden, zoals: `Byte`, `Integer`, `Lange Integer`, `Decimaal`, `Enkel` en `Dubbel`.
 
 Notatie
 
-:   Kan bij de meeste gegevenstypes gebruikt worden. Hiermee kun je regelen hoe de inhoud van het veld eruitziet wanneer het wordt weergegeven in tabellen, query's, formulieren en rapporten. Je kunt alle geldige getalnotaties gebruiken en vaak is er ook een lijst met reeds gedefinieerde notaties beschikbaar.
+: Kan bij de meeste gegevenstypes gebruikt worden. Hiermee kun je regelen hoe de inhoud van het veld eruitziet wanneer het wordt weergegeven in tabellen, query's, formulieren en rapporten. Je kunt alle geldige getalnotaties gebruiken en vaak is er ook een lijst met reeds gedefinieerde notaties beschikbaar.
 
 Aantal decimalen
 
-:   Van belang bij `Numeriek` en `Valuta`. Hiermee geef je het aantal te gebruiken decimalen op voor de weergave van de getallen.
+: Van belang bij `Numeriek` en `Valuta`. Hiermee geef je het aantal te gebruiken decimalen op voor de weergave van de getallen.
 
 Standaardwaarde
 
-:   Kan bij de meeste gegevenstypes gebruikt worden. Hiermee ken je automatisch de opgegeven waarde toe aan dit veld wanneer er een nieuwe record wordt gemaakt. Erg handig wanneer de waarde vaak hetzelfde is. De waarde kan daarna weer gewijzigd worden.
+: Kan bij de meeste gegevenstypes gebruikt worden. Hiermee ken je automatisch de opgegeven waarde toe aan dit veld wanneer er een nieuwe record wordt gemaakt. Erg handig wanneer de waarde vaak hetzelfde is. De waarde kan daarna weer gewijzigd worden.
 
 Vereist
 
-:   Kan bij de meeste gegevenstypes gebruikt worden. De mogelijke waarden zijn `Nee` (standaard) en `Ja`.
+: Kan bij de meeste gegevenstypes gebruikt worden. De mogelijke waarden zijn `Nee` (standaard) en `Ja`.
 
 ::: {.callout-note title="Validatie van de invoer"}
 Een speciale rol vervullen de gegevenstypes `Invoermasker`, `Validatieregel` en `Validatietekst`. Deze kunnen gebruikt worden bij de validatie van gegevens waarmee je kunt regelen dat de invoer van gegevens aan bepaalde voorwaarden voldoet.
@@ -93,12 +93,12 @@ Een speciale rol vervullen de gegevenstypes `Invoermasker`, `Validatieregel` en 
 
 Mogelijke waarden voor de veldlengte van het gegevenstype getal.
 
--   `Byte`: Voor gehele getallen tussen 0 en 255
--   `Integer`: Voor gehele getallen lopend van -32.768 t/m 32.767
--   `Lange integer`: Voor gehele getallen lopend van -2.147.483.648 t/m 2.147.483.647
--   `Enkel`: Voor decimale getallen lopend van -3,4 x 1038 t/m 3,4 x 1038 met maximaal 7 significante cijfers.
--   `Dubbel`: Voor decimale getallen lopend van -1,797 x 10308 en 1,797 x 10308 met maximaal 15 significante cijfers.
--   `Decimaal`: Voor decimale getallen lopend van tussen -9,999... x 1027 en 9,999... x 1027
+- `Byte`: Voor gehele getallen tussen 0 en 255
+- `Integer`: Voor gehele getallen lopend van -32.768 t/m 32.767
+- `Lange integer`: Voor gehele getallen lopend van -2.147.483.648 t/m 2.147.483.647
+- `Enkel`: Voor decimale getallen lopend van -3,4 x 1038 t/m 3,4 x 1038 met maximaal 7 significante cijfers.
+- `Dubbel`: Voor decimale getallen lopend van -1,797 x 10308 en 1,797 x 10308 met maximaal 15 significante cijfers.
+- `Decimaal`: Voor decimale getallen lopend van tussen -9,999... x 1027 en 9,999... x 1027
 
 ## Validatie {#sec-tables-validation}
 
@@ -110,9 +110,9 @@ Een invoermasker zorgt voor een vaste, verplichte indeling voor de invoer van ge
 
 Het invoermasker bepaalt ook het aantal tekens dat ingevoerd kan worden. Invoermaskers bestaan uit een verplicht onderdeel en twee optionele onderdelen. De onderdelen worden met een puntkomma gescheiden.
 
--   Het eerste onderdeel is verplicht. Dit onderdeel bevat het patroon met de tekens en symbolen.
--   Het tweede onderdeel is optioneel en geeft aan of ook de maskertekens moeten worden opgeslagen in het veld. Bij de waarde 0 worden de maskertekens samen met de gegevens opgeslagen. Bij de waarde 1 worden de tekens wel weergegeven maar niet opgeslagen.
--   Het derde onderdeel van het invoermasker is ook optioneel en bevat één teken of spatie dat als tijdelijke plaatsaanduiding wordt gebruikt. Standaard gebruikt Access het onderstrepingsteken (\_). Alleen wanneer je een ander teken wilt gebruiken moet je dit teken in het derde gedeelte van het masker opnemen.
+- Het eerste onderdeel is verplicht. Dit onderdeel bevat het patroon met de tekens en symbolen.
+- Het tweede onderdeel is optioneel en geeft aan of ook de maskertekens moeten worden opgeslagen in het veld. Bij de waarde 0 worden de maskertekens samen met de gegevens opgeslagen. Bij de waarde 1 worden de tekens wel weergegeven maar niet opgeslagen.
+- Het derde onderdeel van het invoermasker is ook optioneel en bevat één teken of spatie dat als tijdelijke plaatsaanduiding wordt gebruikt. Standaard gebruikt Access het onderstrepingsteken (\_). Alleen wanneer je een ander teken wilt gebruiken moet je dit teken in het derde gedeelte van het masker opnemen.
 
 ::: {.callout-note title="Besparen opslagruimte"}
 Je kunt opslagruimte in de database besparen door het tweede onderdeel in te stellen op 1.
@@ -122,7 +122,7 @@ In @tbl-inputmask-symbols staan de symbolen die in een masker gebruikt kunnen wo
 
 ::: {#tbl-inputmask-symbols}
 | Symbool | Betekenis |
-|:----------------------|:-----------------------------------------------|
+|:------------------------|:----------------------------------------------|
 | 0 | Gebruiker moet een cijfer (0 t/m 9) invoeren. |
 | 9 | Gebruiker mag een cijfer (0 t/m 9) invoeren. |
 | \# | Gebruiker kan een cijfer, een spatie of een plus- of minteken invoeren. Als dit wordt overgeslagen, wordt een spatie ingevoerd. |
@@ -151,10 +151,10 @@ Invoermasker: `(999) 000-000;0;-`
 
 Toelichting:
 
--   `(999)` gebruiker kan drie cijfers invoeren voor het kengetal.
--   `000-000` gebruiker moet zes cijfers invoeren.
--   `;0` geeft aan dat de maskertekens samen met de gegevens worden opgeslagen.
--   `;-` geeft aan dat een minteken als tijdelijke plaatsaanduiding wordt gebruikt i.p.v. een onderstrepingsteken.
+- `(999)` gebruiker kan drie cijfers invoeren voor het kengetal.
+- `000-000` gebruiker moet zes cijfers invoeren.
+- `;0` geeft aan dat de maskertekens samen met de gegevens worden opgeslagen.
+- `;-` geeft aan dat een minteken als tijdelijke plaatsaanduiding wordt gebruikt i.p.v. een onderstrepingsteken.
 :::
 
 ::: {#exm-tables-zipcode}
@@ -164,9 +164,9 @@ Invoermasker: `0000\ >LL`
 
 Toelichting:
 
--   `0000` gebruiker moet vier cijfers (0 t/m 9) achter elkaar invoeren.
--   `\` geeft aan dat er een spatie wordt weergegeven. Deze hoeft niet te worden ingevoerd.
--   `>LL` gebruiker moet twee letters invoeren die worden omgezet naar hoofdletters.
+- `0000` gebruiker moet vier cijfers (0 t/m 9) achter elkaar invoeren.
+- `\` geeft aan dat er een spatie wordt weergegeven. Deze hoeft niet te worden ingevoerd.
+- `>LL` gebruiker moet twee letters invoeren die worden omgezet naar hoofdletters.
 :::
 
 ### Validatieregel en tekst {#sec-tables-fields-validationrules}
@@ -175,24 +175,20 @@ Met validatieregels kun je beperkingen opleggen aan wat een gebruikers kan invoe
 
 Validatieregel
 
-:   Een expressie die Waar moet zijn voor de ingevoerde waarde in het veld. Wanneer je een waarde in het veld invoert of wijzigt, dan controleert Access of de expressie waar is. Zo niet, dan wordt de inhoud van de eigenschapValidatietekst weergegeven. Je moet dan de waarde aanpassen totdat aan de validatieregel voldaan wordt.
+: Een expressie die Waar moet zijn voor de ingevoerde waarde in het veld. Wanneer je een waarde in het veld invoert of wijzigt, dan controleert Access of de expressie waar is. Zo niet, dan wordt de inhoud van de eigenschapValidatietekst weergegeven. Je moet dan de waarde aanpassen totdat aan de validatieregel voldaan wordt.
 
 Validatietekst
 
-:   Hier komt de tekst die aan de gebruiker moet worden weergegeven wanneer deze een waarde invoert die niet voldoet aan de expressie in de eigenschap Validatieregel.
+: Hier komt de tekst die aan de gebruiker moet worden weergegeven wanneer deze een waarde invoert die niet voldoet aan de expressie in de eigenschap Validatieregel.
 
 ::: {.callout-tip title="Syntax tips"}
--   Veldnamen staan tussen vierkante haken: `[Orderdatum]`
-
--   Datums staan tussen `#` symbolen: `#31-12-2010#`
-
--   Tekst wordt tussen aanhalingstekens geplaatst: `"Amsterdam"`
-
--   Jokertekens:
-
-    -   `?` : één teken
-    -   `*` : een willekeurig aantal tekens
-    -   `#` : één cijfer
+- Veldnamen staan tussen vierkante haken: `[Orderdatum]`
+- Datums staan tussen `#` symbolen: `#31-12-2025#`
+- Tekst wordt tussen aanhalingstekens geplaatst: `"Amsterdam"`
+- Jokertekens:
+  - `?` : één teken
+  - `*` : een willekeurig aantal tekens
+  - `#` : één cijfer
 :::
 
 @tbl-operators toont de meest gebruikte operatoren.
@@ -219,22 +215,22 @@ Validatietekst
 ::: {#exm-tables-validation-date}
 **Datum validatie**
 
--   Validatieregel: `>=#1-1-2010#`
--   Validatietekst: `Voer een datum vanaf 1 januari 2010 in.`
+- Validatieregel: `>=#1-1-2025#`
+- Validatietekst: `Voer een datum vanaf 1 januari 2025 in.`
 :::
 
 ::: {#exm-tables-validation-invoicenumber}
 **Factuurnummer validatie**
 
--   Validatieregel: `Like "[0-9][0-9][0-9][0-9]"`
--   Validatietekst: `Factuurnummer moet uit 4 cijfers bestaan.`
+- Validatieregel: `Like "[0-9][0-9][0-9][0-9]"`
+- Validatietekst: `Factuurnummer moet uit 4 cijfers bestaan.`
 :::
 
 ::: {#exm-tables-validation-email}
 **Eenvoudige emailadres validatie**
 
--   Validatieregel: `Like "*@*.???"`
--   Validatietekst: `Geen geldig email adres.`
+- Validatieregel: `Like "*@*.???"`
+- Validatietekst: `Geen geldig email adres.`
 :::
 
 ## Nieuwe tabel handmatig maken {#sec-tables-manually}
@@ -404,11 +400,11 @@ Referentiële integriteit is een systeem van regels waarmee er voor gezorgd word
 De referentiële integriteit kun je instellen door in het dialoogvenster ***Relaties bewerken*** het vakje [Referentiële integriteit afdwingen]{.uicontrol} in te schakelen.
 
 ::: {.callout-important title="Consequenties referentiële integriteit"}
--   Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.
+- Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.
 
--   Je kunt een record niet uit de primaire tabel verwijderen als er gerelateerde records bestaan in andere tabellen. Zo kun je geen record uit de tabel [Klanten]{.varname} verwijderen als er in de tabel [Orders]{.varname} nog records voor deze klant bestaan.
+- Je kunt een record niet uit de primaire tabel verwijderen als er gerelateerde records bestaan in andere tabellen. Zo kun je geen record uit de tabel [Klanten]{.varname} verwijderen als er in de tabel [Orders]{.varname} nog records voor deze klant bestaan.
 
--   Je kunt de waarde van de primaire-sleutel in de primaire tabel niet wijzigen wanneer er gerelateerde records bestaan in andere tabellen. Zo kun je de klantcode in de tabel [Klanten]{.varname} niet wijzigen als er records in de tabel [Orders]{.varname} aan deze klant zijn toegewezen.
+- Je kunt de waarde van de primaire-sleutel in de primaire tabel niet wijzigen wanneer er gerelateerde records bestaan in andere tabellen. Zo kun je de klantcode in de tabel [Klanten]{.varname} niet wijzigen als er records in de tabel [Orders]{.varname} aan deze klant zijn toegewezen.
 :::
 
 Wanneer de referentiële integriteit is afgedwongen en een van de voorgaande regels wordt bij een actie geschonden, dan wordt een passende foutmelding weergegeven. In @fig-warning-referential-integrity zie je een voorbeeld hiervan.
@@ -417,10 +413,10 @@ Wanneer de referentiële integriteit is afgedwongen en een van de voorgaande reg
 
 Je kunt referentiële integriteit bij een relatie tussen twee tabellen instellen onder de volgende voorwaarden:
 
--   Beide tabellen zitten in dezelfde Access database.
--   Het gekoppelde veld in de primaire tabel is een primaire sleutel of heeft een unieke index.
--   De gekoppelde velden zijn van hetzelfde gegevenstype en numerieke velden moeten dezelfde veldlengte hebben.
--   Bestaande gegevens in beide tabellen overtreden niet de regels voor referentiële integriteit.
+- Beide tabellen zitten in dezelfde Access database.
+- Het gekoppelde veld in de primaire tabel is een primaire sleutel of heeft een unieke index.
+- De gekoppelde velden zijn van hetzelfde gegevenstype en numerieke velden moeten dezelfde veldlengte hebben.
+- Bestaande gegevens in beide tabellen overtreden niet de regels voor referentiële integriteit.
 
 ::: {.callout-important title="AutoNummering en veldtype"}
 AutoNummering velden kunnen gekoppeld worden aan velden van het type `Numeriek` mits hiervan de eigenschap [Veldlengte]{.uicontrol} de waarde `Lange integer` heeft.
@@ -438,8 +434,8 @@ Een relatie koppelt twee velden in verschillende tabellen aan elkaar. Voordat je
 
 In de database bestaat nog geen relatie tussen de tabellen [Dozen]{.varname} en [Doosdetails]{.varname}. Dat is wel nodig, want anders kan immers niet bepaald worden welke bonbons en de hoeveelheid daarvan in een bepaalde doos zitten.
 
--   Primaire tabel: [Dozen]{.varname}, veld [Dooscode]{.varname}
--   Gerelateerde tabel: [Doosdetails]{.varname}, veld [Dooscode]{.varname}
+- Primaire tabel: [Dozen]{.varname}, veld [Dooscode]{.varname}
+- Gerelateerde tabel: [Doosdetails]{.varname}, veld [Dooscode]{.varname}
 
 ::: {#prp-tables-relationship}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -484,8 +480,8 @@ Uit een klanten-tevredenheids-onderzoek blijkt dat enkele belangrijke klanten he
 
 Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie \@ref(tables-new-manually). Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
 
--   Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
--   Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+- Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
+- Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
 
 Open de tabel [Vervoer]{.varname} en merk op dat de vervoerskosten niet in een valutanotatie met eurosymbool worden weergegeven. Verander de waarde van de eigenschap [Notatie]{.uicontrol} van het veld [Vervoerskosten]{.varname} in `Euro`. Schakel daarna over naar de gegevensbladweergave en bekijk het resultaat van deze verandering.
 :::
@@ -495,8 +491,8 @@ Open de tabel [Vervoer]{.varname} en merk op dat de vervoerskosten niet in een v
 
 Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie @sec-tables-manually. Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
 
--   Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
--   Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
+- Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
+- Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.
 
 In de tabel [Vervoer]{.varname} heeft het veld [ID vervoersbedrijf]{.varname} regelmatig dezelfde waarde. Zo zie je dertien keer de waarde `1`. Daarom kan dit veld niet als primaire sleutel dienen. De waarde van iedere afleverprovincie komt drie keer voor omdat ieder vervoerbedrijf per provincie een tarief heeft. Het veld [Aflever-provincie]{.varname} kan dus ook niet dienen als primaire sleutel. De combinatie van de velden [ID vervoersbedrijf]{.varname} en [Aflever-provincie]{.varname} is wel uniek en kan dus als primaire sleutel gebruikt worden.
 
@@ -518,11 +514,11 @@ Breng een relatie aan tussen de tabellen [Doosdetails]{.varname} en [Bonbons]{.v
 ::: {#exr-tabl008}
 **Tabel Werknemers (tabl008)**
 
-Eind 2010 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 2011 bij te gaan houden welke werknemer een order heeft ingevoerd. Er bestaat al een Excel bestand met daarin de gegevens van alle werknemers. Voer de volgende opdrachten uit:
+Eind 2025 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 2026 bij te gaan houden welke werknemer een order heeft ingevoerd. Er bestaat al een Excel bestand met daarin de gegevens van alle werknemers. Voer de volgende opdrachten uit:
 
--   Importeer het Excelbestand `Werknemers.xlsx` en geef de tabel de naam [Werknemers]{.varname}. Zorg voor een geschikte primaire sleutel voor deze tabel.
--   Breid de tabel [Orders]{.varname} uit met het veld [Werknemercode]{.varname}.
--   Breng een relatie aan tussen de tabellen [Orders]{.varname} en [Werknemers]{.varname} en dwing tevens de referentiële integriteit af.
+- Importeer het Excelbestand `Werknemers.xlsx` en geef de tabel de naam [Werknemers]{.varname}. Zorg voor een geschikte primaire sleutel voor deze tabel.
+- Breid de tabel [Orders]{.varname} uit met het veld [Werknemercode]{.varname}.
+- Breng een relatie aan tussen de tabellen [Orders]{.varname} en [Werknemers]{.varname} en dwing tevens de referentiële integriteit af.
 :::
 
 ::: {#exr-tabl009}

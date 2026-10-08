@@ -1,10 +1,10 @@
 # Gegevens toevoegen/wijzigen {#sec-data}
 
 ::: callout-intro
--   Het gebruik van een formulier voor gegevensinvoer.
--   Het bewerken, toevoegen en verwijderen van records in een tabel.
--   Het gebruik van een hoofdformulier met subformulier.
--   Mogelijkheden om validatie van de invoer van gegevens af te dwingen.
+- Het gebruik van een formulier voor gegevensinvoer.
+- Het bewerken, toevoegen en verwijderen van records in een tabel.
+- Het gebruik van een hoofdformulier met subformulier.
+- Mogelijkheden om validatie van de invoer van gegevens af te dwingen.
 :::
 
 Het toevoegen van nieuwe gegevens of het wijzigen van bestaande gegevens is een van de belangrijkste werkzaamheden binnen Access. In dit onderdeel komen een aantal basisvaardigheden voor het toevoegen en/of wijzigen van gegevens aan de orde.
@@ -29,8 +29,8 @@ Ga naar de onderkant van de tabel, naar de rij met een asterisk [\*]{.uicontrol}
 
 Er zijn meerdere manieren om records te verwijderen. De twee gemakkelijkste manieren zijn:
 
--   Selecteer het record en druk dan op de toets [Delete]{.uicontrol}.
--   Rechtermuisklik in de marge aan het begin van het record. Kies daarna uit het snelmenu voor [Record verwijderen]{.uicontrol}. Access vraagt daarna om een bevestiging van de verwijderactie.
+- Selecteer het record en druk dan op de toets [Delete]{.uicontrol}.
+- Rechtermuisklik in de marge aan het begin van het record. Kies daarna uit het snelmenu voor [Record verwijderen]{.uicontrol}. Access vraagt daarna om een bevestiging van de verwijderactie.
 
 ::: warning
 Access kent geen knop of functie om de verwijderacties ongedaan te maken.
@@ -83,13 +83,13 @@ Met het formulier [Bonbons]{.varname} kun je zowel door bestaande records blader
 
 4.  Voer de volgende bonbongegevens in:
 
-    -   Bonbonnaam: Pecan Mokka Toffee
-    -   Bonboncode: F03
-    -   Beschrijving: Zoete crèmige mokka en pekan, omgeven met toffee
-    -   Chocoladetype: Toffee
-    -   Vullingtype: Mokkacrème
-    -   Noottype: Pecan
-    -   Kosten: 0,25
+    - Bonbonnaam: Pecan Mokka Toffee
+    - Bonboncode: F03
+    - Beschrijving: Zoete crèmige mokka en pekan, omgeven met toffee
+    - Chocoladetype: Toffee
+    - Vullingtype: Mokkacrème
+    - Noottype: Pecan
+    - Kosten: 0,25
 
 5.  Sluit formulier [Bonbons]{.varname} via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster. De records die je via het formulier [Bonbons]{.varname} toevoegt worden opgeslagen in de tabel [Bonbons]{.varname}.
 
@@ -104,11 +104,11 @@ Een nieuwe doos kun je toevoegen met het formulier [Dozen]{.varname}. Dit formul
 
 Hoofdformulier ([Dozen]{.varname})
 
-:   Dit formulier bevat gegevens over de doos zelf (niet over de inhoud) zoals [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}.
+: Dit formulier bevat gegevens over de doos zelf (niet over de inhoud) zoals [doosnaam]{.varname}, [dooscode]{.varname}, [doosbeschrijving]{.varname}, [gewicht]{.varname}, [doosprijs]{.varname} en de [magazijnvoorraad]{.varname}. Deze gegevens worden opgeslagen in de tabel [Dozen]{.varname}.
 
 Subformulier ([Dozen subformulier]{.varname})
 
-:   Dit formulier bevat gegevens over de bonbons in de doos, zoals [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens worden opgeslagen in de tabel [Doosdetails]{.varname}.
+: Dit formulier bevat gegevens over de bonbons in de doos, zoals [Bonboncode]{.varname} en [Hoeveelheid]{.varname}. Deze gegevens worden opgeslagen in de tabel [Doosdetails]{.varname}.
 
 ::: {.callout-note title="Berekening van Dooskosten"}
 De inhoud van het veld [Dooskosten]{.varname} wordt berekend via de som van `Bonbonkosten * Hoeveelheid` voor alle bonbons in de doos. Omdat je deze waarde kunt berekenen, wordt deze niet in een tabel opgeslagen.
@@ -125,10 +125,10 @@ De inhoud van het veld [Dooskosten]{.varname} wordt berekend via de som van `Bon
 
 4.  Voer de volgende doosgegevens in:
 
-    -   Doosnaam: Winterverrassing
-    -   Dooscode : WINT
-    -   Doosbeschrijving: Noten en bessen, bedekt met chocolade en toffee; geknipt voor de lange winteravonden bij het haardvuur.
-    -   Gewicht: 300 gram
+    - Doosnaam: Winterverrassing
+    - Dooscode : WINT
+    - Doosbeschrijving: Noten en bessen, bedekt met chocolade en toffee; geknipt voor de lange winteravonden bij het haardvuur.
+    - Gewicht: 300 gram
 
 5.  Klik onder Inhoud in het veld [Code]{.varname} op de keuzepijl en selecteer bonboncode B02 Butterscotch Bosbes. De overige bonbongegevens als bonbonnaam, chocolade, noot, vulling en kosten worden automatisch ingevuld. Alleen het veld [Aantal]{.varname} moet nog ingevuld worden.
 
@@ -208,9 +208,9 @@ Voeg de volgende twee bonbons toe:
 
 Een klant plaatst een nieuwe order volgens de gegevens hierna. Bedenk zelf hoe je het beste deze order in kunt voeren. Voer daarna deze order in. De ordercode moet de eerstvolgende beschikbare ordercode zijn.
 
-`Bestelling op 23 april 2010, 10 uur. Klant Rebecca Smit bestelt telefonisch drie dozen Kers en twee dozen Mars.`
+`Bestelling op 23 april 2025, 10 uur. Klant Rebecca Smit bestelt telefonisch drie dozen Kers en twee dozen Mars.`
 
 Een aantal uren later komt er telefonisch onderstaande wijziging op deze order. Bedenk zelf hoe je het beste deze wijziging kunt doorvoeren. Breng daarna de wijziging aan.
 
-`Orderwijziging 23 april 2010, 16 uur. De twee dozen Mars moeten geschrapt worden.`
+`Orderwijziging 23 april 2025, 16 uur. De twee dozen Mars moeten geschrapt worden.`
 :::

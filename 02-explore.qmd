@@ -4,13 +4,13 @@
 ```
 
 ::: callout-intro
--   Kennis maken met de voorbeelddatabase `{{< var database >}}`.
--   Wat te doen bij beveiligingswaarschuwingen.
--   De vensters en navigatiemogelijkheden binnen Access.
--   De weergavemogelijkheden van tabellen, formulieren, rapporten en query's.
--   De werking van een opdrachtknop op een formulier.
--   Hoe je een record kunt zoeken, sorteren en filteren.
--   Het afdrukken van tabellen, query's, formulieren en rapporten.
+- Kennis maken met de voorbeelddatabase `{{< var database >}}`.
+- Wat te doen bij beveiligingswaarschuwingen.
+- De vensters en navigatiemogelijkheden binnen Access.
+- De weergavemogelijkheden van tabellen, formulieren, rapporten en query's.
+- De werking van een opdrachtknop op een formulier.
+- Hoe je een record kunt zoeken, sorteren en filteren.
+- Het afdrukken van tabellen, query's, formulieren en rapporten.
 :::
 
 De cursus is opgebouwd rond het voorbeeldbestand `{{< var database >}}`. In dit hoofdstuk komt aan bod uit welke tabellen deze database is opgebouwd en waarvoor deze tabellen dienen. Met deze voorbeelddatabase ga je wat experimenteren om een aantal aspecten over het werken met Access te ontdekken. Sommige functies worden in andere hoofdstukken verder uitgediept.
@@ -19,14 +19,14 @@ De cursus is opgebouwd rond het voorbeeldbestand `{{< var database >}}`. In dit 
 
 De voorbeelddatabase `{{< var database >}}` bevat gegevens over SNOOPY, een bedrijf dat bonbondozen verkoopt aan klanten. In de dozen zitten verschillende soorten bonbons. De informatie wordt in 6 tabellen bijgehouden:
 
--   [Klanten]{.varname}
--   [Orders]{.varname}
--   [Orderdetails]{.varname}
--   [Dozen]{.varname}
--   [Doosdetails]{.varname}
--   [Bonbons]{.varname}
+- [Klanten]{.varname}
+- [Orders]{.varname}
+- [Orderdetails]{.varname}
+- [Dozen]{.varname}
+- [Doosdetails]{.varname}
+- [Bonbons]{.varname}
 
-![De tabellen en hun relaties in de database.](images/explore/example-db-design.png){#fig-example-db-design}
+![De tabellen en hun relaties in de database (klik er op voor een vergroting).](images/explore/example-db-design.png){#fig-example-db-design .lightbox}
 
 De klantgegevens staan in de tabel [Klanten]{.varname}. De orders van de klanten worden opgeslagen in de tabellen [Orders]{.varname} en [Orderdetails]{.varname}. De gegevens van een doos bonbons, bijvoorbeeld naam en prijs, staan in de tabel [Dozen]{.varname}. In de tabel [Doosdetails]{.varname} staat welke bonbons en hoeveel daarvan in elke doos zitten. De tabel [Bonbons]{.varname} bevat gegevens over de naam van de bonbons, het chocoladetype, de vulling en bevat zelfs een plaatje.
 
@@ -142,15 +142,15 @@ Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen, 
 
 Het navigatievenster staat links en hierin zijn alle objecten van de database te vinden. De objecten worden onderverdeeld in groepen: [Tabellen]{.uicontrol}, [Query's]{.uicontrol}, [Formulieren]{.uicontrol}, [Rapporten]{.uicontrol}, [Macro's]{.uicontrol}. In @fig-explore-access-window is het venster van de groep [Tabellen]{.uicontrol} opengevouwen. Het navigatievenster zelf en de vensters voor de groepen kunnen open- en dichtgevouwen worden.
 
--   ![](images/common/button-object-selection.png) - selectie getoonde objecten
+- ![](images/common/button-object-selection.png) - selectie getoonde objecten
 
--   ![](images/common/button-group-open.png) - groep openvouwen
+- ![](images/common/button-group-open.png) - groep openvouwen
 
--   ![](images/common/button-group-close.png) - groep dichtvouwen
+- ![](images/common/button-group-close.png) - groep dichtvouwen
 
--   ![](images/common/button-navigation-close.png) - navigatievenster dichtvouwen
+- ![](images/common/button-navigation-close.png) - navigatievenster dichtvouwen
 
--   ![](images/common/button-navigation-open.png) - navigatievenster openvouwen
+- ![](images/common/button-navigation-open.png) - navigatievenster openvouwen
 
 Door dubbelklikken op een object in het navigatievenster wordt het object geopend en in het documentvenster getoond. Wanneer je nog meer objecten opent, dan toont Access deze standaard in de vorm van tabbladen.
 
@@ -174,11 +174,11 @@ De twee belangrijkste weergaven van een tabel zijn:
 
 Gegevensbladweergave
 
-:   In deze weergave kun je de inhoud van de records zien, deze wijzigen en ook kun je nieuwe records toevoegen.
+: In deze weergave kun je de inhoud van de records zien, deze wijzigen en ook kun je nieuwe records toevoegen.
 
 Ontwerpweergave
 
-:   In deze weergave kun je het ontwerp van de tabel zien en deze aanpassen.
+: In deze weergave kun je het ontwerp van de tabel zien en deze aanpassen.
 
 :::: {#prp-explore-tables}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -189,15 +189,15 @@ Ontwerpweergave
 
 3.  Zet de tabel [Klanten]{.varname} in de Ontwerpweergave op een van de volgende manieren:
 
-    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
-    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
-    -   Rechter muisklik op de tabelnaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+    - Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    - Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    - Rechter muisklik op de tabelnaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
 
 4.  Zet de tabel [Klanten]{.varname} weer in de [Gegevensbladweergave]{.uicontrol} op een van de volgende manieren:
 
-    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-datasheet-view.png).
-    -   Kies [tab Start \> Weergave (groep Weergaven) \> Gegevensbladweergave]{.uicontrol}.
-    -   Rechter muisklik op de tabelnaam in het navigatievenster en dan [Openen]{.uicontrol}.
+    - Klik rechtsonder in het programmavenster op de knop ![](images/common/button-datasheet-view.png).
+    - Kies [tab Start \> Weergave (groep Weergaven) \> Gegevensbladweergave]{.uicontrol}.
+    - Rechter muisklik op de tabelnaam in het navigatievenster en dan [Openen]{.uicontrol}.
 
 5.  Sluit de tabel [Klanten]{.varname} via de sluitknop [X]{.uicontrol} rechtsboven in het documentvenster.
 
@@ -222,15 +222,15 @@ De belangrijkste weergaven van een formulier zijn:
 
 Formulierweergave
 
-:   In deze weergave worden de gegevens getoond en kun je deze bewerken en invoeren.
+: In deze weergave worden de gegevens getoond en kun je deze bewerken en invoeren.
 
 Gegevensbladweergave
 
-:   Een weergave die op die van de tabel lijkt.
+: Een weergave die op die van de tabel lijkt.
 
 Ontwerpweergave
 
-:   In deze weergave kun je het ontwerp van het formulier zien en deze aanpassen.
+: In deze weergave kun je het ontwerp van het formulier zien en deze aanpassen.
 
 :::: {#prp-explore-forms}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -243,9 +243,9 @@ Ontwerpweergave
 
 3.  Zet het formulier [Bonbons]{.varname} in de [Ontwerpweergave]{.uicontrol} op een van de volgende manieren:
 
-    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
-    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
-    -   Rechter muisklik op de formuliernaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+    - Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    - Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    - Rechter muisklik op de formuliernaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
 
 ![Formulier bonbons in ontwerpweergave.](images/explore/form-pralines-design-view.png){#fig-form-pralines-design-view}
 
@@ -257,15 +257,11 @@ In de ontwerpweergave kun je het formulier opmaken en besturingselementen toevoe
 
 5.  Blader door de records met de navigatieknoppen linksonder in het documentvenster.
 
-    -   ![](images/common/button-record-first.png) -Eerste record
-
-    -   ![](images/common/button-record-previous.png) - Vorige record
-
-    -   ![](images/common/button-record-next.png) - Volgende record
-
-    -   ![](images/common/button-record-last.png) - Laatste record
-
-    -   ![](images/common/button-record-new.png) - Nieuw (leeg) record
+    - ![](images/common/button-record-first.png) -Eerste record
+    - ![](images/common/button-record-previous.png) - Vorige record
+    - ![](images/common/button-record-next.png) - Volgende record
+    - ![](images/common/button-record-last.png) - Laatste record
+    - ![](images/common/button-record-new.png) - Nieuw (leeg) record
 
 6.  Sluit het formulier.
 ::::
@@ -318,11 +314,11 @@ De twee belangrijkste weergaven van een query zijn:
 
 Gegevensbladweergave
 
-:   In deze weergave kun je de inhoud van de query zien.
+: In deze weergave kun je de inhoud van de query zien.
 
 Ontwerpweergave
 
-:   In deze weergave kun je het ontwerp van de query zien en deze aanpassen.
+: In deze weergave kun je het ontwerp van de query zien en deze aanpassen.
 
 ::::: {#prp-explore-queries}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -341,9 +337,9 @@ De resultaten van deze query zijn uit meerdere tabellen afkomstig. Om te weten w
 
 3.  Zet de query [Bonbons per doos]{.varname} in de Ontwerpweergave op een van de volgende manieren:
 
-    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
-    -   Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
-    -   Rechter muisklik op de querynaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
+    - Klik rechtsonder in het programmavenster op de knop ![](images/common/button-design-view.png).
+    - Kies [tab Start \> Weergave (groep Weergaven) \> Ontwerpweergave]{.uicontrol}.
+    - Rechter muisklik op de querynaam in het navigatievenster en dan [Ontwerpweergave]{.uicontrol}.
 
 ![Query bonbons per doos in ontwerpweergave.](images/explore/query-pralines-box-design.png){#fig-query-pralines-box-design}
 
@@ -368,15 +364,15 @@ De belangrijkste weergaven van een rapport zijn:
 
 Rapportweergave
 
-:   In deze weergave kun je de inhoud van het rapport zien.
+: In deze weergave kun je de inhoud van het rapport zien.
 
 Afdrukvoorbeeld
 
-:   De weergave van het rapport wanneer deze wordt afgedrukt.
+: De weergave van het rapport wanneer deze wordt afgedrukt.
 
 Ontwerpweergave
 
-:   In deze weergave kun je het ontwerp van het rapport zien en deze aanpassen.
+: In deze weergave kun je het ontwerp van het rapport zien en deze aanpassen.
 
 :::: {#prp-explore-reports}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -389,9 +385,9 @@ Ontwerpweergave
 
 3.  Zet het rapport [Bonbons per doos]{.varname} in Afdrukvoorbeeld op een van de volgende manieren:
 
-    -   Klik rechtsonder in het programmavenster op de knop ![](images/common/button-print-preview.png).
-    -   Kies[tab Start \> Weergave (groep Weergaven) \> Afdrukvoorbeeld]{.uicontrol}.
-    -   Rechter muisklik op de rapportnaam in het navigatievenster en dan [Afdrukvoorbeeld]{.uicontrol}.
+    - Klik rechtsonder in het programmavenster op de knop ![](images/common/button-print-preview.png).
+    - Kies[tab Start \> Weergave (groep Weergaven) \> Afdrukvoorbeeld]{.uicontrol}.
+    - Rechter muisklik op de rapportnaam in het navigatievenster en dan [Afdrukvoorbeeld]{.uicontrol}.
 
 4.  Zet het rapport [Bonbons per doos]{.varname} in de Ontwerpweergave.
 
@@ -460,8 +456,8 @@ Informatiebehoefte: Toon alle bonbons met het chocoladetype Wit.
 ::: {.callout-note title="Resultaat van filteren"}
 Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is. Dat op de tabel een filtering is toegepast kun je zien:
 
--   Aan de rechterkant van de kolomkop [Chocoladetype]{.varname} staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
--   In de statusbalk zie je ![](images/explore/statusbar-filtered.png)
+- Aan de rechterkant van de kolomkop [Chocoladetype]{.varname} staat een symbool van een filter: ![](images/common/button-arrow-down-filter.png)
+- In de statusbalk zie je ![](images/explore/statusbar-filtered.png)
 :::
 ::::
 

@@ -18,20 +18,20 @@ Een goed ontwerp van de database is van belang. En dit ontwerp wordt gemaakt voo
 
 De notatiewijze voor een gegevensverzameling (tabel), de verzamelde gegevens (velden in de tabel) en de sleutel ziet er als volgt uit:
 
-**KLANT**([klantnr]{.key}, naam, straat, huisnr, postcode, plaats)
+**KLANT:**[klantnr]{.key}, [naam]{.varname}, [straat]{.varname}, [huisnr]{.varname}, [postcode]{.varname}, [plaats]{.varname}
 
-Hierbij is **KLANT** de naam van de gegevensverzameling, de tabelnaam dus. En tussen de haakjes staan de veldnamen. De onderstreepte veldnamen vormen de sleutel van de tabel.
+Hierbij is **KLANT** de naam van de gegevensverzameling en daarachter worden de veldnamen opgesomd. De onderstreepte veldnamen vormen de sleutel van de tabel.
 
 ## Sleutel {#sec-norm-sleutel}
 
 In de tabellen van een relationele database zijn gelijksoortige gegevens opgeslagen in de velden van records (rijen). Records moeten gevonden kunnen worden via een unieke waarde van deze gegevens. Zo'n unieke waarde wordt een **kandidaatsleutel** genoemd. Vaak is er in een tabel maar één kandidaatsleutel, maar het is mogelijk dat er meerdere kandidaatsleutels zijn. Uit de beschikbare kandidaatsleutels wordt er eentje gekozen tot de [(primaire) sleutel]{.term}. Een tabel moet daarom zo ontworpen worden dat er een sleutel gedefinieerd kan worden. Wanneer zo'n sleutel niet uit de gegevens samengesteld kan worden moet er een kunstmatig sleutelveld gemaakt worden. Vaak is dat een nummer, een id. Enkele voorbeelden van mogelijke sleutelvelden:
 
--   Artikelnummer
--   Klantnummer
--   Ordernummer
--   Factuurnummer
--   Burgerservicenummer (BSN)
--   IBAN
+- Artikelnummer
+- Klantnummer
+- Ordernummer
+- Factuurnummer
+- Burgerservicenummer (BSN)
+- IBAN
 
 Een sleutel bestaat uit 1 of meerdere veldnamen uit een tabel. Iedere sleutelwaarde is uniek; d.w.z. dat iedere sleutelwaarde slechts één keer in de tabel mag voorkomen. Verder moet de sleutel minimaal zijn, uit zo min mogelijk veldnamen bestaan.
 
@@ -61,8 +61,8 @@ Een tabel PRODUCTEN heeft de volgende inhoud:
 
 Zowel afmeting, kleur als lengte kan niet als sleutel voor de tabel dienen, omdat in elk veld (kolom) geen unieke waarde voorkomt. Via een combinatie van velden is wel een unieke waarde te vinden. Ga na dat de volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:
 
--   [afmeting]{.key}, [lengte]{.key}
--   [kleur]{.key}, [lengte]{.key}
+- [afmeting]{.key}, [lengte]{.key}
+- [kleur]{.key}, [lengte]{.key}
 :::
 
 ::: {#exm-norm03}
@@ -90,8 +90,8 @@ Het kan voorkomen dat twee klanten op hetzelfde adres wonen. Indien dit het geva
 
 Ga na dat de sleutel hier niet uit één veld kan bestaande te vinden en dat de volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:
 
--   [naam]{.key}, [telnr]{.key}
--   [naam]{.key}, [adres]{.key}, [postcode]{.key}
+- [naam]{.key}, [telnr]{.key}
+- [naam]{.key}, [adres]{.key}, [postcode]{.key}
 
 In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.
 :::
@@ -101,17 +101,17 @@ In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.
 
 Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) en 400 leden. Men heeft de volgende informatiebehoeften:
 
--   Eens per jaar moeten etiketten geprint kunnen worden voor alle leden.
--   Eens per half jaar moet een lijst uitgedraaid kunnen worden met alle boeken die de bibliotheek bezit en die er als volgt uitziet (het aantal wordt berekend bij het maken van deze lijst):
+- Eens per jaar moeten etiketten geprint kunnen worden voor alle leden.
+- Eens per half jaar moet een lijst uitgedraaid kunnen worden met alle boeken die de bibliotheek bezit en die er als volgt uitziet (het aantal wordt berekend bij het maken van deze lijst):
 
 | ISBN       | Titel                         | Auteur        | Aantal |
 |------------|-------------------------------|---------------|--------|
 | 9080022217 | Praktijk van het zweefvliegen | W. Adriaansen | 1      |
 | 9062552277 | De wolken en het weer         | G. de Bont    | 2      |
 
--   Van ieder boek dat uitgeleend wordt moet bijgehouden worden: het nummer van het boek, het nummer van het lid en de datum waarop het boek uiterlijk terug bezorgd dient te worden. Eens per week worden er etiketten en brieven uitgeprint betreffende de boeken die minstens 1 maand te laat zijn.
--   Op het etiket staan de gegevens van het lid waarvan 1 of meerdere boeken minstens 1 maand te laat zijn. In de brief staan de gegevens van het lid en de gegevens van de boeken die minstens 1 maand te laat zijn.
--   De database met leden-, boeken- en uitleenadministratie heeft drie tabellen:
+- Van ieder boek dat uitgeleend wordt moet bijgehouden worden: het nummer van het boek, het nummer van het lid en de datum waarop het boek uiterlijk terug bezorgd dient te worden. Eens per week worden er etiketten en brieven uitgeprint betreffende de boeken die minstens 1 maand te laat zijn.
+- Op het etiket staan de gegevens van het lid waarvan 1 of meerdere boeken minstens 1 maand te laat zijn. In de brief staan de gegevens van het lid en de gegevens van de boeken die minstens 1 maand te laat zijn.
+- De database met leden-, boeken- en uitleenadministratie heeft drie tabellen:
 
 **LID**([Lidnr]{.key}, Naam, Adres, Postcode, Plaats)
 
@@ -141,9 +141,9 @@ Tabel UITLEEN:
 
 | Lidnr | Boeknr | Terugdatum |
 |-------|--------|------------|
-| 2     | 1      | 12-10-2011 |
-| 2     | 2      | 12-10-2011 |
-| 3     | 3      | 11-10-2011 |
+| 2     | 1      | 12-10-2026 |
+| 2     | 2      | 12-10-2026 |
+| 3     | 3      | 11-10-2026 |
 
 In de tabel **UITLEEN** is [Terugdatum]{.varname} de datum waarop de uitleentermijn afloopt. Als een boek terug wordt gebracht, wordt het betreffende record (= rij uit de tabel) uit de tabel **UITLEEN** verwijderd. In de tabel **UITLEEN** staan dus alleen gegevens over boeken die op dit moment uitgeleend zijn. Wanneer het boek opnieuw uitgeleend wordt dan wordt er een nieuw record met een nieuwe [Terugdatum]{.varname} aangemaakt. Er is een plan voor een nieuwe opzet waarbij alle uitleenrecords gedurende een jaar bewaard worden. De opzet van de tabel moet hierdoor gewijzigd worden.
 
@@ -184,11 +184,11 @@ Dit zijn gegevens die steeds hetzelfde zijn. Op de factuur zijn dit de gegevens 
 
 Procesgegevens zijn gegevens die uit andere gegevens kunnen worden afgeleid, bijvoorbeeld doordat ze uit die andere gegevens berekend kunnen worden. Op de factuur komen de volgende procesgegevens voor:
 
--   `Bedrag`, wordt berekend via `Aantal` x `Prijs`
--   `Subtotaal`, wordt berekend door alle bedragen op te tellen.
--   `Tot. excl. BTW`, berekend uit `Subtotaal` - `Korting`
--   `BTW`, wordt berekend via 21% x `Tot. excl. BTW`
--   `Tot. incl. BTW`, berekend uit `Tot. excl. BTW` - `BTW`
+- `Bedrag`, wordt berekend via `Aantal` x `Prijs`
+- `Subtotaal`, wordt berekend door alle bedragen op te tellen.
+- `Tot. excl. BTW`, berekend uit `Subtotaal` - `Korting`
+- `BTW`, wordt berekend via 21% x `Tot. excl. BTW`
+- `Tot. incl. BTW`, berekend uit `Tot. excl. BTW` - `BTW`
 
 ::: {.callout-note title="Conclusie"}
 **Procesgegevens worden niet opgenomen in de database.**
@@ -248,14 +248,14 @@ Een attribuut A is functioneel afhankelijk van attribuut B als bij iedere waarde
 
 Alleen tabel **FACTUURREGEL** heeft een samengestelde sleutel en hiervan moeten de niet-sleutelvelden onderzocht worden op eventuele functionele afhankelijkheid van een deel van de sleutel, van [Factuurnr]{.key} of van [Artikelnr]{.key}.
 
--   [Artikelomschrijving]{.varname}, is functioneel afhankelijk van [Artikelnr]{.key}. Immers bij ieder artikelnummer hoort precies één omschrijving van het artikel.
+- [Artikelomschrijving]{.varname}, is functioneel afhankelijk van [Artikelnr]{.key}. Immers bij ieder artikelnummer hoort precies één omschrijving van het artikel.
 
--   [Aantal]{.varname} is niet functioneel afhankelijk van [Artikelnr]{.key} en ook niet van [Factuurnr]{.key}. Het is een waarde die door de klant wordt bepaald en kan per factuur een andere waarde hebben.
+- [Aantal]{.varname} is niet functioneel afhankelijk van [Artikelnr]{.key} en ook niet van [Factuurnr]{.key}. Het is een waarde die door de klant wordt bepaald en kan per factuur een andere waarde hebben.
 
--   [Prijs]{.varname}, is meestal niet functioneel afhankelijk van [Artikelnr]{.key}. Dit komt omdat de prijs meestal van de verkoopdatum afhangt en er in de loop van de tijd prijswijzigingen kunnen optreden. Ook kan de prijs door onderhandelingen bepaald worden. Het attribuut [Prijs]{.varname} bevat dus de waarde van de verkoopprijs. In dit voorbeeld wordt gekozen om het oorspronkelijke attribuut [Prijs]{.varname} te vervangen door twee nieuwe attributen:
+- [Prijs]{.varname}, is meestal niet functioneel afhankelijk van [Artikelnr]{.key}. Dit komt omdat de prijs meestal van de verkoopdatum afhangt en er in de loop van de tijd prijswijzigingen kunnen optreden. Ook kan de prijs door onderhandelingen bepaald worden. Het attribuut [Prijs]{.varname} bevat dus de waarde van de verkoopprijs. In dit voorbeeld wordt gekozen om het oorspronkelijke attribuut [Prijs]{.varname} te vervangen door twee nieuwe attributen:
 
-    -   [Verkoopprijs]{.varname}, deze is niet functioneel afhankelijk van [Artikelnr]{.key}
-    -   [Adviesprijs]{.varname}, deze is wel functioneel afhankelijk van [Artikelnr]{.key}
+  - [Verkoopprijs]{.varname}, deze is niet functioneel afhankelijk van [Artikelnr]{.key}
+  - [Adviesprijs]{.varname}, deze is wel functioneel afhankelijk van [Artikelnr]{.key}
 
 Het onderzoek heeft nu opgeleverd dat twee attributen functioneel afhankelijk zijn van [Artikelnr]{.key}, namelijk [Artikelomschrijving]{.varname} en [Adviesprijs]{.varname}. Deze twee gegevens worden ondergebracht in een nieuwe tabel **ARTIKEL** en tevens wordt het veld [Artikelnr]{.key} hieraan toegevoegd, daar zijn de twee gegevens immers van afhankelijk. Dit veld is tevens de sleutel van de nieuwe tabel.
 
@@ -293,19 +293,19 @@ De 3 NV wordt dan:
 
 0 NV
 
-:   Inventarisatie van attributen (velden maken, repeterende groepen (RG) aangeven, sleutel onderstrepen.
+: Inventarisatie van attributen (velden maken, repeterende groepen (RG) aangeven, sleutel onderstrepen.
 
 1 NV
 
-:   Repeterende groepen afsplitsen als aparte tabellen en de sleutel van de "oude" tabel meenemen. De sleutel van de nieuwe tabel is een samengestelde sleutel.
+: Repeterende groepen afsplitsen als aparte tabellen en de sleutel van de "oude" tabel meenemen. De sleutel van de nieuwe tabel is een samengestelde sleutel.
 
 2 NV
 
-:   Alleen voor tabellen met samengestelde sleutels: attributen afsplitsen die afhankelijk zijn van een deel van de sleutel. Dit wordt de sleutel van een nieuwe tabel.
+: Alleen voor tabellen met samengestelde sleutels: attributen afsplitsen die afhankelijk zijn van een deel van de sleutel. Dit wordt de sleutel van een nieuwe tabel.
 
 3 NV
 
-:   Voor alle tabellen: als een attribuut afhankelijk is van een niet-sleutelveld, dan deze afhankelijkheid afsplitsen naar een nieuwe tabel.
+: Voor alle tabellen: als een attribuut afhankelijk is van een niet-sleutelveld, dan deze afhankelijkheid afsplitsen naar een nieuwe tabel.
 
 ## Gegevens Structuur Diagram (GSD) {#sec-norm-gsd}
 
@@ -315,9 +315,9 @@ Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen ta
 
 Tussen deze vier tabellen bestaan verschillende relaties, zoals:
 
--   **Klant** - **FACTUUR** : Een factuur hoort bij precies één klant en een klant kan meerdere facturen hebben. In het GSD gaat er vanuit KLANT meerdere lijnen naar FACTUUR, aangegeven via een vertakking aan het eind.
--   **FACTUUR** - **Factuurregel** : Een factuurregel hoort bij één factuur en op een factuur kunnen meerdere factuurregels staan.
--   **FACTUURREGEL** - **Artikel** : Een factuurregel heeft altijd betrekking op één artikel en een bepaald artikel kan op meerdere factuurregels voorkomen.
+- **Klant** - **FACTUUR** : Een factuur hoort bij precies één klant en een klant kan meerdere facturen hebben. In het GSD gaat er vanuit KLANT meerdere lijnen naar FACTUUR, aangegeven via een vertakking aan het eind.
+- **FACTUUR** - **Factuurregel** : Een factuurregel hoort bij één factuur en op een factuur kunnen meerdere factuurregels staan.
+- **FACTUURREGEL** - **Artikel** : Een factuurregel heeft altijd betrekking op één artikel en een bepaald artikel kan op meerdere factuurregels voorkomen.
 
 Vaak wordt bij de pijl ook het attribuut (veld) vermeld waarmee de koppeling tot stand wordt gebracht.
 
@@ -325,9 +325,9 @@ Vaak wordt bij de pijl ook het attribuut (veld) vermeld waarmee de koppeling tot
 
 Bij een GSD worden de volgende symbolen gebruikt:
 
--   Rechthoek: voor een tabel.
--   Enkele lijn: voor een relatie van één op één.
--   Vertakte lijn: voor een relatie van een op veel.
+- Rechthoek: voor een tabel.
+- Enkele lijn: voor een relatie van één op één.
+- Vertakte lijn: voor een relatie van een op veel.
 
 Een relatiediagram in Access ziet er als volgt uit
 
@@ -533,10 +533,10 @@ Het boekingsbureau Cultuur heeft voor het seizoen 2001 - 2002 het Passe-partout 
 ![](images/normalization//norm014-data.png)
 
 1.  Normaliseer het passe-partout. Geef alle stappen van het normalisatieproces duidelijk weer. Houd hierbij rekening met de volgende zaken.
-    -   De datum van uitgifte van het Passe-partout wordt bij het aanmaken vastgelegd als eigenschap van het passepartout.
-    -   De data op de regel van de voorstelling is de datum van die betreffende voorstelling.
-    -   Bij een Passe-partout moeten kaarten van 5 verschillende voorstellingen zijn gekocht.
-    -   Een voorstelling wordt geïdentificeerd met een identificatienummer, dat niet staat afgedrukt op het passepartout.
+    - De datum van uitgifte van het Passe-partout wordt bij het aanmaken vastgelegd als eigenschap van het passepartout.
+    - De data op de regel van de voorstelling is de datum van die betreffende voorstelling.
+    - Bij een Passe-partout moeten kaarten van 5 verschillende voorstellingen zijn gekocht.
+    - Een voorstelling wordt geïdentificeerd met een identificatienummer, dat niet staat afgedrukt op het passepartout.
 2.  Maak het bijbehorende gegevensstructuurdiagram in Bachman weergave. Geef ook de verbindingsvelden aan.
 :::
 

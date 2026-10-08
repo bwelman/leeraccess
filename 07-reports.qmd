@@ -4,11 +4,11 @@
 ```
 
 ::: callout-intro
--   Waarvoor je rapporten kunt gebruiken.
--   Hoe je etiketten met de Wizard kunt maken.
--   Het maken van een automatisch gegenereerd rapport met handmatige aanpassingen.
--   Het maken van een gegroepeerd rapport.
--   Het maken van een rapport met afbeeldingen van bonbons op etiketten.
+- Waarvoor je rapporten kunt gebruiken.
+- Hoe je etiketten met de Wizard kunt maken.
+- Het maken van een automatisch gegenereerd rapport met handmatige aanpassingen.
+- Het maken van een gegroepeerd rapport.
+- Het maken van een rapport met afbeeldingen van bonbons op etiketten.
 :::
 
 Rapporten zijn overzichten die meestal bedoeld zijn om af te drukken. Ook etiketten zijn een vorm van rapporten.
@@ -105,13 +105,13 @@ Het [Eigenschappenvenster]{.uicontrol} staat aan de rechterkant van het scherm e
 
 INFORMATIEBEHOEFTE
 
-:   Maak een rapport waarop over een op te geven periode de verkoop per doos te zien is, alsmede de detailgegevens van elke order. Zie als voorbeeld @fig-group-report-result waarin een gedeelte van het rapport te zien is over november 2009.
+: Maak een rapport waarop over een op te geven periode de verkoop per doos te zien is, alsmede de detailgegevens van elke order. Zie als voorbeeld @fig-group-report-result waarin een gedeelte van het rapport te zien is over november 2024.
 
-![Rapport November 2009 (gedeeltelijke weergave).](images/reports/group-report-result.png){#fig-group-report-result}
+![Rapport November 2024 (gedeeltelijke weergave)](images/reports/group-report-result.png){#fig-group-report-result}
 
 ANALYSE
 
-:   De benodigde gegevens zijn [Doosnaam]{.varname}, [Ordercode]{.varname}, [Orderdatum]{.varname}, [Aantal]{.varname} en een veld [Bedrag]{.varname} wat berekend wordt met de expressie `[Hoeveelheid]*[Doosprijs]`. Een query gemaakt voor deze gegevens is reeds beschikbaar onder de naam [Omzet per doos per order per periode]{.varname}.
+: De benodigde gegevens zijn [Doosnaam]{.varname}, [Ordercode]{.varname}, [Orderdatum]{.varname}, [Aantal]{.varname} en een veld [Bedrag]{.varname} wat berekend wordt met de expressie `[Hoeveelheid]*[Doosprijs]`. Een query gemaakt voor deze gegevens is reeds beschikbaar onder de naam [Omzet per doos per order per periode]{.varname}.
 
 ::: {#prp-reports-grouping}
 [Bestand]{.smallcaps}: `{{< var database >}}`
@@ -152,7 +152,7 @@ ANALYSE
 
 Het rapport wordt gemaakt en in weergave [Afdrukvoorbeeld]{.uicontrole} geopend. Omdat de query de parameters begindatum en einddatum kent vraagt Access om een waarde hiervoor.
 
-13. Test met begindatum `1-11-2009` en einddatum `30-11-2009`.
+13. Test met begindatum `1-11-2024` en einddatum `30-11-2024`.
 
 14. Sluit het rapport.
 :::
@@ -198,11 +198,11 @@ In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en
 
 13. Zorg dat het kader geselecteerd blijft en breng dan via het [Eigenschappenvenster]{.uicontrol} de volgende wijzigingen aan:
 
--   In tab [Opmaak]{.uicontrol}: zet [Breedte]{.uicontrol} en [Hoogte]{.uicontrol} op `2,5 cm`. Het is mogelijk dat Access de afmetingen iets aanpast.
+- In tab [Opmaak]{.uicontrol}: zet [Breedte]{.uicontrol} en [Hoogte]{.uicontrol} op `2,5 cm`. Het is mogelijk dat Access de afmetingen iets aanpast.
 
 ![Afmetingen van het objectkader instellen.](images/reports/label-praline-dimensions.png){#fig-label-praline-dimensions}
 
--   In tab [Gegevens]{.uicontrol}: stel eigenschap [Besturingselementbron]{.uicontrol} in op `Plaatje`.
+- In tab [Gegevens]{.uicontrol}: stel eigenschap [Besturingselementbron]{.uicontrol} in op `Plaatje`.
 
 ![Besturingsbron voor het object instellen.](images/reports/label-praline-controlsource.png){#fig-label-praline-controlsource}
 
@@ -270,7 +270,7 @@ Maak verder nog wat kleine wijzigingen in de opmaak. Het tekstvak Som moet naar 
 ::: {#exr-rapp005}
 **Omzet per doos per order per periode (rapp005)**
 
-Maak een kopie van het rapport [Omzet per doos per order per periode]{.varname} en noem de kopie [rapp005]{.varname}. Wijzig het ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt afgedrukt.
+Maak een kopie van het rapport [Omzet per doos per order per periode]{.varname} en noem de kopie [rapp005]{.varname}. Wijzig het ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt afgedrukt. In onderstaande afbeelding is een gedeelte van het rapport te zien voor de periode november 2024.
 
 ![](images/reports/rapp005-report.png)
 :::
@@ -288,7 +288,7 @@ Maak een kopie van rapport [rapp005]{.varname} en noem het rapport [rapp006]{.va
 ::: {#exr-rapp007}
 **Doosetiketten (rapp007)**
 
-Maak etiketten voor alle bonbondozen volgens het model zoals hierna afgebeeld. Bewaar het rapport onder de naam [rapp007]{.varname}.
+Maak etiketten voor alle bonbondozen volgens het model zoals hieronder afgebeeld. Bewaar het rapport onder de naam [rapp007]{.varname}.
 
 Etikettype “Avery J8163 99mmx38mm”, Letter Consolas 12pt normaal, zwart.
 
@@ -305,7 +305,7 @@ Gewicht: 150 gram
 
 Maak een rapport met daarop per regio het aantal verkochte dozen in een bepaald jaar. Bij het openen van het rapport moet eerst gevraagd worden naar het jaar van verkoop waarop het rapport gebaseerd moet zijn. Bewaar het rapport onder de naam [rapp008]{.varname}.
 
-In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2009.
+In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2024.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Tip")` Maak eerst een parameterquery [Jaarafzet dozen per regio]{.varname} die de benodigde gegevens voor het rapport levert en naar het verkoopjaar vraagt. `r unhide()`

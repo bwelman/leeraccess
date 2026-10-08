@@ -1,10 +1,10 @@
 # Formulieren {#sec-forms}
 
 ::: callout-intro
--   Soorten formulieren: hoofdformulier, subformulier en gekoppeld formulier.
--   Het maken van formulieren: gegenereerd, handmatig
--   Berekeningen in een formulier.
--   Formulieren met een grafiek.
+- Soorten formulieren: hoofdformulier, subformulier en gekoppeld formulier.
+- Het maken van formulieren: gegenereerd, handmatig
+- Berekeningen in een formulier.
+- Formulieren met een grafiek.
 :::
 
 Formulieren tonen een georganiseerd en opgemaakt overzicht van velden in tabellen en query's. Ze zijn erg belangrijk voor de gegevensinvoer.
@@ -51,15 +51,15 @@ Besturingselementen kunnen afhankelijk, niet-afhankelijk of berekend zijn:
 
 Afhankelijk besturingselement
 
-:   Een besturingselement waarvan de gegevensbron een veld in tabel of een query is. Je gebruikt afhankelijke besturingselementen om waarden weer te geven die afkomstig zijn uit velden.
+: Een besturingselement waarvan de gegevensbron een veld in tabel of een query is. Je gebruikt afhankelijke besturingselementen om waarden weer te geven die afkomstig zijn uit velden.
 
 Niet-afhankelijk besturingselement
 
-:   Een besturingselement zonder gegevensbron. Je gebruikt niet-afhankelijke besturingselementen voor het weergeven van informatie, afbeeldingen, lijnen, ...
+: Een besturingselement zonder gegevensbron. Je gebruikt niet-afhankelijke besturingselementen voor het weergeven van informatie, afbeeldingen, lijnen, ...
 
 Berekend besturingselement
 
-:   Een besturingselement waarvan de gegevensbron een expressie is en niet een veld.
+: Een besturingselement waarvan de gegevensbron een expressie is en niet een veld.
 
 #### Indelingen {.unnumbered}
 
@@ -67,13 +67,13 @@ Indelingen zijn hulpmiddelen waarmee je de besturingselementen horizontaal en ve
 
 Tabelvormige indeling
 
-:   In tabelvormige indelingen worden besturingselementen gerangschikt in rijen en kolommen zoals in een werkblad, met labels aan de bovenkant.
+: In tabelvormige indelingen worden besturingselementen gerangschikt in rijen en kolommen zoals in een werkblad, met labels aan de bovenkant.
 
 ![Voorbeeld van een tabelvormige indeling](images/forms/layout-controls-tabular.png){#fig-layout-controls-tabular}
 
 Gestapelde indeling
 
-:   In gestapelde indelingen worden besturingselementen verticaal gerangschikt zoals op een papieren formulier, met een label links van elk besturingselement.
+: In gestapelde indelingen worden besturingselementen verticaal gerangschikt zoals op een papieren formulier, met een label links van elk besturingselement.
 
 ![Voorbeeld van een gestapelde indeling.](images/forms/layout-controls-stacked.png){#fig-layout-controls-stacked}
 
@@ -81,13 +81,13 @@ Gestapelde indeling
 
 Omdat op formulieren vaak besturingselementen anders geordend moeten worden is het van belang om te weten hoe je besturingselementen kunt bewerken en verplaatsen. Veel bewerkingen kun je op meerdere besturingselementen tegelijk uitvoeren. Om besturingselementen te bewerken moet je deze altijd eerst selecteren. Zorg er ook voor dat altijd het [Eigenschappenvenster]{.uicontrol} zichtbaar is.
 
--   **selecteren**: Klik op het besturingselement.
--   **meervoudige selectie**: Klik met ingedrukte Shift toets op de besturingselementen, of sleep met de muis een rechthoekig kader om de besturingselementen.
--   **selectie opheffen**: Op een lege plek in het formulier klikken.
--   **verplaatsen**: Versleep het besturingselement via het vierkantje linksboven. Precieze plaats op het formulier kan via het [Eigenschappenvenster]{.uicontrol} ingesteld wordt.
--   **afmetingen**: Versleep een van de formaatgrepen (in het midden of in de hoekpunten van de selectierechthoek). Precieze afmetingen kunnen via het [Eigenschappenvenster]{.uicontrol} ingesteld worden.
--   **uitlijnen**: Via de opties bij [tabblad Schikken \> groep uitlijning bepalen]{.uicontrol}.
--   **verwijderen**: Via de [Delete]{.uicontrol} toets.
+- **selecteren**: Klik op het besturingselement.
+- **meervoudige selectie**: Klik met ingedrukte Shift toets op de besturingselementen, of sleep met de muis een rechthoekig kader om de besturingselementen.
+- **selectie opheffen**: Op een lege plek in het formulier klikken.
+- **verplaatsen**: Versleep het besturingselement via het vierkantje linksboven. Precieze plaats op het formulier kan via het [Eigenschappenvenster]{.uicontrol} ingesteld wordt.
+- **afmetingen**: Versleep een van de formaatgrepen (in het midden of in de hoekpunten van de selectierechthoek). Precieze afmetingen kunnen via het [Eigenschappenvenster]{.uicontrol} ingesteld worden.
+- **uitlijnen**: Via de opties bij [tabblad Schikken \> groep uitlijning bepalen]{.uicontrol}.
+- **verwijderen**: Via de [Delete]{.uicontrol} toets.
 
 ## Automatisch formulier {#sec-forms-autoform}
 
@@ -148,8 +148,8 @@ De eigenschap [Vergrendeld]{.uicontrol} kan gebruikt worden om de waarde in een 
 
 9.  Houd deze velden geselecteerd en wijzig dan de achtergrondkleur van wit in lichtgrijs. Je kunt dat op een van de volgende manieren doen:
 
-    -   Wijzig eigenschap [Achtergrondkleur]{.uicontrol}.
-    -   Rechtermuisklik op een van de geselecteerde velden en kies uit het snelmenu voor [Opvul-/achtergrondkleur]{.uicontrol}.
+    - Wijzig eigenschap [Achtergrondkleur]{.uicontrol}.
+    - Rechtermuisklik op een van de geselecteerde velden en kies uit het snelmenu voor [Opvul-/achtergrondkleur]{.uicontrol}.
 
 10. Schakel over naar [Formulierweergave]{.uicontrol} om het resultaat te zien.
 
@@ -195,8 +195,8 @@ Je kunt nu namen (titels) aan de formulieren geven. Er zijn al default titels be
 
 9.  Wijzig de standaardtitels van de formulieren.
 
-    -   Titel formulier: `Klanten en orders`
-    -   Titel subformulier: `Klanten en orders subformulier`.
+    - Titel formulier: `Klanten en orders`
+    - Titel subformulier: `Klanten en orders subformulier`.
 
 10. Klik op [Voltooien]{.uicontrol}.
 
@@ -249,11 +249,11 @@ Omdat het formulier gebaseerd is op de tabel [Klanten]{.varname} en deze tabel e
 14. Versleep de besturingselementen op het formulier zodanig dat de lay-out zo goed mogelijk lijkt op de gewenste indeling. Maak hiervoor gebruik van de hierna aangegeven tips.
 
 ::: callout-tip
--   Lijn besturingselementen uit via [tab Schikken \> Uitlijnen (groep Formaat en volgorde)]{.uicontrol}.
--   Voeg een nieuw [Bijschrift]{.uicontrol} met `Naam:` voor de velden voor- en achternaam.
--   Wijzig de afmetingen van de besturingselementen met de eigenschappen [Breedte]{.uicontrol} en [Hoogte]{.uicontrol}.
--   Wijzig de plaats van een besturingselement met de eigenschappen [Boven]{.uicontrol} en [Links]{.uicontrol}.
--   Stel de achtergrondkleur in met de eigenschap [Achtergrondkleur]{.uicontrol}.
+- Lijn besturingselementen uit via [tab Schikken \> Uitlijnen (groep Formaat en volgorde)]{.uicontrol}.
+- Voeg een nieuw [Bijschrift]{.uicontrol} met `Naam:` voor de velden voor- en achternaam.
+- Wijzig de afmetingen van de besturingselementen met de eigenschappen [Breedte]{.uicontrol} en [Hoogte]{.uicontrol}.
+- Wijzig de plaats van een besturingselement met de eigenschappen [Boven]{.uicontrol} en [Links]{.uicontrol}.
+- Stel de achtergrondkleur in met de eigenschap [Achtergrondkleur]{.uicontrol}.
 :::
 
 15. Schakel over naar de [Formulierweergave]{.uicontrol} en test de werking van het formulier.
@@ -298,11 +298,11 @@ In deze taak wordt een formulier gemaakt waarmee de gegevens voor een nieuwe bon
 
 14. Beantwoord de vragen die de Wizard achtereenvolgens stelt als volgt:
 
-    -   De waarden zullen worden getypt.
-    -   Aantal kolommen is 1. De in te typen waarden zijn: `Butterscotch`, `Melk`, `Puur` en `Toffee`.
-    -   De geselecteerde waarde opslaan in het veld [Chocoladetype]{.varname}.
-    -   De geselecteerde waarde opslaan in het veld [Chocoladetype]{.varname}.
-    -   Tekst voor het label bij de keuzelijst: `Chocoladetype:`
+    - De waarden zullen worden getypt.
+    - Aantal kolommen is 1. De in te typen waarden zijn: `Butterscotch`, `Melk`, `Puur` en `Toffee`.
+    - De geselecteerde waarde opslaan in het veld [Chocoladetype]{.varname}.
+    - De geselecteerde waarde opslaan in het veld [Chocoladetype]{.varname}.
+    - Tekst voor het label bij de keuzelijst: `Chocoladetype:`
 
 Na het Voltooien van de Wizard kom je weer terug in de [Ontwerpweergave]{.uicontrol}.
 
@@ -325,7 +325,7 @@ Het formulier [Dozen]{.varname} bestaat uit het hoofdformulier [Dozen]{.varname}
 
 Echter [Dozen subformulier]{.varname} is gebaseerd op de tabel [Doosdetails]{.varname} en hierin komt [Bonbonnaam]{.varname} niet voor. Daarom zal er een query [Kies bonbonnaam]{.varname} gemaakt moeten worden, gebaseerd op de tabel [Bonbons]{.varname}, die als resultaat de kolommen [Bonbonnaam]{.varname} en [Bonboncode]{.varname} geeft en die gesorteerd is op [Bonbonnaam]{.varname}. Deze nieuwe query is dan de gegevensbron voor de keuzelijst met invoervak.
 
-::: {#prp-forms-boxes-data-entry}
+:::: {#prp-forms-boxes-data-entry}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 **Query [Kies bonbonnaam]{.varname}**
@@ -348,14 +348,14 @@ Echter [Dozen subformulier]{.varname} is gebaseerd op de tabel [Doosdetails]{.va
 
 7.  Beantwoord de vragen van de Wizard achtereenvolgens als volgt:
 
-    -   De waarden voor de keuzelijst worden opgezocht in een tabel of query.
-    -   De waarden voor de keuzelijst worden geleverd door de query [Kies bonbonnaam]{.varname}.
-    -   De toe te voegen velden zijn [Bonbonnaam]{.varname} en [Bonboncode]{.varname}.
-    -   Sorteervolgorde is Oplopend op [Bonbonnaam]{.varname}.
-    -   Maak de kolombreedtes passend door een dubbelklik op de rechtergrens van elke kolom.
-    -   De kolom [Bonboncode]{.varname} bevat de waarde die opgeslagen moet worden.
-    -   De waarde moet opgeslagen worden in het veld [Code]{.varname}.
-    -   Typ een willekeurige tekst voor het label in. Dit label wordt in de volgende stap verwijderd omdat de labeltekst al in de formulierkoptekst voorkomt.
+    - De waarden voor de keuzelijst worden opgezocht in een tabel of query.
+    - De waarden voor de keuzelijst worden geleverd door de query [Kies bonbonnaam]{.varname}.
+    - De toe te voegen velden zijn [Bonbonnaam]{.varname} en [Bonboncode]{.varname}.
+    - Sorteervolgorde is Oplopend op [Bonbonnaam]{.varname}.
+    - Maak de kolombreedtes passend door een dubbelklik op de rechtergrens van elke kolom.
+    - De kolom [Bonboncode]{.varname} bevat de waarde die opgeslagen moet worden.
+    - De waarde moet opgeslagen worden in het veld [Code]{.varname}.
+    - Typ een willekeurige tekst voor het label in. Dit label wordt in de volgende stap verwijderd omdat de labeltekst al in de formulierkoptekst voorkomt.
 
 8.  Selecteer het zojuist ingevoerde label dat bij de keuzelijst hoort en druk dan op de [Delete]{.uicontrol} toets om deze te verwijderen.
 
@@ -370,7 +370,7 @@ Door deze instelling kunnen alleen vooraf gedefinieerde bonbonnamen uit de lijst
 10. Sluit het formulier [Dozen subformulier]{.varname} en bewaar de wijzigingen.
 
 11. Test de nieuwe keuzelijst uit.
-:::
+::::
 
 ## Invoerformulier Orders {#sec-forms-orders-data-entry}
 
@@ -475,27 +475,27 @@ ANALYSE
 
 De verschillende onderdelen in de grafiek kunnen uit bepaalde tabellen gehaald of berekend worden.
 
--   De [Doosnaam]{.varname} zit in de tabel [Dozen]{.varname}.
+- De [Doosnaam]{.varname} zit in de tabel [Dozen]{.varname}.
 
--   De [Omzet]{.varname} moet berekend worden via de berekening `[Hoeveelheid] * [Doosprijs]`.
+- De [Omzet]{.varname} moet berekend worden via de berekening `[Hoeveelheid] * [Doosprijs]`.
 
--   Het veld [Doosprijs]{.varname} zit ook in de tabel [Dozen]{.varname}.
+- Het veld [Doosprijs]{.varname} zit ook in de tabel [Dozen]{.varname}.
 
--   Het veld [Hoeveelheid]{.varname} zit in de tabel [Orderdetails]{.varname}.
+- Het veld [Hoeveelheid]{.varname} zit in de tabel [Orderdetails]{.varname}.
 
--   [Maand]{.varname} en [Jaar]{.varname} kunnen berekend worden met de functies `Month([Orderdatum])` en `Year([Orderdatum])`.
+- [Maand]{.varname} en [Jaar]{.varname} kunnen berekend worden met de functies `Month([Orderdatum])` en `Year([Orderdatum])`.
 
--   Het veld [Orderdatum]{.varname} zit in de tabel [Orders]{.varname}.
+- Het veld [Orderdatum]{.varname} zit in de tabel [Orders]{.varname}.
 
--   Groepering eerst op [Doosnaam]{.varname} en daarna op [Maand]{.varname}.
+- Groepering eerst op [Doosnaam]{.varname} en daarna op [Maand]{.varname}.
 
--   Er moet gefilterd worden op het jaar `2010`.
+- Er moet gefilterd worden op het jaar `2025`.
 
-Er moet dus een query gemaakt worden die de benodigde gegevens ([Doosnaam]{.varname}, [Omzet]{.varname}, Maand[Maand]{.varname} en [Jaar]{.varname}) aanlevert. Groeperen en filteren kan via de rij [Totaal]{.varname} in het queryraster. Voor groeperen kies je voor `Group By` en voor filteren maak je de keuze `Waar`. Voor het laatste moet dan ook nog bij [Criteria]{.uicontrol} de waarde `2010` worden opgegeven.
+Er moet dus een query gemaakt worden die de benodigde gegevens ([Doosnaam]{.varname}, [Omzet]{.varname}, Maand[Maand]{.varname} en [Jaar]{.varname}) aanlevert. Groeperen en filteren kan via de rij [Totaal]{.varname} in het queryraster. Voor groeperen kies je voor `Group By` en voor filteren maak je de keuze `Waar`. Voor het laatste moet dan ook nog bij [Criteria]{.uicontrol} de waarde `2025` worden opgegeven.
 
 De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en daarna het formulier met de grafiek.
 
-::::: {#prp-forms-sales-boxes}
+:::: {#prp-forms-sales-boxes}
 [Bestand]{.smallcaps}: `{{< var database >}}`
 
 **Query maken**
@@ -508,63 +508,52 @@ De werkzaamheden bestaan uit twee delen. Eerst moet de query gemaakt worden en d
 
 4.  Kies [tab Ontwerp \> Totalen (groep Weergeven/verbergen)]{.uicontrol}.
 
-5.  Wijzig in de derde kolom de [Group By]{.uicontrol} in `Som` en in de vierde kolom in `Waar`. Voeg in de vierde kolom als criterium toe `2010`. Laat dit laatste veld niet weergeven.
+5.  Wijzig in de derde kolom de [Group By]{.uicontrol} in `Som` en in de vierde kolom in `Waar`. Voeg in de vierde kolom als criterium toe `2025`. Laat dit laatste veld niet weergeven.
 
 ![Ontwerp query omzet](images/forms/q-sales-box-month-design.png){#fig-q-sales-box-month-design}
 
-6.  Sluit de query en bewaar deze onder de naam [Omzet per doos per maand in 2010]{.varname}.
+6.  Sluit de query en bewaar deze onder de naam [Omzet per doos per maand in 2025]{.varname}.
 
 ::: {.callout-note title="Wijzigingen in berekende velden"}
 Wanneer je na het sluiten de query weer opent in de [Ontwerpweergave]{.uicontrol}, dan heeft Access een paar wijzigingen aangebracht in de kolom [Omzet]{.varname}.
 
--   Waarde in rij [Veld]{.uicontrol} is nu: `Omzet: Som([Hoeveelheid]*[Doosprijs])`
--   Waarde in veld [Totaal]{.uicontrol} is nu: `Expressie`
+- Waarde in rij [Veld]{.uicontrol} is nu: `Omzet: Som([Hoeveelheid]*[Doosprijs])`
+- Waarde in veld [Totaal]{.uicontrol} is nu: `Expressie`
 :::
 
 **Formulier maken**
 
-7.  Kies [tab Maken \> Wizard Formulier]{.uicontrol}. Voeg tabel [Dozen]{.varname} toe en van deze tabel alleen het veld [Doosnaam]{.varname}. Klik op [Volgende]{.uicontrol}.
+7.  Kies [tab Maken \> Wizard Formulier]{.uicontrol}. Voeg van de tabel [Dozen]{.varname} het veld [Doosnaam]{.varname}. Klik op [Volgende]{.uicontrol}.
 
 8.  Beantwoord de vragen van de Wizard als volgt:
 
-    -   Formulier opmaak [Als gegevensblad]{.uicontrol}.
-    -   Titel `Omzet per doos per maand in 2010`.
-    -   Bewaar het formulier onder dezelfde naam als de titel.
+    - Formulier opmaak [Als gegevensblad]{.uicontrol}.
+    - Titel `Omzet per doos per maand in 2025`.
+    - Bewaar het formulier onder dezelfde naam als de titel.
 
 9.  Open het formulier in de [Ontwerpweergave]{.uicontrol}. Maak wat ruimte voor de grafiek in de sectie [Details]{.uicontrol} door de onderkant naar beneden te slepen.
 
-10. Kies [tab Ontwerp \> Grafiek (groep Besturingselementen)]{.uicontrol} ![](images/common/control-chart.png) en teken op het formulier een rechthoekig kader waar de grafiek moet komen. De [Wizard Grafieken]{.uicontrol} wordt opgestart.
+10. Kies tab Formulierontwerp \> Moderne grafiek invoegen (groep Besturingselementen) \> Kolom \> Gegroepeerde kolom en teken op het formulier een rechthoekig kader waar de grafiek moet komen. Aan de rechterkant verschijnt het paneel Grafiekinstellingen.
 
-11. Beantwoord de eerste drie vragen van de Wizard achtereenvolgens als volgt:
+11. Specificeer de grafiekinstellingen als volgt:
 
-    -   De gegevens voor de grafiek zijn afkomstig van de query [Omzet per doos per maand in 2010]{.varname}.
-    -   Voeg de velden [Maand]{.varname} en [Omzet]{.varname} aan de grafiek toe.
-    -   Kies als grafiektype een Kolomdiagram.
+    - Tab Gegevens
+      - Gegevensbron: query [Omzet per doos per maand in 2025]{.varname}.
+      - Categorie-as: Maand
+      - Legenda: geen
+      - Waarden Y-as: Omzet (Som)
+    - Tab Opmaak
+      - Weergavenaam: Som omzet
 
-De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten aanpassen.
+12. In het Eigenschappenvenster:
 
-![Voorstel indeling grafiek.](images/forms/chartwizard-layout-default.png){#fig-chartwizard-layout-default}
+    - Grafiektitel: Omzet per doos per maand in 2025
+    - Heeft legenda: Nee
 
-12. Sleep het veld [SomVanMaand]{.varname} uit het vak bij de verticale as naar het vak voor de horizontale as. De weergave langs de horizontale as wijzigt dan in `Maand`.
+13. Sluit het formulier en bewaar de wijzigingen.
 
-13. Sleep het veld [Omzet]{.varname} naar het vak voor de verticale as. De weergave langs de verticale as wijzigt in `SomVanOmzet`.
-
-![Definitieve indeling grafiek.](images/forms/chartwizard-layout-data.png){#fig-chartwizard-layout-data}
-
-14. Klik op [Volgende]{.uicontrol}. Hier selecteer je het veld in het formulier dat gekoppeld moet worden aan het veld in de grafiek. In beide gevallen is dat [Doosnaam]{.varname}.
-
-![Koppeling tussen velden formulier en grafiek.](images/forms/chartwizard-linking-fields.png){#fig-chartwizard-linking-fields}
-
-15. Klik op [Volgende]{.uicontrol}. Geef de grafiek de naam [Omzet per doos per maand in 2010]{.varname} en kies er voor om de legenda niet weer te geven en klik daarna op [Voltooien]{.uicontrol}.
-
-::: {.callout-warning title="Geen echte gegevens in grafiek"}
-In de Ontwerpweergave wordt een voorbeeldgrafiek getoond en niet een grafiek met de echte gegevens.
-:::
-
-16. Sluit het formulier en bewaar de wijzigingen.
-
-17. Open het formulier in de [Formulierweergave]{.uicontrol}, blader door wat dozen en sluit daarna het formulier.
-:::::
+14. Open het formulier in de [Formulierweergave]{.uicontrol}, blader door wat dozen en sluit daarna het formulier.
+::::
 
 ## Gekoppelde formulieren {#sec-forms-customerorders}
 
@@ -589,9 +578,9 @@ Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zij
 
 4.  Voeg de volgende velden toe:
 
-    -   Uit de tabel [Klanten]{.varname}: [Klantcode]{.varname}, [Achternaam]{.varname}, [Voornaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname}, [Plaats]{.varname}.
-    -   Uit de tabel [Orders]{.varname}: [Ordercode]{.varname}, [Orderdatum]{.varname}.
-    -   Uit de tabel [Orderdetails]{.varname}: [Dooscode]{.varname}, [Hoeveelheid]{.varname}.
+    - Uit de tabel [Klanten]{.varname}: [Klantcode]{.varname}, [Achternaam]{.varname}, [Voornaam]{.varname}, [Straat]{.varname}, [Postcode]{.varname}, [Plaats]{.varname}.
+    - Uit de tabel [Orders]{.varname}: [Ordercode]{.varname}, [Orderdatum]{.varname}.
+    - Uit de tabel [Orderdetails]{.varname}: [Dooscode]{.varname}, [Hoeveelheid]{.varname}.
 
 5.  Klik op [Volgende]{.uicontrol}. Kies voor weergave volgens [Klanten]{.varname} en voor [Gekoppelde formulieren]{.uicontrol}.
 
@@ -601,9 +590,9 @@ Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zij
 
 7.  Geef de formulieren de volgende namen:
 
-    -   1e formulier: [OrdersKlanten]{.varname}
-    -   2e formulier: [OrdersKlantenSub1]{.varname}
-    -   Subformulier: [OrdersKlantenSub2]{.varname}
+    - 1e formulier: [OrdersKlanten]{.varname}
+    - 2e formulier: [OrdersKlantenSub1]{.varname}
+    - Subformulier: [OrdersKlantenSub2]{.varname}
 
 8.  Klik op [Voltooien]{.uicontrol}.
 
@@ -613,8 +602,8 @@ Het hoofdformulier [OrdersKlanten]{.varname} wordt nu geopend. Het ontwerp moet 
 
 9.  Open het formulier [OrdersKlanten]{.varname} in de [Ontwerpweergave]{.uicontrol}.
 
-    -   Verwijder het label [OrdersKlanten]{.varname}.
-    -   Selecteer de opdrachtknop en wijzig via het [Eigenschappenvenster]{.uicontrol} de tekst van het bijschrift in `Ordergegevens`.
+    - Verwijder het label [OrdersKlanten]{.varname}.
+    - Selecteer de opdrachtknop en wijzig via het [Eigenschappenvenster]{.uicontrol} de tekst van het bijschrift in `Ordergegevens`.
 
 10. Pas desgewenst de opmaak van de drie formulieren verder aan.
 

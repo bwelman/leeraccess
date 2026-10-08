@@ -1,17 +1,17 @@
 # Beginnen met Access {#sec-intro}
 
 ::: callout-intro
--   Wat databases zijn en hoe deze zijn opgebouwd.
--   Beknopte kennismaking met de componenten (tabellen, query's, formulieren, rapporten, macro's, modules).
--   Het opstarten en afsluiten van Access.
--   Het openen van een bestaande database en het kunnen opslaan hiervan onder een andere naam en/of in een ander bestandsformaat.
--   De inrichting van het programmavenster van Access.
+- Wat databases zijn en hoe deze zijn opgebouwd.
+- Beknopte kennismaking met de componenten (tabellen, query's, formulieren, rapporten, macro's, modules).
+- Het opstarten en afsluiten van Access.
+- Het openen van een bestaande database en het kunnen opslaan hiervan onder een andere naam en/of in een ander bestandsformaat.
+- De inrichting van het programmavenster van Access.
 :::
 
 Access is een programma uit de Microsoft Office reeks waarmee je databases kunt maken. Hiermee kun je gegevens opslaan, beheren en analyseren. De gegevens bevatten bijvoorbeeld detailinformatie over klanten, orders, artikelen, leveranciers, enz. Deze gegevens worden geordend opgeslagen, waardoor je antwoorden kunt krijgen op vragen als
 
--   Wat is de omzet per klant geweest in het afgelopen halfjaar?
--   Welke artikelen zorgen voor het grootste deel van de omzet?
+- Wat is de omzet per klant geweest in het afgelopen halfjaar?
+- Welke artikelen zorgen voor het grootste deel van de omzet?
 
 Access wordt als een moeilijk programma gezien. Dat komt door de manier waarop databases in elkaar zitten en werken. Met de andere programma's uit de Microsoft Office reeks als Excel, Word en Powerpoint kun je direct na het opstarten beginnen met gegevens in te voeren. Dat kan in Access niet. Je moet eerst een structuur voor de database bedenken en aanmaken voordat je gegevens in kunt voeren. Voor de wat grotere en complexere databases is dat al snel werk voor specialisten.
 
@@ -25,20 +25,20 @@ Naast het maken en onderhouden van tabellen kun je met Access ook formulieren, q
 
 Access kent de volgende onderdelen (**objecten**) in een database:
 
--   Tabellen
--   Query's
--   Formulieren
--   Rapporten
--   Macro's
--   Modules
+- Tabellen
+- Query's
+- Formulieren
+- Rapporten
+- Macro's
+- Modules
 
 In Access wordt een database als één bestand opgeslagen, waarin al deze onderdelen van de database zitten.
 
 De werkzaamheden met databases kun je onderscheiden in:
 
--   **Ontwerpen en maken van de database**. Dit houdt in het maken van de tabellen, query's, formulieren en rapporten. Dit is werk voor de bouwer van de database.
+- **Ontwerpen en maken van de database**. Dit houdt in het maken van de tabellen, query's, formulieren en rapporten. Dit is werk voor de bouwer van de database.
 
--   **Omgaan met gegevens**. Dit betreft het invoeren en wijzigen van gegevens, het maken van rapportages, het zoeken in de database, enz. Dit is werk waarmee de eindgebruiker bezig is.
+- **Omgaan met gegevens**. Dit betreft het invoeren en wijzigen van gegevens, het maken van rapportages, het zoeken in de database, enz. Dit is werk waarmee de eindgebruiker bezig is.
 
 ### Tabellen {#sec-intro-tables}
 
@@ -50,13 +50,15 @@ In een tabel zijn gegevens in kolommen (**velden**) en rijen (**records**) inged
 
 Veld
 
-:   Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon, telefoonnummer, artikelprijs, ...
-:   *In een tabel is elke kolom een veld.*
+: Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon, telefoonnummer, artikelprijs, ...
+
+: *In een tabel is elke kolom een veld.*
 
 Record
 
-:   Een record is een verzameling van gegevens over een persoon, artikel, bedrijf, ...
-:   *In een tabel is elke rij een record.*
+: Een record is een verzameling van gegevens over een persoon, artikel, bedrijf, ...
+
+: *In een tabel is elke rij een record.*
 
 ### Query's {#sec-intro-queries}
 
@@ -104,7 +106,7 @@ Met Access beschik je over een ingebouwde programmeertaal, Visual Basic for Appl
 
 De mogelijkheden om Access op te starten hangen af van de manier waarop het systeem geïnstalleerd is. Deze cursus gaat uit van een standaard installatie van Microsoft Office 365 NL op een systeem met Windows 10 NL. Op bijna alle computers kan Access via de startknop van Windows gestart worden en deze methode wordt hierna beschreven.
 
-::: {#prp-intro-start-access}
+:::: {#prp-intro-start-access}
 1.  Kies [Start \> Access]{.uicontrol}.
 
 Hierna verschijnt het opstartscherm van Access. In het linkerdeel staan de laatst geopende bestanden en in het rechterdeel een overzicht van beschikbare sjablonen.
@@ -114,17 +116,17 @@ Hierna verschijnt het opstartscherm van Access. In het linkerdeel staan de laats
 ::: {.callout-note title="Database opslaan"}
 In tegenstelling tot de meeste andere programma's hoef je in Access een database niet op te slaan. Alle gemaakte wijzigingen worden automatisch bewaard.
 :::
-:::
+::::
 
 ## Database openen {#sec-intro-open-database}
 
 Veel gebruikte methodes om een reeds bestaande Access database te openen zijn:
 
--   Dubbelklikken op een Accessbestand in de Windows verkenner.
--   In het opstartscherm van Access op een recent bestand klikken of kiezen voor [Andere bestanden openen]{.uicontrol}.
--   Wanneer Access reeds geopend is kiezen voor [Bestand \> Openen]{.uicontrol}.
+- Dubbelklikken op een Accessbestand in de Windows verkenner.
+- In het opstartscherm van Access op een recent bestand klikken of kiezen voor [Andere bestanden openen]{.uicontrol}.
+- Wanneer Access reeds geopend is kiezen voor [Bestand \> Openen]{.uicontrol}.
 
-::: {#prp-intro-open-database}
+:::: {#prp-intro-open-database}
 [File]{.smallcaps}: `{{< var database >}}`
 
 Open via een van de hiervoor genoemde methodes de database.
@@ -132,7 +134,7 @@ Open via een van de hiervoor genoemde methodes de database.
 ::: {.callout-note title="Database afsluiten"}
 Om een database af te sluiten en Access open te houden, kies je [Bestand \> Sluiten]{.uicontrol}.
 :::
-:::
+::::
 
 ## Access venster {#sec-intro-access-window}
 
@@ -142,21 +144,21 @@ Het programmavenster van Access bestaat van boven naar beneden uit een gedeelte 
 
 Bestand
 
-:   Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Onder deze knop zitten een aantal basisopdrachten die je bij alle Office programma's terugvindt zoals het openen, opslaan en afdrukken van bestanden. Ook zit hieronder de belangrijke opdracht [Opties]{.uicontrol}, waarmee je een aantal instellingen voor Access kunt regelen.
+: Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Onder deze knop zitten een aantal basisopdrachten die je bij alle Office programma's terugvindt zoals het openen, opslaan en afdrukken van bestanden. Ook zit hieronder de belangrijke opdracht [Opties]{.uicontrol}, waarmee je een aantal instellingen voor Access kunt regelen.
 
 Werkbalk Snelle Toegang
 
-:   In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Access staan hierop drie knoppen:
+: In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Access staan hierop drie knoppen:
 
-:   -   ![](images/common/button-save.png) - Opslaan
+: - ![](images/common/button-save.png) - Opslaan
 
-:   -   ![](images/common/button-undo.png) - Ongedaan maken
+: - ![](images/common/button-undo.png) - Ongedaan maken
 
-:   -   ![](images/common/button-redo.png) - Opnieuw
+: - ![](images/common/button-redo.png) - Opnieuw
 
 Lint
 
-:   Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals Start, Maken, .... Elk tabblad heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde contextuele tabbladen. Een voorbeeld hiervan is het tabblad Tabel, welke alleen verschijnt wanneer een tabel geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
+: Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals Start, Maken, .... Elk tabblad heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde contextuele tabbladen. Een voorbeeld hiervan is het tabblad Tabel, welke alleen verschijnt wanneer een tabel geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
 
 ::: {.callout-note title="Lint minimaliseren"}
 Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met de toetscombinatie [Ctrl + F1]{.uicontrol}. Je ziet dan alleen de tabs. Opnieuw indrukken van deze toetscombinatie brengt het volledige lint weer terug.
@@ -164,23 +166,23 @@ Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met d
 
 Tabbladen
 
-:   Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen commando's. Sommige tabs worden alleen maar getoond wanneer je ze nodig hebt.
+: Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen commando's. Sommige tabs worden alleen maar getoond wanneer je ze nodig hebt.
 
 Groepen
 
-:   Op elk tabblad staan groepen van bij elkaar behorende opdrachten. De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl ![](images/common/button-dialogwindow.png) in de rechterbenedenhoek van de groep klikken.
+: Op elk tabblad staan groepen van bij elkaar behorende opdrachten. De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl ![](images/common/button-dialogwindow.png) in de rechterbenedenhoek van de groep klikken.
 
 Opdrachtknop
 
-:   Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk aangebracht. Het kan ook zijn dat er eerst een keuzelijst of een dialoogvenster verschijnt.
+: Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk aangebracht. Het kan ook zijn dat er eerst een keuzelijst of een dialoogvenster verschijnt.
 
 Navigatievenster
 
-:   Het navigatiedeelvenster staat aan de linkerkant en hierin zijn alle objecten van de database te vinden.
+: Het navigatiedeelvenster staat aan de linkerkant en hierin zijn alle objecten van de database te vinden.
 
 Documentvensters
 
-:   Wanneer een object wordt geopend dan verschijnt deze in een eigen documentvenster.
+: Wanneer een object wordt geopend dan verschijnt deze in een eigen documentvenster.
 
 ## Nieuwe database {#sec-intro-database-new}
 
@@ -228,7 +230,7 @@ Een overzicht van de nieuwe en oude bestandsformaten van Access.
 
 ACCDB
 
-:   Dit is het standaardformaat voor bestanden gemaakt met Access 2007 en later.
+: Dit is het standaardformaat voor bestanden gemaakt met Access 2007 en later.
 
 ::: {.callout-warning title="Oude bestandsformaten"}
 Omdat de bestandsformaten gelijk zijn kun je bijvoorbeeld in Access 2007 een database openen die met Access 2016 gemaakt is. Echter nieuwe functies die in de oudere versies niet beschikbaar zijn zullen niet werken. Hierdoor kunnen problemen optreden.
@@ -236,4 +238,4 @@ Omdat de bestandsformaten gelijk zijn kun je bijvoorbeeld in Access 2007 een dat
 
 MDB
 
-:   Dit is het bestandsformaat voor Access 2003 en eerder. Een dergelijk bestand kan ook door Access 2007, 2010, 2013 en 2016 geopend worden. Ook kan Access 2016 een database in dit oudere bestandsformaat opslaan.
+: Dit is het bestandsformaat voor Access 2003 en eerder. Een dergelijk bestand kan ook door Access 2007, 2010, 2013 en 2016 geopend worden. Ook kan Access 2016 een database in dit oudere bestandsformaat opslaan.

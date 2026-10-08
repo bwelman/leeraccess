@@ -102,5 +102,7 @@ nav-link active {
 }
 
 .key {
+  @extend .varname;
   text-decoration: underline;
 }
+
