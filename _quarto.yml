@@ -33,7 +33,7 @@ book:
         - 08-integration.qmd
         - 09-tools.qmd
         - 10-macros.qmd
-        - 11-normalization.qmd
+
 execute:
   freeze: auto
 

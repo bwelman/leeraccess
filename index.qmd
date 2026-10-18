@@ -2,6 +2,8 @@
 
 Dit is de gratis versie van het studieboek **Leer Access**. Dit taakgerichte boek is speciaal ontwikkeld voor studenten in het middelbaar hoger onderwijs. Er is veel aandacht voor het maken van queries, formulieren en rapportages. En bevat veel oefeningen.
 
+In voorgaande edities was ook een hoofdstuk Normaliseren opgenomen. Voor het ontwerpen van databases is een nieuw studieboek verschenen [Databases Ontwerpen](https://database-ontwerp.netlify.app/) waarin naast normaliseren ook het ontwerp via ERD's aan bod komt.
+
 ::: {.content-visible when-format="html"}
 Er zijn interactieve onderdelen in het boek om je te helpen de inhoud beter te begrijpen. Deze interactieve inhoud werkt alleen als je dit materiaal opent via een webbrowser die javascript ondersteunt.
 :::
