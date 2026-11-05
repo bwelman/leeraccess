@@ -157,7 +157,7 @@ Door dubbelklikken op een object in het navigatievenster wordt het object geopen
 ![Documentvenster met de tabellen Klanten en Orders in tabbladen.](images/explore/document-tabs.png){#fig-document-tabs}
 
 ::: {.callout-note title="Vensterindeling"}
-Je kunt de manier waarop de objecten getoond worden wijzigen via [Bestand \> Opties \> Huidige database]{.uicontrol}. In figuur @fig-document-window-options zie je de mogelijkheden voor de documentvensters.
+Je kunt de manier waarop de objecten getoond worden wijzigen via [Bestand \> Opties \> Huidige database]{.uicontrol}. In @fig-document-window-options zie je de mogelijkheden voor de documentvensters.
 
 ![Opties voor documentvensters.](images/common/document-window-options.png){#fig-document-window-options}
 

@@ -478,7 +478,7 @@ Uit een klanten-tevredenheids-onderzoek blijkt dat enkele belangrijke klanten he
 ::: {#exr-tabl004}
 **Valutanotatie (tabl004)**
 
-Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie \@ref(tables-new-manually). Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
+Bij deze opdracht moet je beschikken over de tabel [Vervoer]{.varname} die eerder in de cursus gemaakt moest worden, zie @sec-tables-manually. Wanneer in jouw database deze tabel niet aanwezig is, dan heb je twee mogelijkheden:
 
 - Je voert alsnog de opdracht uit waarbij je de tabel [Vervoer]{.varname} maakt.
 - Je gebruikt het hulpbestand `Vervoer.accdb` waarin de tabel [Vervoer]{.varname} al voor je gemaakt is.

@@ -436,7 +436,7 @@ Met de keuze `*` kun je alle velden van een tabel toevoegen.
 
 ## Ordertotaal {#sec-forms-orders-total}
 
-Het formulier dat gemaakt is in \@ref(forms-orders-data-entry) wordt zodanig gewijzigd dat ook het totale orderbedrag berekend en getoond wordt.
+Het formulier dat gemaakt is in @sec-forms-orders-data-entry wordt zodanig gewijzigd dat ook het totale orderbedrag berekend en getoond wordt.
 
 ![Orders met totaalbedrag.](images/forms/f-orderdata-entry-totals.png){#fig-f-orderdata-entry-totals}
 

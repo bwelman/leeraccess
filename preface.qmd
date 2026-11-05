@@ -32,8 +32,6 @@ Het studieboek is gebouwd rond de database `{{< var database >}}` van het fictie
 
 -   @sec-macros laat zien hoe je handelingen die veel voorkomen of vrij complex zijn, kunt automatiseren met behulp van macro's.
 
--   @sec-normalization is een theoretisch hoofdstuk dat uitlegt hoe je via een stapsgewijs normalisatieproces een relationele database kunt ontwerpen. Voor dit hoofdstuk heb je Access niet nodig.
-
 ## Software {.unnumbered}
 
 In dit studieboek wordt gewerkt met **Access 365**, maar het studieboek is ook bruikbaar voor andere Accessversies zoals 2016 en 2019 en zelfs de oudere 2010 en 2007 versies.
